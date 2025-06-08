@@ -67,3 +67,12 @@ ML_classification/
 to understand the current stage, past decisions, and open questions tied to the spec.
 
 Refer to `README.md` and full documentation in `docs/` for further details on features and architecture.
+
+## Migration tracking
+
+Two markdown files at the repository root help coordinate the refactor.
+
+- **TODO.md** – complete list of tasks required to move the legacy `ai_arisha.py` notebook into the modular project layout above.
+- **NOTES.md** – running log that explains what was done and how.
+
+Contributors must keep `TODO.md` up to date with remaining work and record completed items in `NOTES.md`.
