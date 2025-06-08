@@ -3,11 +3,11 @@
 The repository at commit dbd5184 only contains the legacy `ai_arisha.py` script, `README.md`, `AGENTS.md` and a dataset README.  The goal is to reorganise the notebook code into a maintainable module-based project with CI tests.
 
 ## 1. Basic project skeleton
-- create directories: `.github/workflows/`, `src/models/`, `scripts/`, `tests/`, and `notebooks/`
+- [x] create directories: `.github/workflows/`, `src/models/`, `scripts/`, `tests/`, and `notebooks/`
 - [x] add minimal files listed in `AGENTS.md` and `README.md`: `environment.yml`, `requirements.txt`, `Dockerfile`, `Makefile`, `LICENSE`, `.gitignore`
 
 ## 2. Data utilities
-- implement `scripts/download_data.py` to fetch the Kaggle dataset using `KAGGLE_USERNAME` and `KAGGLE_KEY`
+- implement `scripts/download_data.py` to fetch the Kaggle dataset using `KAGGLE_USERNAME` and `KAGGLE_KEY` (file present)
 - write `src/dataprep.py` to load the raw CSV and perform basic cleaning
 
 ## 3. Feature engineering
@@ -22,7 +22,7 @@ The repository at commit dbd5184 only contains the legacy `ai_arisha.py` script,
 
 ## 5. Tests and CI
 - add `tests/test_smoke.py` importing each module
-- set up GitHub Actions workflow `ci.yml` running flake8/black and `pytest`
+- set up GitHub Actions workflow `ci.yml` running flake8/black and `pytest` (workflow present)
 
 ## 6. Documentation updates
 - update `README.md` with new instructions once modules are in place
