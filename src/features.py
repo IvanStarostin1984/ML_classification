@@ -118,9 +118,14 @@ class FeatureEngineer:
 
     def _dependents_features(self, df: pd.DataFrame) -> pd.DataFrame:
         """Add dependent count features."""
-        dep = pd.to_numeric(
-            df.get("no_of_dependents", pd.Series(0, index=df.index)), errors="coerce"
-        ).fillna(0).astype(int)
+        dep = (
+            pd.to_numeric(
+                df.get("no_of_dependents", pd.Series(0, index=df.index)),
+                errors="coerce",
+            )
+            .fillna(0)
+            .astype(int)
+        )
         df["number_of_dependents"] = dep
         df["many_dependents_flag"] = (df["number_of_dependents"] >= 3).astype(int)
         df["income_per_dependent"] = df["total_income_month"] / (
