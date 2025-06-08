@@ -47,5 +47,6 @@ corresponding TODO items.
 2025-06-14: Updated README to remove missing-modules note and confirm the migration is complete.
 2025-06-08: Removed obsolete README statements about missing model pipelines and noted make train runs both models.
 2025-06-14: Renamed project structure heading in AGENTS.md.
-
 2025-06-08: Refreshed README repository layout and checked TODO item.
+2025-06-08: Adjusted CI workflow to invoke pytest via python -m.
+
