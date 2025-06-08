@@ -49,22 +49,26 @@ docker run --rm -e KAGGLE_USERNAME=$KAGGLE_USERNAME -e KAGGLE_KEY=$KAGGLE_KEY ml
 
 ## Repository layout
 
-Note: at the moment this repo only includes the legacy `ai_arisha.py` notebook
-and this `AGENTS.md` guide. The modular directory tree listed below is the
-intended structure that will be implemented over time.
+The project already follows the target directory layout, but most modules under
+`src/` are only placeholders. Model implementations are still missing, so
+`make train` will fail until they are added.
 
 ```
-ai_arisha.py            ← original Colab notebook (read-only legacy)
-AGENTS.md               ← contributor guidelines & architecture notes
-.github/workflows/ci.yml← CI pipeline (Black, flake8, pytest)
-scripts/download_data.py← Kaggle dataset pull helper
-src/                    ← modular pipeline (dataprep, features, models…)
-tests/                  ← pytest suite
-Dockerfile, Makefile    ← reproducible build & one-command workflow
-environment.yml         ← conda spec (Python ≥ 3.10)
-requirements.txt        ← pip fallback
-LICENSE                 ← MIT
-README.md               ← you are here
+ai_arisha.py             ← legacy Colab script (read-only)
+AGENTS.md                ← contributor guidelines and architecture notes
+.github/workflows/ci.yml ← CI pipeline (Black, flake8, pytest)
+scripts/download_data.py ← Kaggle dataset pull helper
+src/                     ← Python package skeleton
+src/models/              ← model pipelines (to be implemented)
+tests/                   ← pytest suite
+data/README.md           ← dataset licence notes
+notebooks/README.md      ← Colab/Binder demo stub
+Dockerfile, Makefile     ← reproducible build & workflow helpers
+environment.yml          ← Conda spec (Python ≥ 3.10)
+pyproject.toml           ← project build metadata
+requirements.txt         ← pip fallback
+LICENSE                  ← MIT
+README.md                ← you are here
 ```
 
 ---
