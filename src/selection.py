@@ -18,8 +18,8 @@ def calculate_vif(df: pd.DataFrame, cols: list[str]) -> pd.Series:
     """Return variance inflation factors for numeric columns."""
     arr = df[cols].to_numpy(float)
     with warnings.catch_warnings():
-        warnings.simplefilter('ignore', category=RuntimeWarning)
-        with np.errstate(divide='ignore'):
+        warnings.simplefilter("ignore", category=RuntimeWarning)
+        with np.errstate(divide="ignore"):
             vals = [vif(arr, i) for i in range(arr.shape[1])]
     return pd.Series(vals, index=cols)
 
