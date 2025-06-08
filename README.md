@@ -37,6 +37,8 @@ python scripts/download_data.py
 make train
 ````
 
+See [data/README.md](data/README.md) for dataset licence notes.
+
 **Prefer Docker?**
 
 ```bash
