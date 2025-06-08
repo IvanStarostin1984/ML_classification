@@ -49,8 +49,10 @@ make train-cart
 
 See [data/README.md](data/README.md) for dataset licence notes.
 
-`make eval` prints test-set metrics and the worst four-fifths ratio across
-protected groups. A ratio below **0.8** warns of possible bias.
+`make eval` runs `python -m src.evaluate` to compute test metrics and the worst
+four-fifths ratio across protected groups (pass `--group-col` to override the
+default). Metrics are stored in `artefacts/summary_metrics.csv` and printed to
+stdout. A ratio below **0.8** warns of possible bias.
 
 **Prefer Docker?**
 
