@@ -1,6 +1,6 @@
 # Migration notes
 
-Current commit: `354c4fc`.
+Current commit: `536978c`.
 
 
 The modular refactor is nearly complete. Core helpers and model pipelines live
@@ -39,4 +39,5 @@ corresponding TODO items.
 2025-06-12: Updated TODO progress and revised project overview for commit 354c4fc.
 2025-06-12: Updated migration notes to reflect commit 354c4fc and mention completed src modules, tests and CI.
 2025-06-08: Updated AGENTS.md project structure tests section to list module unit tests.
+2025-06-08: Marked tasks complete in TODO and expanded migration notes for commit 536978c.
 
