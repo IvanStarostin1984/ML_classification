@@ -67,7 +67,7 @@ ML_classification/
 - **Each PR requires at least one reviewer.**
 - with *every commit* reflect in **NOTES.md** on work done in a short lean way to track work.
 
-to understand the current stage, past decisions, and open questions tied to the spec.
+Read `NOTES.md` and `TODO.md` to understand the current stage, past decisions, and open questions tied to the spec.
 
 Refer to `README.md` and full documentation in `docs/` for further details on features and architecture.
 
