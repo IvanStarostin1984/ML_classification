@@ -4,6 +4,7 @@ import numpy as np
 import pandas as pd
 from src.models.logreg import train_from_df as train_logreg
 from src.models.cart import train_from_df as train_cart
+from src.models import logreg, cart
 from src.features import FeatureEngineer
 from src import dataprep
 
@@ -44,3 +45,13 @@ def test_train_cart() -> None:
     df = FeatureEngineer().transform(df)
     auc = train_cart(df, "target")
     assert 0 <= auc <= 1
+
+
+def test_load_data_path(tmp_path) -> None:
+    df = _toy_df().rename(columns={"target": "Loan_Status"})
+    csv = tmp_path / "loan.csv"
+    df.to_csv(csv, index=False)
+    df_lr = logreg.load_data(csv)
+    df_cart = cart.load_data(csv)
+    assert "loan_status" in df_lr.columns
+    assert "loan_status" in df_cart.columns

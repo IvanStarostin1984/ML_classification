@@ -69,5 +69,7 @@ corresponding TODO items.
 2025-06-18: documented new mlcls-* console scripts and usage.
 2025-06-08: Updated download_data to check CSV existence before using Kaggle API and expanded tests.
 2025-06-08: Added console script entrypoints and tests invoking them.
-
 2025-06-08: refactored FeatureEngineer.transform into helper methods to meet function length rule. Added docstrings and updated tests. Black and pytest fail due to pyproject parsing error.
+2025-06-18: Added --data-path option to mlcls-train and updated tests.
+2025-06-20: Added CITATION.cff for citation metadata.
+

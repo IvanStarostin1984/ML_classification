@@ -43,7 +43,8 @@ def test_console_scripts(tmp_path) -> None:
     df = _toy_df()
     data_dir = tmp_path / "data" / "raw"
     data_dir.mkdir(parents=True)
-    df.to_csv(data_dir / "loan_approval_dataset.csv", index=False)
+    csv_path = data_dir / "loan_approval_dataset.csv"
+    df.to_csv(csv_path, index=False)
 
     env = os.environ.copy()
     scripts_dir = Path(sysconfig.get_path("scripts"))
@@ -60,7 +61,7 @@ def test_console_scripts(tmp_path) -> None:
     assert "roc_auc" in eval_res.stdout
 
     train_res = subprocess.run(
-        ["mlcls-train", "--model", "logreg"],
+        ["mlcls-train", "--model", "logreg", "--data-path", str(csv_path)],
         cwd=tmp_path,
         env=env,
         capture_output=True,

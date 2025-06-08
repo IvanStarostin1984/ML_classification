@@ -1,0 +1,8 @@
+cff-version: 1.2.0
+message: 'If you use this work, please cite it as below.'
+authors:
+  - family-names: Starostin
+    given-names: Ivan
+title: 'ML_classification: Loan-approval prediction pipelines'
+year: 2025
+url: 'https://github.com/IvanStarostin1984/ML_classification'
