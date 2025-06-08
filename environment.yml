@@ -12,3 +12,7 @@ dependencies:
   - scipy
   - statsmodels
   - joblib
+  - kaggle
+  - flake8
+  - black
+  - pytest
