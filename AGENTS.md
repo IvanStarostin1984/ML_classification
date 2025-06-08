@@ -44,7 +44,11 @@ ML_classification/
 │   ├─ test_dataprep.py             # unit tests for data loading
 │   ├─ test_features.py             # unit tests for feature engineering
 │   ├─ test_models.py               # unit tests for modelling pipelines
-│   └─ test_smoke.py                # CI sanity import check
+│   ├─ test_smoke.py                # CI sanity import check
+│   ├─ test_download_data.py        # tests the data download script
+│   ├─ test_preprocessing.py        # preprocessing pipeline tests
+│   ├─ test_selection.py            # feature selection helpers
+│   └─ test_diagnostics.py          # diagnostic utilities
 ├─ environment.yml                  # Conda spec (Python ≥ 3.10)
 ├─ requirements.txt                 # pip fallback
 ├─ Dockerfile                       # reproducible container build
@@ -60,7 +64,7 @@ ML_classification/
 - Functions should stay under 20 lines with at most 2 nesting levels.
 - Favour composition over inheritance and keep variables scoped tightly.
 - Validate inputs early and throw on bad data.
-- Use 2‑space indentation, single quotes and end files with a newline.
+- Use 4‑space indentation, single quotes and end files with a newline.
 - Document each public API/function with a doc comment.
 
 
