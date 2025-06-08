@@ -25,7 +25,7 @@ This checklist started from commit `dbd5184` when only the legacy `ai_arisha.py`
 - [x] add unit tests for `dataprep`, `features`, and `models` modules
 
 ## 6. Documentation updates
-- update `README.md` with new instructions once modules are in place
+- [x] update `README.md` with new instructions once modules are in place
 - [x] add brief usage notes to `notebooks/README.md`
 
 ## 7. Legacy script

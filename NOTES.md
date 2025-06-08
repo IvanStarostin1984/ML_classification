@@ -42,6 +42,8 @@ corresponding TODO items.
 2025-06-08: Marked tasks complete in TODO and expanded migration notes for commit 536978c.
 2025-06-08: Rewrote TODO introduction to reference dbd5184 and note that modular code, tests and CI now exist.
 2025-06-13: Updated AGENTS.md to list all tests and clarify 4-space indentation standard.
+2025-06-14: Marked README update as complete in TODO.
+2025-06-14: Updated README to remove missing-modules note and confirm the migration is complete.
 2025-06-14: Updated README to remove missing-modules note and confirm the migration is complete.
 2025-06-08: Removed obsolete README statements about missing model pipelines and noted make train runs both models.
 2025-06-14: Renamed project structure heading in AGENTS.md.
