@@ -43,4 +43,6 @@ corresponding TODO items.
 2025-06-08: Rewrote TODO introduction to reference dbd5184 and note that modular code, tests and CI now exist.
 2025-06-13: Updated AGENTS.md to list all tests and clarify 4-space indentation standard.
 
+2025-06-14: Marked README update as complete in TODO.
+
 
