@@ -1,6 +1,6 @@
 # TODO: Modularise the Colab notebook
 
-This checklist started from commit `dbd5184` when only the legacy `ai_arisha.py` and a few docs were present. The project now has modular code under `src/`, a suite of tests and CI workflow. Focus on the outstanding tasks below.
+All migration tasks are complete as of commit `8af97fc`. This checklist started from commit `dbd5184` when only the legacy `ai_arisha.py` and a few docs were present. The project now has modular code under `src/`, a suite of tests and CI workflow.
 
 ## 1. Basic project skeleton
 - [x] create directories: `.github/workflows/`, `src/models/`, `scripts/`, `tests/`, and `notebooks/`
@@ -32,3 +32,6 @@ This checklist started from commit `dbd5184` when only the legacy `ai_arisha.py`
 
 ## 7. Legacy script
 - keep `ai_arisha.py` read-only for reference until the migration is finished
+
+## 8. Evaluation & fairness
+- [x] implement evaluation CLI and fairness metrics
