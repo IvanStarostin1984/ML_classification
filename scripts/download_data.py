@@ -15,8 +15,6 @@ import os
 import sys
 from pathlib import Path
 
-from kaggle.api.kaggle_api_extended import KaggleApi
-
 DATASET = 'architsharma01/loan-approval-prediction-dataset'
 DEST_DIR = Path('data/raw')
 
@@ -32,8 +30,13 @@ def main() -> None:
   if not username or not key:
     sys.exit('Set KAGGLE_USERNAME and KAGGLE_KEY environment variables.')
 
+  # ``KaggleApi`` reads credentials from env vars. Ensure they are set
+  os.environ['KAGGLE_USERNAME'] = username
+  os.environ['KAGGLE_KEY'] = key
+
   DEST_DIR.mkdir(parents=True, exist_ok=True)
 
+  from kaggle.api.kaggle_api_extended import KaggleApi
   api = KaggleApi()
   api.authenticate()
   api.dataset_download_files(DATASET, path=str(DEST_DIR), unzip=True)
