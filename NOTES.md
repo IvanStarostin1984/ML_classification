@@ -64,4 +64,5 @@ corresponding TODO items.
 2025-06-08: Clarified Kaggle credential setup in README.
 2025-06-17: Updated TODO intro to mark migration complete and added evaluation/fairness checklist item.
 2025-06-08: Documented evaluate/train/fairness modules and tests in AGENTS.md directory tree.
+2025-06-18: Cleaned tests and formatted selection/train modules.
 
