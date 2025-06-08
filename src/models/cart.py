@@ -5,7 +5,8 @@ from pathlib import Path
 import joblib
 import pandas as pd
 from sklearn.metrics import roc_auc_score
-from sklearn.pipeline import Pipeline
+from imblearn.base import SamplerMixin
+from imblearn.pipeline import Pipeline
 from sklearn.tree import DecisionTreeClassifier
 
 from ..dataprep import clean
@@ -24,17 +25,24 @@ def load_data(path: str | Path = DATA_PATH) -> pd.DataFrame:
     return FeatureEngineer().transform(df)
 
 
-def build_pipeline(cat_cols: list[str], num_cols: list[str]) -> Pipeline:
+def build_pipeline(
+    cat_cols: list[str], num_cols: list[str], sampler: SamplerMixin | None = None
+) -> Pipeline:
     """Create preprocessing and decision-tree pipeline."""
     preproc = build_preprocessor(num_cols, cat_cols)
     model = DecisionTreeClassifier(random_state=42)
-    return Pipeline([("prep", preproc), ("model", model)])
+    steps = [("prep", preproc)]
+    if sampler is not None:
+        steps.append(("sampler", sampler))
+    steps.append(("model", model))
+    return Pipeline(steps)
 
 
 def train_from_df(
     df: pd.DataFrame,
     target: str = TARGET,
     artefact_path: Path | None = None,
+    sampler: SamplerMixin | None = None,
 ) -> float:
     """Train model on ``df`` and return validation ROC-AUC."""
     train_df, val_df, _ = stratified_split(df, target)
@@ -44,7 +52,7 @@ def train_from_df(
     y_val = val_df[target]
     cat_cols = x_train.select_dtypes(include=["object", "category"]).columns.tolist()
     num_cols = [c for c in x_train.columns if c not in cat_cols]
-    pipe = build_pipeline(cat_cols, num_cols)
+    pipe = build_pipeline(cat_cols, num_cols, sampler)
     pipe.fit(x_train, y_train)
     pred = pipe.predict_proba(x_val)[:, 1]
     auc = roc_auc_score(y_val, pred)
@@ -54,9 +62,13 @@ def train_from_df(
     return auc
 
 
-def main(data_path: str | Path = DATA_PATH) -> None:
+def main(
+    data_path: str | Path = DATA_PATH, sampler: SamplerMixin | None = None
+) -> None:
     df = load_data(data_path)
-    auc = train_from_df(df, artefact_path=Path("artefacts/cart.joblib"))
+    auc = train_from_df(
+        df, artefact_path=Path("artefacts/cart.joblib"), sampler=sampler
+    )
     print(f"Validation ROC-AUC: {auc:.3f}")
 
 
