@@ -1,17 +1,11 @@
 # Migration notes
 
-Current commit: `8520315`.
+Current commit: `354c4fc`.
 
-At this point the repo consists only of the original Colab export `ai_arisha.py`,
-a project `README.md`, `AGENTS.md` and a data licence notice under `data/`.
-None of the planned `src/` modules or CI files exist yet.
-
-The notebook script still contains many Colab-specific commands such as
-`files.upload()` and shell calls (`!pip install`, `!kaggle datasets download`).
-It also mixes data cleaning, feature engineering and model training in one file.
-
-The next step is to break this large script into smaller modules as outlined in
-`TODO.md` and introduce tests plus GitHub Actions.
+The modular refactor is nearly complete. Core helpers and model pipelines live
+under `src/` with corresponding tests and an automated GitHub Actions workflow.
+`make train` now runs the training pipelines, though the README still states
+they are missing.
 
 2025-04-30: Added environment.yml, requirements.txt, Dockerfile, Makefile, .gitignore and LICENSE to start project skeleton.
 2025-06-08: Set up CI workflow and created src/, scripts/ and tests skeletons with a smoke test.
@@ -32,3 +26,4 @@ corresponding TODO items.
 
 2025-06-08: Removed sys.path modification from several test files.
 2025-06-08: Cleaned unused imports, tweaked features formatting and removed sys.path hacking from tests.
+2025-06-12: Updated TODO progress and revised project overview for commit 354c4fc.
