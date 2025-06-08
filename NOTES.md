@@ -55,3 +55,4 @@ corresponding TODO items.
 2025-06-08: integrated FeatureEngineer into model pipelines and updated tests.
 2025-06-08: Added CLI main entry in evaluate.py and updated tests and README.
 
+2025-06-08: Added unit tests for fairness metrics.
