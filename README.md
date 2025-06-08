@@ -54,9 +54,14 @@ make eval             # evaluate trained models and check fairness
 # or individually
 make train-logreg
 make train-cart
+mlcls-train --sampler smote   # run with SMOTE oversampling
 ```
 
 See [data/README.md](data/README.md) for dataset licence notes.
+
+Training produces feature-importance tables (`logreg_coefficients.csv`,
+`cart_importances.csv`) and bar-chart PNGs in `artefacts/`. All generated files
+are recorded in `artefacts/SHA256_manifest.txt` for reproducibility.
 
 `make eval` runs `python -m src.evaluate` to compute test metrics and the worst
 four-fifths ratio across protected groups (pass `--group-col` to override the
@@ -82,6 +87,17 @@ original licence. See [data/README.md](data/README.md) for details.
 docker build -t ml_classification .
 docker run --rm -e KAGGLE_USERNAME=$KAGGLE_USERNAME -e KAGGLE_KEY=$KAGGLE_KEY ml_classification
 ```
+
+## Model calibration
+
+Run the calibration helper after training to create reliability plots:
+
+```bash
+python -m src.calibration
+```
+
+This saves `logreg_calibration.png` and `cart_calibration.png` (plus
+`*_calibrated.joblib` models) in `artefacts/`.
 
 ---
 

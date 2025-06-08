@@ -76,6 +76,7 @@ corresponding TODO items.
 2025-06-08: expanded evaluate metrics and CV, added new tests
 2025-06-21: Added calibration module with CLI and tests for model probability calibration.
 2025-06-08: added feature_importance module exporting logistic coefficients and tree importances with tests.
-
 2025-06-21: Added sampler option to training pipeline and oversampling tests.
+2025-06-22: Documented sampler CLI, calibration command, feature-importance outputs and manifest in README.
 2025-06-22: Cleaned TODO to remove outdated missing-feature notes.
+
