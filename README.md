@@ -36,11 +36,17 @@ pip install -e .
 # If you used conda, activate the environment
 conda activate ml-classification
 
-# Download the Kaggle dataset (needs KAGGLE_USERNAME and KAGGLE_KEY env vars)
+# Provide your Kaggle API token before downloading the dataset.
+# Either place `kaggle.json` under `~/.kaggle/` or export the
+# `KAGGLE_USERNAME` and `KAGGLE_KEY` environment variables:
+#
+#   export KAGGLE_USERNAME=your_username
+#   export KAGGLE_KEY=your_key
+#
+# Download the Kaggle dataset
 python scripts/download_data.py
 
-# The raw CSVs land in `data/raw/` (git-ignored). Make sure your Kaggle
-# credentials are set via environment variables or `~/.kaggle/kaggle.json`.
+# The raw CSVs land in `data/raw/` (git-ignored).
 
 # Train, evaluate and store artefacts in artefacts/
 make train            # run both models

@@ -59,3 +59,4 @@ corresponding TODO items.
 
 2025-06-08: Added unit tests for fairness metrics.
 2025-06-08: Wrapped VIF computation in warnings and numpy error state contexts to avoid RuntimeWarning when columns are perfectly collinear.
+2025-06-08: Clarified Kaggle credential setup in README.
