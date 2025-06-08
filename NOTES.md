@@ -78,3 +78,4 @@ corresponding TODO items.
 2025-06-08: added feature_importance module exporting logistic coefficients and tree importances with tests.
 
 2025-06-21: Added sampler option to training pipeline and oversampling tests.
+2025-06-22: Documented sampler CLI, calibration command, feature-importance outputs and manifest in README.
