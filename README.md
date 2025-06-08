@@ -41,12 +41,16 @@ python scripts/download_data.py
 
 # Train, evaluate and store artefacts in artefacts/
 make train            # run both models
+make eval             # evaluate trained models and check fairness
 # or individually
 make train-logreg
 make train-cart
 ```
 
 See [data/README.md](data/README.md) for dataset licence notes.
+
+`make eval` prints test-set metrics and the worst four-fifths ratio across
+protected groups. A ratio below **0.8** warns of possible bias.
 
 **Prefer Docker?**
 
