@@ -12,3 +12,5 @@ It also mixes data cleaning, feature engineering and model training in one file.
 
 The next step is to break this large script into smaller modules as outlined in
 `TODO.md` and introduce tests plus GitHub Actions.
+
+2025-04-30: Added environment.yml, requirements.txt, Dockerfile, Makefile, .gitignore and LICENSE to start project skeleton.

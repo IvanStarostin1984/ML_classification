@@ -4,7 +4,7 @@ The repository at commit dbd5184 only contains the legacy `ai_arisha.py` script,
 
 ## 1. Basic project skeleton
 - create directories: `.github/workflows/`, `src/models/`, `scripts/`, `tests/`, and `notebooks/`
-- add minimal files listed in `AGENTS.md` and `README.md`: `environment.yml`, `requirements.txt`, `Dockerfile`, `Makefile`, `LICENSE`, `.gitignore`
+- [x] add minimal files listed in `AGENTS.md` and `README.md`: `environment.yml`, `requirements.txt`, `Dockerfile`, `Makefile`, `LICENSE`, `.gitignore`
 
 ## 2. Data utilities
 - implement `scripts/download_data.py` to fetch the Kaggle dataset using `KAGGLE_USERNAME` and `KAGGLE_KEY`
