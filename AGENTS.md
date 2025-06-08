@@ -1,4 +1,4 @@
-# Contributor Guidelines for Stock-App1
+# Contributor Guidelines for ML_classification
 
 This repository hosts ML classifier (trees and logistic classifier).  Follow these rules when adding or updating code.
 
