@@ -58,10 +58,9 @@ docker run --rm -e KAGGLE_USERNAME=$KAGGLE_USERNAME -e KAGGLE_KEY=$KAGGLE_KEY ml
 ---
 
 ## Repository layout
-The project follows the target directory layout. Logistic regression and
-decision-tree pipelines reside under `src/models`, so running `make train`
-executes both models.
-The project now includes feature engineering and helper utilities under `src/`, but model training pipelines are still missing so `make train` fails.
+The project follows the target directory layout. Running `make train` now
+executes both the logistic regression and decision-tree pipelines located under
+`src/models`.
 
 ```
 ai_arisha.py             ← legacy Colab script (read-only)
@@ -70,7 +69,6 @@ AGENTS.md                ← contributor guidelines and architecture notes
 scripts/download_data.py ← Kaggle dataset pull helper
 src/                     ← Python package skeleton
 src/models/              ← logistic regression and tree pipelines
-src/models/              ← model pipelines (to be implemented)
 src/features.py          ← FeatureEngineer class
 src/diagnostics.py       ← chi-square & correlation plots
 src/preprocessing.py     ← ColumnTransformer helpers
