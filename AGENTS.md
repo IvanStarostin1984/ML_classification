@@ -40,6 +40,9 @@ ML_classification/
 │   ├─ preprocessing.py             # ColumnTransformers
 │   ├─ selection.py                 # VIF, RFE, tree selector
 │   ├─ split.py                     # stratified train/test logic
+│   ├─ evaluate.py                  # nested CV + fairness metrics
+│   ├─ fairness.py                  # fairness helpers
+│   ├─ train.py                     # orchestrates pipelines
 │   └─ models/
 │       ├─ __init__.py
 │       ├─ logreg.py                # LR training / eval pipeline
@@ -52,7 +55,9 @@ ML_classification/
 │   ├─ test_download_data.py        # tests the data download script
 │   ├─ test_preprocessing.py        # preprocessing pipeline tests
 │   ├─ test_selection.py            # feature selection helpers
-│   └─ test_diagnostics.py          # diagnostic utilities
+│   ├─ test_diagnostics.py          # diagnostic utilities
+│   ├─ test_evaluate.py             # tests for the evaluation CLI
+│   └─ test_fairness.py             # tests for fairness metrics
 ├─ environment.yml                  # Conda spec (Python ≥ 3.10)
 ├─ requirements.txt                 # pip fallback
 ├─ Dockerfile                       # reproducible container build
