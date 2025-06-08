@@ -30,8 +30,14 @@ cd ML_classification
 # Set up the environment
 pip install -r requirements.txt          # or: conda env create -f environment.yml
 
+# If you used conda, activate the environment
+conda activate ml-classification
+
 # Download the Kaggle dataset (needs KAGGLE_USERNAME and KAGGLE_KEY env vars)
 python scripts/download_data.py
+
+# The raw CSVs land in `data/raw/` (git-ignored). Make sure your Kaggle
+# credentials are set via environment variables or `~/.kaggle/kaggle.json`.
 
 # Train, evaluate and store artefacts in artefacts/
 make train
