@@ -21,7 +21,7 @@ The repository at commit dbd5184 only contains the legacy `ai_arisha.py` script,
 - expose a simple command line entry point (e.g. `make train` or `python -m src.models.logreg`)
 
 ## 5. Tests and CI
-- add `tests/test_smoke.py` importing each module
+- [x] add `tests/test_smoke.py` importing each module
 - set up GitHub Actions workflow `ci.yml` running flake8/black and `pytest`
 
 ## 6. Documentation updates
