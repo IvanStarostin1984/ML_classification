@@ -14,7 +14,7 @@ from ..preprocessing import build_preprocessor
 from ..split import stratified_split
 
 DATA_PATH = Path("data/raw/loan_approval_dataset.csv")
-TARGET = "Loan_Status"
+TARGET = "loan_status"
 
 
 def load_data(path: Path = DATA_PATH) -> pd.DataFrame:
