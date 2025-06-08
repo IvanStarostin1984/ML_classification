@@ -4,6 +4,8 @@ This repository hosts ML classifier (trees and logistic classifier).  Follow the
 
 Your job is to migrate Google Colab notebook ai_arisha.py to several classes github repo in line with README.md to showcase my work.
 
+The style rules apply to new code under `src/` and tests, while `ai_arisha.py` is kept as-is for reference
+
 # Important — Not authoritative:
 1. This file is only a quick-start contributor guide.
 2. Your job is to adapt google colab python code to Github.
