@@ -57,3 +57,4 @@ corresponding TODO items.
 2025-06-08: Added project metadata in pyproject.toml and exposed src as installable package. README now documents 'pip install -e .' for development.
 2025-06-08: Added src/train.py CLI orchestrating both models and updated Makefile to use it.
 
+2025-06-08: Added unit tests for fairness metrics.
