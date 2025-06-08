@@ -1,6 +1,6 @@
 # Migration notes
 
-Current commit: `dbd5184`.
+Current commit: `0d11a70`.
 
 At this point the repo consists only of the original Colab export `ai_arisha.py`,
 a project `README.md`, `AGENTS.md` and a data licence notice under `data/`.
@@ -12,3 +12,6 @@ It also mixes data cleaning, feature engineering and model training in one file.
 
 The next step is to break this large script into smaller modules as outlined in
 `TODO.md` and introduce tests plus GitHub Actions.
+
+Initial skeleton modules under `src/` were created along with a smoke test to
+ensure they can all be imported.
