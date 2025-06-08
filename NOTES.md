@@ -81,3 +81,4 @@ corresponding TODO items.
 2025-06-22: Cleaned TODO to remove outdated missing-feature notes.
 
 2025-06-08: Removed extra blank lines in src/__init__.py to satisfy flake8.
+2025-06-08: Fixed indentation in train-cart, train, eval commands in Makefile.
