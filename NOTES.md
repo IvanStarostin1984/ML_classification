@@ -72,5 +72,6 @@ corresponding TODO items.
 2025-06-08: refactored FeatureEngineer.transform into helper methods to meet function length rule. Added docstrings and updated tests. Black and pytest fail due to pyproject parsing error.
 2025-06-18: Added --data-path option to mlcls-train and updated tests.
 2025-06-20: Added CITATION.cff for citation metadata.
-
 2025-06-21: Added plotting helpers and manifest writer with tests.
+2025-06-08: expanded evaluate metrics and CV, added new tests
+
