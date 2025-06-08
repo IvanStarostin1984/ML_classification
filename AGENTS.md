@@ -66,7 +66,7 @@ ML_classification/
 - **Ensure local tests pass** before opening a PR.
 - **Each PR requires at least one reviewer.**
 
-to understand the current stage, past decisions, and open questions tied to the spec.
+Read `NOTES.md` and `TODO.md` to understand the current stage, past decisions, and open questions tied to the spec.
 
 Refer to `README.md` and full documentation in `docs/` for further details on features and architecture.
 
