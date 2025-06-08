@@ -4,7 +4,8 @@ train-logreg:
 train-cart:
         python -m src.models.cart
 
-train: train-logreg train-cart
+train:
+        python -m src.train
 
 eval:
 	python -m src.evaluate
