@@ -73,3 +73,4 @@ corresponding TODO items.
 2025-06-18: Added --data-path option to mlcls-train and updated tests.
 2025-06-20: Added CITATION.cff for citation metadata.
 
+2025-06-08: added feature_importance module exporting logistic coefficients and tree importances with tests.
