@@ -1,6 +1,6 @@
 # Migration notes
 
-Current commit: `536978c`.
+Current commit: `0174b25`.
 
 
 The modular refactor is nearly complete. Core helpers and model pipelines live
@@ -14,8 +14,8 @@ the project `README.md`, `AGENTS.md` and the data licence notice under `data/`.
 The notebook script still contains many Colab-specific commands such as
 `files.upload()` and shell calls (`!pip install`, `!kaggle datasets download`).
 It also mixes data cleaning, feature engineering and model training in one file.
-The next step is to break this large script into smaller modules as outlined in
-`TODO.md` and introduce tests plus GitHub Actions.
+The notebook remains for reference and all modular helpers and CI are now in
+place.
 
 
 2025-04-30: Added environment.yml, requirements.txt, Dockerfile, Makefile, .gitignore and LICENSE to start project skeleton.
@@ -42,5 +42,7 @@ corresponding TODO items.
 2025-06-08: Marked tasks complete in TODO and expanded migration notes for commit 536978c.
 2025-06-08: Rewrote TODO introduction to reference dbd5184 and note that modular code, tests and CI now exist.
 2025-06-13: Updated AGENTS.md to list all tests and clarify 4-space indentation standard.
+
+2025-06-14: Updated README to remove missing-modules note and confirm the migration is complete.
 
 
