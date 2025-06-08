@@ -52,5 +52,6 @@ corresponding TODO items.
 2025-06-15: Added PYTHONPATH env var in CI to fix ModuleNotFoundError during tests.
 2025-06-16: Added evaluate.py with nested CV and fairness metrics plus tests.
 2025-06-16: Added make eval target and expanded README with evaluation instructions and fairness guidance.
-
+2025-06-08: integrated FeatureEngineer into model pipelines and updated tests.
 2025-06-08: Added CLI main entry in evaluate.py and updated tests and README.
+
