@@ -70,3 +70,5 @@ corresponding TODO items.
 2025-06-08: Updated download_data to check CSV existence before using Kaggle API and expanded tests.
 2025-06-08: Added console script entrypoints and tests invoking them.
 
+
+2025-06-18: Removed duplicate [project.scripts] block from pyproject.toml to fix TOML parsing for black and pytest.
