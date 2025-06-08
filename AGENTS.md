@@ -41,6 +41,9 @@ ML_classification/
 │       ├─ logreg.py                # LR training / eval pipeline
 │       └─ cart.py                  # Decision-Tree pipeline
 ├─ tests/
+│   ├─ test_dataprep.py             # unit tests for data loading
+│   ├─ test_features.py             # unit tests for feature engineering
+│   ├─ test_models.py               # unit tests for modelling pipelines
 │   └─ test_smoke.py                # CI sanity import check
 ├─ environment.yml                  # Conda spec (Python ≥ 3.10)
 ├─ requirements.txt                 # pip fallback
