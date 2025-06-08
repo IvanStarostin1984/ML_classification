@@ -7,22 +7,22 @@ The repository at commit dbd5184 only contains the legacy `ai_arisha.py` script,
 - [x] add minimal files listed in `AGENTS.md` and `README.md`: `environment.yml`, `requirements.txt`, `Dockerfile`, `Makefile`, `LICENSE`, `.gitignore`
 
 - [x] implement `scripts/download_data.py` to fetch the Kaggle dataset using `KAGGLE_USERNAME` and `KAGGLE_KEY`
-- write `src/dataprep.py` to load the raw CSV and perform basic cleaning
+- [x] write `src/dataprep.py` to load the raw CSV and perform basic cleaning
 
 ## 3. Feature engineering
-- move the lengthy feature engineering block from `ai_arisha.py` into `src/features.py`
-- split out diagnostic plots and chi-square analysis into `src/diagnostics.py`
-- provide preprocessing helpers under `src/preprocessing.py` and feature selection logic under `src/selection.py`
+- [x] move the lengthy feature engineering block from `ai_arisha.py` into `src/features.py`
+- [x] split out diagnostic plots and chi-square analysis into `src/diagnostics.py`
+- [x] provide preprocessing helpers under `src/preprocessing.py` and feature selection logic under `src/selection.py`
 
 ## 4. Modelling pipelines
-- add `src/models/logreg.py` and `src/models/cart.py` for logistic regression and decision-tree pipelines respectively
-- create `src/split.py` with stratified train/validation/test split utilities
-- expose a simple command line entry point (e.g. `make train` or `python -m src.models.logreg`)
+- [x] add `src/models/logreg.py` and `src/models/cart.py` for logistic regression and decision-tree pipelines respectively
+- [x] create `src/split.py` with stratified train/validation/test split utilities
+- [x] expose a simple command line entry point (e.g. `make train` or `python -m src.models.logreg`)
 
 ## 5. Tests and CI
 - [x] add `tests/test_smoke.py` importing each module
 - [x] set up GitHub Actions workflow `ci.yml` running flake8/black and `pytest`
-- add unit tests for `dataprep`, `features`, and `models` modules
+- [x] add unit tests for `dataprep`, `features`, and `models` modules
 
 ## 6. Documentation updates
 - update `README.md` with new instructions once modules are in place
