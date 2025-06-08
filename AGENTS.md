@@ -8,6 +8,7 @@ Your job is to migrate Google Colab notebook ai_arisha.py to several classes git
 1. This file is only a quick-start contributor guide.
 2. Your job is to adapt google colab python code to Github.
 3. KAGGLE_USERNAME, KAGGLE_KEY are in secrets
+4. Never commit downloaded Kaggle data or personal API keys
 
 # Proposed project structure:
 ML_classification/
