@@ -40,4 +40,7 @@ corresponding TODO items.
 2025-06-12: Updated migration notes to reflect commit 354c4fc and mention completed src modules, tests and CI.
 2025-06-08: Updated AGENTS.md project structure tests section to list module unit tests.
 2025-06-08: Marked tasks complete in TODO and expanded migration notes for commit 536978c.
+2025-06-08: Rewrote TODO introduction to reference dbd5184 and note that modular code, tests and CI now exist.
+2025-06-13: Updated AGENTS.md to list all tests and clarify 4-space indentation standard.
+
 
