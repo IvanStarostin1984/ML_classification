@@ -1,7 +1,6 @@
 """Feature selection helpers."""
 from __future__ import annotations
 
-import numpy as np
 import pandas as pd
 from statsmodels.stats.outliers_influence import variance_inflation_factor as vif
 from sklearn.ensemble import ExtraTreesClassifier
@@ -15,7 +14,12 @@ def calculate_vif(df: pd.DataFrame, cols: list[str]) -> pd.Series:
   return pd.Series([vif(arr, i) for i in range(arr.shape[1])], index=cols)
 
 
-def tree_feature_selector(X: pd.DataFrame, y: pd.Series, n_estimators: int = 100, top: int = 10) -> list[str]:
+def tree_feature_selector(
+  X: pd.DataFrame,
+  y: pd.Series,
+  n_estimators: int = 100,
+  top: int = 10,
+) -> list[str]:
   """Select important features using an ExtraTrees classifier."""
   clf = ExtraTreesClassifier(n_estimators=n_estimators, random_state=0)
   clf.fit(X, y)

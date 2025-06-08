@@ -2,7 +2,6 @@
 from __future__ import annotations
 
 import pandas as pd
-import numpy as np
 import seaborn as sns
 import matplotlib.pyplot as plt
 from scipy.stats import chi2_contingency
