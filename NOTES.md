@@ -19,7 +19,7 @@ The next step is to break this large script into smaller modules as outlined in
 2025-06-09: Added kaggle, flake8, black and pytest to environment files for CI.
 2025-06-08: Updated README repository layout section to match existing folders and note that model modules are missing, so make train fails.
 2025-06-08: Marked directory creation as complete in TODO and noted CI workflow.
-
+2025-06-08: Introduced FeatureEngineer class and helper modules with unit tests.
 2025-06-08: Added dataset handling instructions and conda activation notes to
 README. Documented notebook usage in `notebooks/README.md` and checked off the
 corresponding TODO items.
