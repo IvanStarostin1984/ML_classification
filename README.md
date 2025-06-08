@@ -48,6 +48,10 @@ docker run --rm -e KAGGLE_USERNAME=$KAGGLE_USERNAME -e KAGGLE_KEY=$KAGGLE_KEY ml
 
 ## Repository layout
 
+Note: at the moment this repo only includes the legacy `ai_arisha.py` notebook
+and this `AGENTS.md` guide. The modular directory tree listed below is the
+intended structure that will be implemented over time.
+
 ```
 ai_arisha.py            ← original Colab notebook (read-only legacy)
 AGENTS.md               ← contributor guidelines & architecture notes
