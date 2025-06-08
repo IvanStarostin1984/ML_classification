@@ -33,7 +33,10 @@ pip install -r requirements.txt          # or: conda env create -f environment.y
 python scripts/download_data.py
 
 # Train, evaluate and store artefacts in artefacts/
-make train
+make train            # run both models
+# or individually
+make train-logreg
+make train-cart
 ```
 
 See [data/README.md](data/README.md) for dataset licence notes.
@@ -49,9 +52,9 @@ docker run --rm -e KAGGLE_USERNAME=$KAGGLE_USERNAME -e KAGGLE_KEY=$KAGGLE_KEY ml
 
 ## Repository layout
 
-The project already follows the target directory layout, but most modules under
-`src/` are only placeholders. Model implementations are still missing, so
-`make train` will fail until they are added.
+The project follows the target directory layout. Logistic regression and
+decision-tree pipelines reside under `src/models`, so running `make train`
+executes both models.
 
 ```
 ai_arisha.py             ← legacy Colab script (read-only)
@@ -59,7 +62,7 @@ AGENTS.md                ← contributor guidelines and architecture notes
 .github/workflows/ci.yml ← CI pipeline (Black, flake8, pytest)
 scripts/download_data.py ← Kaggle dataset pull helper
 src/                     ← Python package skeleton
-src/models/              ← model pipelines (to be implemented)
+src/models/              ← logistic regression and tree pipelines
 tests/                   ← pytest suite
 data/README.md           ← dataset licence notes
 notebooks/README.md      ← Colab/Binder demo stub
