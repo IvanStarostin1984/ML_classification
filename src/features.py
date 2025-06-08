@@ -18,7 +18,7 @@ class FeatureEngineer:
     """Return engineered feature DataFrame."""
     df_fe = df.copy(deep=True)
     df_fe.columns = (
-      df_fe.columns
+        df_fe.columns
         .str.strip()
         .str.lower()
         .str.replace(r"[ \t\-/]+", '', regex=True)
