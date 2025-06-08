@@ -74,5 +74,6 @@ corresponding TODO items.
 2025-06-20: Added CITATION.cff for citation metadata.
 2025-06-21: Added plotting helpers and manifest writer with tests.
 2025-06-08: expanded evaluate metrics and CV, added new tests
-
+2025-06-21: Added calibration module with CLI and tests for model probability calibration.
 2025-06-08: added feature_importance module exporting logistic coefficients and tree importances with tests.
+
