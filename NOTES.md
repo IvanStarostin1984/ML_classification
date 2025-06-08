@@ -26,3 +26,4 @@ corresponding TODO items.
 2025-06-10: Implemented Kaggle download script with env auth, added dataprep module and unit tests.
 2025-06-10: Added train/eval modules for logistic regression and decision tree with stratified split utility. Updated Makefile, Dockerfile, README and added basic model tests.
 
+2025-06-10: Removed unused numpy imports from diagnostics and selection modules.
