@@ -1,5 +1,7 @@
 """ML classification utilities."""
 
+__version__ = "0.1.0"
+
 from .features import FeatureEngineer
 from .diagnostics import chi_square_tests, correlation_heatmap
 from .preprocessing import build_preprocessor, safe_transform

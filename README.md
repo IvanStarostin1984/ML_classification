@@ -32,6 +32,8 @@ pip install -r requirements.txt          # or: conda env create -f environment.y
 
 # Install the project in editable mode for development
 pip install -e .
+# Or install normally
+pip install .
 
 # If you used conda, activate the environment
 conda activate ml-classification
@@ -65,7 +67,7 @@ stdout. A ratio below **0.8** warns of possible bias.
 
 ## Command-line usage
 
-After installing the project in editable mode you get two console commands:
+After installing the project (e.g., `pip install .` or `pip install -e .`) you get two console commands:
 
 ```bash
 pip install -e .

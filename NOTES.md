@@ -70,3 +70,4 @@ corresponding TODO items.
 2025-06-08: Updated download_data to check CSV existence before using Kaggle API and expanded tests.
 2025-06-08: Added console script entrypoints and tests invoking them.
 
+2025-06-08: removed duplicate scripts block, added __version__, added pip install docs
