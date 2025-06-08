@@ -44,3 +44,4 @@ corresponding TODO items.
 2025-06-13: Updated AGENTS.md to list all tests and clarify 4-space indentation standard.
 
 
+2025-06-08: Removed obsolete README statements about missing model pipelines and noted make train runs both models.
