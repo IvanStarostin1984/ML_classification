@@ -41,8 +41,6 @@ All migration tasks are complete as of commit `8af97fc`. This checklist started 
 
 Inspection of ai_arisha.py reveals several features that were not ported to the src/ modules:
 
-Oversampling strategies
-The notebook implements multiple imbalance-handling techniques (SMOTE, SMOTENC, SMOTEN, RandomOverSampler, RandomUnderSampler, SMOTETomek). None of these are present in src/models where pipelines always train on the original class distribution.
 
 Extensive hyper‑parameter grids
 ai_arisha.py defines larger parameter grids for both logistic regression and decision tree models (e.g. varying C, penalty, class_weight, tree depth, leaf size). The modular code has minimal grids of two values for each model.
@@ -50,15 +48,4 @@ ai_arisha.py defines larger parameter grids for both logistic regression and dec
 Repeated cross‑validation and bootstrap logic
 The original script uses RepeatedStratifiedKFold and falls back to bootstrapping when the minority class is small, recording confidence intervals over folds. The modular code runs a single 3×3 nested CV without bootstrapping.
 
-Probability calibration
-The notebook applies CalibratedClassifierCV and plots calibration curves. There is no calibration step or plotting in the modular pipeline.
-
-Feature importance and coefficient export
-The Colab script saves logistic regression coefficients (odds ratios) and decision‑tree feature importances to CSV and PNG files. The modular code does not extract or persist these artefacts.
-
-Extra evaluation metrics
-Metrics such as F1 score, recall, specificity and balanced accuracy (reported per group) are missing. Current evaluation only records ROC‑AUC, PR‑AUC and a fairness ratio.
-
-Graphical artefacts and manifest
-The notebook saves ROC/PR boxplots, fairness bar charts and a manifest summarising environment details and artefact checksums. These outputs are absent from the refactored version.
-
+Oversampling options, probability calibration, feature importance export, extended metrics and manifest writing were implemented in commit `0c16cae`.
