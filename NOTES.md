@@ -50,3 +50,4 @@ corresponding TODO items.
 2025-06-08: Refreshed README repository layout and checked TODO item.
 2025-06-08: Adjusted CI workflow to invoke pytest via python -m.
 2025-06-15: Added PYTHONPATH env var in CI to fix ModuleNotFoundError during tests.
+2025-06-16: Added fairness module with four_fifths_ratio helper and unit tests.
