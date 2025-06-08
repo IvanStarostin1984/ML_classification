@@ -67,3 +67,4 @@ corresponding TODO items.
 2025-06-18: Cleaned tests and formatted selection/train modules.
 
 2025-06-08: Expanded Testing & CI guidelines in AGENTS.md to describe flake8, black, pytest workflow.
+2025-06-18: documented new mlcls-* console scripts and usage.
