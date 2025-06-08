@@ -1,4 +1,6 @@
 import pandas as pd
+import pytest
+import warnings
 from src.selection import calculate_vif, tree_feature_selector
 
 
@@ -10,6 +12,13 @@ def test_vif_returns_series():
   })
   res = calculate_vif(df, ['a', 'b'])
   assert res.index.tolist() == ['a', 'b']
+
+
+def test_vif_no_warning():
+  df = pd.DataFrame({'a': [1.0, 2.0, 3.0], 'b': [2.0, 4.0, 6.0]})
+  with warnings.catch_warnings(record=True) as w:
+    calculate_vif(df, ['a', 'b'])
+  assert not w
 
 
 def test_tree_selector():

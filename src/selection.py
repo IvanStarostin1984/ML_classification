@@ -2,6 +2,9 @@
 
 from __future__ import annotations
 
+import warnings
+
+import numpy as np
 import pandas as pd
 from statsmodels.stats.outliers_influence import (
     variance_inflation_factor as vif,
@@ -14,7 +17,11 @@ __all__ = ["calculate_vif", "tree_feature_selector"]
 def calculate_vif(df: pd.DataFrame, cols: list[str]) -> pd.Series:
     """Return variance inflation factors for numeric columns."""
     arr = df[cols].to_numpy(float)
-    return pd.Series([vif(arr, i) for i in range(arr.shape[1])], index=cols)
+    with warnings.catch_warnings():
+        warnings.simplefilter('ignore', category=RuntimeWarning)
+        with np.errstate(divide='ignore'):
+            vals = [vif(arr, i) for i in range(arr.shape[1])]
+    return pd.Series(vals, index=cols)
 
 
 def tree_feature_selector(
