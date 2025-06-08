@@ -11,7 +11,9 @@ from .preprocessing import build_preprocessor, safe_transform
 from .selection import calculate_vif, tree_feature_selector
 from .evaluate import evaluate_models
 from .fairness import four_fifths_ratio, youden_threshold
+from .feature_importance import logreg_coefficients, tree_feature_importances
 from .manifest import write_manifest
+
 
 __all__ = [
     "FeatureEngineer",
@@ -26,5 +28,7 @@ __all__ = [
     "evaluate_models",
     "four_fifths_ratio",
     "youden_threshold",
-    "write_manifest",
+    "logreg_coefficients",
+    "tree_feature_importances",
+    "write_manifest"
 ]

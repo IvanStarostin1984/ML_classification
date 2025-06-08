@@ -75,3 +75,4 @@ corresponding TODO items.
 2025-06-21: Added plotting helpers and manifest writer with tests.
 2025-06-08: expanded evaluate metrics and CV, added new tests
 
+2025-06-08: added feature_importance module exporting logistic coefficients and tree importances with tests.
