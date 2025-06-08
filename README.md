@@ -1,4 +1,3 @@
-````markdown
 # ML_classification
 
 > **A tidy, production-ready re-implementation of my Google Colab notebook for predicting loan approvals with logistic regression and decision-tree pipelines.**
@@ -35,7 +34,7 @@ python scripts/download_data.py
 
 # Train, evaluate and store artefacts in artefacts/
 make train
-````
+```
 
 **Prefer Docker?**
 
@@ -92,5 +91,3 @@ Values reproduced from the accompanying statistical report.&#x20;
 
 **Ivan Starostin** – [LinkedIn](https://www.linkedin.com/in/ivanstarostin/)
 
-```
-```
