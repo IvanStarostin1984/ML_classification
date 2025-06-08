@@ -78,7 +78,11 @@ ML_classification/
 
 
 ## Testing & CI
-- Run tests before committing.
+- The GitHub Actions workflow (`.github/workflows/ci.yml`) runs `flake8`,
+  `black --check .` and `pytest` on Python&nbsp;3.10.
+- Run these commands locally before committing to ensure your code passes the
+  same checks.
+- Black uses a line length of **88** as configured in `pyproject.toml`.
 
 ## Contributing Workflow
 - **Fork** then branch off `main` using the pattern `feat/<topic>`.

@@ -65,3 +65,4 @@ corresponding TODO items.
 2025-06-17: Updated TODO intro to mark migration complete and added evaluation/fairness checklist item.
 2025-06-08: Documented evaluate/train/fairness modules and tests in AGENTS.md directory tree.
 
+2025-06-08: Expanded Testing & CI guidelines in AGENTS.md to describe flake8, black, pytest workflow.
