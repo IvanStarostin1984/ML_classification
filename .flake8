@@ -1,0 +1,4 @@
+[flake8]
+exclude = ai_arisha.py
+indent-size = 2
+max-line-length = 88
