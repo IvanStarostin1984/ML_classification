@@ -1,6 +1,9 @@
 # Migration notes
 
-Current commit: `0174b25`.
+Current commit: `8af97fc`.
+
+2025-06-18: Evaluation and fairness modules are in place with passing tests and
+README instructions describing the workflow.
 
 
 The modular refactor is nearly complete. Core helpers and model pipelines live
