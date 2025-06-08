@@ -17,6 +17,7 @@
 * **One-command reproducibility** – `make train` or `docker compose up` trains the models and regenerates all artefacts.
 * **CI/CD ready** – GitHub Actions lint + pytest on every push.
 
+* **Modular utilities** – feature engineering and diagnostics are available as importable helpers.
 ---
 
 ## Quick-start
@@ -29,8 +30,14 @@ cd ML_classification
 # Set up the environment
 pip install -r requirements.txt          # or: conda env create -f environment.yml
 
+# If you used conda, activate the environment
+conda activate ml-classification
+
 # Download the Kaggle dataset (needs KAGGLE_USERNAME and KAGGLE_KEY env vars)
 python scripts/download_data.py
+
+# The raw CSVs land in `data/raw/` (git-ignored). Make sure your Kaggle
+# credentials are set via environment variables or `~/.kaggle/kaggle.json`.
 
 # Train, evaluate and store artefacts in artefacts/
 make train            # run both models
@@ -51,10 +58,10 @@ docker run --rm -e KAGGLE_USERNAME=$KAGGLE_USERNAME -e KAGGLE_KEY=$KAGGLE_KEY ml
 ---
 
 ## Repository layout
-
 The project follows the target directory layout. Logistic regression and
 decision-tree pipelines reside under `src/models`, so running `make train`
 executes both models.
+The project now includes feature engineering and helper utilities under `src/`, but model training pipelines are still missing so `make train` fails.
 
 ```
 ai_arisha.py             ← legacy Colab script (read-only)
@@ -63,6 +70,11 @@ AGENTS.md                ← contributor guidelines and architecture notes
 scripts/download_data.py ← Kaggle dataset pull helper
 src/                     ← Python package skeleton
 src/models/              ← logistic regression and tree pipelines
+src/models/              ← model pipelines (to be implemented)
+src/features.py          ← FeatureEngineer class
+src/diagnostics.py       ← chi-square & correlation plots
+src/preprocessing.py     ← ColumnTransformer helpers
+src/selection.py         ← VIF & tree-based selector
 tests/                   ← pytest suite
 data/README.md           ← dataset licence notes
 notebooks/README.md      ← Colab/Binder demo stub
