@@ -49,3 +49,4 @@ corresponding TODO items.
 2025-06-14: Renamed project structure heading in AGENTS.md.
 
 2025-06-08: Adjusted CI workflow to invoke pytest via python -m.
+2025-06-15: Added PYTHONPATH env var in CI to fix ModuleNotFoundError during tests.
