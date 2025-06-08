@@ -6,6 +6,8 @@ Your job is to migrate Google Colab notebook ai_arisha.py to several classes git
 
 The style rules apply to new code under `src/` and tests, while `ai_arisha.py` is kept as-is for reference
 
+TODO.md, NOTES.md AGENTS.md may be not perfectly aligned with current project status. Always recheck in actual code.
+
 # Important — Not authoritative:
 1. This file is only a quick-start contributor guide.
 2. Your job is to adapt google colab python code to Github.
