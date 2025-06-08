@@ -19,10 +19,10 @@ class FeatureEngineer:
     df_fe = df.copy(deep=True)
     df_fe.columns = (
       df_fe.columns
-        .str.strip()
-        .str.lower()
-        .str.replace(r"[ \t\-/]+", '', regex=True)
-        .str.replace(r"[^\w]", '', regex=True)
+      .str.strip()
+      .str.lower()
+      .str.replace(r"[ \t\-/]+", '', regex=True)
+      .str.replace(r"[^\w]", '', regex=True)
     )
 
     def _zeros() -> pd.Series:
@@ -116,7 +116,9 @@ class FeatureEngineer:
     df_fe['graduate_flag'] = (
       df_fe['education'].str.lower().str.contains('graduate').astype(int)
     )
-    df_fe['income_times_graduate'] = df_fe['total_income_month'] * df_fe['graduate_flag']
+    df_fe['income_times_graduate'] = (
+      df_fe['total_income_month'] * df_fe['graduate_flag']
+    )
     df_fe['self_employed_flag'] = (
       df_fe['self_employed'].astype(str).str.lower().isin(['yes', 'y', '1']).astype(int)
     )
@@ -130,7 +132,16 @@ class FeatureEngineer:
       (df_fe['loan_amount'] / (df_fe['total_assets'] + 1e-6) > 0.80)
     ).astype(int)
 
-    cat_cols = [c for c in ['gender', 'married', 'self_employed', 'property_area'] if c in df_fe.columns]
+    cat_cols = [
+      c
+      for c in [
+        'gender',
+        'married',
+        'self_employed',
+        'property_area',
+      ]
+      if c in df_fe.columns
+    ]
     if cat_cols:
       df_fe = pd.get_dummies(df_fe, columns=cat_cols, prefix_sep='=', drop_first=True)
     bool_cols = df_fe.select_dtypes('bool').columns
