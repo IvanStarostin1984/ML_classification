@@ -1,9 +1,9 @@
 # Migration notes
 
 Current commit: `8af97fc`.
-
 2025-06-18: Evaluation and fairness modules are in place with passing tests and
 README instructions describing the workflow.
+
 
 
 The modular refactor is nearly complete. Core helpers and model pipelines live
@@ -59,9 +59,10 @@ corresponding TODO items.
 2025-06-08: Added CLI main entry in evaluate.py and updated tests and README.
 2025-06-08: Added project metadata in pyproject.toml and exposed src as installable package. README now documents 'pip install -e .' for development.
 2025-06-08: Added src/train.py CLI orchestrating both models and updated Makefile to use it.
-
 2025-06-08: Added unit tests for fairness metrics.
 2025-06-08: Wrapped VIF computation in warnings and numpy error state contexts to avoid RuntimeWarning when columns are perfectly collinear.
 2025-06-08: Clarified Kaggle credential setup in README.
+2025-06-17: Updated TODO intro to mark migration complete and added evaluation/fairness checklist item.
 2025-06-08: Documented evaluate/train/fairness modules and tests in AGENTS.md directory tree.
 2025-06-18: Cleaned tests and formatted selection/train modules.
+
