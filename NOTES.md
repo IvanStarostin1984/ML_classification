@@ -32,3 +32,4 @@ corresponding TODO items.
 
 2025-06-08: Removed sys.path modification from several test files.
 2025-06-08: Cleaned unused imports, tweaked features formatting and removed sys.path hacking from tests.
+2025-06-08: Updated AGENTS.md project structure tests section to list module unit tests.
