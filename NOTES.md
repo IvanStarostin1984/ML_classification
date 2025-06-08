@@ -1,10 +1,11 @@
 # Migration notes
 
-Current commit: `8520315`.
+Current commit: `354c4fc`.
 
-At this point the repo consists only of the original Colab export `ai_arisha.py`,
-a project `README.md`, `AGENTS.md` and a data licence notice under `data/`.
-None of the planned `src/` modules or CI files exist yet.
+The repository now includes the modular `src/` package with model pipelines and
+feature engineering helpers, unit tests under `tests/` and a working CI
+workflow. The original `ai_arisha.py` notebook is kept for reference alongside
+the project `README.md`, `AGENTS.md` and the data licence notice under `data/`.
 
 The notebook script still contains many Colab-specific commands such as
 `files.upload()` and shell calls (`!pip install`, `!kaggle datasets download`).
@@ -29,7 +30,8 @@ corresponding TODO items.
 2025-06-08: Reformatted tree_feature_selector arguments to multiple lines.
 2025-06-11: Cleaned flake8 warnings in features.py and split long lines.
 2025-06-08: Standardised df_fe.columns block indentation in features.py.
-
 2025-06-08: Removed sys.path modification from several test files.
 2025-06-08: Cleaned unused imports, tweaked features formatting and removed sys.path hacking from tests.
+2025-06-12: Updated migration notes to reflect commit 354c4fc and mention completed src modules, tests and CI.
 2025-06-08: Updated AGENTS.md project structure tests section to list module unit tests.
+
