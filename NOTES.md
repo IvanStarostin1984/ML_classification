@@ -80,3 +80,4 @@ corresponding TODO items.
 2025-06-22: Documented sampler CLI, calibration command, feature-importance outputs and manifest in README.
 2025-06-22: Cleaned TODO to remove outdated missing-feature notes.
 
+2025-06-08: Removed extra blank lines in src/__init__.py to satisfy flake8.
