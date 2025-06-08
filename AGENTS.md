@@ -7,6 +7,10 @@ Your job is to migrate Google Colab notebook ai_arisha.py to several classes git
 The style rules apply to new code under `src/` and tests, while `ai_arisha.py` is kept as-is for reference
 
 TODO.md, NOTES.md AGENTS.md may be not perfectly aligned with current project status. Always recheck in actual code.
+**Distinct-files rule**:  
+   1. Every concurrent task must confine its edits to a **unique list of code or data files**.  
+   2. *Shared exceptions*: any task may append (never rewrite) the markdown logs `NOTES.md`, `TODO.md`, and this `AGENTS.md`.  
+   3. If two or more open PRs would touch the same non-markdown file, cancel or re-scope one of them before continuing.
 
 # Important — Not authoritative:
 1. This file is only a quick-start contributor guide.
