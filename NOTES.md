@@ -20,3 +20,4 @@ The next step is to break this large script into smaller modules as outlined in
 2025-06-08: Updated README repository layout section to match existing folders and note that model modules are missing, so make train fails.
 2025-06-08: Marked directory creation as complete in TODO and noted CI workflow.
 
+2025-06-08: Introduced FeatureEngineer class and helper modules with unit tests.
