@@ -65,6 +65,7 @@ ML_classification/
 - **Fork** then branch off `main` using the pattern `feat/<topic>`.
 - **Ensure local tests pass** before opening a PR.
 - **Each PR requires at least one reviewer.**
+- with *every commit* reflect in **NOTES.md** on work done in a short lean way to track work.
 
 to understand the current stage, past decisions, and open questions tied to the spec.
 
