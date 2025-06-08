@@ -70,3 +70,4 @@ corresponding TODO items.
 2025-06-08: Updated download_data to check CSV existence before using Kaggle API and expanded tests.
 2025-06-08: Added console script entrypoints and tests invoking them.
 
+2025-06-08: Added checks in load_raw and safe_transform for missing files and columns; updated tests.

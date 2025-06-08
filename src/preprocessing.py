@@ -25,11 +25,15 @@ def build_preprocessor(num_cols: list[str], cat_cols: list[str]) -> ColumnTransf
 
 
 def safe_transform(preprocessor: ColumnTransformer, X_new: pd.DataFrame) -> np.ndarray:
-    """Transform X_new dropping unseen columns."""
+    """Transform ``X_new`` with safety checks."""
     if not isinstance(X_new, pd.DataFrame):
         raise TypeError("safe_transform expects a pandas DataFrame.")
-    common = X_new.columns.intersection(preprocessor.feature_names_in_)
-    extras = set(X_new.columns) - set(common)
+    expected = set(preprocessor.feature_names_in_)
+    present = set(X_new.columns)
+    missing = expected - present
+    if missing:
+        raise ValueError(f"missing columns for transform: {sorted(missing)}")
+    extras = present - expected
     if extras:
         warnings.warn(f"dropped unseen columns at predict-time: {sorted(extras)}")
-    return preprocessor.transform(X_new[common])
+    return preprocessor.transform(X_new[list(expected)])

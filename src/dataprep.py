@@ -9,8 +9,14 @@ CSV_PATH = Path('data/raw/loan_approval_dataset.csv')
 
 
 def load_raw(path: str | Path = CSV_PATH) -> pd.DataFrame:
-  """Return the raw dataset as a ``DataFrame``."""
-  return pd.read_csv(path)
+    """Return the raw dataset as a ``DataFrame``."""
+    p = Path(path)
+    if not p.exists():
+        raise FileNotFoundError(f"Dataset not found: {p}")
+    df = pd.read_csv(p)
+    if df.empty:
+        raise ValueError(f"No data loaded from {p}")
+    return df
 
 
 def clean(df: pd.DataFrame) -> pd.DataFrame:

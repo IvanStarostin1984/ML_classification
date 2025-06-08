@@ -1,4 +1,5 @@
 import pandas as pd
+import pytest
 from src import dataprep
 
 
@@ -7,6 +8,11 @@ def test_load_raw(tmp_path):
     csv.write_text("A,B\n1,2\n")
     df = dataprep.load_raw(csv)
     assert df.shape == (1, 2)
+
+
+def test_load_raw_missing(tmp_path):
+    with pytest.raises(FileNotFoundError):
+        dataprep.load_raw(tmp_path / "missing.csv")
 
 
 def test_clean():
