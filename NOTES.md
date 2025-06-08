@@ -54,5 +54,6 @@ corresponding TODO items.
 2025-06-16: Added make eval target and expanded README with evaluation instructions and fairness guidance.
 2025-06-08: integrated FeatureEngineer into model pipelines and updated tests.
 2025-06-08: Added CLI main entry in evaluate.py and updated tests and README.
-
+2025-06-08: Added project metadata in pyproject.toml and exposed src as installable package. README now documents 'pip install -e .' for development.
 2025-06-08: Added src/train.py CLI orchestrating both models and updated Makefile to use it.
+
