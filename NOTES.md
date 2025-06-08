@@ -44,3 +44,4 @@ corresponding TODO items.
 2025-06-13: Updated AGENTS.md to list all tests and clarify 4-space indentation standard.
 
 
+2025-06-14: Renamed project structure heading in AGENTS.md.
