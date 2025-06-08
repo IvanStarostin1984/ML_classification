@@ -24,3 +24,4 @@ The next step is to break this large script into smaller modules as outlined in
 README. Documented notebook usage in `notebooks/README.md` and checked off the
 corresponding TODO items.
 
+2025-06-10: Added train/eval modules for logistic regression and decision tree with stratified split utility. Updated Makefile, Dockerfile, README and added basic model tests.
