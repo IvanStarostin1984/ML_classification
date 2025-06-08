@@ -68,7 +68,8 @@ AGENTS.md                ← contributor guidelines and architecture notes
 .github/workflows/ci.yml ← CI pipeline (Black, flake8, pytest)
 scripts/download_data.py ← Kaggle dataset pull helper
 src/                     ← Python package skeleton
-src/models/              ← logistic regression and tree pipelines
+src/models/logreg.py     ← logistic regression pipeline
+src/models/cart.py       ← decision-tree pipeline
 src/features.py          ← FeatureEngineer class
 src/diagnostics.py       ← chi-square & correlation plots
 src/preprocessing.py     ← ColumnTransformer helpers
