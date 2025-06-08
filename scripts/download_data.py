@@ -15,14 +15,18 @@ import os
 import sys
 from pathlib import Path
 
+from src.dataprep import CSV_PATH
+
 DATASET = 'architsharma01/loan-approval-prediction-dataset'
 DEST_DIR = Path('data/raw')
+CSV_NAME = Path(CSV_PATH).name
 
 
 def main() -> None:
   """Authenticate with Kaggle and download the dataset."""
-  if DEST_DIR.exists() and any(DEST_DIR.iterdir()):
-    print(f'Dataset already present in {DEST_DIR}. Skipping download.')
+  csv_path = DEST_DIR / CSV_NAME
+  if csv_path.exists():
+    print(f'Dataset already present at {csv_path}. Skipping download.')
     return
 
   username = os.getenv('KAGGLE_USERNAME')

@@ -67,3 +67,4 @@ corresponding TODO items.
 2025-06-18: Cleaned tests and formatted selection/train modules.
 
 2025-06-08: Expanded Testing & CI guidelines in AGENTS.md to describe flake8, black, pytest workflow.
+2025-06-08: Updated download_data to check CSV existence before using Kaggle API and expanded tests.
