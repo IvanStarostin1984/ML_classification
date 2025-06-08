@@ -21,4 +21,3 @@ def test_four_fifths_ratio_range():
   thr = youden_threshold(model, X, y)
   ratio = four_fifths_ratio(model, X, y, 'group', thr)
   assert 0.0 <= ratio <= 1.0
-

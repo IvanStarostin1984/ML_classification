@@ -1,5 +1,4 @@
 import pandas as pd
-import pytest
 import warnings
 from src.selection import calculate_vif, tree_feature_selector
 
