@@ -21,6 +21,10 @@ dependencies = [
     "kaggle",
 ]
 
+[project.scripts]
+mlcls-train = "src.train:main"
+mlcls-eval = "src.evaluate:main"
+
 [tool.setuptools]
 packages = ["src", "scripts"]
 package-dir = {"src" = "src", "scripts" = "scripts"}
