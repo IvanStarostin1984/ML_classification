@@ -1,3 +1,26 @@
 [tool.black]
 line-length = 88
 extend-exclude = 'ai_arisha.py|scripts/download_data.py|src/dataprep.py|tests/test_.*.py'
+
+[project]
+name = "ml-classification"
+version = "0.1.0"
+description = "Loan-approval prediction pipelines"
+readme = "README.md"
+requires-python = ">=3.10"
+dependencies = [
+    "pandas",
+    "numpy",
+    "scikit-learn",
+    "matplotlib",
+    "seaborn",
+    "imbalanced-learn",
+    "scipy",
+    "statsmodels",
+    "joblib",
+    "kaggle",
+]
+
+[tool.setuptools]
+packages = ["src", "scripts"]
+package-dir = {"src" = "src", "scripts" = "scripts"}
