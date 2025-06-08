@@ -1,0 +1,17 @@
+# Byte-compiled / cache
+__pycache__/
+*.py[cod]
+
+# Virtual environments
+.env/
+venv/
+
+# Data and model artefacts
+data/
+artefacts/
+
+# Kaggle credentials and other secrets
+kaggle.json
+secrets/
+*.key
+*.pem
