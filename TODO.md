@@ -1,6 +1,6 @@
 # TODO: Modularise the Colab notebook
 
-The repository at commit dbd5184 only contains the legacy `ai_arisha.py` script, `README.md`, `AGENTS.md` and a dataset README.  The goal is to reorganise the notebook code into a maintainable module-based project with CI tests.
+This checklist started from commit `dbd5184` when only the legacy `ai_arisha.py` and a few docs were present. The project now has modular code under `src/`, a suite of tests and CI workflow. Focus on the outstanding tasks below.
 
 ## 1. Basic project skeleton
 - [x] create directories: `.github/workflows/`, `src/models/`, `scripts/`, `tests/`, and `notebooks/`
