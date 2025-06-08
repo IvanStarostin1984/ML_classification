@@ -1,6 +1,6 @@
 # Migration notes
 
-Current commit: `0174b25`.
+Current commit: `8af97fc`.
 
 
 The modular refactor is nearly complete. Core helpers and model pipelines live
@@ -60,3 +60,4 @@ corresponding TODO items.
 2025-06-08: Added unit tests for fairness metrics.
 2025-06-08: Wrapped VIF computation in warnings and numpy error state contexts to avoid RuntimeWarning when columns are perfectly collinear.
 2025-06-08: Clarified Kaggle credential setup in README.
+2025-06-17: Updated TODO intro to mark migration complete and added evaluation/fairness checklist item.
