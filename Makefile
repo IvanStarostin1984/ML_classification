@@ -2,6 +2,9 @@ train-logreg:
 	python -m src.models.logreg
 
 train-cart:
-	python -m src.models.cart
+        python -m src.models.cart
 
 train: train-logreg train-cart
+
+eval:
+	python -m src.evaluate
