@@ -7,3 +7,7 @@ imbalanced-learn
 scipy
 statsmodels
 joblib
+kaggle
+flake8
+black
+pytest

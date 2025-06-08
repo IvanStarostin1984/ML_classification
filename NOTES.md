@@ -15,3 +15,4 @@ The next step is to break this large script into smaller modules as outlined in
 
 2025-04-30: Added environment.yml, requirements.txt, Dockerfile, Makefile, .gitignore and LICENSE to start project skeleton.
 2025-06-08: Added smoke test importing src and scripts skeleton modules.
+2025-06-09: Added kaggle, flake8, black and pytest to environment files for CI.
