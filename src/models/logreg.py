@@ -18,9 +18,9 @@ DATA_PATH = Path("data/raw/loan_approval_dataset.csv")
 TARGET = "loan_status"
 
 
-def load_data(path: Path = DATA_PATH) -> pd.DataFrame:
+def load_data(path: str | Path = DATA_PATH) -> pd.DataFrame:
     """Return cleaned and engineered DataFrame loaded from ``path``."""
-    df = pd.read_csv(path)
+    df = pd.read_csv(Path(path))
     df = clean(df)
     return FeatureEngineer().transform(df)
 
@@ -55,8 +55,8 @@ def train_from_df(
     return auc
 
 
-def main() -> None:
-    df = load_data()
+def main(data_path: str | Path = DATA_PATH) -> None:
+    df = load_data(data_path)
     auc = train_from_df(df, artefact_path=Path("artefacts/logreg.joblib"))
     print(f"Validation ROC-AUC: {auc:.3f}")
 
