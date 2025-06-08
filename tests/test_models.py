@@ -1,14 +1,9 @@
 from __future__ import annotations
 
-from pathlib import Path
-import sys
-
-sys.path.insert(0, str(Path(__file__).resolve().parents[1]))  # noqa: E402
-
-import pandas as pd  # noqa: E402
-from sklearn.datasets import make_classification  # noqa: E402
-from src.models.logreg import train_from_df as train_logreg  # noqa: E402
-from src.models.cart import train_from_df as train_cart  # noqa: E402
+import pandas as pd
+from sklearn.datasets import make_classification
+from src.models.logreg import train_from_df as train_logreg
+from src.models.cart import train_from_df as train_cart
 
 
 def _toy_df() -> pd.DataFrame:

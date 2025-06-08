@@ -1,10 +1,7 @@
 from importlib import import_module
 from pathlib import Path
 import pkgutil
-import sys
 import pytest
-
-sys.path.insert(0, str(Path(__file__).resolve().parents[1]))
 
 
 def _import_modules(package: str) -> None:
