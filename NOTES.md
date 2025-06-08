@@ -46,3 +46,4 @@ corresponding TODO items.
 2025-06-14: Updated README to remove missing-modules note and confirm the migration is complete.
 
 
+2025-06-14: Renamed project structure heading in AGENTS.md.

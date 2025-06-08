@@ -19,7 +19,7 @@ TODO.md, NOTES.md AGENTS.md may be not perfectly aligned with current project st
 4. Never commit downloaded Kaggle data or personal API keys
 5. With *ANY* pull request add data to NOTES.md to shortly reflect on work done in this pull request. Always! 
 
-# Proposed project structure:
+# Project structure
 ML_classification/
 ├─ .github/
 │   └─ workflows/
