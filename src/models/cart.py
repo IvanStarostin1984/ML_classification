@@ -4,12 +4,13 @@ from pathlib import Path
 
 import joblib
 import pandas as pd
-from sklearn.compose import ColumnTransformer
 from sklearn.metrics import roc_auc_score
 from sklearn.pipeline import Pipeline
-from sklearn.preprocessing import OneHotEncoder
 from sklearn.tree import DecisionTreeClassifier
 
+from ..dataprep import clean
+from ..features import FeatureEngineer
+from ..preprocessing import build_preprocessor
 from ..split import stratified_split
 
 DATA_PATH = Path("data/raw/loan_approval_dataset.csv")
@@ -17,16 +18,15 @@ TARGET = "Loan_Status"
 
 
 def load_data(path: Path = DATA_PATH) -> pd.DataFrame:
-    """Return DataFrame loaded from ``path``."""
-    return pd.read_csv(path)
+    """Return cleaned and engineered DataFrame loaded from ``path``."""
+    df = pd.read_csv(path)
+    df = clean(df)
+    return FeatureEngineer().transform(df)
 
 
 def build_pipeline(cat_cols: list[str], num_cols: list[str]) -> Pipeline:
     """Create preprocessing and decision-tree pipeline."""
-    preproc = ColumnTransformer(
-        [("cat", OneHotEncoder(handle_unknown="ignore"), cat_cols)],
-        remainder="passthrough",
-    )
+    preproc = build_preprocessor(num_cols, cat_cols)
     model = DecisionTreeClassifier(random_state=42)
     return Pipeline([("prep", preproc), ("model", model)])
 
@@ -42,7 +42,7 @@ def train_from_df(
     y_train = train_df[target]
     x_val = val_df.drop(columns=[target])
     y_val = val_df[target]
-    cat_cols = x_train.select_dtypes(include="object").columns.tolist()
+    cat_cols = x_train.select_dtypes(include=["object", "category"]).columns.tolist()
     num_cols = [c for c in x_train.columns if c not in cat_cols]
     pipe = build_pipeline(cat_cols, num_cols)
     pipe.fit(x_train, y_train)
