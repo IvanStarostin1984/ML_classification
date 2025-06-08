@@ -15,8 +15,6 @@ from .calibration import calibrate_model
 from .feature_importance import logreg_coefficients, tree_feature_importances
 from .manifest import write_manifest
 
-
-
 __all__ = [
     "FeatureEngineer",
     "chi_square_tests",
@@ -33,5 +31,5 @@ __all__ = [
     "calibrate_model",
     "logreg_coefficients",
     "tree_feature_importances",
-    "write_manifest"
+    "write_manifest",
 ]
