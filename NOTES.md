@@ -91,3 +91,4 @@ corresponding TODO items.
 2025-06-09: Added grid_train_from_df with grid search and tests.
 
 2025-06-09: Added grid-search flag to mlcls-train and tests.
+2025-06-24: Marked TODO item clarifying Makefile usage as done.
