@@ -82,4 +82,4 @@ Oversampling options, probability calibration, feature importance export, extend
 - [x] extend FeatureEngineer unit tests for column normalisation, asset ratios and risk flag
 
 
-- [ ] add Makefile test target to run pytest
+- [x] add Makefile test target to run pytest
