@@ -72,3 +72,4 @@ Oversampling options, probability calibration, feature importance export, extend
 
 - [x] add evaluation_utils helpers for plotting and fairness aliases
 
+- [x] add tests for calibrate_model isotonic option and invalid method handling
