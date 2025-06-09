@@ -97,3 +97,4 @@ corresponding TODO items.
 2025-06-24: Marked TODO item clarifying Makefile usage as done.
 2025-06-09: Documented grid-search flag and dataset size in README.
 2025-06-09: Verified grid_train_from_df header and removed stray blank line.
+2025-06-09: mlcls-train now prints best cart grid-search score.
