@@ -117,3 +117,4 @@ corresponding TODO items.
 2025-07-03: Added calibration tests for isotonic option and invalid method validation. Reason: strengthen coverage. Decisions: check `calibrated_classifiers_` attribute and expect ValueError for bad method.
 
 2025-07-03: Added make test target for simplified testing via pytest. Updated docs and guidelines.
+2025-07-04: Marked TODO bullet for Makefile test target as completed. Reason: target already in Makefile.
