@@ -116,3 +116,4 @@ corresponding TODO items.
 2025-06-09: expanded FeatureEngineer tests for column normalisation, asset totals and risk flags. Reason: improve coverage per TODO. Decisions: use pytest.warns for missing asset warnings.
 2025-07-03: Added calibration tests for isotonic option and invalid method validation. Reason: strengthen coverage. Decisions: check `calibrated_classifiers_` attribute and expect ValueError for bad method.
 
+2025-07-03: Added make test target for simplified testing via pytest. Updated docs and guidelines.

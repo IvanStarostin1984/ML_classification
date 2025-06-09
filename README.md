@@ -82,6 +82,16 @@ mlcls-train --grid-search  # repeated CV with extended parameter grids
 This run takes longer but mirrors the notebook results.
 
 
+## Running tests
+
+Execute the test-suite locally with:
+
+```bash
+make test
+```
+This sets `PYTHONPATH` so `pytest` can find the `src` package.
+
+
 ## Command-line usage
 
 After installing the project in editable mode you get two console commands:
