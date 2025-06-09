@@ -33,6 +33,9 @@ pip install -r requirements.txt          # or: conda env create -f environment.y
 # Install the project in editable mode for development
 pip install -e .
 
+# This registers the `src` package so scripts like
+# `python scripts/download_data.py` can import it.
+
 # If you used conda, activate the environment
 conda activate ml-classification
 
