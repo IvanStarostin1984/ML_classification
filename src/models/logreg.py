@@ -90,11 +90,7 @@ def grid_train_from_df(
     df: pd.DataFrame,
     target: str = TARGET,
     artefact_path: Path | None = None,
-
     sampler: SamplerMixin | None = None,
-) -> float:
-    """Train with grid search on ``df`` and return validation ROC-AUC."""
-
 ) -> float:
     """Grid-search logistic regression and return validation ROC-AUC."""
 
@@ -105,16 +101,6 @@ def grid_train_from_df(
     y_val = val_df[target]
     cat_cols = x_train.select_dtypes(include=["object", "category"]).columns.tolist()
     num_cols = [c for c in x_train.columns if c not in cat_cols]
-
-    pipe = build_pipeline(cat_cols, num_cols, sampler)
-    gs = GridSearchCV(
-        pipe,
-        {"model__C": [0.3, 1, 3], "model__penalty": ["l1", "l2"]},
-        cv=3,
-        scoring="roc_auc",
-    )
-    gs.fit(x_train, y_train)
-    pred = gs.predict_proba(x_val)[:, 1]
 
     cat_mask = [i for i, c in enumerate(x_train.columns) if c in cat_cols]
     smote_nc = (
