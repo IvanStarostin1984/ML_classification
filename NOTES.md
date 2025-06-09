@@ -88,3 +88,4 @@ corresponding TODO items.
 2025-06-23: Added note in README that 'pip install -e .' registers src for import so scripts like python scripts/download_data.py work.
 2025-06-24: README clarifies that `make` is required and lists console script alternatives for Windows.
 
+2025-06-09: Added grid_train_from_df with grid search and tests.
