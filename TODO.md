@@ -44,6 +44,7 @@ Inspection of ai_arisha.py reveals several features that were not ported to the 
 
 Extensive hyper‑parameter grids
 ai_arisha.py defines larger parameter grids for both logistic regression and decision tree models (e.g. varying C, penalty, class_weight, tree depth, leaf size). The modular code has minimal grids of two values for each model.
+Grid-search flag now calls these grids from the CLI.
 
 Repeated cross‑validation and bootstrap logic
 The original script uses RepeatedStratifiedKFold and falls back to bootstrapping when the minority class is small, recording confidence intervals over folds. The modular code runs a single 3×3 nested CV without bootstrapping.
