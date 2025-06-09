@@ -11,6 +11,7 @@ from .preprocessing import build_preprocessor, safe_transform
 from .selection import calculate_vif, tree_feature_selector
 from .evaluate import evaluate_models
 from .fairness import four_fifths_ratio, youden_threshold
+from .evaluation_utils import plot_or_load, youden_thr, four_fifths
 from .calibration import calibrate_model
 from .feature_importance import logreg_coefficients, tree_feature_importances
 from .manifest import write_manifest
@@ -28,6 +29,9 @@ __all__ = [
     "evaluate_models",
     "four_fifths_ratio",
     "youden_threshold",
+    "plot_or_load",
+    "youden_thr",
+    "four_fifths",
     "calibrate_model",
     "logreg_coefficients",
     "tree_feature_importances",

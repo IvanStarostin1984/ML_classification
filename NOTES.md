@@ -108,4 +108,7 @@ corresponding TODO items.
     ``_zeros`` or ``_vif_prune`` remain unported. Marked the TODO item as
     complete to record this gap.
 
+
 2025-06-09: added reporting module with helpers to assemble report and tests for flatten_cv and flatten_metrics.
+2025-07-02: Added evaluation_utils with plot_or_load and alias wrappers. Reason: implement new helper API. Decisions: keep wrappers thin for simplicity.
+
