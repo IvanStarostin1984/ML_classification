@@ -14,3 +14,11 @@ def test_clean():
     cleaned = dataprep.clean(df)
     assert cleaned.shape == (2, 2)
     assert set(cleaned["Loan_Status"]) <= {0, 1}
+
+
+def test_clean_lowercase() -> None:
+    df = pd.DataFrame(
+        {"A": [1, 2, 3], "loan_status": ["Approved", "Rejected", "Approved"]}
+    )
+    cleaned = dataprep.clean(df)
+    assert list(cleaned["Loan_Status"]) == [1, 0, 1]

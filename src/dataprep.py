@@ -14,8 +14,23 @@ def load_raw(path: str | Path = CSV_PATH) -> pd.DataFrame:
 
 
 def clean(df: pd.DataFrame) -> pd.DataFrame:
-  """Basic cleaning: drop duplicates/NA and normalise target column."""
-  df = df.drop_duplicates().dropna().copy()
-  if 'Loan_Status' in df.columns:
-    df['Loan_Status'] = df['Loan_Status'].map({'Y': 1, 'N': 0}).astype('Int64')
-  return df
+    """Basic cleaning: drop duplicates/NA and normalise target column."""
+    df = df.drop_duplicates().dropna().copy()
+    df.columns = df.columns.str.strip()
+
+    if "loan_status" in df.columns and "Loan_Status" not in df.columns:
+        df = df.rename(columns={"loan_status": "Loan_Status"})
+
+    if "Loan_Status" in df.columns:
+        df["Loan_Status"] = df["Loan_Status"].astype(str).str.strip()
+        mapping = {
+            "Y": 1,
+            "N": 0,
+            "Approved": 1,
+            "Rejected": 0,
+        }
+        df["Loan_Status"] = (
+            df["Loan_Status"].map(mapping).fillna(df["Loan_Status"]).astype("Int64")
+        )
+
+    return df
