@@ -115,6 +115,7 @@ corresponding TODO items.
 2025-07-03: Added CLI sampler integration test verifying mlcls-train works with SMOTE and prints ROC-AUC. Reason: extend CLI coverage for sampler option.
 2025-06-09: expanded FeatureEngineer tests for column normalisation, asset totals and risk flags. Reason: improve coverage per TODO. Decisions: use pytest.warns for missing asset warnings.
 2025-07-03: Added calibration tests for isotonic option and invalid method validation. Reason: strengthen coverage. Decisions: check `calibrated_classifiers_` attribute and expect ValueError for bad method.
-
 2025-07-03: Added make test target for simplified testing via pytest. Updated docs and guidelines.
+2025-07-04: Marked TODO item for Makefile test target as done and fixed Makefile tabs. 'make test' now invokes pytest correctly.
 2025-07-04: Marked TODO bullet for Makefile test target as completed. Reason: target already in Makefile.
+
