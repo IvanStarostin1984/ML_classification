@@ -66,5 +66,4 @@ Oversampling options, probability calibration, feature importance export, extend
 
 - [x] save best estimator when performing cart grid search
 
-
-- [ ] Verify that each function from ai_arisha.py is represented or intentionally omitted in the src modules (see FUNCTIONS.md).
+- [x] Verify that each function from ai_arisha.py is represented or intentionally omitted in the src modules (see FUNCTIONS.md).
