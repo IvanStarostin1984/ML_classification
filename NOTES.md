@@ -111,4 +111,5 @@ corresponding TODO items.
 
 2025-06-09: added reporting module with helpers to assemble report and tests for flatten_cv and flatten_metrics.
 2025-07-02: Added evaluation_utils with plot_or_load and alias wrappers. Reason: implement new helper API. Decisions: keep wrappers thin for simplicity.
+2025-07-03: Added safe_transform input validation tests for type errors and extra-column warnings as per TODO. Reason: improve preprocessing robustness.
 
