@@ -1,5 +1,6 @@
 from pathlib import Path
 import importlib
+import pytest
 from scripts import download_data
 
 
@@ -53,3 +54,21 @@ def test_skip_if_present(monkeypatch, tmp_path, capsys):
     out = capsys.readouterr().out
     assert "Skipping download" in out
     assert calls == {}
+
+
+def test_warn_if_src_missing(monkeypatch, capsys):
+    import builtins
+
+    orig_import = builtins.__import__
+
+    def fake_import(name, globals=None, locals=None, fromlist=(), level=0):
+        if name == "src.dataprep":
+            raise ImportError
+        return orig_import(name, globals, locals, fromlist, level)
+
+    monkeypatch.setattr(builtins, "__import__", fake_import)
+
+    with pytest.raises(SystemExit):
+        importlib.reload(download_data)
+    out = capsys.readouterr().out
+    assert "pip install -e ." in out

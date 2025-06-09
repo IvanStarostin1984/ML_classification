@@ -85,3 +85,5 @@ corresponding TODO items.
 2025-06-09: Verified Kaggle download and training pipelines. Added lowercase loan_status handling in dataprep.
 2025-06-09: Strip whitespace in dataset columns for evaluation.
 2025-06-23: Replaced Build & Test badge with GitHub internal badge for private repo.
+2025-06-23: download_data warns when src package is missing and tests cover it.
+
