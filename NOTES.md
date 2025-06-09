@@ -98,3 +98,50 @@ corresponding TODO items.
 2025-06-09: Documented grid-search flag and dataset size in README.
 2025-06-09: Verified grid_train_from_df header and removed stray blank line.
 2025-06-09: mlcls-train now prints best cart grid-search score.
+2025-06-27: Clarified README that grid search runs via `mlcls-train -g` and removed
+`mlcls-eval --grid-search` examples.
+<details><summary>codex log</summary>
+
+```
+* Remove the references to `mlcls-eval --grid-search`.
+* Clarify that `--grid-search` applies to `mlcls-train -g`.
+* Search README for any other mention of `--grid-search` and adjust accordingly.
+```
+
+Terminal commands:
+
+```
+ls
+cd ML_classification
+ls
+cat AGENTS.md
+find . -name AGENTS.md -maxdepth 2
+sed -n '1,160p' README.md
+sed -n '161,320p' README.md
+cat TODO.md
+head -n 40 NOTES.md
+tail -n 20 NOTES.md
+grep -n -- '--grid-search' README.md
+nl -ba README.md | sed -n '72,95p'
+grep -n "grid search" -i README.md
+nl -ba README.md | sed -n '96,105p'
+sed -n '1,160p' src/train.py
+grep -rn -- '--grid-search' src | head
+nl -ba README.md | sed -n '70,82p'
+nl -ba README.md | sed -n '86,94p'
+grep -n "mlcls-eval --grid-search" -n README.md
+grep -rn -- '--grid-search' . | head
+grep -rn -- '--grid-search' notebooks | head
+grep -rn -- '--grid-search' docs || true
+grep -n "grid-search" -n TODO.md
+grep -n "mlcls-eval" -n NOTES.md
+grep -rn "mlcls-eval" -n . | head
+sed -n '40,70p' tests/test_cli_scripts.py
+sed -n '70,110p' tests/test_cli_scripts.py
+grep -n "mlcls-eval" -n TODO.md
+grep -rn "mlcls-eval --grid-search" -n .
+sed -n '68,105p' README.md
+sed -n '105,150p' README.md
+```
+
+</details>
