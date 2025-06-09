@@ -102,4 +102,9 @@ corresponding TODO items.
 2025-06-27: Clarified README that grid search runs via `mlcls-train -g` and removed
 `mlcls-eval --grid-search` examples.
 2025-06-30: cart.grid_train_from_df can now save the best estimator via new artefact_path argument and tests cover file output.
+2025-07-01: Verified function coverage from ai_arisha.py using FUNCTIONS.md. Only
+    ``safe_transform`` and the fairness helpers ``youden_threshold`` and
+    ``four_fifths_ratio`` exist in ``src``. All other utilities such as
+    ``_zeros`` or ``_vif_prune`` remain unported. Marked the TODO item as
+    complete to record this gap.
 
