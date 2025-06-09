@@ -98,3 +98,222 @@ corresponding TODO items.
 2025-06-09: Documented grid-search flag and dataset size in README.
 2025-06-09: Verified grid_train_from_df header and removed stray blank line.
 2025-06-09: mlcls-train now prints best cart grid-search score.
+
+2025-06-09: Added FUNCTIONS.md summarising all functions from ai_arisha.py for verification.
+
+<details><summary>Codex log</summary>
+
+```
+        1  ls
+        2  cd ML_classification
+        3  ls
+        4  cat AGENTS.md
+        5  cat TODO.md
+        6  cat NOTES.md
+        7  cat pyproject.toml
+        8  ls
+        9  wc -l ai_arisha.py
+       10  grep -n "^def" -n ai_arisha.py | head
+       11  grep -n "^def" -n ai_arisha.py | tail
+       12  grep -n "def " ai_arisha.py | head -n 20
+       13  grep -n "def " ai_arisha.py | sed -n '21,40p'
+       14  grep -n "def " ai_arisha.py | sed -n '41,80p'
+       15  grep -n "def " ai_arisha.py | sed -n '81,120p'
+       16  grep -n "def " ai_arisha.py | wc -l
+       17  grep -n "def " ai_arisha.py > /tmp/defs.txt
+       18  cat /tmp/defs.txt
+       19  grep -n "def " ai_arisha.py | sed -n '50,90p'
+       20  sed -n '120,170p' ai_arisha.py
+       21  sed -n '140,150p' ai_arisha.py
+       22  find . -name AGENTS.md -print
+       23  head README.md
+       24  grep -n "FUNCTIONS.md" -r .
+       25  tail -n 20 NOTES.md
+       26  tail -n 20 TODO.md
+       27  cat .github/workflows/ci.yml
+       28  ls .github/workflows
+       29  flake8 && echo OK
+       30  pip install flake8 black pytest pandas numpy scikit-learn matplotlib seaborn imbalanced-learn scipy statsmodels joblib kaggle
+       31  flake8 && echo OK
+       32  black --check . && echo OK
+       33  pytest -q && echo OK
+       34  sed -n '140,155p' ai_arisha.py
+       35  sed -n '372,406p' ai_arisha.py
+       36  sed -n '404,450p' ai_arisha.py
+       37  grep -n "def _dedup" -n ai_arisha.py
+       38  sed -n '712,750p' ai_arisha.py
+       39  grep -n "_is_binary_numeric" -n ai_arisha.py
+       40  sed -n '760,770p' ai_arisha.py
+       41  grep -n "safe_transform" -n ai_arisha.py
+       42  sed -n '852,892p' ai_arisha.py
+       43  sed -n '892,910p' ai_arisha.py
+       44  sed -n '1000,1032p' ai_arisha.py
+       45  grep -n "_random_split" -n ai_arisha.py
+       46  sed -n '1176,1196p' ai_arisha.py
+       47  grep -n "set_seeds" -n ai_arisha.py
+       48  sed -n '1330,1345p' ai_arisha.py
+       49  sed -n '1384,1436p' ai_arisha.py
+       50  sed -n '1432,1490p' ai_arisha.py
+       51  grep -n "_is_binary(" -n ai_arisha.py
+       52  sed -n '1528,1615p' ai_arisha.py
+       53  sed -n '1612,1660p' ai_arisha.py
+       54  sed -n '1660,1680p' ai_arisha.py
+       55  sed -n '1680,1705p' ai_arisha.py
+       56  grep -n "_conf(" -n ai_arisha.py
+       57  sed -n '1896,1925p' ai_arisha.py
+       58  sed -n '1925,1947p' ai_arisha.py
+       59  sed -n '1947,1985p' ai_arisha.py
+       60  grep -n "build_outer_iter" -n ai_arisha.py
+       61  sed -n '2000,2060p' ai_arisha.py
+       62  sed -n '2060,2090p' ai_arisha.py
+       63  grep -n "shasum" -n ai_arisha.py
+       64  sed -n '2090,2168p' ai_arisha.py
+       65  sed -n '2168,2195p' ai_arisha.py
+       66  sed -n '2196,2260p' ai_arisha.py
+       67  sed -n '2260,2330p' ai_arisha.py
+       68  grep -n "_sha(fp):" -n ai_arisha.py
+       69  sed -n '2570,2592p' ai_arisha.py
+       70  sed -n '2592,2618p' ai_arisha.py
+       71  sed -n '2720,2740p' ai_arisha.py
+       72  sed -n '2740,2760p' ai_arisha.py
+       73  grep -n "four_fifths" -n ai_arisha.py
+       74  sed -n '3360,3395p' ai_arisha.py
+       75  sed -n '3395,3425p' ai_arisha.py
+       76  sed -n '3425,3450p' ai_arisha.py
+       77  grep -n "eval_at" -n ai_arisha.py
+       78  sed -n '3108,3140p' ai_arisha.py
+       79  sed -n '3140,3210p' ai_arisha.py
+       80  grep -n "eval_metrics(" -n ai_arisha.py
+       81  sed -n '3248,3280p' ai_arisha.py
+       82  grep -n "plot_or_load" -n ai_arisha.py
+       83  sed -n '3328,3336p' ai_arisha.py
+       84  sed -n '3336,3368p' ai_arisha.py
+       85  grep -n "def main" -n ai_arisha.py
+       86  sed -n '3528,3590p' ai_arisha.py
+       87  sed -n '3590,3660p' ai_arisha.py
+       88  sed -n '3660,3700p' ai_arisha.py
+       89  sed -n '3700,3744p' ai_arisha.py
+       90  sed -n '3744,3778p' ai_arisha.py
+       91  sed -n '3778,3814p' ai_arisha.py
+       92  sed -n '3814,3844p' ai_arisha.py
+       93  cat /tmp/defs.txt
+       94  cat > FUNCTIONS.md <<'EOF'
+    # Functions in ai_arisha.py
+    
+    This list captures every function defined in the legacy Colab script. Use it when verifying that the modular `src/` package implements equivalent behaviour.
+    
+    - `_zeros()` – return Series of zeros aligned to `df_fe` index.
+    - `_fmt_p(p, thr=1e-6)` – format p-value; shows `<thr` for tiny values.
+    - `_annotate(ax)` – annotate matplotlib bars with integer heights.
+    - `_need_exact(exp)` – decide whether chi² test needs Monte Carlo.
+    - `_cramers_v(chi2, tbl)` – Cramer’s V effect size for contingency tables.
+    - `_cochran_armitage(ct)` – Cochran–Armitage trend test for 2×k tables.
+    - `_safe_chi2(ct, need_mc, rng)` – chi² test with Monte Carlo and 0.5 adjustment fallback.
+    - `_dedup(old, new)` – merge pairs and drop duplicates regardless of order.
+    - `_is_binary_numeric(series)` – check if numeric column only contains 0/1.
+    - `safe_transform(preprocessor, X_new, copy=True)` – apply fitted ColumnTransformer dropping unseen columns.
+    - `_vif_prune(cols, cap)` – iteratively drop columns with highest VIF until below cap.
+    - `_random_split(test_frac)` – stratified random train/test split.
+    - `_time_split(test_frac)` – time-based train/test split using `DATE_COL`.
+    - `set_seeds(s=SEED)` – seed Python, NumPy and PYTHONHASHSEED.
+    - `lr_steps(samp)` – pipeline steps order for logistic regression.
+    - `tree_steps(samp)` – pipeline steps order for decision tree.
+    - `run_gs(name, steps, estimator, grid)` – run GridSearchCV and report best ROC-AUC.
+    - `show_metrics(lbl, y_true, y_prob, y_hat)` – print test-set metrics summary.
+    - `_is_binary(series)` – helper to filter out pure binary numeric features.
+    - `_num_block(cols, scaler)` – return (pipeline, columns) for numeric scaler block.
+    - `make_preprocessor(include_cont)` – build ColumnTransformer for LR or tree.
+    - `_prefix(label)` – extract prefix from feature name.
+    - `_scaled_matrix(prep)` – transform full dataset and return matrix with feature names.
+    - `_check_mu_sigma(mat, idx, tol_mu=1e-3, tol_sd=1e-2)` – verify scaled columns have mean≈0 and sd≈1.
+    - `validate_prep(prep, name, check_scale=True)` – run NaN/scale checks on transformer.
+    - `_conf(label, yhat)` – print confusion matrix and metrics for threshold.
+    - `_group_metrics(col)` – compute group-wise TPR for fairness audit.
+    - `build_outer_iter(y)` – return outer CV splits or bootstrap when minority<10.
+    - `nested_cv(pipe, grid, label)` – run nested cross-validation and report scores.
+    - `folds_df(res, mdl)` – helper to turn CV results into a tidy DataFrame.
+    - `youden_thr(est, X, y)` – compute optimal Youden J threshold from ROC curve.
+    - `four_fifths(est, X, y, col, thr)` – inner function used to compute 4/5ths ratio.
+    - `shasum(fp)` – short SHA-256 digest of file bytes.
+    - `sha256(path)` – full SHA-256 digest of file bytes.
+    - `save_folds(tag, cv)` – save fold indices produced by CV iterator.
+    - `run_grid(cv, tag)` – grid-search helper used during LR tuning.
+    - `_sha(fp)` – short SHA-256 digest; defined in multiple cells.
+    - `sha(fp)` – same as above but using pathlib.Path.
+    - `eval_at(th)` – compute test metrics at given probability threshold.
+    - `eval_metrics(y_true, y_prob, y_pred, suffix)` – return dict of performance metrics.
+    - `plot_or_load(fname, plot_fn)` – reuse saved plot if available else generate.
+    - `main()` – collect various artifacts into `report_artifacts/`.
+      - `find_path(name)` – search artifact directories for file.
+      - `read_latest_glob(pattern, dirs=(ART, PLOTS, ROOT))` – return most recent match.
+      - `write_section(f, title, reader_fn)` – helper for report table sections.
+      - `flatten_cv(path)` – collapse multi-index CV CSV to two-row table.
+      - `flatten_metrics(md)` – flatten nested metric JSON.
+      - `dump_dataset_overview(ff)` – write dataset overview text.
+      - `dump_lr_params(ff)` – report best logistic regression parameters.
+      - `dump_cart_params(ff)` – report best CART parameters.
+      - `dump_feature_counts(ff)` – report engineered feature counts from registry.
+      - `dump_corr_top10(ff)` – show top absolute correlations.
+      - `dump_dropped_twins(ff)` – list numeric twins removed due to high correlation.
+      - `dump_skew_profile(ff)` – summarize skewness profile of numeric features.
+      - `dump_cart_overfit(ff)` – compare CART CV vs test ROC AUC.
+    EOF
+    
+       95  cat FUNCTIONS.md
+       96  sed -n '1,5p' FUNCTIONS.md
+       97  echo >> TODO.md
+       98  tail -n 5 TODO.md
+       99  printf "- [ ] Verify that each function from ai_arisha.py is represented or intentionally omitted in the src modules (see FUNCTIONS.md).\n" >> TODO.md
+      100  printf '%s
+    ' '- [ ] Verify that each function from ai_arisha.py is represented or intentionally omitted in the src modules (see FUNCTIONS.md).' >> TODO.md
+      101  tail -n 8 TODO.md
+      102  date
+      103  printf '\n2025-06-09: Added FUNCTIONS.md summarising all functions from ai_arisha.py for verification.\n' >> NOTES.md
+      104  tail -n 1 NOTES.md
+      105  grep -n "Codex" -n NOTES.md
+      106  head -n 5 NOTES.md
+      107  sed -n '1,40p' NOTES.md
+      108  history | tail -n 20
+      109  history | head -n 1
+      110  history
+      111  tail -n 2 NOTES.md
+      112  truncate -s -1 NOTES.md
+      113  tail -n 2 NOTES.md
+      114  sed -i '$d' NOTES.md
+      115  tail -n 1 NOTES.md
+      116  printf '2025-06-09: Added FUNCTIONS.md summarising all functions from ai_arisha.py for verification.\n<details><summary>Codex log</summary>\n\n```
+    ' >> NOTES.md
+      117  history | sed 's/^/    /' >> NOTES.md
+      118  printf '\n```\n</details>\n' >> NOTES.md
+      119  tail -n 15 NOTES.md
+      120  grep -n "Codex log" -n NOTES.md
+      121  sed -n '100,115p' NOTES.md
+      122  sed -n '115,150p' NOTES.md
+      123  sed -n '150,185p' NOTES.md
+      124  sed -n '185,220p' NOTES.md
+      125  sed -n '220,255p' NOTES.md
+      126  sed -n '255,290p' NOTES.md
+      127  tail -n 5 NOTES.md
+      128  tail -n 10 NOTES.md
+      129  nl -ba NOTES.md | sed -n '100,130p'
+      130  nl -ba NOTES.md | sed -n '130,170p'
+      131  nl -ba NOTES.md | sed -n '170,210p'
+      132  nl -ba NOTES.md | sed -n '210,250p'
+      133  nl -ba NOTES.md | sed -n '250,290p'
+      134  tail -n 5 NOTES.md
+      135  grep -n "Added FUNCTIONS.md" -n NOTES.md
+      136  nl -ba NOTES.md | sed -n '100,110p'
+      137  grep -n '</details>' -n NOTES.md
+      138  sed -n '102,289p' NOTES.md | head
+      139  sed -n '289,$p' NOTES.md
+      140  sed -n '100,130p' NOTES.md
+      141  wc -l NOTES.md
+      142  head -n 102 NOTES.md > /tmp/NOTES_prefix
+      143  tail -n +289 NOTES.md > /tmp/NOTES_suffix
+      144  cat /tmp/NOTES_prefix /tmp/NOTES_suffix > NOTES.md
+      145  tail -n 5 NOTES.md
+      146  printf '\n<details><summary>Codex log</summary>\n\n```\n' >> NOTES.md
+      147  history | sed 's/^/    /' >> NOTES.md
+
+```
+</details>
