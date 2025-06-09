@@ -101,52 +101,5 @@ corresponding TODO items.
 2025-06-09: Added FUNCTIONS.md summarising all functions from ai_arisha.py for verification.
 2025-06-27: Clarified README that grid search runs via `mlcls-train -g` and removed
 `mlcls-eval --grid-search` examples.
-<details><summary>codex log</summary>
+2025-06-30: cart.grid_train_from_df can now save the best estimator via new artefact_path argument and tests cover file output.
 
-```
-* Remove the references to `mlcls-eval --grid-search`.
-* Clarify that `--grid-search` applies to `mlcls-train -g`.
-* Search README for any other mention of `--grid-search` and adjust accordingly.
-```
-
-
-2025-06-30: Updated .flake8 to ignore internal build folders and other aux files.
-<details><summary>codex log</summary>
-
-```
-$ ls
-^C
-$ pwd
-/workspace
-$ cd ML_classification
-$ ls
-AGENTS.md ...
-$ cat AGENTS.md
-# Contributor Guidelines for ML_classification
-...
-$ cat .flake8
-[flake8]
-exclude = ai_arisha.py
-indent-size = 2
-max-line-length = 88
-$ apply_patch<<'PATCH'
-*** Begin Patch
-*** Update File: .flake8
-@@
--exclude = ai_arisha.py
-+exclude = .git,__pycache__,.tox,*.egg-info,build,dist,ai_arisha.py
-*** End Patch
-PATCH
-Success. Updated the following files:
-M .flake8
-$ cat .flake8
-[flake8]
-exclude = .git,__pycache__,.tox,*.egg-info,build,dist,ai_arisha.py
-indent-size = 2
-max-line-length = 88
-$ date -I
-2025-06-09
-$ git log -1 --format=%cd
-Mon Jun 9 15:03:22 2025 +0200
-```
-</details>
