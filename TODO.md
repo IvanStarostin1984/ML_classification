@@ -49,3 +49,7 @@ Repeated cross‑validation and bootstrap logic
 The original script uses RepeatedStratifiedKFold and falls back to bootstrapping when the minority class is small, recording confidence intervals over folds. The modular code runs a single 3×3 nested CV without bootstrapping.
 
 Oversampling options, probability calibration, feature importance export, extended metrics and manifest writing were implemented in commit `0c16cae`.
+
+## 9. Usability improvements
+- [x] download_data prints guidance if src package cannot be imported.
+

@@ -79,10 +79,11 @@ corresponding TODO items.
 2025-06-21: Added sampler option to training pipeline and oversampling tests.
 2025-06-22: Documented sampler CLI, calibration command, feature-importance outputs and manifest in README.
 2025-06-22: Cleaned TODO to remove outdated missing-feature notes.
-
 2025-06-08: Removed extra blank lines in src/__init__.py to satisfy flake8.
 2025-06-08: Fixed indentation in train-cart, train, eval commands in Makefile.
 2025-06-09: Verified Kaggle download and training pipelines. Added lowercase loan_status handling in dataprep.
 2025-06-09: Strip whitespace in dataset columns for evaluation.
 2025-06-23: Replaced Build & Test badge with GitHub internal badge for private repo.
+2025-06-23: download_data warns when src package is missing and tests cover it.
 2025-06-23: Added note in README that 'pip install -e .' registers src for import so scripts like python scripts/download_data.py work.
+
