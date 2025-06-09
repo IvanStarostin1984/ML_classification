@@ -73,10 +73,11 @@ are recorded in `artefacts/SHA256_manifest.txt` for reproducibility.
 four-fifths ratio across protected groups (pass `--group-col` to override the
 default). Metrics are stored in `artefacts/summary_metrics.csv` and printed to
 stdout. A ratio below **0.8** warns of possible bias.
-You can replicate the notebook's exhaustive cross-validation using the `--grid-search` option:
+You can replicate the notebook's exhaustive cross-validation using the training
+command with `--grid-search` (or `-g`):
 
 ```bash
-mlcls-eval --grid-search  # repeated CV with extended parameter grids
+mlcls-train --grid-search  # repeated CV with extended parameter grids
 ```
 This run takes longer but mirrors the notebook results.
 
@@ -88,8 +89,8 @@ After installing the project in editable mode you get two console commands:
 ```bash
 pip install -e .
 mlcls-train          # trains both models
+mlcls-train -g       # extensive grid search
 mlcls-eval           # evaluates the trained models
-mlcls-eval --grid-search  # repeated CV with extended parameter grids
 ```
 
 These commands require the Kaggle dataset, which is distributed under its
