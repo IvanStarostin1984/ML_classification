@@ -52,4 +52,5 @@ Oversampling options, probability calibration, feature importance export, extend
 
 ## 9. Usability improvements
 - [x] download_data prints guidance if src package cannot be imported.
+- [ ] Clarify that `make` is needed for training commands and mention console scripts for Windows.
 

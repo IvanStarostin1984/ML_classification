@@ -60,6 +60,9 @@ make train-cart
 mlcls-train --sampler smote   # run with SMOTE oversampling
 ```
 
+Note: `make` is required for these commands. On Windows, install GNU Make or run
+the console scripts `mlcls-train` and `mlcls-eval` instead.
+
 See [data/README.md](data/README.md) for dataset licence notes.
 
 Training produces feature-importance tables (`logreg_coefficients.csv`,
