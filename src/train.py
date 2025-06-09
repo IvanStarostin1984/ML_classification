@@ -39,6 +39,12 @@ def main(args: list[str] | None = None) -> None:
         default=None,
         help="optional imbalance sampler",
     )
+    parser.add_argument(
+        "--grid-search",
+        "-g",
+        action="store_true",
+        help="use grid search to tune hyperparameters",
+    )
     ns = parser.parse_args(args)
     models = ns.model or ["logreg", "cart"]
 
@@ -53,9 +59,27 @@ def main(args: list[str] | None = None) -> None:
     sampler = sampler_map[ns.sampler]() if ns.sampler else None
 
     if "logreg" in models:
-        logreg.main(ns.data_path, sampler)
+        if ns.grid_search:
+            df = logreg.load_data(ns.data_path)
+            auc = logreg.grid_train_from_df(
+                df,
+                artefact_path=Path("artefacts/logreg.joblib"),
+                sampler=sampler,
+            )
+            print(f"Validation ROC-AUC: {auc:.3f}")
+        else:
+            logreg.main(ns.data_path, sampler)
     if "cart" in models:
-        cart.main(ns.data_path, sampler)
+        if ns.grid_search:
+            df = cart.load_data(ns.data_path)
+            auc = cart.grid_train_from_df(
+                df,
+                artefact_path=Path("artefacts/cart.joblib"),
+                sampler=sampler,
+            )
+            print(f"Validation ROC-AUC: {auc:.3f}")
+        else:
+            cart.main(ns.data_path, sampler)
 
 
 if __name__ == "__main__":
