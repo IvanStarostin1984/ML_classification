@@ -54,3 +54,4 @@ Oversampling options, probability calibration, feature importance export, extend
 - [x] download_data prints guidance if src package cannot be imported.
 - [ ] Clarify that `make` is needed for training commands and mention console scripts for Windows.
 
+- [x] port grid search helper for decision tree
