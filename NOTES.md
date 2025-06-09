@@ -92,7 +92,6 @@ corresponding TODO items.
 2025-06-25: Documented --grid-search option for exhaustive cross-validation and added TODO bullet.
 2025-06-09: Added grid-search flag to mlcls-train and tests.
 2025-06-09: Added grid-search flag to mlcls-train and tests.
+2025-06-09: Fixed stray parameter block in cart.grid_train_from_df; function now returns fitted GridSearchCV.
 2025-06-24: Marked TODO item clarifying Makefile usage as done.
 2025-06-09: Documented grid-search flag and dataset size in README.
-
-
