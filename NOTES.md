@@ -96,3 +96,4 @@ corresponding TODO items.
 2025-06-09: Fixed stray parameter block in cart.grid_train_from_df; function now returns fitted GridSearchCV.
 2025-06-24: Marked TODO item clarifying Makefile usage as done.
 2025-06-09: Documented grid-search flag and dataset size in README.
+2025-06-09: Verified grid_train_from_df header and removed stray blank line.

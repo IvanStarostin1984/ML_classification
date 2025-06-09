@@ -125,6 +125,7 @@ def grid_train_from_df(
         new_blk["sampler"] = base_samplers.copy()
         param_grid.append(new_blk)
 
+    # repeated cross-validation grid search
     cv = RepeatedStratifiedKFold(n_splits=5, n_repeats=3, random_state=42)
     gs = GridSearchCV(pipe, param_grid, cv=cv, scoring="roc_auc", n_jobs=-1)
     gs.fit(x_train, y_train)
