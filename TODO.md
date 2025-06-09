@@ -72,4 +72,7 @@ Oversampling options, probability calibration, feature importance export, extend
 
 - [x] add evaluation_utils helpers for plotting and fairness aliases
 
+- [x] add CLI test for sampler option
+
 - [x] extend FeatureEngineer unit tests for column normalisation, asset ratios and risk flag
+
