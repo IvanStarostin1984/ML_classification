@@ -72,12 +72,8 @@ def main(args: list[str] | None = None) -> None:
     if "cart" in models:
         if ns.grid_search:
             df = cart.load_data(ns.data_path)
-            auc = cart.grid_train_from_df(
-                df,
-                artefact_path=Path("artefacts/cart.joblib"),
-                sampler=sampler,
-            )
-            print(f"Validation ROC-AUC: {auc:.3f}")
+            gs = cart.grid_train_from_df(df, sampler=sampler)
+            print(f"Validation ROC-AUC: {gs.best_score_:.3f}")
         else:
             cart.main(ns.data_path, sampler)
 

@@ -60,7 +60,7 @@ Oversampling options, probability calibration, feature importance export, extend
 
 
 ## 10. Modelling improvements
-- [ ] Add --grid-search option for repeated cross-validation and extended parameter grids.
+- [x] Add --grid-search option for repeated cross-validation and extended parameter grids.
 
 - [x] port grid search helper for decision tree
 
