@@ -85,7 +85,10 @@ mlcls-eval           # evaluates the trained models
 ```
 
 These commands require the Kaggle dataset, which is distributed under its
-original licence. See [data/README.md](data/README.md) for details.
+original licence. See [data/README.md](data/README.md) for details. The dataset
+is small – around 380&nbsp;kB (~1000 rows) – so the default training run
+finishes in a few seconds. Pass `-g` to `mlcls-train` to perform the extensive
+grid search (5×3 cross-validation) used in the original notebook.
 
 **Prefer Docker?**
 
