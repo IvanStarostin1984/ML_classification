@@ -112,3 +112,4 @@ corresponding TODO items.
 2025-06-09: added reporting module with helpers to assemble report and tests for flatten_cv and flatten_metrics.
 2025-07-02: Added evaluation_utils with plot_or_load and alias wrappers. Reason: implement new helper API. Decisions: keep wrappers thin for simplicity.
 
+2025-06-09: expanded FeatureEngineer tests for column normalisation, asset totals and risk flags. Reason: improve coverage per TODO. Decisions: use pytest.warns for missing asset warnings.
