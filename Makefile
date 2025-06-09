@@ -8,4 +8,8 @@ train:
 	python -m src.train
 
 eval:
-	python -m src.evaluate
+        python -m src.evaluate
+
+test:
+       PYTHONPATH=$(PWD) python -m pytest -q
+
