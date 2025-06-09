@@ -38,3 +38,12 @@ def test_grid_train_from_df() -> None:
     df = FeatureEngineer().transform(df)
     gs = grid_train_from_df(df, "target")
     assert len(gs.cv_results_["params"]) > 1
+
+
+def test_grid_train_saves_best(tmp_path) -> None:
+    df = _toy_df()
+    df = dataprep.clean(df)
+    df = FeatureEngineer().transform(df)
+    fp = tmp_path / "model.joblib"
+    grid_train_from_df(df, "target", artefact_path=fp)
+    assert fp.exists()

@@ -66,21 +66,24 @@ def train_from_df(
 def grid_train_from_df(
     df: pd.DataFrame,
     target: str = TARGET,
+    artefact_path: Path | None = None,
     sampler: SamplerMixin | None = None,
 ) -> GridSearchCV:
-    """Return fitted GridSearchCV on ``df`` using repeated CV."""
-    x = df.drop(columns=[target])
-    y = df[target]
+    """Return fitted GridSearchCV and optionally save best model.
+
+    If ``artefact_path`` is provided, the best estimator is persisted.
+    """
+    x, y = df.drop(columns=[target]), df[target]
     cat_cols = x.select_dtypes(include=["object", "category"]).columns.tolist()
     num_cols = [c for c in x.columns if c not in cat_cols]
     pipe = build_pipeline(cat_cols, num_cols, sampler)
-    grid = {
-        "model__max_depth": [None, 8, 15],
-        "model__min_samples_leaf": [1, 5],
-    }
+    grid = {"model__max_depth": [None, 8, 15], "model__min_samples_leaf": [1, 5]}
     cv = RepeatedStratifiedKFold(n_splits=5, n_repeats=3, random_state=42)
     gs = GridSearchCV(pipe, grid, cv=cv, scoring="roc_auc", n_jobs=-1)
     gs.fit(x, y)
+    if artefact_path:
+        artefact_path.parent.mkdir(parents=True, exist_ok=True)
+        joblib.dump(gs.best_estimator_, artefact_path)
     return gs
 
 

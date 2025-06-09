@@ -108,3 +108,174 @@ corresponding TODO items.
 * Clarify that `--grid-search` applies to `mlcls-train -g`.
 * Search README for any other mention of `--grid-search` and adjust accordingly.
 ```
+2025-06-30: cart.grid_train_from_df can now save the best estimator via new artefact_path argument and tests cover file output.
+<details><summary>codex log</summary>
+
+```
+1. Edit `src/models/cart.py`:
+
+   * Update `grid_train_from_df` signature to\
+     `def grid_train_from_df(df, target: str = TARGET, artefact_path: Path | None = None, sampler: SamplerMixin | None = None) -> GridSearchCV:`.
+   * Inside the function, after fitting the `GridSearchCV`, add:
+
+     ```python
+     if artefact_path:
+         artefact_path.parent.mkdir(parents=True, exist_ok=True)
+         joblib.dump(gs.best_estimator_, artefact_path)
+     ```
+   * Compress the parameter grid definition to keep the function around\
+     20 lines.
+   * Add a short docstring line explaining the new parameter.
+2. Adjust or create a test ensuring that calling `cart.grid_train_from_df` with\
+   `artefact_path` succeeds and writes a file.
+3. Run `black`, `flake8`, and `pytest` locally.\
+   All must succeed before committing.
+
+```
+    1  cd /workspace/ML_classification
+    2  ls
+    3  cat AGENTS.md
+    4  find src -name AGENTS.md -print
+    5  find tests -name AGENTS.md -print
+    6  ls src/models
+    7  sed -n '1,200p' src/models/cart.py
+    8  grep -n "grid_train_from_df" -r tests | head
+    9  sed -n '1,120p' tests/test_cart_gridsearch.py
+   10  sed -n '1,120p' tests/test_logreg_gridsearch.py
+   11  grep -n "cart" -r tests | head
+   12  sed -n '1,120p' tests/test_feature_importance.py
+   13  cat TODO.md
+   14  cat NOTES.md | head -n 40
+   15  tail -n 40 NOTES.md
+   16  tail -n 20 NOTES.md
+   17  grep -n "codex log" -n NOTES.md
+   18  sed -n '95,130p' NOTES.md
+   19  sed -n '130,180p' NOTES.md
+   20  sed -n '1,80p' tests/test_cart_gridsearch.py
+   21  git status --short
+   22  git clean -f requirements.lock
+   23  git status --short
+   24  nl -ba src/models/cart.py | sed -n '45,82p'
+   25  nl -ba src/models/cart.py | sed -n '82,108p'
+   26  apply_patch<<'PATCH'
+*** Begin Patch
+*** Update File: src/models/cart.py
+@@
+ def grid_train_from_df(
+     df: pd.DataFrame,
+     target: str = TARGET,
++    artefact_path: Path | None = None,
+     sampler: SamplerMixin | None = None,
+ ) -> GridSearchCV:
+-    """Return fitted GridSearchCV on ``df`` using repeated CV."""
++    """Return fitted GridSearchCV and optionally save best model."""
+@@
+-    grid = {
+-        "model__max_depth": [None, 8, 15],
+-        "model__min_samples_leaf": [1, 5],
+-    }
++    grid = {"model__max_depth": [None, 8, 15], "model__min_samples_leaf": [1, 5]}
+@@
+-    gs.fit(x, y)
+-    return gs
++    gs.fit(x, y)
++    if artefact_path:
++        artefact_path.parent.mkdir(parents=True, exist_ok=True)
++        joblib.dump(gs.best_estimator_, artefact_path)
++    return gs
+*** End Patch
+PATCH
+
+   27  grep -n "grid_train_from_df" -n src/models/cart.py
+   28  sed -n '66,94p' src/models/cart.py
+   29  nl -ba src/models/cart.py | sed -n '66,91p'
+   30  apply_patch<<'PATCH'
+*** Begin Patch
+*** Update File: src/models/cart.py
+@@
+-    x = df.drop(columns=[target])
+-    y = df[target]
++    x, y = df.drop(columns=[target]), df[target]
+*** End Patch
+PATCH
+
+   31  nl -ba src/models/cart.py | sed -n '66,85p'
+   32  apply_patch<<'PATCH'
+*** Begin Patch
+*** Update File: src/models/cart.py
+@@
+-) -> GridSearchCV:
+-    """Return fitted GridSearchCV and optionally save best model."""
++) -> GridSearchCV:
++    """Return fitted GridSearchCV and optionally save best model.
++
++    If ``artefact_path`` is provided, the best estimator is persisted.
++    """
+*** End Patch
+PATCH
+
+   33  sed -n '66,86p' src/models/cart.py
+   34  sed -n '86,100p' src/models/cart.py
+   35  sed -n '1,80p' tests/test_cart_gridsearch.py
+   36  apply_patch<<'PATCH'
+*** Begin Patch
+*** Update File: tests/test_cart_gridsearch.py
+@@
+ def test_grid_train_from_df() -> None:
+     df = _toy_df()
+     df = dataprep.clean(df)
+     df = FeatureEngineer().transform(df)
+     gs = grid_train_from_df(df, "target")
+     assert len(gs.cv_results_["params"]) > 1
++
++
++def test_grid_train_saves_best(tmp_path) -> None:
++    df = _toy_df()
++    df = dataprep.clean(df)
++    df = FeatureEngineer().transform(df)
++    fp = tmp_path / "model.joblib"
++    grid_train_from_df(df, "target", artefact_path=fp)
++    assert fp.exists()
+*** End Patch
+PATCH
+
+   37  sed -n '40,120p' tests/test_cart_gridsearch.py
+   38  grep -R "grid_train_from_df(" -n . | head
+   39  sed -n '60,80p' src/train.py
+   40  tail -n 20 TODO.md
+   41  grep -n "artefact" -n TODO.md
+   42  head -n 40 TODO.md
+   43  grep -n "grid search" -n TODO.md
+   44  sed -n '60,80p' TODO.md
+   45  apply_patch<<'PATCH'
+*** Begin Patch
+*** Update File: TODO.md
+@@
+ ## 10. Modelling improvements
+ - [x] Add --grid-search option for repeated cross-validation and extended parameter grids.
+ 
+ - [x] port grid search helper for decision tree
++
++- [x] save best estimator when performing cart grid search
+*** End Patch
+PATCH
+
+   46  tail -n 15 NOTES.md
+   47  date -I
+   48  cat <<'EOF' > /tmp/new_notes_entry.txt
+2025-06-30: cart.grid_train_from_df can now save the best estimator via new artefact_path argument and tests cover file output.
+<details><summary>codex log</summary>
+
+```
+```
+</details>
+EOF
+
+   49  history
+   50  history | sed -n '9,40p'
+   51  history | sed -n '40,80p'
+   52  history | sed -n '80,160p'
+   53  history | sed -n '1,160p' > /tmp/term_log.txt
+
+```
+</details>
