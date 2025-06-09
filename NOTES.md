@@ -86,4 +86,5 @@ corresponding TODO items.
 2025-06-23: Replaced Build & Test badge with GitHub internal badge for private repo.
 2025-06-23: download_data warns when src package is missing and tests cover it.
 2025-06-23: Added note in README that 'pip install -e .' registers src for import so scripts like python scripts/download_data.py work.
+2025-06-24: README clarifies that `make` is required and lists console script alternatives for Windows.
 
