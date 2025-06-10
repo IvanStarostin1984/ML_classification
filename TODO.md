@@ -88,9 +88,12 @@ Oversampling options, probability calibration, feature importance export, extend
 
 
 - [x] add Makefile test target to run pytest
+- [x] port `_vif_prune` as `vif_prune` in `src/selection.py` with unit tests
+
 
 
 ## 11. Metrics helpers
 - [ ] Port notebook metrics helpers `eval_metrics`, `eval_at`, `show_metrics` and `folds_df` or confirm omission.
 - [ ] Create `src/metrics.py` with unit tests for these functions.
 - [ ] implement random_split and time_split in src/split.py; add set_seeds helper in new src/utils.py
+

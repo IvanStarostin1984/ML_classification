@@ -11,7 +11,7 @@ from statsmodels.stats.outliers_influence import (
 )
 from sklearn.ensemble import ExtraTreesClassifier
 
-__all__ = ["calculate_vif", "tree_feature_selector"]
+__all__ = ["calculate_vif", "vif_prune", "tree_feature_selector"]
 
 
 def calculate_vif(df: pd.DataFrame, cols: list[str]) -> pd.Series:
@@ -22,6 +22,19 @@ def calculate_vif(df: pd.DataFrame, cols: list[str]) -> pd.Series:
         with np.errstate(divide="ignore"):
             vals = [vif(arr, i) for i in range(arr.shape[1])]
     return pd.Series(vals, index=cols)
+
+
+def vif_prune(
+    df: pd.DataFrame, cols: list[str], cap: float
+) -> tuple[list[str], pd.Series]:
+    """Return columns kept after iterative VIF pruning and their VIFs."""
+
+    cols = list(cols)
+    while True:
+        vifs = calculate_vif(df, cols)
+        if vifs.max() <= cap or len(cols) < 2:
+            return cols, vifs
+        cols.remove(vifs.idxmax())
 
 
 def tree_feature_selector(
