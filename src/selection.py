@@ -20,7 +20,12 @@ def calculate_vif(df: pd.DataFrame, cols: list[str]) -> pd.Series:
     with warnings.catch_warnings():
         warnings.simplefilter("ignore", category=RuntimeWarning)
         with np.errstate(divide="ignore"):
-            vals = [vif(arr, i) for i in range(arr.shape[1])]
+            vals = []
+            for i in range(arr.shape[1]):
+                try:
+                    vals.append(vif(arr, i))
+                except ValueError:
+                    vals.append(float("inf"))
     return pd.Series(vals, index=cols)
 
 
@@ -31,12 +36,31 @@ def vif_prune(
 
     cols = list(cols)
     while True:
+
         if len(cols) <= 2:
             return cols, calculate_vif(df, cols)
         vifs = calculate_vif(df, cols)
         if vifs.max() <= cap:
+
+        if len(cols) < 2:
+            return cols, pd.Series([np.nan] * len(cols), index=cols)
+
+        vifs = calculate_vif(df, cols)
+
+        if vifs.max() <= cap or len(cols) <= 2:
             return cols, vifs
+        cols.remove(vifs.replace(np.inf, 1e12).idxmax())
+
+
+        if len(cols) == 2 and not np.isfinite(vifs).all():
+
+            return cols, vifs
+
+        if vifs.max() <= cap:
+            return cols, vifs
+
         cols.remove(vifs.idxmax())
+
 
 
 def tree_feature_selector(
