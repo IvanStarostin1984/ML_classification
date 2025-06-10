@@ -1,4 +1,5 @@
 import pandas as pd
+import numpy as np
 import warnings
 from src.selection import calculate_vif, tree_feature_selector, vif_prune
 
@@ -47,3 +48,18 @@ def test_vif_prune_no_drop_when_below_cap():
     cols, vifs = vif_prune(df, ["x", "y"], cap=100)
     assert cols == ["x", "y"]
     assert list(vifs.index) == ["x", "y"]
+
+
+def test_vif_prune_single_column():
+    df = pd.DataFrame({"x": [1.0, 2.0, 3.0]})
+    cols, vifs = vif_prune(df, ["x"], cap=5)
+    assert cols == ["x"]
+    assert vifs.isna().all()
+
+
+def test_vif_prune_two_infinite_vifs():
+    df = pd.DataFrame({"a": [1, 2, 3], "b": [1, 2, 3]})
+    cols, vifs = vif_prune(df, ["a", "b"], cap=1000)
+    assert cols == ["a", "b"]
+    assert vifs.index.tolist() == ["a", "b"]
+    assert not vifs.replace([np.inf, -np.inf], np.nan).notna().all()
