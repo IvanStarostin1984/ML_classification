@@ -134,3 +134,4 @@ corresponding TODO items.
 
 2025-07-07: Removed unused pandas import from tests/test_metrics.py and tweaked calculate_vif small-sample handling so flake8 passes. Reason: tidy metrics tests and fix CI.
 2025-06-10: Simplified vif_prune to drop one column at a time and removed stray docstring. Reason: tidy API and meet flake8 guidelines. Decisions: recalc VIFs after each drop to keep function short.
+2025-06-10: Added cv_utils module with build_outer_iter and nested_cv plus tests covering bootstrap path. Reason: port CV bootstrap logic per TODO.
