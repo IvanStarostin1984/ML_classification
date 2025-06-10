@@ -1,4 +1,3 @@
-import pandas as pd
 from src.metrics import eval_metrics, eval_at, show_metrics, folds_df
 
 
