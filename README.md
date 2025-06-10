@@ -155,7 +155,7 @@ pyproject.toml           ← project build metadata
 requirements.txt         ← pip fallback
 LICENSE                  ← MIT
 README.md                ← you are here
-```
+```text
 
 ---
 
@@ -172,7 +172,7 @@ Values reproduced from the accompanying statistical report.&#x20;
 
 ## How to cite
 
-```
+```bibtex
 @misc{Starostin2025LoanApproval,
   author = {Ivan Starostin},
   title  = {ML\_classification: Loan-approval prediction pipelines},

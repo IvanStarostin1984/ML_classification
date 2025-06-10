@@ -4,8 +4,6 @@ Current commit: `c907c0b`.
 2025-06-18: Evaluation and fairness modules are in place with passing tests and
 README instructions describing the workflow.
 
-
-
 The modular refactor is nearly complete. Core helpers and model pipelines live
 under `src/` with corresponding tests and an automated GitHub Actions workflow.
 `make train` now runs the training pipelines, though the README still states
@@ -20,124 +18,133 @@ It also mixes data cleaning, feature engineering and model training in one file.
 The notebook remains for reference and all modular helpers and CI are now in
 place.
 
-
-2025-04-30: Added environment.yml, requirements.txt, Dockerfile, Makefile, .gitignore and LICENSE to start project skeleton.
-2025-06-08: Set up CI workflow and created src/, scripts/ and tests skeletons with a smoke test.
+2025-04-30: Added environment.yml, requirements.txt, Dockerfile, Makefile,
+.gitignore and LICENSE to start project skeleton.
+2025-06-08: Set up CI workflow and created src/, scripts/ and tests skeletons
+with a smoke test.
 2025-06-08: Added smoke test importing src and scripts skeleton modules.
 2025-06-09: Added kaggle, flake8, black and pytest to environment files for CI.
-2025-06-08: Updated README repository layout section to match existing folders and note that model modules are missing, so make train fails.
+2025-06-08: Updated README repository layout section to match existing folders
+and note that model modules are missing, so make train fails.
 2025-06-08: Marked directory creation as complete in TODO and noted CI workflow.
 2025-06-08: Introduced FeatureEngineer class and helper modules with unit tests.
 2025-06-08: Added dataset handling instructions and conda activation notes to
 README. Documented notebook usage in `notebooks/README.md` and checked off the
 corresponding TODO items.
-2025-06-10: Implemented Kaggle download script with env auth, added dataprep module and unit tests.
-2025-06-10: Added train/eval modules for logistic regression and decision tree with stratified split utility. Updated Makefile, Dockerfile, README and added basic model tests.
+2025-06-10: Implemented Kaggle download script with env auth, added dataprep
+module and unit tests.
+2025-06-10: Added train/eval modules for logistic regression and decision tree
+with stratified split utility. Updated Makefile, Dockerfile, README and added
+basic model tests.
 2025-06-10: Removed unused numpy imports from diagnostics and selection modules.
 2025-06-08: Reformatted tree_feature_selector arguments to multiple lines.
 2025-06-11: Cleaned flake8 warnings in features.py and split long lines.
 2025-06-08: Standardised df_fe.columns block indentation in features.py.
 2025-06-08: Removed sys.path modification from several test files.
-2025-06-08: Cleaned unused imports, tweaked features formatting and removed sys.path hacking from tests.
-2025-06-12: Updated TODO progress and revised project overview for commit 354c4fc.
-2025-06-12: Updated migration notes to reflect commit 354c4fc and mention completed src modules, tests and CI.
-2025-06-08: Updated AGENTS.md project structure tests section to list module unit tests.
-2025-06-08: Marked tasks complete in TODO and expanded migration notes for commit 536978c.
-2025-06-08: Rewrote TODO introduction to reference dbd5184 and note that modular code, tests and CI now exist.
-2025-06-13: Updated AGENTS.md to list all tests and clarify 4-space indentation standard.
+2025-06-08: Cleaned unused imports, tweaked features formatting and removed
+sys.path hacking from tests.
+2025-06-12: Updated TODO progress and revised project overview for commit
+354c4fc.
+2025-06-12: Updated migration notes to reflect commit 354c4fc and mention
+completed src modules, tests and CI.
+2025-06-08: Updated AGENTS.md project structure tests section to list module
+unit tests.
+2025-06-08: Marked tasks complete in TODO and expanded migration notes for
+commit 536978c.
+2025-06-08: Rewrote TODO introduction to reference dbd5184 and note that
+modular code, tests and CI now exist.
+2025-06-13: Updated AGENTS.md to list all tests and clarify 4-space indentation
+standard.
 2025-06-14: Marked README update as complete in TODO.
-2025-06-14: Updated README to remove missing-modules note and confirm the migration is complete.
-2025-06-14: Updated README to remove missing-modules note and confirm the migration is complete.
-2025-06-08: Removed obsolete README statements about missing model pipelines and noted make train runs both models.
+2025-06-14: Updated README to remove missing-modules note and confirm the
+migration is complete.
+2025-06-14: Updated README to remove missing-modules note and confirm the
+migration is complete.
+2025-06-08: Removed obsolete README statements about missing model pipelines
+and noted make train runs both models.
 2025-06-14: Renamed project structure heading in AGENTS.md.
 2025-06-08: Refreshed README repository layout and checked TODO item.
 2025-06-08: Adjusted CI workflow to invoke pytest via python -m.
-2025-06-15: Added PYTHONPATH env var in CI to fix ModuleNotFoundError during tests.
+2025-06-15: Added PYTHONPATH env var in CI to fix ModuleNotFoundError during
+tests.
 2025-06-16: Added evaluate.py with nested CV and fairness metrics plus tests.
-2025-06-16: Added make eval target and expanded README with evaluation instructions and fairness guidance.
+2025-06-16: Added make eval target and expanded README with evaluation
+instructions and fairness guidance.
 2025-06-08: integrated FeatureEngineer into model pipelines and updated tests.
 2025-06-08: Added CLI main entry in evaluate.py and updated tests and README.
-2025-06-08: Added project metadata in pyproject.toml and exposed src as installable package. README now documents 'pip install -e .' for development.
-2025-06-08: Added src/train.py CLI orchestrating both models and updated Makefile to use it.
+2025-06-08: Added project metadata in pyproject.toml and exposed src as
+installable package. README now documents 'pip install -e .' for development.
+2025-06-08: Added src/train.py CLI orchestrating both models and updated
+Makefile to use it.
 2025-06-08: Added unit tests for fairness metrics.
-2025-06-08: Wrapped VIF computation in warnings and numpy error state contexts to avoid RuntimeWarning when columns are perfectly collinear.
+2025-06-08: Wrapped VIF computation in warnings and numpy error state contexts
+to avoid RuntimeWarning when columns are perfectly collinear.
 2025-06-08: Clarified Kaggle credential setup in README.
-2025-06-17: Updated TODO intro to mark migration complete and added evaluation/fairness checklist item.
-2025-06-08: Documented evaluate/train/fairness modules and tests in AGENTS.md directory tree.
+2025-06-17: Updated TODO intro to mark migration complete and added
+evaluation/fairness checklist item.
+2025-06-08: Documented evaluate/train/fairness modules and tests in AGENTS.md
+directory tree.
 2025-06-18: Cleaned tests and formatted selection/train modules.
-2025-06-08: Expanded Testing & CI guidelines in AGENTS.md to describe flake8, black, pytest workflow.
-2025-06-18: documented new mlcls-* console scripts and usage.
-2025-06-08: Updated download_data to check CSV existence before using Kaggle API and expanded tests.
+2025-06-08: Expanded Testing & CI guidelines in AGENTS.md to describe flake8,
+black, pytest workflow.
+2025-06-18: documented new mlcls-\* console scripts and usage.
+2025-06-08: Updated download_data to check CSV existence before using Kaggle
+API and expanded tests.
 2025-06-08: Added console script entrypoints and tests invoking them.
-2025-06-08: refactored FeatureEngineer.transform into helper methods to meet function length rule. Added docstrings and updated tests. Black and pytest fail due to pyproject parsing error.
+2025-06-08: refactored FeatureEngineer.transform into helper methods to meet
+function length rule. Added docstrings and updated tests. Black and pytest fail
+due to pyproject parsing error.
 2025-06-18: Added --data-path option to mlcls-train and updated tests.
 2025-06-20: Added CITATION.cff for citation metadata.
 2025-06-21: Added plotting helpers and manifest writer with tests.
 2025-06-08: expanded evaluate metrics and CV, added new tests
-2025-06-21: Added calibration module with CLI and tests for model probability calibration.
-2025-06-08: added feature_importance module exporting logistic coefficients and tree importances with tests.
+2025-06-21: Added calibration module with CLI and tests for model probability
+calibration.
+2025-06-08: added feature_importance module exporting logistic coefficients and
+tree importances with tests.
 2025-06-21: Added sampler option to training pipeline and oversampling tests.
-2025-06-22: Documented sampler CLI, calibration command, feature-importance outputs and manifest in README.
+2025-06-22: Documented sampler CLI, calibration command, feature-importance
+outputs and manifest in README.
 2025-06-22: Cleaned TODO to remove outdated missing-feature notes.
-2025-06-08: Removed extra blank lines in src/__init__.py to satisfy flake8.
+2025-06-08: Removed extra blank lines in src/**init**.py to satisfy flake8.
 2025-06-08: Fixed indentation in train-cart, train, eval commands in Makefile.
-2025-06-09: Verified Kaggle download and training pipelines. Added lowercase loan_status handling in dataprep.
+2025-06-09: Verified Kaggle download and training pipelines. Added lowercase
+loan_status handling in dataprep.
 2025-06-09: Strip whitespace in dataset columns for evaluation.
-2025-06-23: Replaced Build & Test badge with GitHub internal badge for private repo.
+2025-06-23: Replaced Build & Test badge with GitHub internal badge for private
+repo.
 2025-06-23: download_data warns when src package is missing and tests cover it.
-2025-06-23: Added note in README that 'pip install -e .' registers src for import so scripts like python scripts/download_data.py work.
-2025-06-24: README clarifies that `make` is required and lists console script alternatives for Windows.
-2025-06-09: Added grid_train_from_df using GridSearchCV with repeated CV and unit test for parameter grid.
+2025-06-23: Added note in README that 'pip install -e .' registers src for
+import so scripts like python scripts/download_data.py work.
+2025-06-24: README clarifies that `make` is required and lists console script
+alternatives for Windows.
+2025-06-09: Added grid_train_from_df using GridSearchCV with repeated CV and
+unit test for parameter grid.
 2025-06-09: Added grid_train_from_df with grid search and tests.
-2025-06-25: Documented --grid-search option for exhaustive cross-validation and added TODO bullet.
+2025-06-25: Documented --grid-search option for exhaustive cross-validation and
+added TODO bullet.
 2025-06-09: Added grid-search flag to mlcls-train and tests.
 2025-06-09: Added grid-search flag to mlcls-train and tests.
-2025-06-25: Cleaned logreg.grid_train_from_df to use RepeatedStratifiedKFold and removed duplicate docstring.
-2025-06-09: Fixed stray parameter block in cart.grid_train_from_df; function now returns fitted GridSearchCV.
+2025-06-25: Cleaned logreg.grid_train_from_df to use RepeatedStratifiedKFold
+and removed duplicate docstring.
+2025-06-09: Fixed stray parameter block in cart.grid_train_from_df; function
+now returns fitted GridSearchCV.
 2025-06-24: Marked TODO item clarifying Makefile usage as done.
 2025-06-09: Documented grid-search flag and dataset size in README.
 2025-06-09: Verified grid_train_from_df header and removed stray blank line.
 2025-06-09: mlcls-train now prints best cart grid-search score.
-2025-06-09: Added FUNCTIONS.md summarising all functions from ai_arisha.py for verification.
-2025-06-27: Clarified README that grid search runs via `mlcls-train -g` and removed
+2025-06-09: Added FUNCTIONS.md summarising all functions from ai_arisha.py for
+verification.
+2025-06-27: Clarified README that grid search runs via `mlcls-train -g` and
+removed
 `mlcls-eval --grid-search` examples.
-2025-06-30: cart.grid_train_from_df can now save the best estimator via new artefact_path argument and tests cover file output.
-2025-07-01: Verified function coverage from ai_arisha.py using FUNCTIONS.md. Besides
-    ``safe_transform`` and the fairness helpers ``youden_threshold`` and
-    ``four_fifths_ratio``, reporting utilities like ``find_path`` and ``write_section``,
-    along with ``flatten_cv`` and ``flatten_metrics`` live in ``src/reporting.py``.
-    All other utilities such as ``_zeros`` or ``_vif_prune`` remain unported.
-    Marked the TODO item as complete to record this gap.
+2025-06-30: cart.grid_train_from_df can now save the best estimator via new
+artefact_path argument and tests cover file output.
+2025-07-01: Verified function coverage from ai_arisha.py using FUNCTIONS.md.
+Besides
+`safe_transform` and the fairness helpers `youden_threshold` and
+`four_fifths_ratio`, reporting utilities like `find_path` and `write_section`,
+along with `flatten_cv` and `flatten_metrics` live in `src/reporting.py`.
+All other utilities such as `_zeros` or `_vif_prune` remain unported.
+Marked the TODO item as complete to record this gap.
 
-2025-06-09: added reporting module with helpers to assemble report and tests for flatten_cv and flatten_metrics.
-2025-07-02: Added evaluation_utils with plot_or_load and alias wrappers. Reason: implement new helper API. Decisions: keep wrappers thin for simplicity.
-2025-07-03: added tests for split.stratified_split verifying split lengths, stratification and index reset. Reason: cover TODO bullet.
-2025-07-03: Added safe_transform input validation tests for type errors and extra-column warnings as per TODO. Reason: improve preprocessing robustness.
-2025-07-03: Added CLI sampler integration test verifying mlcls-train works with SMOTE and prints ROC-AUC. Reason: extend CLI coverage for sampler option.
-2025-06-09: expanded FeatureEngineer tests for column normalisation, asset totals and risk flags. Reason: improve coverage per TODO. Decisions: use pytest.warns for missing asset warnings.
-2025-07-03: Added calibration tests for isotonic option and invalid method validation. Reason: strengthen coverage. Decisions: check `calibrated_classifiers_` attribute and expect ValueError for bad method.
-2025-07-03: Added make test target for simplified testing via pytest. Updated docs and guidelines.
-2025-07-04: Marked TODO item for Makefile test target as done and fixed Makefile tabs. 'make test' now invokes pytest correctly.
-2025-07-04: Marked TODO bullet for Makefile test target as completed. Reason: target already in Makefile.
-2025-07-05: Implemented `vif_prune` for iterative VIF pruning with tests and recorded TODO entry. Reason: port missing helper from ai_arisha.py.
-2025-07-05: Added TODO bullet listing missing statistical diagnostics from FUNCTIONS.md. Reason: document unported helpers for future diagnostics_stats module.
-2025-07-05: Added TODO bullet for missing random_split, time_split and set_seeds helper. Reason: these functions remain absent from src compared with the original notebook.
-2025-06-10: Clarified NOTES about reporting utilities in src/reporting.py when summarising ported functions. Reason: correct earlier statement. Decisions: emphasised presence of flatten_cv and others.
-2025-07-05: Added TODOs to port notebook metrics helpers (eval_at, eval_metrics, show_metrics, folds_df) into a new metrics module. Reason: these functions come from ai_arisha.py and would aid reproducibility.
-2025-07-06: Implemented random_split and time_split in src.split plus set_seeds in new utils module. Added tests, README note and ticked TODO. Decisions: handled tiny datasets in calculate_vif to keep tests stable under Python 3.12.
-2025-07-05: Implemented diagnostics_stats module with chi-square helpers and tests. Reason: port missing statistical diagnostics from TODO. Decisions: keep MC_N at 5000 as in notebook and add unit tests.
-2025-06-10: Ported eval_metrics, eval_at, show_metrics and folds_df into new metrics module with tests. Updated selection.vif_prune to handle infinite VIFs and stop pruning when two columns remain. Reason: implement TODO item. Decisions: treat inf VIF as large constant but stop dropping for last two cols.
-2025-07-06: Fixed vif_prune to skip VIF calculation when fewer than two columns remain and stop on infinite VIF with two columns. Reason: avoid singular matrix errors.
-2025-07-07: Removed unused pandas import from tests/test_metrics.py and tweaked calculate_vif small-sample handling so flake8 passes. Reason: tidy metrics tests and fix CI.
-2025-07-07: Rewrote vif_prune to remove duplicate logic, recalc VIFs each loop and return NaNs when <2 cols. Reason: simplify function and avoid dropped columns when two remain.
-2025-07-08: Added `_scaled_matrix`, `_check_mu_sigma` and `validate_prep` in preprocessing with unit tests. Reason: port scaling validation helpers from the notebook. Decisions: functions now accept DataFrames to avoid globals and raise ValueError on invalid scaling.
-2025-07-08: Implemented `is_binary_numeric` helper and added unit tests. Reason: port binary-check logic from notebook. Decisions: simple dtype check using `series.dtype.kind`.
-2025-07-07: Removed unused pandas import from tests/test_metrics.py and tweaked calculate_vif small-sample handling so flake8 passes. Reason: tidy metrics tests and fix CI.
-2025-06-10: Simplified vif_prune to drop one column at a time and removed stray docstring. Reason: tidy API and meet flake8 guidelines. Decisions: recalc VIFs after each drop to keep function short.
-2025-07-08: Added note in AGENTS.md to cross-check FUNCTIONS.md and record skipped notebook functions in NOTES.md. Reason: keep track of ported utilities.
-2025-07-07: Added sha256, shasum, save_folds and run_grid utilities with tests. Reason: unify artifact helpers from ai_arisha notebook. Decisions: new run_grid saves CV results.
-2025-06-10: Added cv_utils module with build_outer_iter and nested_cv plus tests covering bootstrap path. Reason: port CV bootstrap logic per TODO.
-2025-07-08: Added pipeline_helpers with lr_steps, tree_steps and run_gs. logreg and cart grid_search now call these helpers. Tests cover helper behaviour.
-2025-07-08: Found unported helpers _zeros, _dedup and _is_binary_numeric in ai_arisha.py. Added TODO section to track porting them into src/utils.py with tests.
-
-2025-06-10: Added markdown lint workflow for docs-only commits and updated AGENTS guidelines. Reason: enforce quick docs QA.
