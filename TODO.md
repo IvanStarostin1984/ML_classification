@@ -103,3 +103,4 @@ Oversampling options, probability calibration, feature importance export, extend
 - [ ] implement random_split and time_split in src/split.py; add set_seeds helper in new src/utils.py
 
 
+- [x] Simplify vif_prune to drop one column per iteration and recalc VIFs

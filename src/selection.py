@@ -34,56 +34,19 @@ def calculate_vif(df: pd.DataFrame, cols: list[str]) -> pd.Series:
 def vif_prune(
     df: pd.DataFrame, cols: list[str], cap: float
 ) -> tuple[list[str], pd.Series]:
-
-    """Return columns kept after iterative VIF pruning and their VIFs."""
-
-    cols = list(cols)
-
-    """Iteratively drop columns with VIF above ``cap``.
-
-    Parameters
-    ----------
-    df:
-        Input DataFrame containing numeric columns.
-    cols:
-        List of column names to examine.
-    cap:
-        Threshold for maximum allowed VIF.
-
-    Returns
-    -------
-    cols:
-        Columns kept after pruning.
-    vifs:
-        VIF values for the kept columns. ``NaN`` if fewer than two columns
-        remain.
-    """
+    """Return remaining columns after iteratively dropping high-VIF columns."""
 
     cols = list(cols)
-
-
-
     while True:
         if len(cols) < 2:
             return cols, pd.Series([np.nan] * len(cols), index=cols)
+
         vifs = calculate_vif(df, cols)
-
-        if len(cols) == 2 and not np.isfinite(vifs).all():
+        if vifs.max() <= cap or (not np.isfinite(vifs).all() and len(cols) == 2):
             return cols, vifs
-        if vifs.max() <= cap:
-            return cols, vifs
-        cols.remove(vifs.replace(np.inf, 1e12).idxmax())
 
-
-        if df.shape[0] <= 3 and np.linalg.matrix_rank(df[cols].to_numpy(float)) < len(
-            cols
-        ):
-            vifs[:] = float("inf")
-        if vifs.max() <= cap or len(cols) <= 2:
-            return cols, vifs
         drop = vifs.replace(np.inf, 1e12).idxmax()
         cols.remove(drop)
-
 
 
 def tree_feature_selector(
