@@ -134,6 +134,7 @@ corresponding TODO items.
 2025-07-08: Implemented `is_binary_numeric` helper and added unit tests. Reason: port binary-check logic from notebook. Decisions: simple dtype check using `series.dtype.kind`.
 2025-07-07: Removed unused pandas import from tests/test_metrics.py and tweaked calculate_vif small-sample handling so flake8 passes. Reason: tidy metrics tests and fix CI.
 2025-06-10: Simplified vif_prune to drop one column at a time and removed stray docstring. Reason: tidy API and meet flake8 guidelines. Decisions: recalc VIFs after each drop to keep function short.
+2025-07-08: Added note in AGENTS.md to cross-check FUNCTIONS.md and record skipped notebook functions in NOTES.md. Reason: keep track of ported utilities.
 2025-07-07: Added sha256, shasum, save_folds and run_grid utilities with tests. Reason: unify artifact helpers from ai_arisha notebook. Decisions: new run_grid saves CV results.
 2025-06-10: Added cv_utils module with build_outer_iter and nested_cv plus tests covering bootstrap path. Reason: port CV bootstrap logic per TODO.
 2025-07-08: Added pipeline_helpers with lr_steps, tree_steps and run_gs. logreg and cart grid_search now call these helpers. Tests cover helper behaviour.
