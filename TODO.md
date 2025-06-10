@@ -55,10 +55,9 @@ The original script uses RepeatedStratifiedKFold and falls back to bootstrapping
 
 Oversampling options, probability calibration, feature importance export, extended metrics and manifest writing were implemented in commit `0c16cae`.
 
-- Several diagnostic helpers from `FUNCTIONS.md` remain unported:
-  `_need_exact`, `_cramers_v`, `_cochran_armitage`, `_safe_chi2`, and
-  `_fmt_p`/`_annotate`. These could become a new
-  `src/diagnostics_stats.py` module with unit tests.
+- [x] Ported statistical helpers `_need_exact`, `_cramers_v`, `_cochran_armitage`,
+  `_safe_chi2`, and `_fmt_p`/`_annotate` into new
+  `src/diagnostics_stats.py` with unit tests.
 
 ## 9. Usability improvements
 - [x] download_data prints guidance if src package cannot be imported.
