@@ -42,6 +42,7 @@ ML_classification/
 │   ├─ split.py                     # stratified train/test logic
 │   ├─ evaluate.py                  # nested CV + fairness metrics
 │   ├─ fairness.py                  # fairness helpers
+│   ├─ metrics.py                   # metric utilities from notebook
 │   ├─ train.py                     # orchestrates pipelines
 │   └─ models/
 │       ├─ __init__.py
@@ -58,6 +59,7 @@ ML_classification/
 │   ├─ test_diagnostics.py          # diagnostic utilities
 │   ├─ test_evaluate.py             # tests for the evaluation CLI
 │   └─ test_fairness.py             # tests for fairness metrics
+│   └─ test_metrics.py              # unit tests for metric helpers
 ├─ environment.yml                  # Conda spec (Python ≥ 3.10)
 ├─ requirements.txt                 # pip fallback
 ├─ Dockerfile                       # reproducible container build
