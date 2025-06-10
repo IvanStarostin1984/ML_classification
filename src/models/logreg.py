@@ -8,9 +8,6 @@ import pandas as pd
 from sklearn.linear_model import LogisticRegression
 from sklearn.metrics import roc_auc_score
 
-
-from sklearn.model_selection import GridSearchCV, RepeatedStratifiedKFold
-
 from imblearn.base import SamplerMixin
 from imblearn.pipeline import Pipeline
 from imblearn.over_sampling import SMOTE, SMOTENC
@@ -18,6 +15,8 @@ from imblearn.over_sampling import SMOTE, SMOTENC
 from ..dataprep import clean
 from ..features import FeatureEngineer
 from ..preprocessing import build_preprocessor
+
+from ..pipeline_helpers import lr_steps, run_gs
 
 from ..split import stratified_split
 
@@ -118,17 +117,15 @@ def grid_train_from_df(
         )
     )
 
-    pipe = build_pipeline(cat_cols, num_cols, sampler="passthrough")
+    preproc = build_preprocessor(num_cols, cat_cols)
+    steps = lr_steps(preproc, "passthrough")
     param_grid = []
     for blk in _LOGREG_PARAM_GRID_BASE:
         new_blk = blk.copy()
         new_blk["sampler"] = base_samplers.copy()
         param_grid.append(new_blk)
 
-    # repeated cross-validation grid search
-    cv = RepeatedStratifiedKFold(n_splits=5, n_repeats=3, random_state=42)
-    gs = GridSearchCV(pipe, param_grid, cv=cv, scoring="roc_auc", n_jobs=-1)
-    gs.fit(x_train, y_train)
+    gs = run_gs(x_train, y_train, steps, LogisticRegression(max_iter=1000), param_grid)
     pred = gs.best_estimator_.predict_proba(x_val)[:, 1]
 
     auc = roc_auc_score(y_val, pred)
