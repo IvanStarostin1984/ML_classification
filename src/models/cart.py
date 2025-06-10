@@ -8,11 +8,12 @@ from sklearn.metrics import roc_auc_score
 from imblearn.base import SamplerMixin
 from imblearn.pipeline import Pipeline
 from sklearn.tree import DecisionTreeClassifier
-from sklearn.model_selection import GridSearchCV, RepeatedStratifiedKFold
+from sklearn.model_selection import GridSearchCV
 
 from ..dataprep import clean
 from ..features import FeatureEngineer
 from ..preprocessing import build_preprocessor
+from ..pipeline_helpers import tree_steps, run_gs
 from ..split import stratified_split
 
 DATA_PATH = Path("data/raw/loan_approval_dataset.csv")
@@ -76,11 +77,10 @@ def grid_train_from_df(
     x, y = df.drop(columns=[target]), df[target]
     cat_cols = x.select_dtypes(include=["object", "category"]).columns.tolist()
     num_cols = [c for c in x.columns if c not in cat_cols]
-    pipe = build_pipeline(cat_cols, num_cols, sampler)
+    preproc = build_preprocessor(num_cols, cat_cols)
+    steps = tree_steps(preproc, sampler or "passthrough")
     grid = {"model__max_depth": [None, 8, 15], "model__min_samples_leaf": [1, 5]}
-    cv = RepeatedStratifiedKFold(n_splits=5, n_repeats=3, random_state=42)
-    gs = GridSearchCV(pipe, grid, cv=cv, scoring="roc_auc", n_jobs=-1)
-    gs.fit(x, y)
+    gs = run_gs(x, y, steps, DecisionTreeClassifier(random_state=42), grid)
     if artefact_path:
         artefact_path.parent.mkdir(parents=True, exist_ok=True)
         joblib.dump(gs.best_estimator_, artefact_path)
