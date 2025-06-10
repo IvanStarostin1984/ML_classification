@@ -139,4 +139,5 @@ corresponding TODO items.
 2025-06-10: Added cv_utils module with build_outer_iter and nested_cv plus tests covering bootstrap path. Reason: port CV bootstrap logic per TODO.
 2025-07-08: Added pipeline_helpers with lr_steps, tree_steps and run_gs. logreg and cart grid_search now call these helpers. Tests cover helper behaviour.
 2025-07-08: Found unported helpers _zeros, _dedup and _is_binary_numeric in ai_arisha.py. Added TODO section to track porting them into src/utils.py with tests.
+2025-06-10: Updated README badges. Replaced relative actions link with absolute URL and removed unreachable ROC-AUC shield. LinkedIn URL turned into plain text so markdown-link-check passes.
 
