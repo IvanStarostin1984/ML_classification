@@ -124,6 +124,7 @@ corresponding TODO items.
 2025-07-05: Added TODO bullet for missing random_split, time_split and set_seeds helper. Reason: these functions remain absent from src compared with the original notebook.
 2025-06-10: Clarified NOTES about reporting utilities in src/reporting.py when summarising ported functions. Reason: correct earlier statement. Decisions: emphasised presence of flatten_cv and others.
 2025-07-05: Added TODOs to port notebook metrics helpers (eval_at, eval_metrics, show_metrics, folds_df) into a new metrics module. Reason: these functions come from ai_arisha.py and would aid reproducibility.
+2025-07-05: Implemented diagnostics_stats module with chi-square helpers and tests. Reason: port missing statistical diagnostics from TODO. Decisions: keep MC_N at 5000 as in notebook and add unit tests.
 2025-06-10: Ported eval_metrics, eval_at, show_metrics and folds_df into new metrics module with tests. Updated selection.vif_prune to handle infinite VIFs and stop pruning when two columns remain. Reason: implement TODO item. Decisions: treat inf VIF as large constant but stop dropping for last two cols.
 2025-07-06: Fixed vif_prune to skip VIF calculation when fewer than two columns remain and stop on infinite VIF with two columns. Reason: avoid singular matrix errors.
 
