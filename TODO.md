@@ -104,6 +104,9 @@ Oversampling options, probability calibration, feature importance export, extend
 
 - [x] Simplify vif_prune to drop one column per iteration and recalc VIFs
 
+- [x] Port sha256, shasum, save_folds and run_grid helpers into src.manifest with unit tests.
+
+
 - [x] Ported build_outer_iter and nested_cv with bootstrap fallback into new src/cv_utils.py with tests.
 
 
