@@ -85,6 +85,8 @@ ML_classification/
 - Run these commands locally before committing to ensure your code passes the
   same checks. Use `make test` to run the full pytest suite with the correct `PYTHONPATH`.
 - Black uses a line length of **88** as configured in `pyproject.toml`.
+- Docs-only commits run a fast job with `markdownlint` and
+   `markdown-link-check`.
 
 ## Contributing Workflow
 - **Fork** then branch off `main` using the pattern `feat/<topic>`.

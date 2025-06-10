@@ -24,6 +24,7 @@ All migration tasks are complete as of commit `8af97fc`. This checklist started 
 - [x] set up GitHub Actions workflow `ci.yml` running flake8/black and `pytest`
 - [x] add unit tests for `dataprep`, `features`, and `models` modules
 - [x] add unit tests for `split.stratified_split`
+- [x] add docs-only CI job running markdownlint and markdown-link-check
 
 ## 6. Documentation updates
 - [x] update `README.md` with new instructions once modules are in place
