@@ -119,3 +119,4 @@ corresponding TODO items.
 2025-07-04: Marked TODO item for Makefile test target as done and fixed Makefile tabs. 'make test' now invokes pytest correctly.
 2025-07-04: Marked TODO bullet for Makefile test target as completed. Reason: target already in Makefile.
 
+2025-07-05: Added TODOs to port notebook metrics helpers (eval_at, eval_metrics, show_metrics, folds_df) into a new metrics module. Reason: these functions come from ai_arisha.py and would aid reproducibility.
