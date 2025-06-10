@@ -88,3 +88,5 @@ Oversampling options, probability calibration, feature importance export, extend
 
 
 - [x] add Makefile test target to run pytest
+
+- [ ] implement random_split and time_split in src/split.py; add set_seeds helper in new src/utils.py
