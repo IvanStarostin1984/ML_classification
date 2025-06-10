@@ -94,14 +94,32 @@ Oversampling options, probability calibration, feature importance export, extend
 
 ## 11. Metrics helpers
 
-- [ ] Port notebook metrics helpers `eval_metrics`, `eval_at`, `show_metrics` and `folds_df` or confirm omission.
-- [ ] Create `src/metrics.py` with unit tests for these functions.
-- [x] implement random_split and time_split in src/split.py; add set_seeds helper in new src/utils.py
-
 - [x] Port notebook metrics helpers `eval_metrics`, `eval_at`, `show_metrics` and `folds_df` or confirm omission.
 - [x] Create `src/metrics.py` with unit tests for these functions.
-- [ ] implement random_split and time_split in src/split.py; add set_seeds helper in new src/utils.py
+- [x] implement random_split and time_split in src/split.py; add set_seeds helper in new src/utils.py
+- [x] Simplify vif_prune to drop one column per iteration and recalc VIFs
+- [x] add `is_binary_numeric` helper in `src/utils.py` with unit tests
+
 
 
 - [x] Simplify vif_prune to drop one column per iteration and recalc VIFs
+
 - [x] Port sha256, shasum, save_folds and run_grid helpers into src.manifest with unit tests.
+
+
+- [x] Ported build_outer_iter and nested_cv with bootstrap fallback into new src/cv_utils.py with tests.
+
+
+## 12. Preprocessing validation
+- [ ] Integrate `validate_prep` into training scripts to fail fast on bad scaling.
+
+- [x] centralise grid-search helpers as pipeline_helpers
+
+## 12. Utility helpers
+
+The original notebook defines small helper functions `_zeros`, `_dedup` and `_is_binary_numeric`. These create zero-filled series, merge lists without duplicates and detect 0/1 numeric columns. They are not yet present in the modular code.
+- [ ] Port these helpers into `src/utils.py` with accompanying unit tests.
+
+
+
+
