@@ -104,3 +104,5 @@ Two markdown files at the repository root help coordinate the refactor.
 - **NOTES.md** – running log that explains what was done and how.
 
 Contributors must keep `TODO.md` up to date with remaining work and record completed items in `NOTES.md`.
+
+- **FUNCTIONS.md** – reference list of notebook functions. Ensure each is implemented or intentionally skipped. Log skipped ones in NOTES.md.

@@ -134,3 +134,5 @@ corresponding TODO items.
 
 2025-07-07: Removed unused pandas import from tests/test_metrics.py and tweaked calculate_vif small-sample handling so flake8 passes. Reason: tidy metrics tests and fix CI.
 2025-06-10: Simplified vif_prune to drop one column at a time and removed stray docstring. Reason: tidy API and meet flake8 guidelines. Decisions: recalc VIFs after each drop to keep function short.
+
+2025-07-08: Added note in AGENTS.md to cross-check FUNCTIONS.md and record skipped notebook functions in NOTES.md. Reason: keep track of ported utilities.
