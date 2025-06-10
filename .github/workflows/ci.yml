@@ -5,7 +5,30 @@ on:
   pull_request:
 
 jobs:
+  changes:
+    runs-on: ubuntu-latest
+    outputs:
+      docs_only: ${{ steps.docs.outputs.docs_only }}
+    steps:
+      - uses: actions/checkout@v3
+        with:
+          fetch-depth: 0
+      - id: files
+        uses: tj-actions/changed-files@v41
+      - id: docs
+        run: |
+          docs_only=true
+          for f in ${{ steps.files.outputs.all_changed_files }}; do
+            case "$f" in
+              *.md) ;;
+              *) docs_only=false; break ;;
+            esac
+          done
+          echo "docs_only=$docs_only" >> "$GITHUB_OUTPUT"
+
   build:
+    needs: changes
+    if: needs.changes.outputs.docs_only != 'true'
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v3
@@ -25,3 +48,17 @@ jobs:
         env:
           PYTHONPATH: ${{ github.workspace }}
         run: python -m pytest -q
+
+  markdown-lint:
+    needs: changes
+    if: needs.changes.outputs.docs_only == 'true'
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+      - name: Run markdownlint
+        run: npx markdownlint-cli '**/*.md' --ignore node_modules
+      - name: Check links
+        run: npx markdown-link-check -q '**/*.md'
