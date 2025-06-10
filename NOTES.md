@@ -128,6 +128,6 @@ corresponding TODO items.
 2025-07-05: Implemented diagnostics_stats module with chi-square helpers and tests. Reason: port missing statistical diagnostics from TODO. Decisions: keep MC_N at 5000 as in notebook and add unit tests.
 2025-06-10: Ported eval_metrics, eval_at, show_metrics and folds_df into new metrics module with tests. Updated selection.vif_prune to handle infinite VIFs and stop pruning when two columns remain. Reason: implement TODO item. Decisions: treat inf VIF as large constant but stop dropping for last two cols.
 2025-07-06: Fixed vif_prune to skip VIF calculation when fewer than two columns remain and stop on infinite VIF with two columns. Reason: avoid singular matrix errors.
-
-
 2025-07-07: Removed unused pandas import from tests/test_metrics.py and tweaked calculate_vif small-sample handling so flake8 passes. Reason: tidy metrics tests and fix CI.
+2025-07-07: Rewrote vif_prune to remove duplicate logic, recalc VIFs each loop and return NaNs when <2 cols. Reason: simplify function and avoid dropped columns when two remain.
+
