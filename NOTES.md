@@ -102,11 +102,12 @@ corresponding TODO items.
 2025-06-27: Clarified README that grid search runs via `mlcls-train -g` and removed
 `mlcls-eval --grid-search` examples.
 2025-06-30: cart.grid_train_from_df can now save the best estimator via new artefact_path argument and tests cover file output.
-2025-07-01: Verified function coverage from ai_arisha.py using FUNCTIONS.md. Only
+2025-07-01: Verified function coverage from ai_arisha.py using FUNCTIONS.md. Besides
     ``safe_transform`` and the fairness helpers ``youden_threshold`` and
-    ``four_fifths_ratio`` exist in ``src``. All other utilities such as
-    ``_zeros`` or ``_vif_prune`` remain unported. Marked the TODO item as
-    complete to record this gap.
+    ``four_fifths_ratio``, reporting utilities like ``find_path`` and ``write_section``,
+    along with ``flatten_cv`` and ``flatten_metrics`` live in ``src/reporting.py``.
+    All other utilities such as ``_zeros`` or ``_vif_prune`` remain unported.
+    Marked the TODO item as complete to record this gap.
 
 2025-06-09: added reporting module with helpers to assemble report and tests for flatten_cv and flatten_metrics.
 2025-07-02: Added evaluation_utils with plot_or_load and alias wrappers. Reason: implement new helper API. Decisions: keep wrappers thin for simplicity.
@@ -118,6 +119,7 @@ corresponding TODO items.
 2025-07-03: Added make test target for simplified testing via pytest. Updated docs and guidelines.
 2025-07-04: Marked TODO item for Makefile test target as done and fixed Makefile tabs. 'make test' now invokes pytest correctly.
 2025-07-04: Marked TODO bullet for Makefile test target as completed. Reason: target already in Makefile.
-
-
+2025-07-05: Added TODO bullet listing missing statistical diagnostics from FUNCTIONS.md. Reason: document unported helpers for future diagnostics_stats module.
 2025-07-05: Added TODO bullet for missing random_split, time_split and set_seeds helper. Reason: these functions remain absent from src compared with the original notebook.
+2025-06-10: Clarified NOTES about reporting utilities in src/reporting.py when summarising ported functions. Reason: correct earlier statement. Decisions: emphasised presence of flatten_cv and others.
+
