@@ -94,13 +94,8 @@ Oversampling options, probability calibration, feature importance export, extend
 
 ## 11. Metrics helpers
 
-- [ ] Port notebook metrics helpers `eval_metrics`, `eval_at`, `show_metrics` and `folds_df` or confirm omission.
-- [ ] Create `src/metrics.py` with unit tests for these functions.
-- [x] implement random_split and time_split in src/split.py; add set_seeds helper in new src/utils.py
-
 - [x] Port notebook metrics helpers `eval_metrics`, `eval_at`, `show_metrics` and `folds_df` or confirm omission.
 - [x] Create `src/metrics.py` with unit tests for these functions.
-- [ ] implement random_split and time_split in src/split.py; add set_seeds helper in new src/utils.py
-
-
+- [x] implement random_split and time_split in src/split.py; add set_seeds helper in new src/utils.py
 - [x] Simplify vif_prune to drop one column per iteration and recalc VIFs
+- [x] add `is_binary_numeric` helper in `src/utils.py` with unit tests
