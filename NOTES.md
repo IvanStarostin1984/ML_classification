@@ -140,3 +140,4 @@ corresponding TODO items.
 2025-07-08: Added pipeline_helpers with lr_steps, tree_steps and run_gs. logreg and cart grid_search now call these helpers. Tests cover helper behaviour.
 2025-07-08: Found unported helpers _zeros, _dedup and _is_binary_numeric in ai_arisha.py. Added TODO section to track porting them into src/utils.py with tests.
 
+2025-07-09: Cleaned TODO checklist by removing duplicate bullets and inserting blank lines for markdownlint. Reason: keep tasks unique and lint clean.
