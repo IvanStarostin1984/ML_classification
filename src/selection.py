@@ -31,8 +31,10 @@ def vif_prune(
 
     cols = list(cols)
     while True:
+        if len(cols) <= 2:
+            return cols, calculate_vif(df, cols)
         vifs = calculate_vif(df, cols)
-        if vifs.max() <= cap or len(cols) < 2:
+        if vifs.max() <= cap:
             return cols, vifs
         cols.remove(vifs.idxmax())
 
