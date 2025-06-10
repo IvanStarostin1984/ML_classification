@@ -104,3 +104,4 @@ Oversampling options, probability calibration, feature importance export, extend
 
 
 - [x] Simplify vif_prune to drop one column per iteration and recalc VIFs
+- [x] centralise grid-search helpers as pipeline_helpers
