@@ -55,10 +55,9 @@ The original script uses RepeatedStratifiedKFold and falls back to bootstrapping
 
 Oversampling options, probability calibration, feature importance export, extended metrics and manifest writing were implemented in commit `0c16cae`.
 
-- Several diagnostic helpers from `FUNCTIONS.md` remain unported:
-  `_need_exact`, `_cramers_v`, `_cochran_armitage`, `_safe_chi2`, and
-  `_fmt_p`/`_annotate`. These could become a new
-  `src/diagnostics_stats.py` module with unit tests.
+- [x] Ported statistical helpers `_need_exact`, `_cramers_v`, `_cochran_armitage`,
+  `_safe_chi2`, and `_fmt_p`/`_annotate` into new
+  `src/diagnostics_stats.py` with unit tests.
 
 ## 9. Usability improvements
 - [x] download_data prints guidance if src package cannot be imported.
@@ -89,11 +88,18 @@ Oversampling options, probability calibration, feature importance export, extend
 
 - [x] add Makefile test target to run pytest
 - [x] port `_vif_prune` as `vif_prune` in `src/selection.py` with unit tests
+- [x] VIF pruning handles singular matrices
 
 
 
 ## 11. Metrics helpers
+
 - [ ] Port notebook metrics helpers `eval_metrics`, `eval_at`, `show_metrics` and `folds_df` or confirm omission.
 - [ ] Create `src/metrics.py` with unit tests for these functions.
 - [x] implement random_split and time_split in src/split.py; add set_seeds helper in new src/utils.py
+
+- [x] Port notebook metrics helpers `eval_metrics`, `eval_at`, `show_metrics` and `folds_df` or confirm omission.
+- [x] Create `src/metrics.py` with unit tests for these functions.
+- [ ] implement random_split and time_split in src/split.py; add set_seeds helper in new src/utils.py
+
 
