@@ -5,6 +5,7 @@ from sklearn.datasets import make_classification
 from sklearn.linear_model import LogisticRegression
 
 from src import dataprep, evaluate
+from src.cv_utils import nested_cv
 
 
 def _df() -> pd.DataFrame:
@@ -19,10 +20,11 @@ def test_extended_metrics_and_grid() -> None:
     metrics = evaluate.evaluate_models(df)
     for col in ["f1", "recall", "specificity", "bal_acc"]:
         assert col in metrics.columns
-    res, _, _ = evaluate._run_nested(
+    res, _, _ = nested_cv(
         df,
         "Loan_Status",
         LogisticRegression(max_iter=1000, solver="liblinear"),
         {"model__C": [0.3, 1, 3], "model__penalty": ["l1", "l2"]},
+        evaluate.SCORERS,
     )
     assert len(res["estimator"][0].cv_results_["params"]) > 1
