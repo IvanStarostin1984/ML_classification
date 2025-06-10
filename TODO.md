@@ -104,3 +104,6 @@ Oversampling options, probability calibration, feature importance export, extend
 
 
 - [x] Simplify vif_prune to drop one column per iteration and recalc VIFs
+
+## 12. Preprocessing validation
+- [ ] Integrate `validate_prep` into training scripts to fail fast on bad scaling.
