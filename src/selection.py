@@ -36,7 +36,6 @@ def vif_prune(
 
     cols = list(cols)
     while True:
-
         if len(cols) <= 2:
             return cols, calculate_vif(df, cols)
         vifs = calculate_vif(df, cols)
