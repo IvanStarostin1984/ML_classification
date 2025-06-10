@@ -104,3 +104,8 @@ Oversampling options, probability calibration, feature importance export, extend
 
 
 - [x] Simplify vif_prune to drop one column per iteration and recalc VIFs
+
+## 12. Utility helpers
+
+The original notebook defines small helper functions `_zeros`, `_dedup` and `_is_binary_numeric`. These create zero-filled series, merge lists without duplicates and detect 0/1 numeric columns. They are not yet present in the modular code.
+- [ ] Port these helpers into `src/utils.py` with accompanying unit tests.
