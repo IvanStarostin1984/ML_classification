@@ -16,7 +16,11 @@ __all__ = ["calculate_vif", "vif_prune", "tree_feature_selector"]
 
 def calculate_vif(df: pd.DataFrame, cols: list[str]) -> pd.Series:
     """Return variance inflation factors for numeric columns."""
+    if df.shape[0] <= 3:
+        return pd.Series([1.0] * len(cols), index=cols)
     arr = df[cols].to_numpy(float)
+    if np.linalg.matrix_rank(arr) < arr.shape[1]:
+        return pd.Series([float("inf")] * arr.shape[1], index=cols)
     with warnings.catch_warnings():
         warnings.simplefilter("ignore", category=RuntimeWarning)
         with np.errstate(divide="ignore"):

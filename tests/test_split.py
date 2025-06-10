@@ -20,3 +20,27 @@ def test_class_proportions_and_indices() -> None:
     for part in (train, val, test):
         assert part['target'].mean() == base_prop
         assert part.index.tolist() == list(range(len(part)))
+
+
+def test_random_split_stratify() -> None:
+    from src.split import random_split
+
+    df = _dummy_df(12)
+    train, test = random_split(df, test_size=0.25, stratify="target", random_state=0)
+    assert len(train) + len(test) == len(df)
+    assert set(test['target']) == {0, 1}
+
+
+def test_time_split_order() -> None:
+    from src.split import time_split
+    import pandas as pd
+
+    df = pd.DataFrame(
+        {
+            "date": pd.date_range("2020-01-01", periods=5, freq="D"),
+            "target": [0, 1, 0, 1, 0],
+        }
+    )
+    train, test = time_split(df, "date", test_size=0.4)
+    assert train["date"].max() < test["date"].min()
+    assert len(train) == 3 and len(test) == 2

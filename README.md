@@ -17,7 +17,7 @@
 * **One-command reproducibility** – `make train` or `docker compose up` trains the models and regenerates all artefacts.
 * **CI/CD ready** – GitHub Actions lint + pytest on every push.
 
-* **Modular utilities** – feature engineering and diagnostics are available as importable helpers.
+* **Modular utilities** – feature engineering and diagnostics are available as importable helpers.  Helpers like `split.random_split`, `split.time_split` and `utils.set_seeds` simplify experiments.
 ---
 
 ## Quick-start

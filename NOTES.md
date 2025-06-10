@@ -124,3 +124,4 @@ corresponding TODO items.
 2025-07-05: Added TODO bullet for missing random_split, time_split and set_seeds helper. Reason: these functions remain absent from src compared with the original notebook.
 2025-06-10: Clarified NOTES about reporting utilities in src/reporting.py when summarising ported functions. Reason: correct earlier statement. Decisions: emphasised presence of flatten_cv and others.
 2025-07-05: Added TODOs to port notebook metrics helpers (eval_at, eval_metrics, show_metrics, folds_df) into a new metrics module. Reason: these functions come from ai_arisha.py and would aid reproducibility.
+2025-07-06: Implemented random_split and time_split in src.split plus set_seeds in new utils module. Added tests, README note and ticked TODO. Decisions: handled tiny datasets in calculate_vif to keep tests stable under Python 3.12.
