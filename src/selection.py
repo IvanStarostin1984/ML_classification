@@ -31,9 +31,17 @@ def vif_prune(
 
     cols = list(cols)
     while True:
+        if len(cols) < 2:
+            return cols, pd.Series([np.nan] * len(cols), index=cols)
+
         vifs = calculate_vif(df, cols)
-        if vifs.max() <= cap or len(cols) < 2:
+
+        if len(cols) == 2 and not np.isfinite(vifs).all():
             return cols, vifs
+
+        if vifs.max() <= cap:
+            return cols, vifs
+
         cols.remove(vifs.idxmax())
 
 
