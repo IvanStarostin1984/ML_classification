@@ -130,6 +130,7 @@ corresponding TODO items.
 2025-07-06: Fixed vif_prune to skip VIF calculation when fewer than two columns remain and stop on infinite VIF with two columns. Reason: avoid singular matrix errors.
 2025-07-07: Removed unused pandas import from tests/test_metrics.py and tweaked calculate_vif small-sample handling so flake8 passes. Reason: tidy metrics tests and fix CI.
 2025-07-07: Rewrote vif_prune to remove duplicate logic, recalc VIFs each loop and return NaNs when <2 cols. Reason: simplify function and avoid dropped columns when two remain.
+2025-07-08: Added `_scaled_matrix`, `_check_mu_sigma` and `validate_prep` in preprocessing with unit tests. Reason: port scaling validation helpers from the notebook. Decisions: functions now accept DataFrames to avoid globals and raise ValueError on invalid scaling.
 2025-07-08: Implemented `is_binary_numeric` helper and added unit tests. Reason: port binary-check logic from notebook. Decisions: simple dtype check using `series.dtype.kind`.
 2025-07-07: Removed unused pandas import from tests/test_metrics.py and tweaked calculate_vif small-sample handling so flake8 passes. Reason: tidy metrics tests and fix CI.
 2025-06-10: Simplified vif_prune to drop one column at a time and removed stray docstring. Reason: tidy API and meet flake8 guidelines. Decisions: recalc VIFs after each drop to keep function short.
