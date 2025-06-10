@@ -83,3 +83,4 @@ Oversampling options, probability calibration, feature importance export, extend
 
 
 - [x] add Makefile test target to run pytest
+- [x] port `_vif_prune` as `vif_prune` in `src/selection.py` with unit tests
