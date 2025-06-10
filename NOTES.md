@@ -119,3 +119,5 @@ corresponding TODO items.
 2025-07-04: Marked TODO item for Makefile test target as done and fixed Makefile tabs. 'make test' now invokes pytest correctly.
 2025-07-04: Marked TODO bullet for Makefile test target as completed. Reason: target already in Makefile.
 
+
+2025-07-05: Added TODO bullet for missing random_split, time_split and set_seeds helper. Reason: these functions remain absent from src compared with the original notebook.
