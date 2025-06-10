@@ -119,5 +119,6 @@ corresponding TODO items.
 2025-07-03: Added make test target for simplified testing via pytest. Updated docs and guidelines.
 2025-07-04: Marked TODO item for Makefile test target as done and fixed Makefile tabs. 'make test' now invokes pytest correctly.
 2025-07-04: Marked TODO bullet for Makefile test target as completed. Reason: target already in Makefile.
+2025-07-05: Added TODO bullet listing missing statistical diagnostics from FUNCTIONS.md. Reason: document unported helpers for future diagnostics_stats module.
 
 2025-06-10: Clarified NOTES about reporting utilities in src/reporting.py when summarising ported functions. Reason: correct earlier statement. Decisions: emphasised presence of flatten_cv and others.
