@@ -131,3 +131,5 @@ corresponding TODO items.
 2025-07-07: Removed unused pandas import from tests/test_metrics.py and tweaked calculate_vif small-sample handling so flake8 passes. Reason: tidy metrics tests and fix CI.
 2025-07-07: Rewrote vif_prune to remove duplicate logic, recalc VIFs each loop and return NaNs when <2 cols. Reason: simplify function and avoid dropped columns when two remain.
 
+
+2025-07-07: Removed unused pandas import from tests/test_metrics.py and tweaked calculate_vif small-sample handling so flake8 passes. Reason: tidy metrics tests and fix CI.

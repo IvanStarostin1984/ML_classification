@@ -36,6 +36,7 @@ def vif_prune(
 ) -> tuple[list[str], pd.Series]:
 
     """Return columns kept after iterative VIF pruning and their VIFs."""
+
     cols = list(cols)
 
     """Iteratively drop columns with VIF above ``cap``.
@@ -61,6 +62,7 @@ def vif_prune(
     cols = list(cols)
 
 
+
     while True:
         if len(cols) < 2:
             return cols, pd.Series([np.nan] * len(cols), index=cols)
@@ -71,6 +73,7 @@ def vif_prune(
         if vifs.max() <= cap:
             return cols, vifs
         cols.remove(vifs.replace(np.inf, 1e12).idxmax())
+
 
         if df.shape[0] <= 3 and np.linalg.matrix_rank(df[cols].to_numpy(float)) < len(
             cols
