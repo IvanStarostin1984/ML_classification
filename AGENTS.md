@@ -44,7 +44,7 @@ ML_classification/
 ├─ scripts/
 │ └─ download_data.py # pulls dataset via Kaggle API
 ├─ src/
-│ ├─ __init__.py
+│ ├─ `__init__.py`
 │ ├─ calibration.py # probability calibration utilities
 │ ├─ cv_utils.py # cross-validation wrappers
 │ ├─ dataprep.py # load / clean raw data
@@ -65,7 +65,7 @@ ML_classification/
 │ ├─ train.py # orchestrates pipelines
 │ ├─ utils.py # small misc helpers
 │ └─ models/
-│    ├─ __init__.py
+│    ├─ `__init__.py`
 │    ├─ logreg.py # LR training / eval pipeline
 │    └─ cart.py # Decision-Tree pipeline
 ├─ tests/
