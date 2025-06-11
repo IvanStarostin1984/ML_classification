@@ -1,23 +1,32 @@
 # ML_classification
 
-> **A tidy, production-ready re-implementation of my Google Colab notebook for predicting loan approvals with logistic regression and decision-tree pipelines.**
+> **A tidy, production-ready re-implementation of my Google Colab notebook for
+> predicting loan approvals with logistic regression and decision-tree
+> pipelines.**
 
 [![Build & Test](https://github.com/IvanStarostin1984/ML_classification/actions/workflows/ci.yml/badge.svg)](../../actions)
 [![License: MIT](https://img.shields.io/badge/License-MIT-green.svg)](LICENSE)
 ![Python 3.10+](https://img.shields.io/badge/python-3.10%2B-blue)
-![ROC-AUC 0.987 ± 0.008](https://img.shields.io/badge/Test ROC–AUC-0.987-±0.008-purple)
+![ROC-AUC 0.987 ± 0.008](https://img.shields.io/badge/Test%20ROC–AUC-0.987-±0.008-purple)
 
 ---
 
 ## What’s inside & why it matters
 
-* **End-to-end pipeline** – data download, cleaning, 80 + engineered features, rigorous feature selection, model tuning, and statistical evaluation.
-* **Statistical transparency** – every performance number is reported with 95 % bootstrap confidence intervals and a fairness check (four-fifths rule).
-* **Clean architecture** – each stage is its own Python module under `src/`, ready for unit tests and continuous integration.
-* **One-command reproducibility** – `make train` or run the Docker image from the provided `Dockerfile` to train the models and regenerate all artefacts.
+* **End-to-end pipeline** – data download, cleaning, 80 + engineered features,
+  rigorous feature selection, model tuning, and statistical evaluation.
+* **Statistical transparency** – every performance number is reported with
+  95 % bootstrap confidence intervals and a fairness check (four-fifths rule).
+* **Clean architecture** – each stage is its own Python module under `src/`,
+  ready for unit tests and continuous integration.
+* **One-command reproducibility** – `make train` or run the Docker image from
+  the provided `Dockerfile` to train the models and regenerate all artefacts.
 * **CI/CD ready** – GitHub Actions lint + pytest on every push.
 
-* **Modular utilities** – feature engineering and diagnostics are available as importable helpers.  Helpers like `split.random_split`, `split.time_split` and `utils.set_seeds` simplify experiments.
+* **Modular utilities** – feature engineering and diagnostics are available as
+  importable helpers. Helpers like `split.random_split`, `split.time_split` and
+  `utils.set_seeds` simplify experiments.
+
 ---
 
 ## Quick-start
@@ -79,8 +88,8 @@ command with `--grid-search` (or `-g`):
 ```bash
 mlcls-train --grid-search  # repeated CV with extended parameter grids
 ```
-This run takes longer but mirrors the notebook results.
 
+This run takes longer but mirrors the notebook results.
 
 ## Running tests
 
@@ -89,8 +98,8 @@ Execute the test-suite locally with:
 ```bash
 make test
 ```
-This sets `PYTHONPATH` so `pytest` can find the `src` package.
 
+This sets `PYTHONPATH` so `pytest` can find the `src` package.
 
 ## Command-line usage
 
@@ -130,11 +139,12 @@ This saves `logreg_calibration.png` and `cart_calibration.png` (plus
 ---
 
 ## Repository layout
+
 The project follows the target directory layout. Running `make train` now
 executes both the logistic regression and decision-tree pipelines located under
 `src/models`.
 
-```
+```text
 ai_arisha.py             ← legacy Colab script (read-only)
 AGENTS.md                ← contributor guidelines and architecture notes
 .github/workflows/ci.yml ← CI pipeline (Black, flake8, pytest)
@@ -195,4 +205,3 @@ Values reproduced from the accompanying statistical report.&#x20;
 ## Author
 
 **Ivan Starostin** – [LinkedIn](https://www.linkedin.com/in/ivanstarostin/)
-
