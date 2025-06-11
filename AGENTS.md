@@ -44,33 +44,60 @@ ML_classification/
 ├─ scripts/
 │ └─ download_data.py # pulls dataset via Kaggle API
 ├─ src/
-│ ├─ **init**.py
+│ ├─ __init__.py
+│ ├─ calibration.py # probability calibration utilities
+│ ├─ cv_utils.py # cross-validation wrappers
 │ ├─ dataprep.py # load / clean raw data
-│ ├─ features.py # FeatureEngineer class
 │ ├─ diagnostics.py # χ² tests, corr heat-map, etc.
+│ ├─ diagnostics_stats.py # additional stats for diagnostics
+│ ├─ evaluate.py # nested CV + fairness metrics
+│ ├─ evaluation_utils.py # evaluation helpers
+│ ├─ fairness.py # fairness helpers
+│ ├─ feature_importance.py # tree-based feature importance
+│ ├─ features.py # FeatureEngineer class
+│ ├─ manifest.py # dataset manifest utilities
+│ ├─ metrics.py # metric utilities from notebook
+│ ├─ pipeline_helpers.py # CLI and pipeline orchestrators
 │ ├─ preprocessing.py # ColumnTransformers
+│ ├─ reporting.py # reporting helpers
 │ ├─ selection.py # VIF, RFE, tree selector
 │ ├─ split.py # stratified train/test logic
-│ ├─ evaluate.py # nested CV + fairness metrics
-│ ├─ fairness.py # fairness helpers
-│ ├─ metrics.py # metric utilities from notebook
 │ ├─ train.py # orchestrates pipelines
+│ ├─ utils.py # small misc helpers
 │ └─ models/
-│ ├─ **init**.py
-│ ├─ logreg.py # LR training / eval pipeline
-│ └─ cart.py # Decision-Tree pipeline
+│    ├─ __init__.py
+│    ├─ logreg.py # LR training / eval pipeline
+│    └─ cart.py # Decision-Tree pipeline
 ├─ tests/
-│ ├─ test_dataprep.py # unit tests for data loading
-│ ├─ test_features.py # unit tests for feature engineering
-│ ├─ test_models.py # unit tests for modelling pipelines
-│ ├─ test_smoke.py # CI sanity import check
-│ ├─ test_download_data.py # tests the data download script
-│ ├─ test_preprocessing.py # preprocessing pipeline tests
-│ ├─ test_selection.py # feature selection helpers
+│ ├─ test_calibration.py # probability calibration
+│ ├─ test_cart_gridsearch.py # CART grid-search pipeline
+│ ├─ test_cli_sampler.py # CLI data sampler functions
+│ ├─ test_cli_scripts.py # CLI wrappers
+│ ├─ test_cli_train_gridsearch.py # CLI grid search training
+│ ├─ test_cv_utils.py # cross-validation helpers
+│ ├─ test_dataprep.py # data loading
 │ ├─ test_diagnostics.py # diagnostic utilities
-│ ├─ test_evaluate.py # tests for the evaluation CLI
-│ └─ test_fairness.py # tests for fairness metrics
-│ └─ test_metrics.py # unit tests for metric helpers
+│ ├─ test_diagnostics_stats.py # extended diagnostics
+│ ├─ test_download_data.py # dataset download script
+│ ├─ test_evaluate.py # evaluation CLI
+│ ├─ test_evaluate_extended.py # extended metrics
+│ ├─ test_evaluation_utils.py # evaluation helpers
+│ ├─ test_fairness.py # fairness metrics
+│ ├─ test_feature_importance.py # feature importance calculators
+│ ├─ test_features.py # feature engineering
+│ ├─ test_logreg_gridsearch.py # logistic grid-search
+│ ├─ test_manifest.py # dataset manifest
+│ ├─ test_manifest_plots.py # manifest plotting
+│ ├─ test_metrics.py # metric utilities
+│ ├─ test_models.py # modelling pipelines
+│ ├─ test_oversampling.py # oversampling heuristics
+│ ├─ test_pipeline_helpers.py # pipeline helpers
+│ ├─ test_preprocessing.py # preprocessing pipeline
+│ ├─ test_reporting.py # reporting utilities
+│ ├─ test_selection.py # feature selection
+│ ├─ test_smoke.py # CI sanity import check
+│ ├─ test_split.py # split logic
+│ ├─ test_utils.py # miscellaneous utils
 ├─ environment.yml # Conda spec (Python ≥ 3.10)
 ├─ requirements.txt # pip fallback
 ├─ Dockerfile # reproducible container build
@@ -106,6 +133,7 @@ ML_classification/
 - **Each PR requires at least one reviewer.**
 - with _every commit_ reflect in **NOTES.md** on work done in a short lean way
 to track work.
+- keep docs in sync with code; update AGENTS.md and README when behaviour changes.
 
 Read `NOTES.md` and `TODO.md` to understand the current stage, past decisions,
 and open questions tied to the spec.
