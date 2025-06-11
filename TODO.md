@@ -131,8 +131,6 @@ helper in new src/utils.py
 - [x] Simplify vif_prune to drop one column per iteration and recalc VIFs
 - [x] add `is_binary_numeric` helper in `src/utils.py` with unit tests
 
-- [x] Simplify vif_prune to drop one column per iteration and recalc VIFs
-
 - [x] Port sha256, shasum, save_folds and run_grid helpers into src.manifest
 with unit tests.
 
@@ -146,7 +144,7 @@ scaling.
 
 - [x] centralise grid-search helpers as pipeline_helpers
 
-## 12. Utility helpers
+## 13. Utility helpers
 
 The original notebook defines small helper functions `_zeros`, `_dedup` and
 `_is_binary_numeric`. These create zero-filled series, merge lists without
