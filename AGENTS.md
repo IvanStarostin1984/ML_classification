@@ -124,6 +124,8 @@ ML_classification/
 - NOTES.md and TODO.md entries must keep lines under 80 chars and avoid
   multiple blank lines. Run `npx markdownlint-cli` after updates.
 - Run `npx markdownlint-cli` locally before committing documentation changes.
+- Run `npx markdownlint-cli '**/*.md' --ignore node_modules` to mirror the CI
+  job.
 
 ## Testing & CI
 

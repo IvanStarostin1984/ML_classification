@@ -189,4 +189,7 @@ markdownlint passes.
 2025-07-03: Added TODO item for fixing long lines in NOTES.md to satisfy
 markdownlint. Reason: enforce doc style. Decision: bullet under docs updates.
 
+2025-07-17: Added bullet to run markdownlint with glob to match CI checks.
+
 2025-07-20: Removed extra blank lines in NOTES.md to satisfy markdownlint.
+
