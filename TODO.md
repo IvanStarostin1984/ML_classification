@@ -49,6 +49,7 @@ src.models.logreg`)
 - [x] remove note about missing model pipelines once they are added
       (obsolete since README now describes both pipelines)
 - [x] add brief usage notes to `notebooks/README.md`
+- [x] refresh README layout with new modules and replace docker compose mention
 
 - [x] keep `AGENTS.md` project structure entries in sync with code and tests
 ## 7. Legacy script

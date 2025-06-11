@@ -14,7 +14,7 @@
 * **End-to-end pipeline** – data download, cleaning, 80 + engineered features, rigorous feature selection, model tuning, and statistical evaluation.
 * **Statistical transparency** – every performance number is reported with 95 % bootstrap confidence intervals and a fairness check (four-fifths rule).
 * **Clean architecture** – each stage is its own Python module under `src/`, ready for unit tests and continuous integration.
-* **One-command reproducibility** – `make train` or `docker compose up` trains the models and regenerates all artefacts.
+* **One-command reproducibility** – `make train` or run the Docker image from the provided `Dockerfile` to train the models and regenerate all artefacts.
 * **CI/CD ready** – GitHub Actions lint + pytest on every push.
 
 * **Modular utilities** – feature engineering and diagnostics are available as importable helpers.  Helpers like `split.random_split`, `split.time_split` and `utils.set_seeds` simplify experiments.
@@ -146,6 +146,15 @@ src/features.py          ← FeatureEngineer class
 src/diagnostics.py       ← chi-square & correlation plots
 src/preprocessing.py     ← ColumnTransformer helpers
 src/selection.py         ← VIF & tree-based selector
+src/calibration.py       ← probability calibration CLI
+src/evaluation_utils.py  ← evaluation helpers
+src/cv_utils.py          ← cross-validation utilities
+src/manifest.py          ← SHA-256 manifest writer
+src/feature_importance.py← importance tables
+src/pipeline_helpers.py  ← grid-search utilities
+src/reporting.py         ← report assembly helpers
+src/diagnostics_stats.py ← stats for diagnostics
+src/utils.py             ← general helpers
 tests/                   ← pytest suite
 data/README.md           ← dataset licence notes
 notebooks/README.md      ← Colab/Binder demo stub
