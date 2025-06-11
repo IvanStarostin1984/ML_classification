@@ -51,6 +51,7 @@ src.models.logreg`)
 - [x] add brief usage notes to `notebooks/README.md`
 - [x] refresh README layout with new modules and replace docker compose mention
 - [x] keep `AGENTS.md` project structure entries in sync with code and tests
+- [x] document Markdown style guidelines in `AGENTS.md`
 - [x] ensure markdown files pass `markdownlint`
 
 ## 7. Legacy script
