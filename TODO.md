@@ -50,8 +50,9 @@ src.models.logreg`)
       (obsolete since README now describes both pipelines)
 - [x] add brief usage notes to `notebooks/README.md`
 - [x] refresh README layout with new modules and replace docker compose mention
-
 - [x] keep `AGENTS.md` project structure entries in sync with code and tests
+- [x] ensure markdown files pass `markdownlint`
+
 ## 7. Legacy script
 
 - keep `ai_arisha.py` read-only for reference until the migration is finished
