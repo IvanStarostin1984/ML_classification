@@ -121,6 +121,8 @@ ML_classification/
 - Surround lists, headings and fenced code blocks with blank lines.
 - Use backticks around file names containing underscores to avoid MD050.
 - Specify a language for fenced code blocks.
+- NOTES.md and TODO.md entries must keep lines under 80 chars and avoid
+  multiple blank lines. Run `npx markdownlint-cli` after updates.
 - Run `npx markdownlint-cli` locally before committing documentation changes.
 
 ## Testing & CI
