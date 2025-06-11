@@ -54,6 +54,8 @@ src.models.logreg`)
 - [x] document Markdown style guidelines in `AGENTS.md`
 - [x] ensure markdown files pass `markdownlint`
 - [ ] fix NOTES.md long lines to satisfy markdownlint
+- [x] shorten long NOTES lines to satisfy markdownlint
+
 
 ## 7. Legacy script
 
