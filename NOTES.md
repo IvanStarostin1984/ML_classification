@@ -153,6 +153,7 @@ docker-compose reference with Dockerfile instructions.
 to keep the task list concise.
 2025-06-10: Updated AGENTS.md project structure with all modules and expanded
 test list; added docs-sync guideline.
+
 2025-07-02: Fixed README code fence by removing stray `text` line.
 2025-07-03: Added Markdown style notes to AGENTS.md and suggested running
 `npx markdownlint-cli` after edits.
@@ -161,3 +162,18 @@ line with a closing code fence.
 2025-06-11: Fixed markdownlint issues across docs and updated README links.
 2025-07-04: Added note in AGENTS.md to keep NOTES.md and TODO.md lines under
 80 chars and run `npx markdownlint-cli` after edits.
+
+2025-07-02: Fixed README code block closure by replacing the stray "```text```"
+line with a closing code fence.
+
+2025-07-03: Documented Markdown style guidelines in AGENTS.md and noted running
+`npx markdownlint-cli` before committing docs. Reason: to standardise doc
+formatting. Decisions: added bullet list under Coding Standards.
+
+2025-07-02: Fixed README code block closure by replacing the stray
+```text``` line with a closing code fence.
+
+2025-06-11: Fixed markdownlint issues across docs and updated README links.
+2025-07-16: Shortened long NOTES lines and removed stray blank lines so
+markdownlint passes.
+
