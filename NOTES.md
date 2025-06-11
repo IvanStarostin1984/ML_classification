@@ -151,3 +151,4 @@ Marked the TODO item as complete to record this gap.
 2025-07-02: Tidied TODO numbering and removed duplicate vif_prune item to keep the task list concise.
 2025-06-10: Updated AGENTS.md project structure with all modules and expanded test list; added docs-sync guideline.
 
+2025-07-02: Fixed README code block closure by replacing the stray "```text" line with a closing code fence.
