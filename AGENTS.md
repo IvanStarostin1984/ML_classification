@@ -115,6 +115,14 @@ ML_classification/
 - Use 4‑space indentation, single quotes and end files with a newline.
 - Document each public API/function with a doc comment.
 
+### Markdown style
+
+- Keep lines under 80 characters.
+- Surround lists, headings and fenced code blocks with blank lines.
+- Use backticks around file names containing underscores to avoid MD050.
+- Specify a language for fenced code blocks.
+- Run `npx markdownlint-cli` locally before committing documentation changes.
+
 ## Testing & CI
 
 - The GitHub Actions workflow (`.github/workflows/ci.yml`) runs `flake8`,

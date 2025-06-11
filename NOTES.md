@@ -152,3 +152,5 @@ Marked the TODO item as complete to record this gap.
 2025-06-10: Updated AGENTS.md project structure with all modules and expanded test list; added docs-sync guideline.
 
 2025-07-02: Fixed README code block closure by replacing the stray "```text" line with a closing code fence.
+
+2025-07-03: Documented Markdown style guidelines in AGENTS.md and noted running `npx markdownlint-cli` before committing docs. Reason: to standardise doc formatting. Decisions: added bullet list under Coding Standards.
