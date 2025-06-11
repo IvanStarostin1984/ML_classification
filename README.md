@@ -155,7 +155,7 @@ pyproject.toml           ← project build metadata
 requirements.txt         ← pip fallback
 LICENSE                  ← MIT
 README.md                ← you are here
-```text
+```
 
 ---
 

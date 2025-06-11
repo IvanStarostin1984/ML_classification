@@ -148,3 +148,4 @@ along with `flatten_cv` and `flatten_metrics` live in `src/reporting.py`.
 All other utilities such as `_zeros` or `_vif_prune` remain unported.
 Marked the TODO item as complete to record this gap.
 
+2025-07-02: Fixed README code block closure by replacing the stray "```text" line with a closing code fence.

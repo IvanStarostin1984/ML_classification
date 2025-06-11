@@ -154,3 +154,4 @@ duplicates and detect 0/1 numeric columns. They are not yet present in the
 modular code.
 
 - [ ] Port these helpers into `src/utils.py` with accompanying unit tests.
+- [x] Fix README stray code block marker leaving rest in code.
