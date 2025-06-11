@@ -147,6 +147,5 @@ Besides
 along with `flatten_cv` and `flatten_metrics` live in `src/reporting.py`.
 All other utilities such as `_zeros` or `_vif_prune` remain unported.
 Marked the TODO item as complete to record this gap.
-
 2025-07-02: Tidied TODO numbering and removed duplicate vif_prune item to keep the task list concise.
-
+2025-06-10: Updated AGENTS.md project structure with all modules and expanded test list; added docs-sync guideline.

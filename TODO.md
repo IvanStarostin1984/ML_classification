@@ -50,6 +50,7 @@ src.models.logreg`)
       (obsolete since README now describes both pipelines)
 - [x] add brief usage notes to `notebooks/README.md`
 
+- [x] keep `AGENTS.md` project structure entries in sync with code and tests
 ## 7. Legacy script
 
 - keep `ai_arisha.py` read-only for reference until the migration is finished
