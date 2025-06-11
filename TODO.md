@@ -51,6 +51,7 @@ src.models.logreg`)
 - [x] add brief usage notes to `notebooks/README.md`
 - [x] refresh README layout with new modules and replace docker compose mention
 
+- [x] keep `AGENTS.md` project structure entries in sync with code and tests
 ## 7. Legacy script
 
 - keep `ai_arisha.py` read-only for reference until the migration is finished
@@ -132,8 +133,6 @@ helper in new src/utils.py
 - [x] Simplify vif_prune to drop one column per iteration and recalc VIFs
 - [x] add `is_binary_numeric` helper in `src/utils.py` with unit tests
 
-- [x] Simplify vif_prune to drop one column per iteration and recalc VIFs
-
 - [x] Port sha256, shasum, save_folds and run_grid helpers into src.manifest
 with unit tests.
 
@@ -147,7 +146,7 @@ scaling.
 
 - [x] centralise grid-search helpers as pipeline_helpers
 
-## 12. Utility helpers
+## 13. Utility helpers
 
 The original notebook defines small helper functions `_zeros`, `_dedup` and
 `_is_binary_numeric`. These create zero-filled series, merge lists without
