@@ -205,5 +205,10 @@ markdownlint. Reason: enforce doc style. Decision: bullet under docs updates.
 2025-07-23: logistic and cart pipelines validate preprocessing before model
 training; tests mock `validate_prep` to ensure invocation. Reason: to fail fast
 on bad scaling and complete TODO item.
+
+2025-07-24: Documented that `_sha` and `sha` were replaced by `sha256` and
+`shasum`. `_is_binary`, `_num_block` and `make_preprocessor` have no direct
+equivalent. Reason: clarify function coverage and close TODO.
+
 2025-07-24: Clarified that `_zeros` and `_vif_prune` now reside in
 `src/utils.py` and `src/selection.py` and updated TODO text.

@@ -160,3 +160,5 @@ scaling.
 
 - [x] Port these helpers into `src/utils.py` with accompanying unit tests.
 - [x] Fix README stray code block marker leaving rest in code.
+- [x] Record in NOTES that `_sha`/`sha` map to `sha256`/`shasum` and
+  `_is_binary`, `_num_block` and `make_preprocessor` remain unported.
