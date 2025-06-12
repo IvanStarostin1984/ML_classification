@@ -42,6 +42,7 @@ src.models.logreg`)
 - [x] add unit tests for `dataprep`, `features`, and `models` modules
 - [x] add unit tests for `split.stratified_split`
 - [x] add docs-only CI job running markdownlint and markdown-link-check
+- [x] fix link check step to iterate over markdown files with find/xargs
 
 ## 6. Documentation updates
 
