@@ -182,7 +182,9 @@ formatting. Decisions: added bullet list under Coding Standards.
 
 2025-07-02: Fixed README code block closure by replacing the stray "```text```"
 line with a closing code fence.
+
 2025-06-11: Fixed markdownlint issues across docs and updated README links.
+
 2025-07-16: Shortened long NOTES lines and removed stray blank lines so
 markdownlint passes.
 
@@ -193,3 +195,4 @@ markdownlint. Reason: enforce doc style. Decision: bullet under docs updates.
 
 2025-07-20: Removed extra blank lines in NOTES.md to satisfy markdownlint.
 
+2025-07-21: Removed extra blank lines for markdownlint compliance.
