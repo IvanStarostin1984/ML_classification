@@ -6,6 +6,7 @@ from src.utils import (
     is_binary_numeric,
     zeros_like,
     dedup_pairs,
+    prefix,
 )
 
 
@@ -37,3 +38,8 @@ def test_zeros_like() -> None:
 def test_dedup_pairs() -> None:
     merged = dedup_pairs([(1, 2)], [(2, 1), (3, 4)])
     assert merged == [(1, 2), (3, 4)]
+
+
+def test_prefix() -> None:
+    assert prefix("foo__bar") == "foo"
+    assert prefix("nobar") == ""
