@@ -209,7 +209,7 @@ on bad scaling and complete TODO item.
 2025-07-24: Added prefix helper and new report_helpers module with
  conf_matrix_summary and group_metrics functions plus unit tests. Reason: port
  remaining notebook utilities for metrics summarisation. Decisions: expose via
- __all__ and document in FUNCTIONS.md.
+ `__all__` and document in FUNCTIONS.md.
 
 2025-07-24: Documented that `_sha` and `sha` were replaced by `sha256` and
 `shasum`. `_is_binary`, `_num_block` and `make_preprocessor` have no direct
@@ -218,3 +218,5 @@ equivalent. Reason: clarify function coverage and close TODO.
 2025-07-24: Clarified that `_zeros` and `_vif_prune` now reside in
 `src/utils.py` and `src/selection.py` and updated TODO text.
 
+2025-07-25: prefix, conf_matrix_summary and group_metrics implement the
+ notebook helpers `_prefix`, `_conf` and `_group_metrics`.
