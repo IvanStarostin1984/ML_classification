@@ -7,7 +7,13 @@ from typing import Sequence
 import numpy as np
 import pandas as pd
 
-__all__ = ["set_seeds", "is_binary_numeric", "zeros_like", "dedup_pairs"]
+__all__ = [
+    "set_seeds",
+    "is_binary_numeric",
+    "zeros_like",
+    "dedup_pairs",
+    "prefix",
+]
 
 
 def set_seeds(seed: int = 42) -> None:
@@ -40,3 +46,9 @@ def dedup_pairs(old: Sequence[tuple], new: Sequence[tuple]) -> list[tuple]:
             seen.add(key)
             merged.append(pair)
     return merged
+
+
+def prefix(label: str) -> str:
+    """Return substring before ``'__'`` if present else empty string."""
+
+    return label.split("__", 1)[0] if "__" in label else ""

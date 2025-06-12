@@ -60,6 +60,7 @@ ML_classification/
 │ ├─ pipeline_helpers.py # CLI and pipeline orchestrators
 │ ├─ preprocessing.py # ColumnTransformers
 │ ├─ reporting.py # reporting helpers
+│ ├─ report_helpers.py # confusion matrix and group metrics
 │ ├─ selection.py # VIF, RFE, tree selector
 │ ├─ split.py # stratified train/test logic
 │ ├─ train.py # orchestrates pipelines

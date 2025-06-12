@@ -205,3 +205,8 @@ markdownlint. Reason: enforce doc style. Decision: bullet under docs updates.
 2025-07-23: logistic and cart pipelines validate preprocessing before model
 training; tests mock `validate_prep` to ensure invocation. Reason: to fail fast
 on bad scaling and complete TODO item.
+
+2025-07-24: Added prefix helper and new report_helpers module with
+ conf_matrix_summary and group_metrics functions plus unit tests. Reason: port
+ remaining notebook utilities for metrics summarisation. Decisions: expose via
+ __all__ and document in FUNCTIONS.md.

@@ -71,6 +71,10 @@ match.
 registry.
   - `dump_corr_top10(ff)` – show top absolute correlations.
   - `dump_dropped_twins(ff)` – list numeric twins removed due to high
-correlation.
+  correlation.
   - `dump_skew_profile(ff)` – summarize skewness profile of numeric features.
   - `dump_cart_overfit(ff)` – compare CART CV vs test ROC AUC.
+
+Implemented later:
+- `prefix` – now `src.utils.prefix`.
+- `conf_matrix_summary` and `group_metrics` – moved to `src.report_helpers`.

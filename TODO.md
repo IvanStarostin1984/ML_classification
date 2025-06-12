@@ -160,3 +160,7 @@ scaling.
 
 - [x] Port these helpers into `src/utils.py` with accompanying unit tests.
 - [x] Fix README stray code block marker leaving rest in code.
+
+## 14. Reporting helpers
+
+- [x] Add prefix helper and metrics helpers in report_helpers.py with tests.
