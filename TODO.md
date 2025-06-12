@@ -153,10 +153,10 @@ scaling.
 
 ## 13. Utility helpers
 
-The original notebook defines small helper functions `_zeros`, `_dedup` and
-`_is_binary_numeric`. These create zero-filled series, merge lists without
-duplicates and detect 0/1 numeric columns. They are not yet present in the
-modular code.
+- The original notebook defines small helper functions `_zeros`, `_dedup` and
+  `_is_binary_numeric`. These create zero-filled series, merge lists without
+  duplicates and detect 0/1 numeric columns. They are not yet present in the
+  modular code.
 
-- [ ] Port these helpers into `src/utils.py` with accompanying unit tests.
+- [x] Port these helpers into `src/utils.py` with accompanying unit tests.
 - [x] Fix README stray code block marker leaving rest in code.
