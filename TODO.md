@@ -155,8 +155,8 @@ scaling.
 
 - The original notebook defines small helper functions `_zeros`, `_dedup` and
   `_is_binary_numeric`. These create zero-filled series, merge lists without
-  duplicates and detect 0/1 numeric columns. They are not yet present in the
-  modular code.
+  duplicates and detect 0/1 numeric columns. They now live in `src/utils.py`
+  with unit tests.
 
 - [x] Port these helpers into `src/utils.py` with accompanying unit tests.
 - [x] Fix README stray code block marker leaving rest in code.
@@ -164,3 +164,7 @@ scaling.
 ## 14. Reporting helpers
 
 - [x] Add prefix helper and metrics helpers in report_helpers.py with tests.
+
+- [x] Record in NOTES that `_sha`/`sha` map to `sha256`/`shasum` and
+  `_is_binary`, `_num_block` and `make_preprocessor` remain unported.
+

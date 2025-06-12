@@ -145,8 +145,8 @@ Besides
 `safe_transform` and the fairness helpers `youden_threshold` and
 `four_fifths_ratio`, reporting utilities like `find_path` and `write_section`,
 along with `flatten_cv` and `flatten_metrics` live in `src/reporting.py`.
-All other utilities such as `_zeros` or `_vif_prune` remain unported.
-Marked the TODO item as complete to record this gap.
+All helpers are now ported. `_zeros` lives in `src/utils.py`.
+`_vif_prune` moved to `src/selection.py`. Marked the TODO item as complete.
 2025-07-02: Updated README layout with new modules list and replaced
 docker-compose reference with Dockerfile instructions.
 2025-07-02: Tidied TODO numbering and removed duplicate vif_prune item
@@ -210,3 +210,11 @@ on bad scaling and complete TODO item.
  conf_matrix_summary and group_metrics functions plus unit tests. Reason: port
  remaining notebook utilities for metrics summarisation. Decisions: expose via
  __all__ and document in FUNCTIONS.md.
+
+2025-07-24: Documented that `_sha` and `sha` were replaced by `sha256` and
+`shasum`. `_is_binary`, `_num_block` and `make_preprocessor` have no direct
+equivalent. Reason: clarify function coverage and close TODO.
+
+2025-07-24: Clarified that `_zeros` and `_vif_prune` now reside in
+`src/utils.py` and `src/selection.py` and updated TODO text.
+
