@@ -8,12 +8,16 @@ import pandas as pd
 from sklearn.compose import ColumnTransformer
 from sklearn.pipeline import Pipeline
 from sklearn.preprocessing import OneHotEncoder, StandardScaler
+from sklearn.impute import SimpleImputer
 from scipy.stats import shapiro
 import random
 
 __all__ = [
     "build_preprocessor",
     "safe_transform",
+    "_is_binary",
+    "_num_block",
+    "make_preprocessor",
     "_scaled_matrix",
     "_check_mu_sigma",
     "validate_prep",
@@ -41,6 +45,40 @@ def safe_transform(preprocessor: ColumnTransformer, X_new: pd.DataFrame) -> np.n
     if extras:
         warnings.warn(f"dropped unseen columns at predict-time: {sorted(extras)}")
     return preprocessor.transform(X_new[common])
+
+
+def _is_binary(series: pd.Series) -> bool:
+    """Return ``True`` if ``series`` only contains ``0``/``1`` values."""
+    u = series.dropna().unique()
+    return len(u) <= 2 and set(u) <= {0, 1}
+
+
+def _num_block(cols: list[str], scaler) -> tuple[Pipeline, list[str]]:
+    """Return impute+scale pipeline and ``cols`` for ``ColumnTransformer``."""
+    pipe = Pipeline([("imp", SimpleImputer(strategy="median")), ("sc", scaler)])
+    return pipe, cols
+
+
+def make_preprocessor(
+    num_cols: list[str],
+    cat_cols: list[str],
+    bool_cols: list[str] | None = None,
+    *,
+    include_cont: bool = True,
+) -> ColumnTransformer:
+    """Return ColumnTransformer for logistic or tree models."""
+    bool_cols = bool_cols or []
+    transformers = []
+    if include_cont:
+        if num_cols:
+            transformers.append(("std", *_num_block(num_cols, StandardScaler())))
+    elif num_cols:
+        transformers.append(("num", "passthrough", num_cols))
+    if cat_cols:
+        transformers.append(("cat", OneHotEncoder(handle_unknown="ignore"), cat_cols))
+    if bool_cols:
+        transformers.append(("bool", "passthrough", bool_cols))
+    return ColumnTransformer(transformers, remainder="drop")
 
 
 ROBUST_IQR_TOL = 0.02

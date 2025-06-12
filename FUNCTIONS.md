@@ -76,5 +76,6 @@ registry.
   - `dump_cart_overfit(ff)` – compare CART CV vs test ROC AUC.
 
 Implemented later:
+
 - `prefix` – now `src.utils.prefix`.
 - `conf_matrix_summary` and `group_metrics` – moved to `src.report_helpers`.

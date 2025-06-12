@@ -197,24 +197,24 @@ markdownlint. Reason: enforce doc style. Decision: bullet under docs updates.
 
 2025-07-21: Removed extra blank lines for markdownlint compliance.
 2025-07-22: CI link check fixed to iterate over markdown files;
- quoting glob failed before.
-
+quoting glob failed before.
 2025-07-23: Added zeros_like and dedup_pairs in utils with tests. Reason:
   complete TODO for porting notebook helper functions.
-
 2025-07-23: logistic and cart pipelines validate preprocessing before model
 training; tests mock `validate_prep` to ensure invocation. Reason: to fail fast
 on bad scaling and complete TODO item.
 
 2025-07-24: Added prefix helper and new report_helpers module with
- conf_matrix_summary and group_metrics functions plus unit tests. Reason: port
- remaining notebook utilities for metrics summarisation. Decisions: expose via
- __all__ and document in FUNCTIONS.md.
-
+ conf_matrix_summary and group_metrics functions plus unit tests.
+ Reason: port remaining notebook utilities for metrics summarisation.
+Decisions: expose via `__all__` and document in FUNCTIONS.md.
 2025-07-24: Documented that `_sha` and `sha` were replaced by `sha256` and
 `shasum`. `_is_binary`, `_num_block` and `make_preprocessor` have no direct
 equivalent. Reason: clarify function coverage and close TODO.
-
 2025-07-24: Clarified that `_zeros` and `_vif_prune` now reside in
 `src/utils.py` and `src/selection.py` and updated TODO text.
 
+2025-07-25: Implemented `_is_binary`, `_num_block` and `make_preprocessor`
+ in `src/preprocessing.py` with unit tests. Reason: port missing helpers.
+ Decisions: simplified make_preprocessor to use a single scaler for
+ continuous columns.
