@@ -47,3 +47,17 @@ def test_grid_train_from_df_runs() -> None:
     df = FeatureEngineer().transform(df)
     auc = grid_train_from_df(df, "target")
     assert 0 <= auc <= 1
+
+
+def test_validate_prep_called(monkeypatch) -> None:
+    df = _toy_df()
+    df = dataprep.clean(df)
+    df = FeatureEngineer().transform(df)
+    calls = {}
+
+    def fake_validate(prep, X, name, check_scale=True):
+        calls["called"] = True
+
+    monkeypatch.setattr(logreg, "validate_prep", fake_validate)
+    grid_train_from_df(df, "target")
+    assert calls.get("called")

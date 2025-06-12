@@ -146,7 +146,7 @@ src/cv_utils.py with tests.
 
 ## 12. Preprocessing validation
 
-- [ ] Integrate `validate_prep` into training scripts to fail fast on bad
+- [x] Integrate `validate_prep` into training scripts to fail fast on bad
 scaling.
 
 - [x] centralise grid-search helpers as pipeline_helpers

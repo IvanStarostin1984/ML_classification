@@ -14,7 +14,7 @@ from imblearn.over_sampling import SMOTE, SMOTENC
 
 from ..dataprep import clean
 from ..features import FeatureEngineer
-from ..preprocessing import build_preprocessor
+from ..preprocessing import build_preprocessor, validate_prep
 
 from ..pipeline_helpers import lr_steps, run_gs
 
@@ -76,6 +76,8 @@ def train_from_df(
     cat_cols = x_train.select_dtypes(include=["object", "category"]).columns.tolist()
     num_cols = [c for c in x_train.columns if c not in cat_cols]
     pipe = build_pipeline(cat_cols, num_cols, sampler)
+    pipe.named_steps["prep"].fit(x_train, y_train)
+    validate_prep(pipe.named_steps["prep"], x_train, "logreg")
     pipe.fit(x_train, y_train)
     pred = pipe.predict_proba(x_val)[:, 1]
     auc = roc_auc_score(y_val, pred)
@@ -118,6 +120,8 @@ def grid_train_from_df(
     )
 
     preproc = build_preprocessor(num_cols, cat_cols)
+    preproc.fit(x_train, y_train)
+    validate_prep(preproc, x_train, "logreg")
     steps = lr_steps(preproc, "passthrough")
     param_grid = []
     for blk in _LOGREG_PARAM_GRID_BASE:

@@ -4,6 +4,7 @@ import numpy as np
 import pandas as pd
 
 from src.models.cart import grid_train_from_df
+import src.models.cart as cart
 from src import dataprep
 from src.features import FeatureEngineer
 
@@ -47,3 +48,17 @@ def test_grid_train_saves_best(tmp_path) -> None:
     fp = tmp_path / "model.joblib"
     grid_train_from_df(df, "target", artefact_path=fp)
     assert fp.exists()
+
+
+def test_validate_prep_called(monkeypatch) -> None:
+    df = _toy_df()
+    df = dataprep.clean(df)
+    df = FeatureEngineer().transform(df)
+    called = {}
+
+    def fake_validate(prep, X, name, check_scale=True):
+        called["ok"] = True
+
+    monkeypatch.setattr(cart, "validate_prep", fake_validate)
+    grid_train_from_df(df, "target")
+    assert called.get("ok")

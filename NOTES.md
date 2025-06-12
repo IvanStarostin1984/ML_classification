@@ -197,4 +197,7 @@ markdownlint. Reason: enforce doc style. Decision: bullet under docs updates.
 
 2025-07-21: Removed extra blank lines for markdownlint compliance.
 2025-07-22: CI link check fixed to iterate over markdown files;
-  quoting glob failed before.
+ quoting glob failed before.
+2025-07-23: logistic and cart pipelines validate preprocessing before model
+training; tests mock `validate_prep` to ensure invocation. Reason: to fail fast
+on bad scaling and complete TODO item.
