@@ -10,6 +10,9 @@ from src.preprocessing import (
     _scaled_matrix,
     _check_mu_sigma,
     validate_prep,
+    _is_binary,
+    _num_block,
+    make_preprocessor,
 )
 
 
@@ -96,3 +99,31 @@ def test_validate_prep_success_and_failure():
     pre_bad.fit(df_bad, [0, 0, 0])
     with pytest.raises(ValueError):
         validate_prep(pre_bad, df_bad, "fail")
+
+
+def test_is_binary_true_false() -> None:
+    assert _is_binary(pd.Series([0, 1, 0]))
+    assert not _is_binary(pd.Series([0, 2]))
+    assert not _is_binary(pd.Series(list("01")))
+
+
+def test_num_block_pipeline() -> None:
+    pipe, cols = _num_block(["a"], StandardScaler())
+    assert cols == ["a"]
+    steps = dict(pipe.steps)
+    assert list(steps) == ["imp", "sc"]
+
+
+def test_make_preprocessor_variants() -> None:
+    df = pd.DataFrame({"num": [1.0, 2.0], "cat": ["a", "b"], "flag": [0, 1]})
+    prep_std = make_preprocessor(["num"], ["cat"], ["flag"], include_cont=True)
+    prep_std.fit(df, [0, 1])
+    X_std = safe_transform(prep_std, df)
+    assert X_std.shape[1] == 4
+
+    prep_passthrough = make_preprocessor(
+        ["num"], ["cat"], ["flag"], include_cont=False
+    )
+    prep_passthrough.fit(df, [0, 1])
+    X_raw = safe_transform(prep_passthrough, df)
+    assert X_raw.shape[1] == 4
