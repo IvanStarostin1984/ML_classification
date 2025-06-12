@@ -155,8 +155,8 @@ scaling.
 
 - The original notebook defines small helper functions `_zeros`, `_dedup` and
   `_is_binary_numeric`. These create zero-filled series, merge lists without
-  duplicates and detect 0/1 numeric columns. They are not yet present in the
-  modular code.
+  duplicates and detect 0/1 numeric columns. They now live in `src/utils.py`
+  with unit tests.
 
 - [x] Port these helpers into `src/utils.py` with accompanying unit tests.
 - [x] Fix README stray code block marker leaving rest in code.
