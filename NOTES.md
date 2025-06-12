@@ -221,3 +221,6 @@ equivalent. Reason: clarify function coverage and close TODO.
 2025-07-25: Updated NOTES commit hash to 78a6950 and cleaned trailing blank lines.
 Reason: keep history accurate.
 Decision: wrap `__all__` in backticks to satisfy markdownlint.
+
+2025-07-25: prefix, conf_matrix_summary and group_metrics implement the
+ notebook helpers `_prefix`, `_conf` and `_group_metrics`.
