@@ -61,4 +61,4 @@ jobs:
       - name: Run markdownlint
         run: npx markdownlint-cli '**/*.md' --ignore node_modules
       - name: Check links
-        run: npx markdown-link-check -q '**/*.md'
+        run: find . -name '*.md' -not -path '*node_modules*' -print0 | xargs -0 -n1 npx markdown-link-check -q

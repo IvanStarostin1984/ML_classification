@@ -135,8 +135,13 @@ ML_classification/
   same checks. Use `make test` to run the full pytest suite with the correct
 `PYTHONPATH`.
 - Black uses a line length of **88** as configured in `pyproject.toml`.
-- Docs-only commits run a fast job with `markdownlint` and
-   `markdown-link-check`.
+- Docs-only commits run a fast job with `markdownlint`.
+  Links are checked using:
+
+```bash
+find . -name '*.md' -not -path '*node_modules*' -print0 |
+  xargs -0 -n1 npx markdown-link-check -q
+```
 
 ## Contributing Workflow
 
