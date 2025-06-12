@@ -1,6 +1,6 @@
 # Migration notes
 
-Current commit: `c907c0b`.
+Current commit: `78a6950`.
 2025-06-18: Evaluation and fairness modules are in place with passing tests and
 README instructions describing the workflow.
 
@@ -208,13 +208,28 @@ on bad scaling and complete TODO item.
  conf_matrix_summary and group_metrics functions plus unit tests.
  Reason: port remaining notebook utilities for metrics summarisation.
 Decisions: expose via `__all__` and document in FUNCTIONS.md.
+
+ conf_matrix_summary and group_metrics functions plus unit tests. Reason: port
+ remaining notebook utilities for metrics summarisation. Decisions: expose via
+ `__all__` and document in FUNCTIONS.md.
+
+
 2025-07-24: Documented that `_sha` and `sha` were replaced by `sha256` and
 `shasum`. `_is_binary`, `_num_block` and `make_preprocessor` have no direct
 equivalent. Reason: clarify function coverage and close TODO.
 2025-07-24: Clarified that `_zeros` and `_vif_prune` now reside in
 `src/utils.py` and `src/selection.py` and updated TODO text.
 
+
 2025-07-25: Implemented `_is_binary`, `_num_block` and `make_preprocessor`
  in `src/preprocessing.py` with unit tests. Reason: port missing helpers.
  Decisions: simplified make_preprocessor to use a single scaler for
  continuous columns.
+
+2025-07-25: Updated NOTES commit hash to 78a6950 and cleaned trailing blank lines.
+Reason: keep history accurate.
+Decision: wrap `__all__` in backticks to satisfy markdownlint.
+
+2025-07-25: prefix, conf_matrix_summary and group_metrics implement the
+ notebook helpers `_prefix`, `_conf` and `_group_metrics`.
+

@@ -164,8 +164,8 @@ scaling.
 ## 14. Reporting helpers
 
 - [x] Add prefix helper and metrics helpers in report_helpers.py with tests.
-
 - [x] Record in NOTES that `_sha`/`sha` map to `sha256`/`shasum` and
   `_is_binary`, `_num_block` and `make_preprocessor` remain unported.
 - [x] Port `_is_binary`, `_num_block` and `make_preprocessor` into
   `src/preprocessing.py` with unit tests.
+
