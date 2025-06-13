@@ -180,5 +180,5 @@ scaling.
 ## 16. CI docs build
 
 - [x] Build Sphinx HTML in CI and upload as artifact.
+- [x] Upgrade docs upload step to `actions/upload-artifact@v4`.
 - [ ] Add additional notebook examples demonstrating advanced use cases.
-

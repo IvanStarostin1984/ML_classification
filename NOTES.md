@@ -252,3 +252,5 @@ README points to `make docs`.
 engineering and model training via src package. Updated notebooks/README.md
 with link and run steps.
 
+2025-07-30: Upgraded docs upload step to actions/upload-artifact@v4 in CI.
+Reason: keep workflow in sync with GitHub action updates.
