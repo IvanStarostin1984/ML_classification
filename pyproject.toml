@@ -24,6 +24,7 @@ dependencies = [
 [project.scripts]
 mlcls-train = "src.train:main"
 mlcls-eval = "src.evaluate:main"
+mlcls-predict = "src.predict:main"
 
 [tool.setuptools]
 packages = ["src", "scripts"]

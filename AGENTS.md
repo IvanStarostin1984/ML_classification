@@ -64,6 +64,7 @@ ML_classification/
 │ ├─ selection.py # VIF, RFE, tree selector
 │ ├─ split.py # stratified train/test logic
 │ ├─ train.py # orchestrates pipelines
+│ ├─ predict.py # prediction CLI
 │ ├─ utils.py # small misc helpers
 │ └─ models/
 │    ├─ `__init__.py`
@@ -75,6 +76,7 @@ ML_classification/
 │ ├─ test_cli_sampler.py # CLI data sampler functions
 │ ├─ test_cli_scripts.py # CLI wrappers
 │ ├─ test_cli_train_gridsearch.py # CLI grid search training
+│ ├─ test_predict.py # prediction CLI
 │ ├─ test_cv_utils.py # cross-validation helpers
 │ ├─ test_dataprep.py # data loading
 │ ├─ test_diagnostics.py # diagnostic utilities
