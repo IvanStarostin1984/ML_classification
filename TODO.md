@@ -57,6 +57,7 @@ src.models.logreg`)
 - [x] fix NOTES.md long lines to satisfy markdownlint
 - [x] shorten long NOTES lines to satisfy markdownlint
 - [x] expand Sphinx docs with module usage and CLI examples
+- [x] list Sphinx in requirements and update build instructions
 
 ## 7. Legacy script
 
