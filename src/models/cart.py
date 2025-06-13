@@ -83,7 +83,12 @@ def grid_train_from_df(
     preproc.fit(x, y)
     validate_prep(preproc, x, "cart")
     steps = tree_steps(preproc, sampler or "passthrough")
-    grid = {"model__max_depth": [None, 8, 15], "model__min_samples_leaf": [1, 5]}
+    grid = {
+        "model__max_depth": [None, 8, 15],
+        "model__min_samples_leaf": [1, 5],
+        "model__min_samples_split": [2, 10],
+        "model__class_weight": [None, "balanced"],
+    }
     gs = run_gs(x, y, steps, DecisionTreeClassifier(random_state=42), grid)
     if artefact_path:
         artefact_path.parent.mkdir(parents=True, exist_ok=True)
