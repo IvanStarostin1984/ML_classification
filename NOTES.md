@@ -240,3 +240,7 @@ command and README lists it. Reason: enable simple batch prediction.
 
 2025-07-27: Added CLI usage page with sample commands.
 Linked from README and docs index. Marked TODO items as done.
+
+2025-07-28: Added Sphinx to requirements and conda env.
+README now tells users to install it before building docs.
+AGENTS notes the dependency.

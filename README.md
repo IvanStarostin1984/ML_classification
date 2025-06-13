@@ -103,7 +103,13 @@ This sets `PYTHONPATH` so `pytest` can find the `src` package.
 
 ## Building the docs
 
-Sphinx configuration lives in `docs/`. Generate HTML pages with:
+Install Sphinx from `requirements.txt` or `environment.yml` first:
+
+```bash
+pip install -r requirements.txt  # or conda env update -f environment.yml
+```
+
+Then generate HTML pages:
 
 ```bash
 cd docs
