@@ -129,6 +129,7 @@ original licence. See [data/README.md](data/README.md) for details. The dataset
 is small – around 380&nbsp;kB (~1000 rows) – so the default training run
 finishes in a few seconds. Pass `-g` to `mlcls-train` to perform the extensive
 grid search (5×3 cross-validation) used in the original notebook.
+See `docs/cli_usage.rst` for a walkthrough of these commands.
 
 **Prefer Docker?**
 
