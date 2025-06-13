@@ -216,10 +216,18 @@ equivalent. Reason: clarify function coverage and close TODO.
  in `src/preprocessing.py` with unit tests. Reason: port missing helpers.
 Decisions: simplified make_preprocessor to use a single scaler for
 continuous columns.
+
 2025-07-25: Updated NOTES commit hash to 78a6950 and cleaned trailing blank lines.
 Reason: keep history accurate.
 Decision: wrap `__all__` in backticks to satisfy markdownlint.
+
 2025-07-25: prefix, conf_matrix_summary and group_metrics implement the
 notebook helpers `_prefix`, `_conf` and `_group_metrics`.
+
+2025-07-26: cart.grid_train_from_df tunes min_samples_split and class_weight
+ to mirror the notebook search. Tests assert 24 grid combos and verify the
+ best estimator is returned. Reason: extend tree grid search in TODO.
+
 2025-06-13: Added `mlcls-predict` CLI to apply saved models. Tests cover the
 command and README lists it. Reason: enable simple batch prediction.
+
