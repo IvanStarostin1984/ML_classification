@@ -154,6 +154,8 @@ find . -name '*.md' -not -path '*node_modules*' -print0 |
 - with _every commit_ reflect in **NOTES.md** on work done in a short lean way
 to track work.
 - keep docs in sync with code; update AGENTS.md and README when behaviour changes.
+- the project documentation lives under `docs/`; keep it in sync with README and
+  code changes.
 
 Read `NOTES.md` and `TODO.md` to understand the current stage, past decisions,
 and open questions tied to the spec.
