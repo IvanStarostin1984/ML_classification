@@ -244,3 +244,5 @@ Linked from README and docs index. Marked TODO items as done.
 2025-07-28: Added Sphinx to requirements and conda env.
 README now tells users to install it before building docs.
 AGENTS notes the dependency.
+2025-07-29: CI builds Sphinx docs after tests. Makefile has new docs target and
+README points to `make docs`.

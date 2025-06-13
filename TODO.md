@@ -176,3 +176,7 @@ scaling.
 
 - [x] Add `src/predict.py` and console script `mlcls-predict` with tests.
 - [x] Expand docs with examples on using the prediction command.
+
+## 16. CI docs build
+
+- [x] Build Sphinx HTML in CI and upload as artifact.
