@@ -139,7 +139,9 @@ ML_classification/
 `PYTHONPATH`.
 - Black uses a line length of **88** as configured in `pyproject.toml`.
 - Docs-only commits run a fast job with `markdownlint`.
-- After tests pass, CI builds the Sphinx docs and uploads them as an artifact.
+- After tests pass, CI builds the Sphinx docs and uploads them using
+  `actions/upload-artifact@v4`. Keep the major version current when GitHub
+  releases a new one.
   Links are checked using:
 
 ```bash
