@@ -169,3 +169,7 @@ scaling.
 - [x] Port `_is_binary`, `_num_block` and `make_preprocessor` into
   `src/preprocessing.py` with unit tests.
 
+## 15. Prediction CLI
+
+- [x] Add `src/predict.py` and console script `mlcls-predict` with tests.
+- [ ] Expand docs with examples on using the prediction command.
