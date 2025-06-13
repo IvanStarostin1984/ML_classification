@@ -112,8 +112,7 @@ pip install -r requirements.txt  # or conda env update -f environment.yml
 Then generate HTML pages:
 
 ```bash
-cd docs
-sphinx-build -b html . _build
+make docs         # or cd docs && sphinx-build -b html . _build
 ```
 
 The output appears under `docs/_build/`.

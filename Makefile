@@ -12,3 +12,6 @@ eval:
 
 test:
 	PYTHONPATH=$(PWD) python -m pytest -q
+
+docs:
+	sphinx-build -b html docs docs/_build
