@@ -121,6 +121,7 @@ pip install -e .
 mlcls-train          # trains both models
 mlcls-train -g       # extensive grid search
 mlcls-eval           # evaluates the trained models
+mlcls-predict        # generates predictions from a saved model
 ```
 
 These commands require the Kaggle dataset, which is distributed under its

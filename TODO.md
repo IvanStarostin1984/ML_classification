@@ -109,6 +109,7 @@ parameter grids.
 - [x] port grid search helper for decision tree
 
 - [x] save best estimator when performing cart grid search
+- [x] extend cart grid search with min_samples_split and class_weight
 
 - [x] Verify that each function from ai_arisha.py is represented or
 intentionally omitted in the src modules (see FUNCTIONS.md).
@@ -169,3 +170,8 @@ scaling.
   `_is_binary`, `_num_block` and `make_preprocessor` remain unported.
 - [x] Port `_is_binary`, `_num_block` and `make_preprocessor` into
   `src/preprocessing.py` with unit tests.
+
+## 15. Prediction CLI
+
+- [x] Add `src/predict.py` and console script `mlcls-predict` with tests.
+- [ ] Expand docs with examples on using the prediction command.

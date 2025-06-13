@@ -38,7 +38,8 @@ def test_grid_train_from_df() -> None:
     df = dataprep.clean(df)
     df = FeatureEngineer().transform(df)
     gs = grid_train_from_df(df, "target")
-    assert len(gs.cv_results_["params"]) > 1
+    assert len(gs.cv_results_["params"]) == 24
+    assert hasattr(gs, "best_estimator_")
 
 
 def test_grid_train_saves_best(tmp_path) -> None:
