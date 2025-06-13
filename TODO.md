@@ -56,7 +56,7 @@ src.models.logreg`)
 - [x] ensure markdown files pass `markdownlint`
 - [x] fix NOTES.md long lines to satisfy markdownlint
 - [x] shorten long NOTES lines to satisfy markdownlint
-- [ ] expand Sphinx docs with module usage and CLI examples
+- [x] expand Sphinx docs with module usage and CLI examples
 
 ## 7. Legacy script
 
@@ -174,4 +174,4 @@ scaling.
 ## 15. Prediction CLI
 
 - [x] Add `src/predict.py` and console script `mlcls-predict` with tests.
-- [ ] Expand docs with examples on using the prediction command.
+- [x] Expand docs with examples on using the prediction command.

@@ -237,3 +237,6 @@ command and README lists it. Reason: enable simple batch prediction.
  `index.rst`. Updated README with build instructions and noted docs location
  in AGENTS. Reason: establish documentation framework. Decision: keep default
  Alabaster theme.
+
+2025-07-27: Added CLI usage page with sample commands.
+Linked from README and docs index. Marked TODO items as done.
