@@ -252,3 +252,4 @@ README points to `make docs`.
 engineering and model training via src package. Updated notebooks/README.md
 with link and run steps.
 
+2025-06-13: Switched docs job to actions/upload-artifact@v4 to keep CI current.
