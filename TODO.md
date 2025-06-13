@@ -176,3 +176,5 @@ scaling.
 
 - [x] Add `src/predict.py` and console script `mlcls-predict` with tests.
 - [x] Expand docs with examples on using the prediction command.
+
+- [ ] Add additional notebook examples demonstrating advanced use cases.
