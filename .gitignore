@@ -9,6 +9,7 @@ venv/
 # Data and model artefacts
 data/
 artefacts/
+docs/_build/
 
 # Kaggle credentials and other secrets
 kaggle.json

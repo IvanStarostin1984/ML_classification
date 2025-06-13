@@ -56,6 +56,7 @@ src.models.logreg`)
 - [x] ensure markdown files pass `markdownlint`
 - [x] fix NOTES.md long lines to satisfy markdownlint
 - [x] shorten long NOTES lines to satisfy markdownlint
+- [ ] expand Sphinx docs with module usage and CLI examples
 
 ## 7. Legacy script
 
@@ -168,4 +169,3 @@ scaling.
   `_is_binary`, `_num_block` and `make_preprocessor` remain unported.
 - [x] Port `_is_binary`, `_num_block` and `make_preprocessor` into
   `src/preprocessing.py` with unit tests.
-

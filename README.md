@@ -101,6 +101,17 @@ make test
 
 This sets `PYTHONPATH` so `pytest` can find the `src` package.
 
+## Building the docs
+
+Sphinx configuration lives in `docs/`. Generate HTML pages with:
+
+```bash
+cd docs
+sphinx-build -b html . _build
+```
+
+The output appears under `docs/_build/`.
+
 ## Command-line usage
 
 After installing the project in editable mode you get two console commands:
