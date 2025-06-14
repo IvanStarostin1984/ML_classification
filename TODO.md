@@ -198,6 +198,7 @@ scaling.
 ## 17. Reporting CLI
 
 - [x] expose mlcls-report console script for collecting report artifacts
+- [x] document its usage and the ``report_artifacts/`` directory in the docs
 
 ## 18. Packaging
 
