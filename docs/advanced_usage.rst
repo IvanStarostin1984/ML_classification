@@ -8,8 +8,10 @@ Grid search
 -----------
 
 Run ``mlcls-train -g`` to search a wider range of parameters. The job records
-metrics for each candidate and stores the best estimator under
-``artefacts/``.
+metrics for each candidate and stores the best estimator under ``artefacts/``.
+To perform grid search on the random-forest pipeline pass the model option::
+
+   mlcls-train --model random_forest -g
 
 Calibration
 -----------
