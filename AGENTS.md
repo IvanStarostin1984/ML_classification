@@ -106,6 +106,7 @@ ML_classification/
 ├─ Dockerfile # reproducible container build
 ├─ Makefile # one-command workflow (`make train`)
 ├─ .gitignore # excludes data, artefacts, secrets
+├─ .markdown-link-check.json # patterns for link checker to ignore
 ├─ LICENSE # MIT License
 └─ README.md # badges, quick-start, results, contact
 
@@ -148,6 +149,9 @@ ML_classification/
 find . -name '*.md' -not -path '*node_modules*' -print0 |
   xargs -0 -n1 npx markdown-link-check -q
 ```
+
+The tool reads `.markdown-link-check.json` for patterns of external links to
+ignore. Links to social profiles like LinkedIn may be skipped there.
 
 ## Contributing Workflow
 
