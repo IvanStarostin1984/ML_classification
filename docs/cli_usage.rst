@@ -20,3 +20,10 @@ Generate predictions and save them to ``predictions.csv`` (change
    mlcls-predict --model-path artefacts/logreg.joblib --data data/new.csv
 
 The commands create the output paths in the current working directory.
+
+Collect tables and figures for reporting::
+
+   mlcls-report
+
+The command gathers recent metrics and plots under ``report_artifacts/``. This
+folder can be zipped and shared as a summary of the run.
