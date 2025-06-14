@@ -13,6 +13,7 @@ dependencies:
   - statsmodels
   - joblib
   - kaggle
+  - shap
   - flake8
   - black
   - pytest

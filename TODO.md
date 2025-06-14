@@ -228,4 +228,5 @@ scaling.
 - [x] add GitHub Pages workflow building Sphinx HTML and deploying to
   `gh-pages`
 - [x] document random_forest grid search example in docs and README
-- [ ] add gradient boosting model and CLI option with grid search
+- [x] add gradient boosting model and CLI option with grid search
+- [ ] add SHAP value visualisation for feature importance
