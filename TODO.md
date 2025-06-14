@@ -44,6 +44,7 @@ src.models.logreg`)
 - [x] add docs-only CI job running markdownlint and markdown-link-check
 - [x] fix link check step to iterate over markdown files with find/xargs
 - [x] Add pre-commit hook or make target with `npx markdownlint-cli` for MD012.
+- [x] Run `pre-commit run --files` in CI before flake8, black and pytest
 
 ## 6. Documentation updates
 
@@ -215,3 +216,8 @@ scaling.
 ## 20. Data caching
 
 - [x] check `.sha256` file in `download_data.py` to skip re-downloads
+
+## 20. Fairness metrics
+
+- [x] compute equal opportunity ratio in evaluate.py and document usage
+

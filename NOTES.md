@@ -1,6 +1,6 @@
 # Migration notes
 
-Current commit: `55488a2`.
+Current commit: `97db366`.
 
 2025-06-18: Evaluation and fairness modules are in place with passing tests and
 README instructions describing the workflow.
@@ -330,3 +330,11 @@ because pre-commit already runs isort.
 2025-08-28: `download_data.py` now writes a `.sha256` checksum and reuses it to
 skip downloading if the CSV is unchanged. Updated README and added
 tests for the caching logic.
+
+2025-08-28: Added equal_opportunity_ratio aliasing four_fifths_ratio and
+updated evaluate_models to write an ``equal_opp`` column. Updated docs and
+tests accordingly.
+
+2025-08-28: CI now runs pre-commit on changed files before flake8, black and
+pytest. Updated AGENTS and README. Fixed markdownlint hook pattern in
+.pre-commit-config.yaml. Reason: enforce hooks in pipeline.

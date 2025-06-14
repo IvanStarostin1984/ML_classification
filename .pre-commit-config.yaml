@@ -17,4 +17,4 @@ repos:
     rev: v0.39.0
     hooks:
       - id: markdownlint-cli
-        files: "\.md$"
+        files: '\\.md$'

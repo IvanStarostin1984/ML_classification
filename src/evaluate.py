@@ -9,7 +9,7 @@ from sklearn.metrics import make_scorer, recall_score
 
 from .cv_utils import nested_cv
 
-from .fairness import youden_threshold, four_fifths_ratio
+from .fairness import youden_threshold, four_fifths_ratio, equal_opportunity_ratio
 
 SPECIFICITY = make_scorer(recall_score, pos_label=0)
 SCORERS = {
@@ -22,10 +22,21 @@ SCORERS = {
 }
 
 
-def _fairness(estimator, X: pd.DataFrame, y: pd.Series, group_col: str | None) -> float:
+def _four_fifths(
+    estimator, X: pd.DataFrame, y: pd.Series, group_col: str | None
+) -> float:
     if group_col and group_col in X.columns:
         thr = youden_threshold(estimator, X, y)
         return four_fifths_ratio(estimator, X, y, group_col, thr)
+    return 1.0
+
+
+def _equal_opp(
+    estimator, X: pd.DataFrame, y: pd.Series, group_col: str | None
+) -> float:
+    if group_col and group_col in X.columns:
+        thr = youden_threshold(estimator, X, y)
+        return equal_opportunity_ratio(estimator, X, y, group_col, thr)
     return 1.0
 
 
@@ -69,7 +80,8 @@ def evaluate_models(
                 "recall": res["test_recall"].mean(),
                 "specificity": res["test_specificity"].mean(),
                 "bal_acc": res["test_bal_acc"].mean(),
-                "fairness": _fairness(res["estimator"][0], X, y, group_col),
+                "fairness": _four_fifths(res["estimator"][0], X, y, group_col),
+                "equal_opp": _equal_opp(res["estimator"][0], X, y, group_col),
             }
         )
     out = pd.DataFrame(rows).round(3)
