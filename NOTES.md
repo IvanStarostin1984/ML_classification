@@ -282,3 +282,5 @@ packaging.
 linked it from index and README. Reason: clarify advanced evaluation.
 
 2025-06-14: Added mlcls-report CLI with test and docs. CITATION stayed same.
+
+- 2025-08-15: Added trailing newline to NOTES.md to satisfy markdownlint MD047.
