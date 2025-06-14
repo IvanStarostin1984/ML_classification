@@ -46,6 +46,8 @@ pip install -e .
 pip install pre-commit
 pre-commit install
 
+# The hooks run `isort` before `black` and `flake8` so imports stay ordered.
+
 # This registers the `src` package so scripts like
 # `python scripts/download_data.py` can import it.
 
@@ -74,6 +76,7 @@ mlcls-train --sampler smote   # run with SMOTE oversampling
 ```
 
 Pre-commit hooks format code and lint Markdown automatically on each commit.
+They run `isort`, `black` and `flake8` when you commit.
 
 Note: `make` is required for these commands. On Windows, install GNU Make or run
 the console scripts `mlcls-train` and `mlcls-eval` instead.
