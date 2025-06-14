@@ -187,3 +187,5 @@ scaling.
 - [x] Update docs job to use upload-artifact@v4.
 
 - [x] Add additional notebook examples demonstrating advanced use cases.
+- [x] Update README badges and add `.markdown-link-check.json` to ignore
+      LinkedIn links.

@@ -267,3 +267,4 @@ lines short. Reason: markdownlint flagged the long badge line.
 2025-07-31: Added advanced_demo.ipynb demonstrating grid-search training,
 fairness evaluation and calibration. Updated README files accordingly and
 checked off the notebook TODO item.
+2025-08-01: Updated README badges and added ignore file for LinkedIn links.
