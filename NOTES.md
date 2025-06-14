@@ -274,5 +274,8 @@ checked off the notebook TODO item.
 inserted it in the index. AGENTS notes that Sphinx builds an API reference.
 Reason: document public modules.
 
+2025-08-03: Expanded advanced_usage.rst with fairness and calibration steps and
+linked it from index and README. Reason: clarify advanced evaluation.
+
 2025-06-14: Added mlcls-report CLI with test and docs. CITATION stayed same.
 
