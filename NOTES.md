@@ -323,3 +323,7 @@ complete Binder docs TODO.
 2025-08-27: Updated README pre-commit section. Note that isort, black and
     flake8 run automatically. Reason: clarify formatting automation.
     Decision: ticked TODO item.
+
+2025-08-27: Cleaned up packaging roadmap. Checked off isort hook item
+because pre-commit already runs isort.
+

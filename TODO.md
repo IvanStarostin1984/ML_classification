@@ -205,8 +205,6 @@ scaling.
 - [x] add build-system entry and document wheel creation with `python -m build`
 - [x] publish the wheel to PyPI once the release workflow is battle-tested
 - [x] add isort hook to pre-commit for import ordering
-- [ ] publish the wheel to PyPI once the release workflow is battle-tested
-- [x] add isort hook to pre-commit for import ordering
 
 ## 19. Binder support
 
