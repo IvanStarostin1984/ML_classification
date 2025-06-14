@@ -1,6 +1,6 @@
 # Migration notes
 
-Current commit: `d8138d2`.
+Current commit: `55488a2`.
 
 2025-06-18: Evaluation and fairness modules are in place with passing tests and
 README instructions describing the workflow.
@@ -268,3 +268,7 @@ lines short. Reason: markdownlint flagged the long badge line.
 fairness evaluation and calibration. Updated README files accordingly and
 checked off the notebook TODO item.
 2025-08-01: Updated README badges and added ignore file for LinkedIn links.
+
+2025-08-02: Added API reference page in docs using automodule directives and
+inserted it in the index. AGENTS notes that Sphinx builds an API reference.
+Reason: document public modules.
