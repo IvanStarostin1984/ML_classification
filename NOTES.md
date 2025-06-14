@@ -278,5 +278,7 @@ Reason: document public modules.
 building via `python -m build` in README and AGENTS. Reason: enable
 packaging.
 
-2025-06-14: Added mlcls-report CLI with test and docs. CITATION stayed same.
+2025-08-03: Expanded advanced_usage.rst with fairness and calibration steps and
+linked it from index and README. Reason: clarify advanced evaluation.
 
+2025-06-14: Added mlcls-report CLI with test and docs. CITATION stayed same.
