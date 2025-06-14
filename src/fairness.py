@@ -24,3 +24,10 @@ def four_fifths_ratio(
         if positives.sum():
             tprs.append((yhat[mask] & positives).sum() / positives.sum())
     return min(tprs) / max(tprs) if len(tprs) > 1 else 1.0
+
+
+def equal_opportunity_ratio(
+    estimator, X: pd.DataFrame, y: pd.Series, group_col: str, thr: float
+) -> float:
+    """Return ratio of true positive rates across ``group_col``."""
+    return four_fifths_ratio(estimator, X, y, group_col, thr)

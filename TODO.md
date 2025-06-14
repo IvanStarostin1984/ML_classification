@@ -211,3 +211,7 @@ scaling.
 - [x] add binder/environment.yml referencing requirements
 - [x] create postBuild script to install package in editable mode
 - [x] update docs if binder instructions change
+
+## 20. Fairness metrics
+
+- [x] compute equal opportunity ratio in evaluate.py and document usage

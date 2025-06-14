@@ -33,11 +33,13 @@ Fairness checks
 ---------------
 
 Use the evaluation command with ``--group-col`` to compute group metrics such
-as statistical parity and equal opportunity::
+as statistical parity and equal opportunity. The summary table now includes an
+``equal_opp`` column showing the worst to best true positive rate ratio::
 
    mlcls-eval --group-col gender --group-col marital
 This command prints parity ratios for each group and stores them in
-``artefacts/group_metrics.csv``.
+``artefacts/group_metrics.csv``. ``summary_metrics.csv`` records the
+``equal_opp`` ratio for each model.
 
 The ``advanced_demo.ipynb`` notebook walks through these steps and shows the
 additional plots.
