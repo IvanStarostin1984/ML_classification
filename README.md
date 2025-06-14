@@ -7,7 +7,7 @@
 [![Build & Test](https://github.com/IvanStarostin1984/ML_classification/actions/workflows/ci.yml/badge.svg)](../../actions)
 [![License: MIT](https://img.shields.io/badge/License-MIT-green.svg)](LICENSE)
 ![Python 3.10+](https://img.shields.io/badge/python-3.10%2B-blue)
-![ROC-AUC 0.987 ± 0.008](https://img.shields.io/badge/Test%20ROC–AUC-0.987-±0.008-purple)
+[![ROC-AUC 0.987 ± 0.008][roc-badge]]
 
 ---
 
@@ -73,6 +73,9 @@ Note: `make` is required for these commands. On Windows, install GNU Make or run
 the console scripts `mlcls-train` and `mlcls-eval` instead.
 
 See [data/README.md](data/README.md) for dataset licence notes.
+
+Interactive notebooks live under `notebooks/`. Open `loan_demo.ipynb` or
+`advanced_demo.ipynb` for a guided walkthrough.
 
 Training produces feature-importance tables (`logreg_coefficients.csv`,
 `cart_importances.csv`) and bar-chart PNGs in `artefacts/`. All generated files
@@ -223,3 +226,5 @@ Values reproduced from the accompanying statistical report.&#x20;
 ## Author
 
 **Ivan Starostin** – [LinkedIn](https://www.linkedin.com/in/ivanstarostin/)
+
+[roc-badge]: https://img.shields.io/static/v1?label=Test%20ROC%20AUC&message=0.987%C2%B10.008&color=purple

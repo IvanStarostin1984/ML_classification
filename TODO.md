@@ -58,6 +58,7 @@ src.models.logreg`)
 - [x] shorten long NOTES lines to satisfy markdownlint
 - [x] expand Sphinx docs with module usage and CLI examples
 - [x] list Sphinx in requirements and update build instructions
+- [x] fix README ROC-AUC badge lines via reference link
 
 ## 7. Legacy script
 
@@ -185,4 +186,4 @@ scaling.
 
 - [x] Update docs job to use upload-artifact@v4.
 
-- [ ] Add additional notebook examples demonstrating advanced use cases.
+- [x] Add additional notebook examples demonstrating advanced use cases.
