@@ -294,3 +294,5 @@ ignore for actions URL. Reason: enforce MD012 and fix link check.
 2025-08-16: Removed extra blank line in NOTES to satisfy MD012.
 
 2025-08-16: Logged TODO for markdownlint hook and trimmed blank line.
+
+2025-08-17: Added `lint-docs` target and docs mention. Completes markdownlint TODO.

@@ -123,6 +123,8 @@ make docs         # or cd docs && sphinx-build -b html . _build
 
 The output appears under `docs/_build/`.
 
+Use `make lint-docs` to check Markdown files.
+
 ## Building a wheel
 
 Install the build tool and run:
