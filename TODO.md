@@ -210,4 +210,4 @@ scaling.
 
 - [x] add binder/environment.yml referencing requirements
 - [x] create postBuild script to install package in editable mode
-- [ ] update docs if binder instructions change
+- [x] update docs if binder instructions change
