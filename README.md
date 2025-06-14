@@ -82,6 +82,8 @@ make train-logreg
 make train-cart
 mlcls-train --model random_forest  # train only the RF model
 mlcls-train --model random_forest -g  # grid search for the RF model
+mlcls-train --model gboost  # train the gradient boosting model
+mlcls-train --model gboost -g  # grid search for gradient boosting
 mlcls-train --sampler smote   # run with SMOTE oversampling
 ```
 
@@ -169,6 +171,7 @@ After installing the project in editable mode you get two console commands:
 pip install -e .
 mlcls-train          # trains both models
 mlcls-train --model random_forest -g  # extensive grid search
+mlcls-train --model gboost -g  # gradient boosting grid search
 mlcls-eval           # evaluates the trained models
 mlcls-predict        # generates predictions from a saved model
 mlcls-report        # collects report artifacts
@@ -218,6 +221,7 @@ src/                     ← Python package skeleton
 src/models/logreg.py     ← logistic regression pipeline
 src/models/cart.py       ← decision-tree pipeline
 src/models/random_forest.py ← random-forest pipeline
+src/models/gradient_boosting.py ← gradient boosting pipeline
 src/features.py          ← FeatureEngineer class
 src/diagnostics.py       ← chi-square & correlation plots
 src/preprocessing.py     ← ColumnTransformer helpers
