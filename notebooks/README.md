@@ -8,6 +8,8 @@ for training the models but can be handy for quick experiments.
 
 - [loan_demo.ipynb](loan_demo.ipynb) – data loading, feature engineering
   and training example.
+- [advanced_demo.ipynb](advanced_demo.ipynb) – grid search training,
+  fairness evaluation and calibration.
 
 Run the commands below to open a notebook:
 
@@ -16,7 +18,7 @@ Run the commands below to open a notebook:
 python scripts/download_data.py
 
 # Then start Jupyter
-jupyter notebook loan_demo.ipynb
+jupyter notebook loan_demo.ipynb  # or advanced_demo.ipynb
 ```
 
 You can also open the notebooks directly in Google Colab via the GitHub link.
