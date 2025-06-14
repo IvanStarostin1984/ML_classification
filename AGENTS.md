@@ -164,6 +164,8 @@ ignore. Links to social profiles like LinkedIn may be skipped there.
 
 - **Fork** then branch off `main` using the pattern `feat/<topic>`.
 - **Ensure local tests pass** before opening a PR.
+- Install pre-commit with `pip install pre-commit` and run `pre-commit install`.
+  This formats code and lints Markdown on each commit.
 - **Each PR requires at least one reviewer.**
 - with _every commit_ reflect in **NOTES.md** on work done in a short lean way
 to track work.

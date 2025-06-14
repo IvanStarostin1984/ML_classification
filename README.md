@@ -42,6 +42,10 @@ pip install -r requirements.txt          # or: conda env create -f environment.y
 # Install the project in editable mode for development
 pip install -e .
 
+# Enable automatic formatting on commits
+pip install pre-commit
+pre-commit install
+
 # This registers the `src` package so scripts like
 # `python scripts/download_data.py` can import it.
 
@@ -68,6 +72,8 @@ make train-logreg
 make train-cart
 mlcls-train --sampler smote   # run with SMOTE oversampling
 ```
+
+Pre-commit hooks format code and lint Markdown automatically on each commit.
 
 Note: `make` is required for these commands. On Windows, install GNU Make or run
 the console scripts `mlcls-train` and `mlcls-eval` instead.
