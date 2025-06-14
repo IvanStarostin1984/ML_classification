@@ -59,7 +59,7 @@ ML_classification/
 │ ├─ metrics.py # metric utilities from notebook
 │ ├─ pipeline_helpers.py # CLI and pipeline orchestrators
 │ ├─ preprocessing.py # ColumnTransformers
-│ ├─ reporting.py # reporting helpers
+│ ├─ reporting.py # reporting helpers, CLI `mlcls-report`
 │ ├─ report_helpers.py # confusion matrix and group metrics
 │ ├─ selection.py # VIF, RFE, tree selector
 │ ├─ split.py # stratified train/test logic

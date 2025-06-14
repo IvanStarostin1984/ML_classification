@@ -130,6 +130,7 @@ mlcls-train          # trains both models
 mlcls-train -g       # extensive grid search
 mlcls-eval           # evaluates the trained models
 mlcls-predict        # generates predictions from a saved model
+mlcls-report        # collects report artifacts
 ```
 
 These commands require the Kaggle dataset, which is distributed under its
