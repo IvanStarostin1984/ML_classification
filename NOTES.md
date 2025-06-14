@@ -319,3 +319,7 @@ keep imports consistent.
 2025-08-26: Documented how to launch notebooks on Binder in notebooks README
 and linked the badge from docs/index.rst. Reason: clarify quick start and
 complete Binder docs TODO.
+
+2025-08-27: Updated README pre-commit section. Note that isort, black and
+    flake8 run automatically. Reason: clarify formatting automation.
+    Decision: ticked TODO item.
