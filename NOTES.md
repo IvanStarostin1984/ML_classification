@@ -327,3 +327,6 @@ complete Binder docs TODO.
 2025-08-27: Cleaned up packaging roadmap. Checked off isort hook item
 because pre-commit already runs isort.
 
+2025-08-28: `download_data.py` now writes a `.sha256` checksum and reuses it to
+skip downloading if the CSV is unchanged. Updated README and added
+tests for the caching logic.
