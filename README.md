@@ -42,6 +42,10 @@ pip install -r requirements.txt          # or: conda env create -f environment.y
 # Install the project in editable mode for development
 pip install -e .
 
+# Enable automatic formatting on commits
+pip install pre-commit
+pre-commit install
+
 # This registers the `src` package so scripts like
 # `python scripts/download_data.py` can import it.
 
@@ -69,6 +73,8 @@ make train-cart
 mlcls-train --sampler smote   # run with SMOTE oversampling
 ```
 
+Pre-commit hooks format code and lint Markdown automatically on each commit.
+
 Note: `make` is required for these commands. On Windows, install GNU Make or run
 the console scripts `mlcls-train` and `mlcls-eval` instead.
 
@@ -76,6 +82,8 @@ See [data/README.md](data/README.md) for dataset licence notes.
 
 Interactive notebooks live under `notebooks/`. Open `loan_demo.ipynb` or
 `advanced_demo.ipynb` for a guided walkthrough.
+You can also launch them instantly on Binder via the badge in
+`notebooks/README.md`.
 
 Training produces feature-importance tables (`logreg_coefficients.csv`,
 `cart_importances.csv`) and bar-chart PNGs in `artefacts/`. All generated files
@@ -209,6 +217,8 @@ src/utils.py             ← general helpers
 tests/                   ← pytest suite
 data/README.md           ← dataset licence notes
 notebooks/README.md      ← Colab/Binder demo stub
+binder/environment.yml   ← Binder spec
+binder/postBuild         ← install step
 Dockerfile, Makefile     ← reproducible build & workflow helpers
 environment.yml          ← Conda spec (Python ≥ 3.10)
 pyproject.toml           ← project build metadata
