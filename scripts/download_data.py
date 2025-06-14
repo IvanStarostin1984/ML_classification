@@ -6,14 +6,15 @@ Usage:
 
 Requires ``KAGGLE_USERNAME`` and ``KAGGLE_KEY`` environment variables.
 The dataset is downloaded to ``data/raw/`` and the archive is unzipped.
-If the destination directory already contains files, the script exits
-without downloading again.
+If the destination directory already contains the CSV and a matching
+``.sha256`` file, the script exits without re-downloading.
 """
 from __future__ import annotations
 
 import os
 import sys
 from pathlib import Path
+import hashlib
 
 try:
     from src.dataprep import CSV_PATH
@@ -32,9 +33,12 @@ CSV_NAME = Path(CSV_PATH).name
 def main() -> None:
     """Authenticate with Kaggle and download the dataset."""
     csv_path = DEST_DIR / CSV_NAME
-    if csv_path.exists():
-        print(f"Dataset already present at {csv_path}. Skipping download.")
-        return
+    sha_path = DEST_DIR / f"{CSV_NAME}.sha256"
+    if csv_path.exists() and sha_path.exists():
+        digest = hashlib.sha256(csv_path.read_bytes()).hexdigest()
+        if sha_path.read_text().strip() == digest:
+            print(f"Dataset already present at {csv_path}. Skipping download.")
+            return
 
     username = os.getenv("KAGGLE_USERNAME")
     key = os.getenv("KAGGLE_KEY")
@@ -52,6 +56,9 @@ def main() -> None:
     api = KaggleApi()
     api.authenticate()
     api.dataset_download_files(DATASET, path=str(DEST_DIR), unzip=True)
+    if csv_path.exists():
+        sha = hashlib.sha256(csv_path.read_bytes()).hexdigest()
+        sha_path.write_text(sha)
     print("Download complete.")
 
 

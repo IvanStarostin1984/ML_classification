@@ -67,6 +67,8 @@ conda activate ml-classification
 python scripts/download_data.py
 
 # The raw CSVs land in `data/raw/` (git-ignored).
+# A `.sha256` file keeps the checksum so the script skips re-downloading
+# if the dataset hasn't changed.
 
 # Train, evaluate and store artefacts in artefacts/
 make train            # run both models

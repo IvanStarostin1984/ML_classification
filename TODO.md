@@ -213,6 +213,11 @@ scaling.
 - [x] create postBuild script to install package in editable mode
 - [x] update docs if binder instructions change
 
+## 20. Data caching
+
+- [x] check `.sha256` file in `download_data.py` to skip re-downloads
+
 ## 20. Fairness metrics
 
 - [x] compute equal opportunity ratio in evaluate.py and document usage
+
