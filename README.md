@@ -123,6 +123,17 @@ make docs         # or cd docs && sphinx-build -b html . _build
 
 The output appears under `docs/_build/`.
 
+## Building a wheel
+
+Install the build tool and run:
+
+```bash
+python -m pip install build
+python -m build
+```
+
+The wheel lands in `dist/`.
+
 ## Command-line usage
 
 After installing the project in editable mode you get two console commands:

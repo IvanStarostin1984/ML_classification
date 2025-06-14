@@ -195,3 +195,7 @@ scaling.
 ## 17. Reporting CLI
 
 - [x] expose mlcls-report console script for collecting report artifacts
+
+## 18. Packaging
+
+- [x] add build-system entry and document wheel creation with `python -m build`

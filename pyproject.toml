@@ -2,6 +2,10 @@
 line-length = 88
 extend-exclude = 'ai_arisha.py|scripts/download_data.py|src/dataprep.py|tests/test_.*.py'
 
+[build-system]
+requires = ["setuptools>=61.0", "wheel"]
+build-backend = "setuptools.build_meta"
+
 [project]
 name = "ml-classification"
 version = "0.1.0"
