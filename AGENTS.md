@@ -127,6 +127,8 @@ ML_classification/
 - Specify a language for fenced code blocks.
 - NOTES.md and TODO.md entries must keep lines under 80 chars and avoid
   multiple blank lines. Run `npx markdownlint-cli` after updates.
+- Ensure exactly one blank line between entries in NOTES.md and TODO.md to
+  prevent MD012.
 - Run `npx markdownlint-cli` locally before committing documentation changes.
 - Run `npx markdownlint-cli '**/*.md' --ignore node_modules` to mirror the CI
   job.

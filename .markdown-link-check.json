@@ -1,5 +1,6 @@
 {
   "ignorePatterns": [
     { "pattern": "linkedin.com" }
+    ,{ "pattern": "github\\.com/.*/actions" }
   ]
 }

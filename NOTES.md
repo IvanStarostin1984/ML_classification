@@ -287,8 +287,10 @@ linked it from index and README. Reason: clarify advanced evaluation.
 Reason: keep docs lint clean.
 
 2025-08-15: Added trailing newline to NOTES.md to satisfy markdownlint MD047.
-\
+
+2025-08-16: Documented single blank line rule in AGENTS and added link-check
+ignore for actions URL. Reason: enforce MD012 and fix link check.
+
 2025-08-16: Removed extra blank line in NOTES to satisfy MD012.
 
 2025-08-16: Logged TODO for markdownlint hook and trimmed blank line.
-
