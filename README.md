@@ -145,7 +145,8 @@ python -m build
 The wheel lands in `dist/`.
 
 Tagged releases run the same build in CI and attach the wheel to a GitHub
-release.
+release. Tag a commit with `git tag v1.2.3` and push it to trigger the upload
+to PyPI via `twine`.
 
 ## Command-line usage
 

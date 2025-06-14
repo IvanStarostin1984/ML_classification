@@ -160,8 +160,8 @@ find . -name '*.md' -not -path '*node_modules*' -print0 |
 The tool reads `.markdown-link-check.json` for patterns of external links to
 ignore. Links to social profiles like LinkedIn may be skipped there.
 
-Tagged commits trigger `.github/workflows/release.yml` which builds the wheel
-and attaches it to a GitHub release.
+Tagged commits trigger `.github/workflows/release.yml` which builds the wheel,
+uploads it to PyPI using `twine` and attaches it to a GitHub release.
 
 ## Contributing Workflow
 
