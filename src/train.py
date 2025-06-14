@@ -7,7 +7,7 @@ from imblearn.over_sampling import RandomOverSampler, SMOTE, SMOTEN, SMOTENC
 from imblearn.under_sampling import RandomUnderSampler
 from imblearn.combine import SMOTETomek
 
-from .models import logreg, cart, random_forest
+from .models import logreg, cart, random_forest, gradient_boosting
 
 
 def main(args: list[str] | None = None) -> None:
@@ -17,7 +17,7 @@ def main(args: list[str] | None = None) -> None:
         "--model",
         "-m",
         action="append",
-        choices=["logreg", "cart", "random_forest"],
+        choices=["logreg", "cart", "random_forest", "gboost"],
         help="models to train; defaults to all",
     )
     parser.add_argument(
@@ -46,7 +46,7 @@ def main(args: list[str] | None = None) -> None:
         help="use grid search to tune hyperparameters",
     )
     ns = parser.parse_args(args)
-    models = ns.model or ["logreg", "cart", "random_forest"]
+    models = ns.model or ["logreg", "cart", "random_forest", "gboost"]
 
     sampler_map = {
         "smote": SMOTE,
@@ -83,6 +83,13 @@ def main(args: list[str] | None = None) -> None:
             print(f"Validation ROC-AUC: {gs.best_score_:.3f}")
         else:
             random_forest.main(ns.data_path, sampler)
+    if "gboost" in models:
+        if ns.grid_search:
+            df = gradient_boosting.load_data(ns.data_path)
+            gs = gradient_boosting.grid_train_from_df(df, sampler=sampler)
+            print(f"Validation ROC-AUC: {gs.best_score_:.3f}")
+        else:
+            gradient_boosting.main(ns.data_path, sampler)
 
 
 if __name__ == "__main__":
