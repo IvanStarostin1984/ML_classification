@@ -189,6 +189,7 @@ scaling.
 - [x] Add additional notebook examples demonstrating advanced use cases.
 - [x] Update README badges and add `.markdown-link-check.json` to ignore
       LinkedIn links.
+- [x] Add Sphinx API reference page listing key modules
 
 ## 17. Reporting CLI
 

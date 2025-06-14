@@ -165,6 +165,8 @@ to track work.
 - the project documentation lives under `docs/`; keep it in sync with README and
   code changes.
 - install Sphinx from the requirements files before building the docs.
+- Sphinx now builds an API reference from docstrings in
+  `docs/api_reference.rst`.
 
 Read `NOTES.md` and `TODO.md` to understand the current stage, past decisions,
 and open questions tied to the spec.
