@@ -1,6 +1,6 @@
 # Migration notes
 
-Current commit: `55488a2`.
+Current commit: `97db366`.
 
 2025-06-18: Evaluation and fairness modules are in place with passing tests and
 README instructions describing the workflow.
@@ -326,6 +326,10 @@ complete Binder docs TODO.
 
 2025-08-27: Cleaned up packaging roadmap. Checked off isort hook item
 because pre-commit already runs isort.
+
+2025-08-28: Added equal_opportunity_ratio aliasing four_fifths_ratio and
+updated evaluate_models to write an ``equal_opp`` column. Updated docs and
+tests accordingly.
 
 2025-08-28: CI now runs pre-commit on changed files before flake8, black and
 pytest. Updated AGENTS and README. Fixed markdownlint hook pattern in
