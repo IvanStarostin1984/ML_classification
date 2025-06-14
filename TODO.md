@@ -136,6 +136,7 @@ and risk flag
 - [x] port `_vif_prune` as `vif_prune` in `src/selection.py` with unit tests
 - [x] VIF pruning handles singular matrices
 - [x] add random_forest model pipeline with CLI and tests
+- [x] add random_forest grid search unit and CLI tests
 
 ## 11. Metrics helpers
 
@@ -226,3 +227,4 @@ scaling.
 
 - [x] add GitHub Pages workflow building Sphinx HTML and deploying to
   `gh-pages`
+- [x] document random_forest grid search example in docs and README
