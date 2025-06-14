@@ -2,5 +2,6 @@
   "ignorePatterns": [
     { "pattern": "linkedin.com" }
     ,{ "pattern": "github\\.com/.*/actions" }
+    ,{ "pattern": "ivanstarostin1984.github.io" }
   ]
 }
