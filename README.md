@@ -27,6 +27,9 @@
   importable helpers. Helpers like `split.random_split`, `split.time_split` and
   `utils.set_seeds` simplify experiments.
 
+The rendered documentation lives at
+[https://ivanstarostin1984.github.io/ML_classification](https://ivanstarostin1984.github.io/ML_classification).
+
 ---
 
 ## Quick-start

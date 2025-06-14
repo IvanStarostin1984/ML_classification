@@ -154,6 +154,8 @@ ML_classification/
 - After tests pass, CI builds the Sphinx docs and uploads them using
   `actions/upload-artifact@v4`. Keep the major version current when GitHub
   releases a new one.
+- The workflow `.github/workflows/gh-pages.yml` deploys these pages to the
+  `gh-pages` branch using `peaceiris/actions-gh-pages@v3`.
   Links are checked using:
 
 ```bash

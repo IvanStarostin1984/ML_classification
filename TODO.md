@@ -222,3 +222,7 @@ scaling.
 
 - [x] compute equal opportunity ratio in evaluate.py and document usage
 
+## 21. Docs hosting
+
+- [x] add GitHub Pages workflow building Sphinx HTML and deploying to
+  `gh-pages`
