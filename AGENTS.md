@@ -132,6 +132,7 @@ ML_classification/
 - Run `npx markdownlint-cli` locally before committing documentation changes.
 - Run `npx markdownlint-cli '**/*.md' --ignore node_modules` to mirror the CI
   job.
+- `make lint-docs` runs this command automatically.
 - End each Markdown file with exactly one newline to satisfy MD047.
 
 ## Testing & CI

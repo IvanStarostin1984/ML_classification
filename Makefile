@@ -15,3 +15,6 @@ test:
 
 docs:
 	sphinx-build -b html docs docs/_build
+
+lint-docs:
+	npx markdownlint-cli '**/*.md' --ignore node_modules
