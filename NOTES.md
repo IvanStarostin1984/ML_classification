@@ -219,7 +219,8 @@ equivalent. Reason: clarify function coverage and close TODO.
  Decisions: simplified make_preprocessor to use a single scaler for
  continuous columns.
 
-2025-07-25: Updated NOTES commit hash to 78a6950 and cleaned trailing blank lines.
+2025-07-25: Updated NOTES commit hash to 78a6950 and cleaned trailing
+blank lines.
  Reason: keep history accurate.
  Decision: wrap `__all__` in backticks to satisfy markdownlint.
 
@@ -295,7 +296,8 @@ ignore for actions URL. Reason: enforce MD012 and fix link check.
 
 2025-08-16: Logged TODO for markdownlint hook and trimmed blank line.
 
-2025-08-17: Added `lint-docs` target and docs mention. Completes markdownlint TODO.
+2025-08-17: Added `lint-docs` target and docs mention.
+Completes markdownlint TODO.
 
 2025-08-17: Documented mlcls-report usage in cli_usage.rst and explained the
 report_artifacts folder. Reason: show how to collect results for sharing.
@@ -357,3 +359,9 @@ Reason: clarify advanced training options.
 2025-08-31: Documented that pre-commit downloads hooks from GitHub.
 It may prompt for credentials; set GIT_TOKEN to avoid prompts.
 Reason: avoid interactive runs when network access is restricted.
+
+2025-08-31: Wrapped long README and NOTES lines under 80 characters and
+confirmed with markdownlint. Reason: keep docs compliant with style guide.
+
+2025-08-31: Documented that Markdown-only commits run markdownlint and link
+check instead of full tests in AGENTS.md. Reason: clarify CI behaviour.
