@@ -308,3 +308,7 @@ Reason: enforce consistent formatting automatically.
 
 2025-08-18: Added Binder setup (environment.yml and postBuild) and badge link.
 Documented binder folder in README and AGENTS. Reason: enable online notebooks.
+
+2025-08-26: Documented how to launch notebooks on Binder in notebooks README
+and linked the badge from docs/index.rst. Reason: clarify quick start and
+complete Binder docs TODO.
