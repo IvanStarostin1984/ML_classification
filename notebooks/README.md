@@ -11,6 +11,10 @@ for training the models but can be handy for quick experiments.
 - [advanced_demo.ipynb](advanced_demo.ipynb) – grid search training,
   fairness evaluation and calibration.
 
+Click the Binder badge at the bottom of this page to run these demos in the
+cloud. Binder starts a temporary environment with all requirements so you can
+execute the steps without installing anything locally.
+
 Run the commands below to open a notebook:
 
 ```bash

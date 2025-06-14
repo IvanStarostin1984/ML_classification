@@ -312,3 +312,10 @@ Documented binder folder in README and AGENTS. Reason: enable online notebooks.
 2025-08-20: Release workflow now uploads the wheel to PyPI using twine and
 README instructs tagging a version to trigger it. Reason: finalise packaging
 automation.
+
+2025-08-19: Added isort hook before black and noted it in AGENTS. Reason:
+keep imports consistent.
+
+2025-08-26: Documented how to launch notebooks on Binder in notebooks README
+and linked the badge from docs/index.rst. Reason: clarify quick start and
+complete Binder docs TODO.

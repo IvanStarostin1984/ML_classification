@@ -205,9 +205,11 @@ scaling.
 - [x] add build-system entry and document wheel creation with `python -m build`
 - [x] publish the wheel to PyPI once the release workflow is battle-tested
 - [ ] add isort hook to pre-commit for import ordering
+- [ ] publish the wheel to PyPI once the release workflow is battle-tested
+- [x] add isort hook to pre-commit for import ordering
 
 ## 19. Binder support
 
 - [x] add binder/environment.yml referencing requirements
 - [x] create postBuild script to install package in editable mode
-- [ ] update docs if binder instructions change
+- [x] update docs if binder instructions change
