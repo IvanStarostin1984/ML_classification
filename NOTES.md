@@ -346,5 +346,7 @@ documentation in README. Updated AGENTS accordingly.
 tests and documentation. Reason: extend modelling options. Decisions: use
 RandomForestClassifier with simple grid search and expose via train.py.
 
+2025-08-30: Added RF grid search unit and CLI tests for better coverage.
+
 2025-08-30: Documented random_forest grid search example in docs and README.
 Reason: clarify advanced training options.
