@@ -358,3 +358,6 @@ Reason: clarify advanced training options.
 
 2025-08-31: Wrapped long README and NOTES lines under 80 characters and
 confirmed with markdownlint. Reason: keep docs compliant with style guide.
+
+2025-08-31: Documented that Markdown-only commits run markdownlint and link
+check instead of full tests in AGENTS.md. Reason: clarify CI behaviour.

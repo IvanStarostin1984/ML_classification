@@ -154,6 +154,8 @@ ML_classification/
   CI workflow for verification.
 - Black uses a line length of **88** as configured in `pyproject.toml`.
 - Docs-only commits run a fast job with `markdownlint`.
+- Markdown-only commits skip the full test suite and run `markdownlint`
+  plus the link checker instead.
 - After tests pass, CI builds the Sphinx docs and uploads them using
   `actions/upload-artifact@v4`. Keep the major version current when GitHub
   releases a new one.
