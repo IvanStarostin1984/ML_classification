@@ -59,6 +59,8 @@ src.models.logreg`)
 - [x] expand Sphinx docs with module usage and CLI examples
 - [x] list Sphinx in requirements and update build instructions
 - [x] fix README ROC-AUC badge lines via reference link
+- [x] document single blank line rule in AGENTS and ignore actions URL in
+      link checker
 
 ## 7. Legacy script
 
