@@ -299,3 +299,5 @@ ignore for actions URL. Reason: enforce MD012 and fix link check.
 
 2025-08-17: Documented mlcls-report usage in cli_usage.rst and explained the
 report_artifacts folder. Reason: show how to collect results for sharing.
+2025-08-18: Added Binder setup (environment.yml and postBuild) and badge link.
+Documented binder folder in README and AGENTS. Reason: enable online notebooks.
