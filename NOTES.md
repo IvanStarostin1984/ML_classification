@@ -294,3 +294,6 @@ ignore for actions URL. Reason: enforce MD012 and fix link check.
 2025-08-16: Removed extra blank line in NOTES to satisfy MD012.
 
 2025-08-16: Logged TODO for markdownlint hook and trimmed blank line.
+
+2025-08-17: Documented mlcls-report usage in cli_usage.rst and explained the
+report_artifacts folder. Reason: show how to collect results for sharing.
