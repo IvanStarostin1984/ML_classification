@@ -283,8 +283,8 @@ linked it from index and README. Reason: clarify advanced evaluation.
 
 2025-06-14: Added mlcls-report CLI with test and docs. CITATION stayed same.
 
-
 2025-08-06: Documented MD047 newline rule in AGENTS and re-ran markdownlint.
 Reason: keep docs lint clean.
 
 2025-08-15: Added trailing newline to NOTES.md to satisfy markdownlint MD047.
+2025-08-16: Removed extra blank line in NOTES to satisfy MD012.
