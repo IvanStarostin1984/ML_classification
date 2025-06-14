@@ -338,3 +338,7 @@ tests accordingly.
 2025-08-28: CI now runs pre-commit on changed files before flake8, black and
 pytest. Updated AGENTS and README. Fixed markdownlint hook pattern in
 .pre-commit-config.yaml. Reason: enforce hooks in pipeline.
+
+2025-08-29: Added random_forest model mirroring logreg/cart with CLI support,
+tests and documentation. Reason: extend modelling options. Decisions: use
+RandomForestClassifier with simple grid search and expose via train.py.

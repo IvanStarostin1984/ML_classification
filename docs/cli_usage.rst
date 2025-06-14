@@ -8,6 +8,7 @@ Examples below assume the project is installed in editable mode::
 Train models and store artefacts under ``artefacts/``::
 
    mlcls-train --model logreg
+   mlcls-train --model random_forest
    mlcls-train -g  # grid search
 
 Evaluate metrics and write ``artefacts/summary_metrics.csv``::

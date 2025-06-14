@@ -135,6 +135,7 @@ and risk flag
 - [x] add Makefile test target to run pytest
 - [x] port `_vif_prune` as `vif_prune` in `src/selection.py` with unit tests
 - [x] VIF pruning handles singular matrices
+- [x] add random_forest model pipeline with CLI and tests
 
 ## 11. Metrics helpers
 

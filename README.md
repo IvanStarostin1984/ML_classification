@@ -1,8 +1,8 @@
 # ML_classification
 
 > **A tidy, production-ready re-implementation of my Google Colab notebook for
-> predicting loan approvals with logistic regression and decision-tree
-> pipelines.**
+> predicting loan approvals with logistic regression, decision-tree and
+> random-forest pipelines.**
 
 [![Build & Test](https://img.shields.io/github/actions/workflow/status/IvanStarostin1984/ML_classification/ci.yml?branch=main)](https://github.com/IvanStarostin1984/ML_classification/actions)
 [![License: MIT](https://img.shields.io/badge/License-MIT-green.svg)](LICENSE)
@@ -76,6 +76,7 @@ make eval             # evaluate trained models and check fairness
 # or individually
 make train-logreg
 make train-cart
+mlcls-train --model random_forest  # train only the RF model
 mlcls-train --sampler smote   # run with SMOTE oversampling
 ```
 
@@ -209,6 +210,7 @@ scripts/download_data.py ← Kaggle dataset pull helper
 src/                     ← Python package skeleton
 src/models/logreg.py     ← logistic regression pipeline
 src/models/cart.py       ← decision-tree pipeline
+src/models/random_forest.py ← random-forest pipeline
 src/features.py          ← FeatureEngineer class
 src/diagnostics.py       ← chi-square & correlation plots
 src/preprocessing.py     ← ColumnTransformer helpers
