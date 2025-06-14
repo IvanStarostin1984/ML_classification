@@ -148,7 +148,10 @@ ML_classification/
   `black --check .` and `pytest` on Python&nbsp;3.10.
 - Run these commands locally before committing to ensure your code passes the
   same checks. Use `make test` to run the full pytest suite with the correct
-`PYTHONPATH`.
+  `PYTHONPATH`.
+- Any new executable code must include unit tests and, when it exposes a CLI,
+  an accompanying CLI test in `tests/`. Run `pytest` locally and rely on the
+  CI workflow for verification.
 - Black uses a line length of **88** as configured in `pyproject.toml`.
 - Docs-only commits run a fast job with `markdownlint`.
 - After tests pass, CI builds the Sphinx docs and uploads them using
