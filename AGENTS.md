@@ -141,7 +141,8 @@ ML_classification/
 
 ## Testing & CI
 
-- The GitHub Actions workflow (`.github/workflows/ci.yml`) runs `flake8`,
+- The GitHub Actions workflow (`.github/workflows/ci.yml`) runs
+  `pre-commit run --files` on changed files followed by `flake8`,
   `black --check .` and `pytest` on Python&nbsp;3.10.
 - Run these commands locally before committing to ensure your code passes the
   same checks. Use `make test` to run the full pytest suite with the correct

@@ -47,6 +47,8 @@ pip install pre-commit
 pre-commit install
 
 # The hooks run `isort` before `black` and `flake8` so imports stay ordered.
+# In CI the workflow runs `pre-commit run --files` on changed files before
+# `flake8`, `black` and `pytest`.
 
 # This registers the `src` package so scripts like
 # `python scripts/download_data.py` can import it.
