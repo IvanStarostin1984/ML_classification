@@ -190,3 +190,7 @@ scaling.
 - [x] Update README badges and add `.markdown-link-check.json` to ignore
       LinkedIn links.
 - [x] Add Sphinx API reference page listing key modules
+
+## 17. Reporting CLI
+
+- [x] expose mlcls-report console script for collecting report artifacts
