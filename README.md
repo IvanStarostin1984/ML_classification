@@ -136,6 +136,9 @@ python -m build
 
 The wheel lands in `dist/`.
 
+Tagged releases run the same build in CI and attach the wheel to a GitHub
+release.
+
 ## Command-line usage
 
 After installing the project in editable mode you get two console commands:
