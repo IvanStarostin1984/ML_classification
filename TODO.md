@@ -189,3 +189,7 @@ scaling.
 - [x] Add additional notebook examples demonstrating advanced use cases.
 - [x] Update README badges and add `.markdown-link-check.json` to ignore
       LinkedIn links.
+
+## 17. Reporting CLI
+
+- [x] expose mlcls-report console script for collecting report artifacts

@@ -8,6 +8,8 @@ version = "0.1.0"
 description = "Loan-approval prediction pipelines"
 readme = "README.md"
 requires-python = ">=3.10"
+authors = [{name = "Ivan Starostin"}]
+license = {text = "MIT"}
 dependencies = [
     "pandas",
     "numpy",
@@ -25,6 +27,7 @@ dependencies = [
 mlcls-train = "src.train:main"
 mlcls-eval = "src.evaluate:main"
 mlcls-predict = "src.predict:main"
+mlcls-report = "src.reporting:main"
 
 [tool.setuptools]
 packages = ["src", "scripts"]

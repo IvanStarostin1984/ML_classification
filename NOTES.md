@@ -268,3 +268,4 @@ lines short. Reason: markdownlint flagged the long badge line.
 fairness evaluation and calibration. Updated README files accordingly and
 checked off the notebook TODO item.
 2025-08-01: Updated README badges and added ignore file for LinkedIn links.
+2025-06-14: Added mlcls-report CLI with test and docs. CITATION stayed same.
