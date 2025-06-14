@@ -356,6 +356,10 @@ RandomForestClassifier with simple grid search and expose via train.py.
 2025-08-30: Documented random_forest grid search example in docs and README.
 Reason: clarify advanced training options.
 
+2025-08-31: Documented that pre-commit downloads hooks from GitHub.
+It may prompt for credentials; set GIT_TOKEN to avoid prompts.
+Reason: avoid interactive runs when network access is restricted.
+
 2025-08-31: Wrapped long README and NOTES lines under 80 characters and
 confirmed with markdownlint. Reason: keep docs compliant with style guide.
 

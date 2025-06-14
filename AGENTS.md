@@ -146,6 +146,9 @@ ML_classification/
 - The GitHub Actions workflow (`.github/workflows/ci.yml`) runs
   `pre-commit run --files` on changed files followed by `flake8`,
   `black --check .` and `pytest` on Python&nbsp;3.10.
+- Running `pre-commit` downloads hook repos from GitHub.
+  Ensure network access or set a personal access token via `GIT_TOKEN`
+  to avoid interactive prompts.
 - Run these commands locally before committing to ensure your code passes the
   same checks. Use `make test` to run the full pytest suite with the correct
   `PYTHONPATH`.
