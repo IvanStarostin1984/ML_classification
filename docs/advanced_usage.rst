@@ -46,3 +46,20 @@ This command prints parity ratios for each group and stores them in
 
 The ``advanced_demo.ipynb`` notebook walks through these steps and shows the
 additional plots.
+
+SHAP values
+-----------
+
+Provide a DataFrame to ``logreg_coefficients`` or ``tree_feature_importances``
+and pass ``shap_csv_path`` to store per-feature SHAP values::
+
+   from src.feature_importance import logreg_coefficients
+
+   shap_df = logreg_coefficients(
+       "artefacts/lr.joblib",
+       shap_csv_path="artefacts/logreg_shap_values.csv",
+       X=X_test,
+   )
+
+The helper function ``compute_shap_values`` creates the table with columns
+matching the input DataFrame.

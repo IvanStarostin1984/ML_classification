@@ -28,6 +28,8 @@ re-scope one of them before continuing.
 4. Never commit downloaded Kaggle data or personal API keys
 5. With _ANY_ pull request add data to NOTES.md to shortly reflect on work done
 in this pull request. Always!
+6. Avoid committing SHAP output CSV files over 1 MB. Regenerate them locally
+   if required.
 
 ## Project structure
 

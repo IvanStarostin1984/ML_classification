@@ -366,4 +366,7 @@ confirmed with markdownlint. Reason: keep docs compliant with style guide.
 2025-08-31: Documented that Markdown-only commits run markdownlint and link
 check instead of full tests in AGENTS.md. Reason: clarify CI behaviour.
 
-2025-08-31: Added gradient boosting model and CLI option with grid search tests. Reason: extend modelling options.
+2025-08-31: Added gradient boosting model and CLI option with grid search
+tests. Reason: extend modelling options.
+2025-06-14: Added SHAP utilities and optional SHAP export in
+feature_importance. Reason: user request to inspect model contributions.
