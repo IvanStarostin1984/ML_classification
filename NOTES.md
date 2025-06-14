@@ -256,3 +256,7 @@ with link and run steps.
 Reason: keep workflow in sync with GitHub action updates.
 
 2025-06-13: Switched docs job to actions/upload-artifact@v4 to keep CI current.
+
+2025-06-14: Added advanced_usage docs summarising grid search, calibration and
+fairness referencing advanced_demo.ipynb. Linked from index. Reason: provide
+advanced workflow overview.
