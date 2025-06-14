@@ -308,3 +308,6 @@ Reason: enforce consistent formatting automatically.
 
 2025-08-18: Added Binder setup (environment.yml and postBuild) and badge link.
 Documented binder folder in README and AGENTS. Reason: enable online notebooks.
+
+2025-08-19: Added isort hook before black and noted it in AGENTS. Reason:
+keep imports consistent.
