@@ -331,3 +331,6 @@ because pre-commit already runs isort.
 updated evaluate_models to write an ``equal_opp`` column. Updated docs and
 tests accordingly.
 
+2025-08-28: CI now runs pre-commit on changed files before flake8, black and
+pytest. Updated AGENTS and README. Fixed markdownlint hook pattern in
+.pre-commit-config.yaml. Reason: enforce hooks in pipeline.
