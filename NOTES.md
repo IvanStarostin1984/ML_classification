@@ -345,4 +345,8 @@ documentation in README. Updated AGENTS accordingly.
 2025-08-29: Added random_forest model mirroring logreg/cart with CLI support,
 tests and documentation. Reason: extend modelling options. Decisions: use
 RandomForestClassifier with simple grid search and expose via train.py.
+
 2025-08-30: Added RF grid search unit and CLI tests for better coverage.
+
+2025-08-30: Documented random_forest grid search example in docs and README.
+Reason: clarify advanced training options.

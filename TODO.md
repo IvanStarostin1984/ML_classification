@@ -227,3 +227,4 @@ scaling.
 
 - [x] add GitHub Pages workflow building Sphinx HTML and deploying to
   `gh-pages`
+- [x] document random_forest grid search example in docs and README

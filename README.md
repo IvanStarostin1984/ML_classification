@@ -80,6 +80,7 @@ make eval             # evaluate trained models and check fairness
 make train-logreg
 make train-cart
 mlcls-train --model random_forest  # train only the RF model
+mlcls-train --model random_forest -g  # grid search for the RF model
 mlcls-train --sampler smote   # run with SMOTE oversampling
 ```
 
@@ -166,7 +167,7 @@ After installing the project in editable mode you get two console commands:
 ```bash
 pip install -e .
 mlcls-train          # trains both models
-mlcls-train -g       # extensive grid search
+mlcls-train --model random_forest -g  # extensive grid search
 mlcls-eval           # evaluates the trained models
 mlcls-predict        # generates predictions from a saved model
 mlcls-report        # collects report artifacts
