@@ -319,3 +319,6 @@ keep imports consistent.
 2025-08-26: Documented how to launch notebooks on Binder in notebooks README
 and linked the badge from docs/index.rst. Reason: clarify quick start and
 complete Binder docs TODO.
+
+2025-08-27: Cleaned up packaging roadmap. Checked off isort hook item
+because pre-commit already runs isort.
