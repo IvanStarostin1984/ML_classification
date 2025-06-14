@@ -203,3 +203,9 @@ scaling.
 ## 18. Packaging
 
 - [x] add build-system entry and document wheel creation with `python -m build`
+
+## 19. Binder support
+
+- [x] add binder/environment.yml referencing requirements
+- [x] create postBuild script to install package in editable mode
+- [ ] update docs if binder instructions change

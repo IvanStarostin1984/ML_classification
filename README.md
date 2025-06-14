@@ -76,6 +76,8 @@ See [data/README.md](data/README.md) for dataset licence notes.
 
 Interactive notebooks live under `notebooks/`. Open `loan_demo.ipynb` or
 `advanced_demo.ipynb` for a guided walkthrough.
+You can also launch them instantly on Binder via the badge in
+`notebooks/README.md`.
 
 Training produces feature-importance tables (`logreg_coefficients.csv`,
 `cart_importances.csv`) and bar-chart PNGs in `artefacts/`. All generated files
@@ -206,6 +208,8 @@ src/utils.py             ← general helpers
 tests/                   ← pytest suite
 data/README.md           ← dataset licence notes
 notebooks/README.md      ← Colab/Binder demo stub
+binder/environment.yml   ← Binder spec
+binder/postBuild         ← install step
 Dockerfile, Makefile     ← reproducible build & workflow helpers
 environment.yml          ← Conda spec (Python ≥ 3.10)
 pyproject.toml           ← project build metadata

@@ -40,7 +40,7 @@ ML_classification/
 ├─ data/
 │ └─ README.md # Kaggle‐licence notice & instructions
 ├─ notebooks/
-│ └─ README.md # slim Colab/Binder demo stub
+│ └─ README.md # notebook guides and Binder badge
 ├─ scripts/
 │ └─ download_data.py # pulls dataset via Kaggle API
 ├─ src/
@@ -103,6 +103,9 @@ ML_classification/
 │ ├─ test_utils.py # miscellaneous utils
 ├─ environment.yml # Conda spec (Python ≥ 3.10)
 ├─ requirements.txt # pip fallback
+├─ binder/
+│  ├─ environment.yml # Binder spec referencing requirements
+│  └─ postBuild # installs the package in editable mode
 ├─ Dockerfile # reproducible container build
 ├─ Makefile # one-command workflow (`make train`)
 ├─ .gitignore # excludes data, artefacts, secrets
@@ -172,6 +175,9 @@ to track work.
 - Sphinx now builds an API reference from docstrings in
   `docs/api_reference.rst`.
 - Build distribution packages with `python -m build` to create a wheel.
+- Binder support lives in `binder/` with an `environment.yml` referencing the
+  project requirements and a `postBuild` script installing the package in
+  editable mode.
 
 Read `NOTES.md` and `TODO.md` to understand the current stage, past decisions,
 and open questions tied to the spec.
