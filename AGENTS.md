@@ -167,6 +167,7 @@ to track work.
 - install Sphinx from the requirements files before building the docs.
 - Sphinx now builds an API reference from docstrings in
   `docs/api_reference.rst`.
+- Build distribution packages with `python -m build` to create a wheel.
 
 Read `NOTES.md` and `TODO.md` to understand the current stage, past decisions,
 and open questions tied to the spec.

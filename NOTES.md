@@ -274,5 +274,9 @@ checked off the notebook TODO item.
 inserted it in the index. AGENTS notes that Sphinx builds an API reference.
 Reason: document public modules.
 
+2025-08-05: Added build-system with setuptools.build_meta and noted wheel
+building via `python -m build` in README and AGENTS. Reason: enable
+packaging.
+
 2025-06-14: Added mlcls-report CLI with test and docs. CITATION stayed same.
 
