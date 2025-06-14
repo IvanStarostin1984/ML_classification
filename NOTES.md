@@ -299,3 +299,6 @@ ignore for actions URL. Reason: enforce MD012 and fix link check.
 
 2025-08-17: Documented mlcls-report usage in cli_usage.rst and explained the
 report_artifacts folder. Reason: show how to collect results for sharing.
+
+2025-08-18: Added pre-commit hooks for black, flake8 and markdownlint.
+Reason: enforce consistent formatting automatically.

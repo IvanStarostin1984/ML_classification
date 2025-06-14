@@ -203,3 +203,4 @@ scaling.
 ## 18. Packaging
 
 - [x] add build-system entry and document wheel creation with `python -m build`
+- [ ] add isort hook to pre-commit for import ordering
