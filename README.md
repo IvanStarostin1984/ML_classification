@@ -103,6 +103,8 @@ You can also launch them instantly on Binder via the badge in
 Training produces feature-importance tables (`logreg_coefficients.csv`,
 `cart_importances.csv`) and bar-chart PNGs in `artefacts/`. All generated files
 are recorded in `artefacts/SHA256_manifest.txt` for reproducibility.
+Pass a DataFrame to `logreg_coefficients` or `tree_feature_importances`
+along with `shap_csv_path` to save SHAP value tables as well.
 
 `make eval` runs `python -m src.evaluate` to compute test metrics and the worst
 four-fifths ratio across protected groups (pass `--group-col` to override the
