@@ -7,7 +7,7 @@
 [![Build & Test](https://github.com/IvanStarostin1984/ML_classification/actions/workflows/ci.yml/badge.svg)](../../actions)
 [![License: MIT](https://img.shields.io/badge/License-MIT-green.svg)](LICENSE)
 ![Python 3.10+](https://img.shields.io/badge/python-3.10%2B-blue)
-![ROC-AUC 0.987 ± 0.008](https://img.shields.io/badge/Test%20ROC–AUC-0.987-±0.008-purple)
+[![ROC-AUC 0.987 ± 0.008][roc-badge]]
 
 ---
 
@@ -226,3 +226,5 @@ Values reproduced from the accompanying statistical report.&#x20;
 ## Author
 
 **Ivan Starostin** – [LinkedIn](https://www.linkedin.com/in/ivanstarostin/)
+
+[roc-badge]: https://img.shields.io/static/v1?label=Test%20ROC%20AUC&message=0.987%C2%B10.008&color=purple
