@@ -4,7 +4,7 @@
 > predicting loan approvals with logistic regression, decision-tree and
 > random-forest pipelines.**
 
-[![Build & Test](https://img.shields.io/github/actions/workflow/status/IvanStarostin1984/ML_classification/ci.yml?branch=main)](https://github.com/IvanStarostin1984/ML_classification/actions)
+[![Build & Test][badge-ci]][ci-link]
 [![License: MIT](https://img.shields.io/badge/License-MIT-green.svg)](LICENSE)
 ![Python 3.10+](https://img.shields.io/badge/python-3.10%2B-blue)
 [![ROC-AUC 0.987 ± 0.008][roc-badge]]
@@ -28,7 +28,7 @@
   `utils.set_seeds` simplify experiments.
 
 The rendered documentation lives at
-[https://ivanstarostin1984.github.io/ML_classification](https://ivanstarostin1984.github.io/ML_classification).
+<https://ivanstarostin1984.github.io/ML_classification>.
 
 ---
 
@@ -40,7 +40,8 @@ git clone https://github.com/IvanStarostin1984/ML_classification.git
 cd ML_classification
 
 # Set up the environment
-pip install -r requirements.txt          # or: conda env create -f environment.yml
+pip install -r requirements.txt
+# or: conda env create -f environment.yml
 
 # Install the project in editable mode for development
 pip install -e .
@@ -184,7 +185,9 @@ See `docs/cli_usage.rst` for a walkthrough of these commands.
 
 ```bash
 docker build -t ml_classification .
-docker run --rm -e KAGGLE_USERNAME=$KAGGLE_USERNAME -e KAGGLE_KEY=$KAGGLE_KEY ml_classification
+docker run --rm \
+  -e KAGGLE_USERNAME=$KAGGLE_USERNAME \
+  -e KAGGLE_KEY=$KAGGLE_KEY ml_classification
 ```
 
 ## Model calibration
@@ -272,3 +275,5 @@ Values reproduced from the accompanying statistical report.&#x20;
 **Ivan Starostin** – [LinkedIn](https://www.linkedin.com/in/ivanstarostin/)
 
 [roc-badge]: https://img.shields.io/static/v1?label=Test%20ROC-AUC&message=0.987%C2%B10.008&color=purple
+[badge-ci]: https://img.shields.io/github/actions/workflow/status/IvanStarostin1984/ML_classification/ci.yml?branch=main
+[ci-link]: https://github.com/IvanStarostin1984/ML_classification/actions
