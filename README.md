@@ -74,6 +74,9 @@ the console scripts `mlcls-train` and `mlcls-eval` instead.
 
 See [data/README.md](data/README.md) for dataset licence notes.
 
+Interactive notebooks live under `notebooks/`. Open `loan_demo.ipynb` or
+`advanced_demo.ipynb` for a guided walkthrough.
+
 Training produces feature-importance tables (`logreg_coefficients.csv`,
 `cart_importances.csv`) and bar-chart PNGs in `artefacts/`. All generated files
 are recorded in `artefacts/SHA256_manifest.txt` for reproducibility.

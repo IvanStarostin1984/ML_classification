@@ -259,3 +259,7 @@ Reason: keep workflow in sync with GitHub action updates.
 
 2025-07-31: Replaced inline ROC-AUC badge with reference link to keep README
 lines short. Reason: markdownlint flagged the long badge line.
+
+2025-07-31: Added advanced_demo.ipynb demonstrating grid-search training,
+fairness evaluation and calibration. Updated README files accordingly and
+checked off the notebook TODO item.

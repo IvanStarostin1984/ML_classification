@@ -186,4 +186,4 @@ scaling.
 
 - [x] Update docs job to use upload-artifact@v4.
 
-- [ ] Add additional notebook examples demonstrating advanced use cases.
+- [x] Add additional notebook examples demonstrating advanced use cases.
