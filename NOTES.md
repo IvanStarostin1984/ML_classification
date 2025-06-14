@@ -353,3 +353,5 @@ RandomForestClassifier with simple grid search and expose via train.py.
 
 2025-08-30: Documented random_forest grid search example in docs and README.
 Reason: clarify advanced training options.
+2025-08-31: Documented that Markdown-only commits run markdownlint and link
+check instead of full tests in AGENTS.md. Reason: clarify CI behaviour.
