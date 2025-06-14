@@ -94,6 +94,9 @@ mlcls-train --grid-search  # repeated CV with extended parameter grids
 
 This run takes longer but mirrors the notebook results.
 
+For fairness evaluation and calibration instructions see
+[docs/advanced_usage.rst](docs/advanced_usage.rst).
+
 ## Running tests
 
 Execute the test-suite locally with:
