@@ -69,7 +69,8 @@ ML_classification/
 │ └─ models/
 │    ├─ `__init__.py`
 │    ├─ logreg.py # LR training / eval pipeline
-│    └─ cart.py # Decision-Tree pipeline
+│    ├─ cart.py # Decision-Tree pipeline
+│    └─ random_forest.py # Random-Forest pipeline
 ├─ tests/
 │ ├─ test_calibration.py # probability calibration
 │ ├─ test_cart_gridsearch.py # CART grid-search pipeline
@@ -94,6 +95,7 @@ ML_classification/
 │ ├─ test_metrics.py # metric utilities
 │ ├─ test_models.py # modelling pipelines
 │ ├─ test_oversampling.py # oversampling heuristics
+│ ├─ test_random_forest.py # random-forest pipeline
 │ ├─ test_pipeline_helpers.py # pipeline helpers
 │ ├─ test_preprocessing.py # preprocessing pipeline
 │ ├─ test_reporting.py # reporting utilities
