@@ -203,3 +203,4 @@ scaling.
 ## 18. Packaging
 
 - [x] add build-system entry and document wheel creation with `python -m build`
+- [ ] publish the wheel to PyPI once the release workflow is battle-tested
