@@ -219,11 +219,11 @@ scaling.
 
 - [x] check `.sha256` file in `download_data.py` to skip re-downloads
 
-## 20. Fairness metrics
+## 21. Fairness metrics
 
 - [x] compute equal opportunity ratio in evaluate.py and document usage
 
-## 21. Docs hosting
+## 22. Docs hosting
 
 - [x] add GitHub Pages workflow building Sphinx HTML and deploying to
   `gh-pages`
