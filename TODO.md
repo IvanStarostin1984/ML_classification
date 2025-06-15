@@ -229,6 +229,6 @@ scaling.
   `gh-pages`
 - [x] document random_forest grid search example in docs and README
 - [x] add gradient boosting model and CLI option with grid search
-- [ ] add SHAP value visualisation for feature importance
+- [x] add SHAP value visualisation for feature importance
 
 - [x] update AGENTS.md with gradient_boosting and shap_utils entries
