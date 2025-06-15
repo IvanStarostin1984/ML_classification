@@ -372,3 +372,4 @@ tests. Reason: extend modelling options.
 feature_importance. Reason: user request to inspect model contributions.
 
 2025-09-01: Documented gradient boosting and SHAP modules in AGENTS.md.
+2025-09-02: Documented plot_or_load helper and SHAP PNG size limit in AGENTS. Mentioned running markdownlint after doc edits.

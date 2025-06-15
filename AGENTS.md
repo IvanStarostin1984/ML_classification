@@ -30,6 +30,7 @@ re-scope one of them before continuing.
 in this pull request. Always!
 6. Avoid committing SHAP output CSV files over 1 MB. Regenerate them locally
    if required.
+7. Avoid committing SHAP plot PNGs over 1 MB.
 
 ## Project structure
 
@@ -53,7 +54,7 @@ ML_classification/
 │ ├─ diagnostics.py # χ² tests, corr heat-map, etc.
 │ ├─ diagnostics_stats.py # additional stats for diagnostics
 │ ├─ evaluate.py # nested CV + fairness metrics
-│ ├─ evaluation_utils.py # evaluation helpers
+│ ├─ evaluation_utils.py # plot_or_load helper and fairness aliases
 │ ├─ fairness.py # fairness helpers
 │ ├─ feature_importance.py # tree-based feature importance
 │ ├─ features.py # FeatureEngineer class
@@ -92,7 +93,7 @@ ML_classification/
 │ ├─ test_download_data.py # dataset download script
 │ ├─ test_evaluate.py # evaluation CLI
 │ ├─ test_evaluate_extended.py # extended metrics
-│ ├─ test_evaluation_utils.py # evaluation helpers
+│ ├─ test_evaluation_utils.py # plot_or_load helper
 │ ├─ test_fairness.py # fairness metrics
 │ ├─ test_feature_importance.py # feature importance calculators
 │ ├─ test_features.py # feature engineering
@@ -145,7 +146,7 @@ ML_classification/
   multiple blank lines. Run `npx markdownlint-cli` after updates.
 - Ensure exactly one blank line between entries in NOTES.md and TODO.md to
   prevent MD012.
-- Run `npx markdownlint-cli` locally before committing documentation changes.
+- After editing docs, run `npx markdownlint-cli` locally before committing.
 - Run `npx markdownlint-cli '**/*.md' --ignore node_modules` to mirror the CI
   job.
 - `make lint-docs` runs this command automatically.
