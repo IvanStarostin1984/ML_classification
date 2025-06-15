@@ -370,3 +370,5 @@ check instead of full tests in AGENTS.md. Reason: clarify CI behaviour.
 tests. Reason: extend modelling options.
 2025-06-14: Added SHAP utilities and optional SHAP export in
 feature_importance. Reason: user request to inspect model contributions.
+
+2025-09-01: Documented gradient boosting and SHAP modules in AGENTS.md.
