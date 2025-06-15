@@ -372,3 +372,5 @@ tests. Reason: extend modelling options.
 feature_importance. Reason: user request to inspect model contributions.
 
 2025-09-01: Documented gradient boosting and SHAP modules in AGENTS.md.
+2025-09-02: Documented new plot_shap_summary helper in README and docs.
+Reason: show how to generate SHAP plots.
