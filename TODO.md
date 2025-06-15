@@ -232,3 +232,8 @@ scaling.
 - [x] add SHAP value visualisation for feature importance
 
 - [x] update AGENTS.md with gradient_boosting and shap_utils entries
+
+## 22. Token scopes
+
+- [x] clarify GIT_TOKEN note with required PAT scopes
+- [x] add bullet that gh-pages push needs a token with contents:write
