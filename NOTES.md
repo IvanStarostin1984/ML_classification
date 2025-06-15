@@ -392,3 +392,5 @@ Reason: fix section numbers for clarity.
 
 2025-09-03: Split long doc entry about plot_or_load and markdownlint into two lines.
 Reason: keep NOTES under 80 characters as per guidelines.
+2025-09-04: README and docs index link CITATION.cff so users know how to cite.
+Reason: surface citation metadata.
