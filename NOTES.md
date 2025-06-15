@@ -392,3 +392,6 @@ Reason: fix section numbers for clarity.
 
 2025-09-03: Split long doc entry about plot_or_load and markdownlint into two lines.
 Reason: keep NOTES under 80 characters as per guidelines.
+
+2025-09-04: Added equalized_odds_diff metric and eq_odds column with tests and
+docs. Reason: extend fairness metrics per TODO.

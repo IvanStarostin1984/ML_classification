@@ -222,6 +222,7 @@ scaling.
 ## 21. Fairness metrics
 
 - [x] compute equal opportunity ratio in evaluate.py and document usage
+- [x] compute equalized odds difference and expose eq_odds column
 
 ## 22. Docs hosting
 
