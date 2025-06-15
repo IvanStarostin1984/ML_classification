@@ -64,6 +64,7 @@ ML_classification/
 │ ├─ reporting.py # reporting helpers, CLI `mlcls-report`
 │ ├─ report_helpers.py # confusion matrix and group metrics
 │ ├─ selection.py # VIF, RFE, tree selector
+│ ├─ shap_utils.py # SHAP utilities
 │ ├─ split.py # stratified train/test logic
 │ ├─ train.py # orchestrates pipelines
 │ ├─ predict.py # prediction CLI
@@ -72,13 +73,17 @@ ML_classification/
 │    ├─ `__init__.py`
 │    ├─ logreg.py # LR training / eval pipeline
 │    ├─ cart.py # Decision-Tree pipeline
-│    └─ random_forest.py # Random-Forest pipeline
+│    ├─ random_forest.py # Random-Forest pipeline
+│    └─ gradient_boosting.py # Gradient-Boosting pipeline
 ├─ tests/
 │ ├─ test_calibration.py # probability calibration
 │ ├─ test_cart_gridsearch.py # CART grid-search pipeline
 │ ├─ test_cli_sampler.py # CLI data sampler functions
 │ ├─ test_cli_scripts.py # CLI wrappers
 │ ├─ test_cli_train_gridsearch.py # CLI grid search training
+│ ├─ test_cli_train_rf_gridsearch.py # CLI RF grid search
+│ ├─ test_cli_gboost_gridsearch.py # CLI gradient-boost grid search
+│ ├─ test_cli_report.py # CLI report command
 │ ├─ test_predict.py # prediction CLI
 │ ├─ test_cv_utils.py # cross-validation helpers
 │ ├─ test_dataprep.py # data loading
@@ -98,12 +103,15 @@ ML_classification/
 │ ├─ test_models.py # modelling pipelines
 │ ├─ test_oversampling.py # oversampling heuristics
 │ ├─ test_random_forest.py # random-forest pipeline
+│ ├─ test_rf_gridsearch.py # random-forest grid search
+│ ├─ test_gradient_boosting.py # gradient boosting pipeline
 │ ├─ test_pipeline_helpers.py # pipeline helpers
 │ ├─ test_preprocessing.py # preprocessing pipeline
 │ ├─ test_reporting.py # reporting utilities
 │ ├─ test_selection.py # feature selection
 │ ├─ test_smoke.py # CI sanity import check
 │ ├─ test_split.py # split logic
+│ ├─ test_shap_utils.py # SHAP utilities
 │ ├─ test_utils.py # miscellaneous utils
 ├─ environment.yml # Conda spec (Python ≥ 3.10)
 ├─ requirements.txt # pip fallback
