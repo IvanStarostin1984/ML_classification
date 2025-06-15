@@ -63,6 +63,7 @@ src.models.logreg`)
 - [x] fix README ROC-AUC badge lines via reference link
 - [x] document single blank line rule in AGENTS and ignore actions URL in
       link checker
+- [x] document that installing requirements sets up packages for `make test`
 
 ## 7. Legacy script
 

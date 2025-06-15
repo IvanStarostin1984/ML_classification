@@ -403,3 +403,6 @@ docs. Reason: extend fairness metrics per TODO.
 Reason: surface citation metadata.
 2025-09-07: README states pre-commit needs network access or a GIT_TOKEN.
 Token with public_repo scope can be kept as a CI secret. Reason: clarify setup.
+
+2025-06-15: README and docs explain installing requirements for make test.
+Reason: clarify local testing.
