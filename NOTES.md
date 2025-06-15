@@ -403,3 +403,7 @@ docs. Reason: extend fairness metrics per TODO.
 Reason: surface citation metadata.
 2025-09-07: README states pre-commit needs network access or a GIT_TOKEN.
 Token with public_repo scope can be kept as a CI secret. Reason: clarify setup.
+
+2025-09-08: Bumped version to 0.1.1 and updated CHANGELOG with token docs,
+CITATION link and equalized odds metric.
+Decision: emphasise version rule in AGENTS.
