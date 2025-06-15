@@ -63,3 +63,18 @@ and pass ``shap_csv_path`` to store per-feature SHAP values::
 
 The helper function ``compute_shap_values`` creates the table with columns
 matching the input DataFrame.
+
+SHAP plots
+----------
+
+Use ``plot_shap_summary`` to visualise these values::
+
+   from src.feature_importance import plot_shap_summary
+
+   plot_shap_summary(
+       "artefacts/lr.joblib",
+       X=X_test,
+       png_path="artefacts/logreg_shap.png",
+   )
+
+The image ``logreg_shap.png`` appears under ``artefacts/``.

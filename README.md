@@ -105,6 +105,8 @@ Training produces feature-importance tables (`logreg_coefficients.csv`,
 are recorded in `artefacts/SHA256_manifest.txt` for reproducibility.
 Pass a DataFrame to `logreg_coefficients` or `tree_feature_importances`
 along with `shap_csv_path` to save SHAP value tables as well.
+Use `plot_shap_summary` to turn those values into a PNG stored in
+`artefacts/`.
 
 `make eval` runs `python -m src.evaluate` to compute test metrics and the worst
 four-fifths ratio across protected groups (pass `--group-col` to override the
