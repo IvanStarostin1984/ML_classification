@@ -7,7 +7,7 @@ import numpy as np
 import pandas as pd
 import matplotlib.pyplot as plt
 
-from .shap_utils import compute_shap_values
+from .shap_utils import compute_shap_values, plot_shap_summary
 
 __all__ = ["logreg_coefficients", "tree_feature_importances"]
 
@@ -33,6 +33,7 @@ def logreg_coefficients(
     csv_path: str | Path = Path("artefacts/logreg_coefficients.csv"),
     png_path: str | Path | None = None,
     shap_csv_path: str | Path | None = None,
+    shap_png_path: str | Path | None = None,
     X: pd.DataFrame | None = None,
 ) -> pd.DataFrame:
     """Save logistic-regression coefficients and odds ratios."""
@@ -57,6 +58,12 @@ def logreg_coefficients(
         shap_csv = Path(shap_csv_path)
         shap_csv.parent.mkdir(parents=True, exist_ok=True)
         shap_df.to_csv(shap_csv, index=False)
+    if shap_png_path:
+        if X is None:
+            raise ValueError("X must be provided when shap_png_path is set")
+        prep = pipe.named_steps.get("prep")
+        X_trans = prep.transform(X) if prep else X
+        plot_shap_summary(pipe.named_steps["model"], X_trans, shap_png_path)
     if png_path:
         _bar_chart(
             df.feature.tolist(), df.odds_ratio.to_numpy(), Path(png_path), "Odds ratio"
@@ -69,6 +76,7 @@ def tree_feature_importances(
     csv_path: str | Path = Path("artefacts/cart_importances.csv"),
     png_path: str | Path | None = None,
     shap_csv_path: str | Path | None = None,
+    shap_png_path: str | Path | None = None,
     X: pd.DataFrame | None = None,
 ) -> pd.DataFrame:
     """Save decision-tree feature importances."""
@@ -92,6 +100,12 @@ def tree_feature_importances(
         shap_csv = Path(shap_csv_path)
         shap_csv.parent.mkdir(parents=True, exist_ok=True)
         shap_df.to_csv(shap_csv, index=False)
+    if shap_png_path:
+        if X is None:
+            raise ValueError("X must be provided when shap_png_path is set")
+        prep = pipe.named_steps.get("prep")
+        X_trans = prep.transform(X) if prep else X
+        plot_shap_summary(pipe.named_steps["model"], X_trans, shap_png_path)
     if png_path:
         _bar_chart(
             df.feature.tolist(), df.importance.to_numpy(), Path(png_path), "Importance"

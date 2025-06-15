@@ -44,6 +44,17 @@ def test_logreg_coeff_csv(tmp_path) -> None:
     assert csv.exists()
 
 
+def test_logreg_shap_png(tmp_path) -> None:
+    df = _toy_df()
+    df = dataprep.clean(df)
+    df = FeatureEngineer().transform(df)
+    model_fp = tmp_path / "lr.joblib"
+    train_logreg(df, "target", artefact_path=model_fp)
+    png = tmp_path / "shap.png"
+    logreg_coefficients(model_fp, tmp_path / "coef.csv", shap_png_path=png, X=df)
+    assert png.exists()
+
+
 def test_cart_importance_csv(tmp_path) -> None:
     df = _toy_df()
     df = dataprep.clean(df)
@@ -53,3 +64,14 @@ def test_cart_importance_csv(tmp_path) -> None:
     csv = tmp_path / "imp.csv"
     tree_feature_importances(model_fp, csv)
     assert csv.exists()
+
+
+def test_cart_shap_png(tmp_path) -> None:
+    df = _toy_df()
+    df = dataprep.clean(df)
+    df = FeatureEngineer().transform(df)
+    model_fp = tmp_path / "cart.joblib"
+    train_cart(df, "target", artefact_path=model_fp)
+    png = tmp_path / "cart_shap.png"
+    tree_feature_importances(model_fp, tmp_path / "imp.csv", shap_png_path=png, X=df)
+    assert png.exists()
