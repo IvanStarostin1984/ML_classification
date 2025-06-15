@@ -30,6 +30,8 @@
 The rendered documentation lives at
 <https://ivanstarostin1984.github.io/ML_classification>.
 
+See `CHANGELOG.md` for release notes.
+
 ---
 
 ## Quick-start

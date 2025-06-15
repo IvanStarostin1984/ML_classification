@@ -211,6 +211,7 @@ to track work.
 - Binder support lives in `binder/` with an `environment.yml` referencing the
   project requirements and a `postBuild` script installing the package in
   editable mode.
+- Record release notes in `CHANGELOG.md` whenever the version number changes.
 
 Read `NOTES.md` and `TODO.md` to understand the current stage, past decisions,
 and open questions tied to the spec.

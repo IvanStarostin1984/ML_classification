@@ -238,3 +238,7 @@ scaling.
 
 - [x] clarify GIT_TOKEN note with required PAT scopes
 - [x] add bullet that gh-pages push needs a token with contents:write
+
+## 23. Release notes
+
+- [ ] update CHANGELOG.md with release notes on each version bump
