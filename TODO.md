@@ -244,4 +244,4 @@ scaling.
 
 ## 23. Release notes
 
-- [ ] update CHANGELOG.md with release notes on each version bump
+- [x] update CHANGELOG.md with release notes on each version bump
