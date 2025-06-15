@@ -9,7 +9,12 @@ from sklearn.metrics import make_scorer, recall_score
 
 from .cv_utils import nested_cv
 
-from .fairness import youden_threshold, four_fifths_ratio, equal_opportunity_ratio
+from .fairness import (
+    youden_threshold,
+    four_fifths_ratio,
+    equal_opportunity_ratio,
+    equalized_odds_diff,
+)
 
 SPECIFICITY = make_scorer(recall_score, pos_label=0)
 SCORERS = {
@@ -38,6 +43,15 @@ def _equal_opp(
         thr = youden_threshold(estimator, X, y)
         return equal_opportunity_ratio(estimator, X, y, group_col, thr)
     return 1.0
+
+
+def _eq_odds_diff(
+    estimator, X: pd.DataFrame, y: pd.Series, group_col: str | None
+) -> float:
+    if group_col and group_col in X.columns:
+        thr = youden_threshold(estimator, X, y)
+        return equalized_odds_diff(estimator, X, y, group_col, thr)
+    return 0.0
 
 
 def evaluate_models(
@@ -82,6 +96,7 @@ def evaluate_models(
                 "bal_acc": res["test_bal_acc"].mean(),
                 "fairness": _four_fifths(res["estimator"][0], X, y, group_col),
                 "equal_opp": _equal_opp(res["estimator"][0], X, y, group_col),
+                "eq_odds": _eq_odds_diff(res["estimator"][0], X, y, group_col),
             }
         )
     out = pd.DataFrame(rows).round(3)

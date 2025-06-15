@@ -18,7 +18,7 @@ def _df() -> pd.DataFrame:
 def test_extended_metrics_and_grid() -> None:
     df = _df()
     metrics = evaluate.evaluate_models(df)
-    for col in ["f1", "recall", "specificity", "bal_acc"]:
+    for col in ["f1", "recall", "specificity", "bal_acc", "eq_odds"]:
         assert col in metrics.columns
     res, _, _ = nested_cv(
         df,

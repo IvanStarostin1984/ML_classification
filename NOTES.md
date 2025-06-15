@@ -395,3 +395,9 @@ Reason: keep NOTES under 80 characters as per guidelines.
 
 2025-09-05: Added CHANGELOG and noted in AGENTS that releases must update it.
 Reason: track feature history for each version.
+
+2025-09-04: Added equalized_odds_diff metric and eq_odds column with tests and
+docs. Reason: extend fairness metrics per TODO.
+
+2025-09-04: README and docs index link CITATION.cff so users know how to cite.
+Reason: surface citation metadata.

@@ -31,3 +31,26 @@ def equal_opportunity_ratio(
 ) -> float:
     """Return ratio of true positive rates across ``group_col``."""
     return four_fifths_ratio(estimator, X, y, group_col, thr)
+
+
+def equalized_odds_diff(
+    estimator, X: pd.DataFrame, y: pd.Series, group_col: str, thr: float
+) -> float:
+    """Return TPR gap minus FPR gap across ``group_col``."""
+    groups = X[group_col].astype(str)
+    yhat = estimator.predict_proba(X)[:, 1] >= thr
+    tprs: list[float] = []
+    fprs: list[float] = []
+    for g in groups.unique():
+        mask = groups == g
+        positives = y[mask] == 1
+        negatives = y[mask] == 0
+        if positives.sum():
+            tprs.append((yhat[mask] & positives).sum() / positives.sum())
+        if negatives.sum():
+            fprs.append((yhat[mask] & negatives).sum() / negatives.sum())
+    if len(tprs) > 1 and len(fprs) > 1:
+        tpr_gap = max(tprs) - min(tprs)
+        fpr_gap = max(fprs) - min(fprs)
+        return tpr_gap - fpr_gap
+    return 0.0
