@@ -239,6 +239,8 @@ scaling.
 - [x] clarify GIT_TOKEN note with required PAT scopes
 - [x] add bullet that gh-pages push needs a token with contents:write
 
+- [x] document storing GIT_TOKEN as secret for pre-commit in CI
+
 ## 23. Release notes
 
 - [ ] update CHANGELOG.md with release notes on each version bump

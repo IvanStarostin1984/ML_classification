@@ -401,3 +401,5 @@ docs. Reason: extend fairness metrics per TODO.
 
 2025-09-04: README and docs index link CITATION.cff so users know how to cite.
 Reason: surface citation metadata.
+2025-09-07: README states pre-commit needs network access or a GIT_TOKEN.
+Token with public_repo scope can be kept as a CI secret. Reason: clarify setup.
