@@ -42,7 +42,8 @@ as statistical parity and equal opportunity. The summary table now includes an
    mlcls-eval --group-col gender --group-col marital
 This command prints parity ratios for each group and stores them in
 ``artefacts/group_metrics.csv``. ``summary_metrics.csv`` records the
-``equal_opp`` ratio for each model.
+``equal_opp`` ratio for each model. It also stores ``eq_odds`` which is the
+difference between the true- and false-positive rate gaps.
 
 The ``advanced_demo.ipynb`` notebook walks through these steps and shows the
 additional plots.
