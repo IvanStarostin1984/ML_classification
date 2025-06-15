@@ -5,6 +5,8 @@ See :doc:`advanced_usage` for steps on fairness checks and calibration. See the
 Binder badge in :file:`notebooks/README.md` for a quick start running the demo
 notebooks online.
 
+For citation instructions see :file:`../CITATION.cff`.
+
 .. toctree::
    :maxdepth: 2
    :caption: Contents:

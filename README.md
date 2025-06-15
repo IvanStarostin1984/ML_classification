@@ -276,6 +276,8 @@ Values reproduced from the accompanying statistical report.&#x20;
 }
 ```
 
+See [CITATION.cff](CITATION.cff) for other citation formats.
+
 ---
 
 ## Author
