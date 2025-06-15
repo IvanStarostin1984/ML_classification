@@ -383,6 +383,10 @@ complete TODO for SHAP visualisation.
 2025-09-02: Documented new plot_shap_summary helper in README and docs.
 Reason: show how to generate SHAP plots.
 
+2025-09-03: Clarified token scopes in AGENTS. PAT with public_repo or repo
+is enough for pre-commit. Added note that gh-pages push requires a token with
+contents:write. Reason: avoid CI failures on forks.
+
 2025-06-15: Renumbered Fairness metrics to section 21 and Docs hosting to 22
 Reason: fix section numbers for clarity.
 

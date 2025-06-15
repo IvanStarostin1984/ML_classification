@@ -159,6 +159,7 @@ ML_classification/
   `black --check .` and `pytest` on Python&nbsp;3.10.
 - Running `pre-commit` downloads hook repos from GitHub.
   Ensure network access or set a personal access token via `GIT_TOKEN`
+  with at least the `public_repo` scope (use `repo` for private forks)
   to avoid interactive prompts.
 - Run these commands locally before committing to ensure your code passes the
   same checks. Use `make test` to run the full pytest suite with the correct
@@ -175,6 +176,8 @@ ML_classification/
   releases a new one.
 - The workflow `.github/workflows/gh-pages.yml` deploys these pages to the
   `gh-pages` branch using `peaceiris/actions-gh-pages@v3`.
+  Pushing to this branch requires a token with `contents:write`
+  (the default `GITHUB_TOKEN` on forks lacks this permission).
   Links are checked using:
 
 ```bash
