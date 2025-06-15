@@ -52,6 +52,10 @@ pip install -e .
 pip install pre-commit
 pre-commit install
 
+# Running pre-commit needs network access or a `GIT_TOKEN` with
+# at least the `public_repo` scope. Store the token as a secret and
+# reference it in CI.
+
 # The hooks run `isort` before `black` and `flake8` so imports stay ordered.
 # In CI the workflow runs `pre-commit run --files` on changed files before
 # `flake8`, `black` and `pytest`.
