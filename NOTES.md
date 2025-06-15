@@ -385,3 +385,6 @@ Reason: show how to generate SHAP plots.
 
 2025-06-15: Renumbered Fairness metrics to section 21 and Docs hosting to 22
 Reason: fix section numbers for clarity.
+
+2025-09-03: Split long doc entry about plot_or_load and markdownlint into two lines.
+Reason: keep NOTES under 80 characters as per guidelines.
