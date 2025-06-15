@@ -373,7 +373,8 @@ feature_importance. Reason: user request to inspect model contributions.
 
 2025-09-01: Documented gradient boosting and SHAP modules in AGENTS.md.
 
-2025-09-02: Documented plot_or_load helper and SHAP PNG size limit in AGENTS. Mentioned running markdownlint after doc edits.
+2025-09-02: Documented plot_or_load helper and SHAP PNG size limit in AGENTS.
+Mentioned running markdownlint after doc edits.
 
 2025-09-02: Added plot_shap_summary saving SHAP bar plots, integrated optional
 shap_png_path into feature_importance and wrote tests for PNG outputs. Reason:
@@ -381,3 +382,6 @@ complete TODO for SHAP visualisation.
 
 2025-09-02: Documented new plot_shap_summary helper in README and docs.
 Reason: show how to generate SHAP plots.
+
+2025-06-15: Renumbered Fairness metrics to section 21 and Docs hosting to 22
+Reason: fix section numbers for clarity.
