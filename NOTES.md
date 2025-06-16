@@ -476,3 +476,6 @@ Reason: docs deployment uses this token.
 2025-09-14: gh-pages workflow now uses GH_PAGES_TOKEN secret and checks the
 repository name. ci.yml passes GIT_TOKEN to pre-commit so hooks clone
 without prompts. AGENTS updated.
+
+2025-06-16: Noted GH_PAGES_TOKEN requirement in README under docs section.
+Reason: clarify needed token to deploy pages.
