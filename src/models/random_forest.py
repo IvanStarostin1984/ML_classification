@@ -9,13 +9,13 @@ from sklearn.metrics import roc_auc_score
 from imblearn.base import SamplerMixin
 from imblearn.pipeline import Pipeline
 
-from ..dataprep import clean
+from ..dataprep import clean, CSV_PATH
 from ..features import FeatureEngineer
 from ..preprocessing import build_preprocessor, validate_prep
 from ..pipeline_helpers import tree_steps, run_gs
 from ..split import stratified_split
 
-DATA_PATH = Path("data/raw/loan_approval_dataset.csv")
+DATA_PATH = CSV_PATH
 TARGET = "loan_status"
 
 
