@@ -1,6 +1,7 @@
 from __future__ import annotations
 
 from pathlib import Path
+import argparse
 import hashlib
 import json
 import platform
@@ -18,6 +19,7 @@ __all__ = [
     "shasum",
     "save_folds",
     "run_grid",
+    "main",
 ]
 
 
@@ -74,3 +76,22 @@ def write_manifest(
     lines.append(json.dumps(env, sort_keys=True))
     out.write_text("\n".join(lines))
     return out
+
+
+def main(args: list[str] | None = None) -> None:
+    """CLI entry point writing file checksums to a manifest."""
+    parser = argparse.ArgumentParser(description="Create checksum manifest")
+    parser.add_argument("files", nargs="+", help="files to checksum")
+    parser.add_argument(
+        "--out",
+        type=Path,
+        default=Path("artefacts/SHA256_manifest.txt"),
+        help="output manifest path",
+    )
+    ns = parser.parse_args(args)
+    path = write_manifest(ns.files, ns.out)
+    print(f"Manifest written to {path}")
+
+
+if __name__ == "__main__":
+    main()

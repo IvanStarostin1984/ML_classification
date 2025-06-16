@@ -28,6 +28,10 @@ Collect tables and figures for reporting::
 
    mlcls-report
 
+Create a checksum manifest::
+
+   mlcls-manifest artefacts/*.csv
+
 The command gathers recent metrics and plots under ``report_artifacts/``. This
 folder can be zipped and shared as a summary of the run.
 

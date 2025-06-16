@@ -247,6 +247,7 @@ scaling.
 ## 23. Release notes
 
 - [x] update CHANGELOG.md with release notes on each version bump
+- [x] expose checksum manifest CLI
 
 ## 24. Report docs
 

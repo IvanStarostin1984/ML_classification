@@ -58,7 +58,7 @@ ML_classification/
 │ ├─ fairness.py # fairness helpers
 │ ├─ feature_importance.py # tree-based feature importance
 │ ├─ features.py # FeatureEngineer class
-│ ├─ manifest.py # dataset manifest utilities
+│ ├─ manifest.py # dataset manifest utilities, CLI `mlcls-manifest`
 │ ├─ metrics.py # metric utilities from notebook
 │ ├─ pipeline_helpers.py # CLI and pipeline orchestrators
 │ ├─ preprocessing.py # ColumnTransformers
@@ -100,6 +100,7 @@ ML_classification/
 │ ├─ test_logreg_gridsearch.py # logistic grid-search
 │ ├─ test_manifest.py # dataset manifest
 │ ├─ test_manifest_plots.py # manifest plotting
+│ ├─ test_cli_manifest.py # manifest CLI command
 │ ├─ test_metrics.py # metric utilities
 │ ├─ test_models.py # modelling pipelines
 │ ├─ test_oversampling.py # oversampling heuristics
