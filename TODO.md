@@ -269,4 +269,5 @@ scaling.
 - [x] expose mlcls-summary command printing dataset stats
 
 ## 28. CI token fix
+
 - [x] add env GIT_TOKEN to CI pre-commit step
