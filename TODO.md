@@ -245,7 +245,8 @@ scaling.
 
 - [x] document storing GIT_TOKEN as secret for pre-commit in CI
 
-- [x] configure GH_PAGES_TOKEN secret with contents:write for docs push
+- [x] configure `GH_PAGES_TOKEN` secret with `contents:write`
+  for docs deployment (2025-09-14)
 
 ## 23. Release notes
 

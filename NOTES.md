@@ -455,22 +455,19 @@ Reason: centralise default data path.
 Reason: implement TODO item for quick overview.
 Decisions: compute stats on cleaned data.
 
-<<<<<<< codex/update-agents.md-and-readme.md
-2025-09-14: gh-pages workflow now uses GH_PAGES_TOKEN personal token and job
-gated on repository name. AGENTS updated documenting secret.
+2025-09-14: gh-pages workflow now uses GH_PAGES_TOKEN personal token and
+job gated on repository name. AGENTS updated documenting secret.
+2025-09-14: ci.yml passes GIT_TOKEN to pre-commit. Updated AGENTS.
+Reason: ensure hooks clone without prompts.
 
-2025-09-14: ci.yml passes GIT_TOKEN to pre-commit so hooks can clone without
-prompts. Updated AGENTS accordingly.
+2025-09-14: Updated isort hook in pre-commit config to use
+`args: ['--profile', 'black']` as required by isort 6. Attempted to
+run `pre-commit` but cloning hook repos failed due to missing
+GitHub token.
 
-2025-09-14: Updated isort hook in pre-commit config to use `args: ['--profile',
-'black']`. Attempted to run pre-commit but cloning hook repos failed due to
-missing GitHub token.
+2025-09-16: Marked GH_PAGES_TOKEN secret task as done in TODO.
+Reason: docs deployment uses this token.
 
-2025-09-15: Documented how to create a PAT and store it as the GIT_TOKEN
-secret so `pre-commit` can fetch hooks. Updated AGENTS Testing & CI section and
-cleaned merge markers in NOTES.
-=======
 2025-09-14: gh-pages workflow now uses GH_PAGES_TOKEN secret and checks the
 repository name. ci.yml passes GIT_TOKEN to pre-commit so hooks clone
 without prompts. AGENTS updated.
->>>>>>> main
