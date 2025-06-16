@@ -189,10 +189,11 @@ ML_classification/
   `gh-pages` branch using `peaceiris/actions-gh-pages@v3`.
   Pushing to this branch requires a token with `contents:write`
   (the default `GITHUB_TOKEN` on forks lacks this permission).
-- Store this token in the `GH_PAGES_TOKEN` secret for the docs job. Missing
-  this secret makes `peaceiris/actions-gh-pages` fail with "not found deploy key
-  or tokens".
-  Links are checked using:
+- Store this token in the `GH_PAGES_TOKEN` secret for the docs job.
+- The deploy step runs only when `GH_PAGES_TOKEN` is set to avoid failing on
+  forks.
+
+Links are checked using:
 
 ```bash
 find . -name '*.md' -not -path '*node_modules*' -print0 |
