@@ -99,6 +99,11 @@ mlcls-train --sampler smote   # run with SMOTE oversampling
 Pre-commit hooks format code and lint Markdown automatically on each commit.
 They run `isort`, `black` and `flake8` when you commit.
 
+Create a personal access token with the `public_repo` permission at
+<https://github.com/settings/tokens> and store it as `GIT_TOKEN` under your
+repository secrets. CI exports this token so `pre-commit` can clone its hook
+repositories without prompts.
+
 Note: `make` is required for these commands. On Windows, install GNU Make or run
 the console scripts `mlcls-train` and `mlcls-eval` instead.
 

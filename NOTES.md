@@ -397,7 +397,7 @@ contents:write. Reason: avoid CI failures on forks.
 2025-06-15: Renumbered Fairness metrics to section 21 and Docs hosting to 22
 Reason: fix section numbers for clarity.
 
-2025-09-03: Split long doc entry about plot_or_load and markdownlint into two lines.
+2025-09-03: Split long doc entry about plot_or_load and markdownlint.
 Reason: keep NOTES under 80 characters as per guidelines.
 
 2025-09-05: Added CHANGELOG and noted in AGENTS that releases must update it.
@@ -464,7 +464,15 @@ Decisions: compute stats on cleaned data.
   `args: ['--profile', 'black']` as required by isort 6.
   Attempted to run `pre-commit` but cloning hook repos failed due to
   missing GitHub token.
+  
 2025-09-15: Documented troubleshooting tip for pre-commit failing with
   'could not read Username' in AGENTS.
   Reason: help diagnose GIT_TOKEN errors. Decision: advise checking
   network and secret.
+
+2025-09-16: Marked GH_PAGES_TOKEN secret task as done in TODO.
+Reason: docs deployment uses this token.
+
+2025-09-14: gh-pages workflow now uses GH_PAGES_TOKEN secret and checks the
+repository name. ci.yml passes GIT_TOKEN to pre-commit so hooks clone
+without prompts. AGENTS updated.

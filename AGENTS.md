@@ -166,7 +166,8 @@ ML_classification/
 - Running `pre-commit` downloads hook repos from GitHub.
   Ensure network access or set a personal access token via `GIT_TOKEN`
   with at least the `public_repo` scope (use `repo` for private forks)
-  to avoid interactive prompts.
+  to avoid interactive prompts. This secret must be defined so
+  `pre-commit` can fetch its hook repositories when CI runs.
 - The workflow `ci.yml` sets this token as `GIT_TOKEN` when running
   pre-commit, so define it as a secret in your repository settings.
 - If pre-commit fails with "could not read Username", verify network access
