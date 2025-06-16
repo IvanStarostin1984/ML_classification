@@ -431,3 +431,6 @@ updated. Reason: expose artifact verification.
 2025-09-11: Added example in advanced_usage showing mlcls-report saving
 artifacts under report_artifacts/ and noted zipping for sharing. Updated
 index with reference and ticked TODO. Reason: clarify reporting workflow.
+
+2025-09-12: README shows mlcls-eval --threshold for fairness cutoff.
+Reason: document custom cutoff for group metrics.
