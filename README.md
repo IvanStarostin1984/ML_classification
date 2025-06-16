@@ -105,6 +105,8 @@ Interactive notebooks live under `notebooks/`. Open `loan_demo.ipynb` or
 `advanced_demo.ipynb` for a guided walkthrough.
 You can also launch them instantly on Binder via the badge in
 `notebooks/README.md`.
+Binder sessions do not ship with the Kaggle dataset and cannot download
+it without credentials.
 
 Training produces feature-importance tables (`logreg_coefficients.csv`,
 `cart_importances.csv`) and bar-chart PNGs in `artefacts/`. All generated files
@@ -139,6 +141,15 @@ make test
 ```
 
 This sets `PYTHONPATH` so `pytest` can find the `src` package.
+
+### Local testing
+
+Install the requirements before running the tests:
+
+```bash
+pip install -r requirements.txt
+# or: conda env create -f environment.yml
+```
 
 ## Building the docs
 
