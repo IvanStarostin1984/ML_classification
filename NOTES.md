@@ -485,3 +485,6 @@ now warns to do this for all secrets. Reason: avoid YAML parser errors.
 
 2025-06-16: Noted GH_PAGES_TOKEN requirement in README under docs section.
 Reason: clarify needed token to deploy pages.
+
+2025-09-19: pre-commit step now checks GIT_TOKEN exists in ci.yml.
+Maintainers must define the secret for full checks. Updated AGENTS.
