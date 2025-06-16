@@ -202,6 +202,7 @@ mlcls-eval --threshold 0.6  # sets fairness metric cutoff
 mlcls-predict        # generates predictions from a saved model
 mlcls-report        # collects report artifacts
 mlcls-manifest      # writes checksums for selected files
+mlcls-summary       # prints dataset statistics
 ```
 
 These commands require the Kaggle dataset, which is distributed under its

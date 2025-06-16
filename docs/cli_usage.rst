@@ -34,6 +34,10 @@ Create a checksum manifest::
 
    mlcls-manifest artefacts/*.csv
 
+Show dataset statistics::
+
+   mlcls-summary --data-path data/raw/loan_approval_dataset.csv
+
 The command gathers recent metrics and plots under ``report_artifacts/``. This
 folder can be zipped and shared as a summary of the run.
 
