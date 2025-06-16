@@ -84,3 +84,13 @@ Use ``plot_shap_summary`` to visualise these values::
    )
 
 The image ``logreg_shap.png`` appears under ``artefacts/``.
+
+Report artefacts
+----------------
+
+Gather recent metrics and plots with the report command::
+
+   mlcls-report
+
+The tool copies the latest files into ``report_artifacts/``. You can zip the
+folder and share it with collaborators.

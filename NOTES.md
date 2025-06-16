@@ -424,3 +424,7 @@ Reason: avoid confusion when running demos online.
 
 2025-09-10: Removed TODO item about running a pre-commit hook for markdownlint.
 Reason: docs rely on CI gate only.
+
+2025-09-11: Added example in advanced_usage showing mlcls-report saving
+artifacts under report_artifacts/ and noted zipping for sharing. Updated
+index with reference and ticked TODO. Reason: clarify reporting workflow.
