@@ -192,6 +192,7 @@ ML_classification/
 - Store this token in the `GH_PAGES_TOKEN` secret for the docs job.
 - The deploy step runs only when `GH_PAGES_TOKEN` is set to avoid failing on
   forks.
+- Wrap any `if` referencing secrets in `${{ }}` to avoid parser errors.
 
 Links are checked using:
 
