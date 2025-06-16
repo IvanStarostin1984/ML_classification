@@ -178,6 +178,11 @@ The output appears under `docs/_build/`.
 
 Use `make lint-docs` to check Markdown files.
 
+A personal access token with the `contents:write` scope must be stored in
+the `GH_PAGES_TOKEN` repository secret so the docs workflow can push to the
+`gh-pages` branch. Without this secret the `gh-pages` job fails with
+"not found deploy key or tokens".
+
 ## Building a wheel
 
 Install the build tool and run:

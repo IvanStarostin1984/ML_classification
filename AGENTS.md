@@ -192,7 +192,8 @@ ML_classification/
 - Store this token in the `GH_PAGES_TOKEN` secret for the docs job.
 - The deploy step runs only when `GH_PAGES_TOKEN` is set to avoid failing on
   forks.
-  Links are checked using:
+
+Links are checked using:
 
 ```bash
 find . -name '*.md' -not -path '*node_modules*' -print0 |

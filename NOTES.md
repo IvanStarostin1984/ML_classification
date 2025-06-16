@@ -479,3 +479,6 @@ without prompts. AGENTS updated.
 
 2025-09-17: gh-pages workflow only deploys when GH_PAGES_TOKEN is set.
 Reason: avoid failing docs job on forks lacking the secret.
+
+2025-06-16: Noted GH_PAGES_TOKEN requirement in README under docs section.
+Reason: clarify needed token to deploy pages.
