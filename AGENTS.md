@@ -167,6 +167,8 @@ ML_classification/
   Ensure network access or set a personal access token via `GIT_TOKEN`
   with at least the `public_repo` scope (use `repo` for private forks)
   to avoid interactive prompts.
+- The workflow `ci.yml` sets this token as `GIT_TOKEN` when running
+  pre-commit, so define it as a secret in your repository settings.
 - Run these commands locally before committing to ensure your code passes the
   same checks. Use `make test` to run the full pytest suite with the correct
   `PYTHONPATH`.

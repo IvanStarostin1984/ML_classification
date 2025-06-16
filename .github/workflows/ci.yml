@@ -44,6 +44,8 @@ jobs:
       - id: files
         uses: tj-actions/changed-files@v41
       - name: Run pre-commit on changed files
+        env:
+          GIT_TOKEN: ${{ secrets.GIT_TOKEN }}
         run: pre-commit run --files ${{ steps.files.outputs.all_changed_files }}
       - name: Run flake8
         run: flake8

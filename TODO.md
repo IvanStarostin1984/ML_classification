@@ -257,7 +257,6 @@ scaling.
 
 - [x] centralise DATA_PATH via CSV_PATH constant in model modules
 
-
 ## 26. Support vector machine model
 
 - [x] add SVM pipeline, CLI option and tests
@@ -266,3 +265,6 @@ scaling.
 
 - [x] expose mlcls-summary command printing dataset rows, columns and class balance
 
+## 28. CI token fix
+
+- [x] add env GIT_TOKEN to CI pre-commit step
