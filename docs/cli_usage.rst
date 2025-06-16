@@ -30,3 +30,12 @@ Collect tables and figures for reporting::
 
 The command gathers recent metrics and plots under ``report_artifacts/``. This
 folder can be zipped and shared as a summary of the run.
+
+Local testing
+-------------
+
+Install the requirements before running the tests::
+
+   pip install -r requirements.txt
+   # or: conda env create -f environment.yml
+

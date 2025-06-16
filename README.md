@@ -140,6 +140,15 @@ make test
 
 This sets `PYTHONPATH` so `pytest` can find the `src` package.
 
+### Local testing
+
+Install the requirements before running the tests:
+
+```bash
+pip install -r requirements.txt
+# or: conda env create -f environment.yml
+```
+
 ## Building the docs
 
 Install Sphinx from `requirements.txt` or `environment.yml` first:
