@@ -410,3 +410,8 @@ Reason: clarify local testing.
 2025-09-08: Bumped version to 0.1.1 and updated CHANGELOG with token docs,
 CITATION link and equalized odds metric.
 Decision: emphasise version rule in AGENTS.
+
+2025-06-16: Documented Binder limitation that the Kaggle dataset is
+absent and cannot be downloaded without credentials. Updated Binder
+sections in README, notebooks README, docs index and AGENTS.
+Reason: avoid confusion when running demos online.

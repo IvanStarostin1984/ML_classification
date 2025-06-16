@@ -211,6 +211,9 @@ to track work.
 - Binder support lives in `binder/` with an `environment.yml` referencing the
   project requirements and a `postBuild` script installing the package in
   editable mode.
+- Binder sessions start without the Kaggle dataset and cannot download
+  it because no credentials are provided. Upload the CSV files manually
+  if you need them during a demo.
 - Whenever you bump `pyproject.toml`'s version, add a section in `CHANGELOG.md`
   summarising the changes.
 
