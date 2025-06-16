@@ -116,7 +116,14 @@ loan_status handling in dataprep.
 repo.
 2025-06-23: download_data warns when src package is missing and tests cover it.
 2025-06-23: Added note in README that 'pip install -e .' registers src for
-import so scripts like python scripts/download_data.py work.
+import like
+import python
+import so
+import work.
+
+import scripts
+import scripts/download_data.py
+
 2025-06-24: README clarifies that `make` is required and lists console script
 alternatives for Windows.
 2025-06-09: Added grid_train_from_df using GridSearchCV with repeated CV and
@@ -435,6 +442,15 @@ index with reference and ticked TODO. Reason: clarify reporting workflow.
 2025-09-12: README shows mlcls-eval --threshold for fairness cutoff.
 Reason: document custom cutoff for group metrics.
 
-2025-06-16: Model pipelines import CSV_PATH and reuse it as DATA_PATH. Reason: centralise default data path.
+2025-06-16: Model pipelines import CSV_PATH and reuse it as DATA_PATH.
+Reason: centralise default data path.
 
-2025-09-13: Added mlcls-summary CLI for dataset stats (rows, cols, balance). Reason: implement TODO item for quick overview. Decisions: compute stats on cleaned data.
+2025-06-16: Added SVM model with grid search, CLI option and tests. Updated docs
+and AGENTS. Reason: expand modelling options per TODO.
+
+2025-06-16: Model pipelines import CSV_PATH and reuse it as DATA_PATH. 
+Reason: centralise default data path.
+
+2025-09-13: Added mlcls-summary CLI for dataset stats (rows, cols, balance). 
+Reason: implement TODO item for quick overview. 
+Decisions: compute stats on cleaned data.

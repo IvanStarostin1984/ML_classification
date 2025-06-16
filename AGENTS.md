@@ -75,7 +75,8 @@ ML_classification/
 │    ├─ logreg.py # LR training / eval pipeline
 │    ├─ cart.py # Decision-Tree pipeline
 │    ├─ random_forest.py # Random-Forest pipeline
-│    └─ gradient_boosting.py # Gradient-Boosting pipeline
+│    ├─ gradient_boosting.py # Gradient-Boosting pipeline
+│    └─ svm.py # Support-Vector Machine pipeline
 ├─ tests/
 │ ├─ test_calibration.py # probability calibration
 │ ├─ test_cart_gridsearch.py # CART grid-search pipeline
@@ -107,6 +108,7 @@ ML_classification/
 │ ├─ test_random_forest.py # random-forest pipeline
 │ ├─ test_rf_gridsearch.py # random-forest grid search
 │ ├─ test_gradient_boosting.py # gradient boosting pipeline
+│ ├─ test_svm.py # support-vector machine pipeline
 │ ├─ test_pipeline_helpers.py # pipeline helpers
 │ ├─ test_preprocessing.py # preprocessing pipeline
 │ ├─ test_reporting.py # reporting utilities

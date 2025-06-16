@@ -12,6 +12,8 @@ Train models and store artefacts under ``artefacts/``::
    mlcls-train --model random_forest -g  # grid search
    mlcls-train --model gboost
    mlcls-train --model gboost -g  # grid search
+   mlcls-train --model svm
+   mlcls-train --model svm -g  # grid search
 
 Evaluate metrics and write ``artefacts/summary_metrics.csv``::
 
@@ -44,6 +46,5 @@ Local testing
 
 Install the requirements before running the tests::
 
-   pip install -r requirements.txt
-   # or: conda env create -f environment.yml
-
+    pip install -r requirements.txt
+    # or: conda env create -f environment.yml
