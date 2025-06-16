@@ -245,7 +245,7 @@ scaling.
 
 - [x] document storing GIT_TOKEN as secret for pre-commit in CI
 
-- [ ] configure `GH_PAGES_TOKEN` secret with `contents:write` for docs deployment
+- [x] configure GH_PAGES_TOKEN secret with contents:write for docs push
 
 ## 23. Release notes
 
@@ -266,7 +266,7 @@ scaling.
 
 ## 27. Dataset summary CLI
 
-- [x] expose mlcls-summary command printing dataset rows, columns and class balance
+- [x] expose mlcls-summary command printing dataset stats
 
 ## 28. CI token fix
 - [x] add env GIT_TOKEN to CI pre-commit step
