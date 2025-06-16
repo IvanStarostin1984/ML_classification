@@ -245,6 +245,8 @@ scaling.
 
 - [x] document storing GIT_TOKEN as secret for pre-commit in CI
 
+- [ ] configure `GH_PAGES_TOKEN` secret with `contents:write` for docs deployment
+
 ## 23. Release notes
 
 - [x] update CHANGELOG.md with release notes on each version bump

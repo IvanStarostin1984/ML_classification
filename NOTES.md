@@ -455,6 +455,10 @@ Reason: centralise default data path.
 Reason: implement TODO item for quick overview.
 Decisions: compute stats on cleaned data.
 
+<<<<<<< codex/update-github-actions-and-document-secrets
+2025-09-14: gh-pages workflow now uses GH_PAGES_TOKEN personal token and
+job gated on repository name. AGENTS updated documenting secret.
+=======
 2025-09-14: ci.yml passes GIT_TOKEN to pre-commit. Updated AGENTS.
 Reason: ensure hooks clone without prompts.
 
@@ -462,3 +466,4 @@ Reason: ensure hooks clone without prompts.
 `args: ['--profile', 'black']` as required by isort 6. Attempted to
 run `pre-commit` but cloning hook repos failed due to missing
 GitHub token.
+>>>>>>> main
