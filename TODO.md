@@ -63,6 +63,7 @@ src.models.logreg`)
 - [x] fix README ROC-AUC badge lines via reference link
 - [x] document single blank line rule in AGENTS and ignore actions URL in
       link checker
+- [x] document that installing requirements sets up packages for `make test`
 
 ## 7. Legacy script
 
@@ -214,6 +215,8 @@ scaling.
 - [x] add binder/environment.yml referencing requirements
 - [x] create postBuild script to install package in editable mode
 - [x] update docs if binder instructions change
+- [x] document that Binder sessions lack the Kaggle dataset and
+      cannot download it without credentials
 
 ## 20. Data caching
 
