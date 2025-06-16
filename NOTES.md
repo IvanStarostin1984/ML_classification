@@ -411,6 +411,9 @@ Reason: clarify local testing.
 CITATION link and equalized odds metric.
 Decision: emphasise version rule in AGENTS.
 
+2025-09-09: evaluate.py accepts --threshold to override Youden J.
+Tests and docs cover it. Reason: allow custom cutoff in fairness metrics.
+
 2025-06-16: Documented Binder limitation that the Kaggle dataset is
 absent and cannot be downloaded without credentials. Updated Binder
 sections in README, notebooks README, docs index and AGENTS.

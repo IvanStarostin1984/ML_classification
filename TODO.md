@@ -226,6 +226,7 @@ scaling.
 
 - [x] compute equal opportunity ratio in evaluate.py and document usage
 - [x] compute equalized odds difference and expose eq_odds column
+- [x] expose evaluation --threshold option for fairness metrics
 
 ## 22. Docs hosting
 

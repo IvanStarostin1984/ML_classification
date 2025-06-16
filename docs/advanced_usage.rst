@@ -45,6 +45,11 @@ This command prints parity ratios for each group and stores them in
 ``equal_opp`` ratio for each model. It also stores ``eq_odds`` which is the
 difference between the true- and false-positive rate gaps.
 
+Set a custom probability cutoff for these metrics with ``--threshold``. When
+omitted the tool chooses the Youden J statistic::
+
+   mlcls-eval --group-col gender --threshold 0.6
+
 The ``advanced_demo.ipynb`` notebook walks through these steps and shows the
 additional plots.
 
