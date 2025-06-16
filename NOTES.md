@@ -454,16 +454,17 @@ Reason: centralise default data path.
 2025-09-13: Added mlcls-summary CLI for dataset stats (rows, cols, balance).
 Reason: implement TODO item for quick overview.
 Decisions: compute stats on cleaned data.
+2025-09-14: gh-pages workflow now uses GH_PAGES_TOKEN personal token and job
+  gated on repository name. AGENTS updated documenting secret.
 
-<<<<<<< codex/update-github-actions-and-document-secrets
-2025-09-14: gh-pages workflow now uses GH_PAGES_TOKEN personal token and
-job gated on repository name. AGENTS updated documenting secret.
-=======
 2025-09-14: ci.yml passes GIT_TOKEN to pre-commit. Updated AGENTS.
-Reason: ensure hooks clone without prompts.
+  Reason: ensure hooks clone without prompts.
 
 2025-09-14: Updated isort hook in pre-commit config to use
-`args: ['--profile', 'black']` as required by isort 6. Attempted to
-run `pre-commit` but cloning hook repos failed due to missing
-GitHub token.
->>>>>>> main
+  `args: ['--profile', 'black']` as required by isort 6.
+  Attempted to run `pre-commit` but cloning hook repos failed due to
+  missing GitHub token.
+2025-09-15: Documented troubleshooting tip for pre-commit failing with
+  'could not read Username' in AGENTS.
+  Reason: help diagnose GIT_TOKEN errors. Decision: advise checking
+  network and secret.

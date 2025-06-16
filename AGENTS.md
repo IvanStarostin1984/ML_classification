@@ -169,6 +169,8 @@ ML_classification/
   to avoid interactive prompts.
 - The workflow `ci.yml` sets this token as `GIT_TOKEN` when running
   pre-commit, so define it as a secret in your repository settings.
+- If pre-commit fails with "could not read Username", verify network access
+  and ensure the `GIT_TOKEN` secret is set.
 - Run these commands locally before committing to ensure your code passes the
   same checks. Use `make test` to run the full pytest suite with the correct
   `PYTHONPATH`.
