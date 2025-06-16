@@ -43,7 +43,6 @@ src.models.logreg`)
 - [x] add unit tests for `split.stratified_split`
 - [x] add docs-only CI job running markdownlint and markdown-link-check
 - [x] fix link check step to iterate over markdown files with find/xargs
-- [x] Add pre-commit hook or make target with `npx markdownlint-cli` for MD012.
 - [x] Run `pre-commit run --files` in CI before flake8, black and pytest
 
 ## 6. Documentation updates

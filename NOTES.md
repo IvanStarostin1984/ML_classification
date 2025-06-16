@@ -421,3 +421,6 @@ Tests and docs cover it. Reason: allow custom cutoff in fairness metrics.
 absent and cannot be downloaded without credentials. Updated Binder
 sections in README, notebooks README, docs index and AGENTS.
 Reason: avoid confusion when running demos online.
+
+2025-09-10: Removed TODO item about running a pre-commit hook for markdownlint.
+Reason: docs rely on CI gate only.
