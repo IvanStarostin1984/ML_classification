@@ -1,3 +1,4 @@
+
 # TODO: Modularise the Colab notebook
 
 All migration tasks are complete as of commit `8af97fc`. This checklist started
@@ -257,7 +258,6 @@ scaling.
 
 - [x] centralise DATA_PATH via CSV_PATH constant in model modules
 
-
 ## 26. Support vector machine model
 
 - [x] add SVM pipeline, CLI option and tests
@@ -265,4 +265,3 @@ scaling.
 ## 27. Dataset summary CLI
 
 - [x] expose mlcls-summary command printing dataset rows, columns and class balance
-
