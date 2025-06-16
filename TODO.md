@@ -256,3 +256,7 @@ scaling.
 ## 25. Data path refactor
 
 - [x] centralise DATA_PATH via CSV_PATH constant in model modules
+
+## 26. Dataset summary CLI
+
+- [x] expose mlcls-summary command printing dataset rows, columns and class balance
