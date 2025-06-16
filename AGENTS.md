@@ -190,6 +190,8 @@ ML_classification/
   Pushing to this branch requires a token with `contents:write`
   (the default `GITHUB_TOKEN` on forks lacks this permission).
 - Store this token in the `GH_PAGES_TOKEN` secret for the docs job.
+- The deploy step runs only when `GH_PAGES_TOKEN` is set to avoid failing on
+  forks.
   Links are checked using:
 
 ```bash
