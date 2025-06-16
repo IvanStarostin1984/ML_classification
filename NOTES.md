@@ -448,9 +448,12 @@ Reason: centralise default data path.
 2025-06-16: Added SVM model with grid search, CLI option and tests. Updated docs
 and AGENTS. Reason: expand modelling options per TODO.
 
-2025-06-16: Model pipelines import CSV_PATH and reuse it as DATA_PATH. 
+2025-06-16: Model pipelines import CSV_PATH and reuse it as DATA_PATH.
 Reason: centralise default data path.
 
-2025-09-13: Added mlcls-summary CLI for dataset stats (rows, cols, balance). 
-Reason: implement TODO item for quick overview. 
+2025-09-13: Added mlcls-summary CLI for dataset stats (rows, cols, balance).
+Reason: implement TODO item for quick overview.
 Decisions: compute stats on cleaned data.
+
+2025-09-14: gh-pages workflow now uses GH_PAGES_TOKEN personal token and
+job gated on repository name. AGENTS updated documenting secret.

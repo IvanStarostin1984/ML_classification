@@ -7,6 +7,7 @@ on:
 
 jobs:
   build:
+    if: github.repository == 'IvanStarostin1984/ML_classification'
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v3
@@ -22,6 +23,6 @@ jobs:
       - name: Deploy to gh-pages
         uses: peaceiris/actions-gh-pages@v3
         with:
-          github_token: ${{ secrets.GITHUB_TOKEN }}
+          personal_token: ${{ secrets.GH_PAGES_TOKEN }}
           publish_dir: docs/_build
           publish_branch: gh-pages
