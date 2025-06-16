@@ -488,3 +488,6 @@ Reason: clarify needed token to deploy pages.
 
 2025-09-19: pre-commit step now checks GIT_TOKEN exists in ci.yml.
 Maintainers must define the secret for full checks. Updated AGENTS.
+
+2025-09-20: pre-commit token check in ci.yml is quoted to avoid YAML
+parser errors. Reason: ensures expression parsing works on all runners.
