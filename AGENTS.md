@@ -127,6 +127,8 @@ ML_classification/
 ├─ LICENSE # MIT License
 └─ README.md # badges, quick-start, results, contact
 
+- CLI `mlcls-eval` accepts `--threshold` to set group metric cutoff
+
 ## Coding Standards
 
 - One domain concept per file; no cyclic imports.

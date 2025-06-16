@@ -432,4 +432,7 @@ updated. Reason: expose artifact verification.
 artifacts under report_artifacts/ and noted zipping for sharing. Updated
 index with reference and ticked TODO. Reason: clarify reporting workflow.
 
+2025-09-12: README shows mlcls-eval --threshold for fairness cutoff.
+Reason: document custom cutoff for group metrics.
+
 2025-06-16: Model pipelines import CSV_PATH and reuse it as DATA_PATH. Reason: centralise default data path.
