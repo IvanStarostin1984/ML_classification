@@ -457,3 +457,8 @@ Decisions: compute stats on cleaned data.
 
 2025-09-14: ci.yml passes GIT_TOKEN to pre-commit. Updated AGENTS.
 Reason: ensure hooks clone without prompts.
+
+2025-09-14: Updated isort hook in pre-commit config to use
+`args: ['--profile', 'black']` as required by isort 6. Attempted to
+run `pre-commit` but cloning hook repos failed due to missing
+GitHub token.
