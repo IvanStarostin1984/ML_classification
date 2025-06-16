@@ -196,6 +196,8 @@ ML_classification/
   forks.
 - Wrap any `if` referencing secrets in `${{ }}` and quote the expression
   (e.g. `if: "${{ secrets.MY_TOKEN != '' }}"`) to avoid YAML parser errors.
+- Run `actionlint` whenever you change workflow files and verify secret
+  conditions are quoted as above.
 
 Links are checked using:
 
