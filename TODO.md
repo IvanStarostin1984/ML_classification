@@ -285,3 +285,7 @@ scaling.
 ## 31. Pre-commit secret check
 
 - [x] run pre-commit only when GIT_TOKEN secret is set (2025-09-19)
+
+## 32. CI quoting fix
+
+- [x] wrap GIT_TOKEN check in ci.yml with quotes to avoid YAML parser errors (2025-09-20)

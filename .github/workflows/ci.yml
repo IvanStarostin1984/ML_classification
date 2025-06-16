@@ -44,7 +44,7 @@ jobs:
       - id: files
         uses: tj-actions/changed-files@v41
       - name: Run pre-commit on changed files
-        if: ${{ secrets.GIT_TOKEN != '' }}
+        if: "${{ secrets.GIT_TOKEN != '' }}"
         env:
           GIT_TOKEN: ${{ secrets.GIT_TOKEN }}
         run: pre-commit run --files ${{ steps.files.outputs.all_changed_files }}
