@@ -281,3 +281,7 @@ scaling.
 
 - [x] wrap GH_PAGES_TOKEN check in ${{ }} and mention rule in AGENTS
   (2025-09-18)
+
+## 31. Pre-commit secret check
+
+- [x] run pre-commit only when GIT_TOKEN secret is set (2025-09-19)
