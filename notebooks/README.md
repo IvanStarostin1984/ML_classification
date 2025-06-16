@@ -29,3 +29,7 @@ You can also open the notebooks directly in Google Colab via the GitHub link.
 Alternatively launch them in Binder:
 
 [![Binder](https://mybinder.org/badge_logo.svg)](https://mybinder.org/v2/gh/IvanStarostin1984/ML_classification/HEAD?labpath=notebooks%2Floan_demo.ipynb)
+
+**Note:** Binder sessions start without the Kaggle dataset and cannot
+download it unless you provide credentials. Upload the CSV files
+manually if you want to run the notebooks online.
