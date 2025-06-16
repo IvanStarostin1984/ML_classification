@@ -285,3 +285,8 @@ scaling.
 ## 31. Pre-commit secret check
 
 - [x] run pre-commit only when GIT_TOKEN secret is set (2025-09-19)
+
+## 32. Workflow lint
+
+- [x] mention running actionlint on workflow changes and quoting secret
+  conditions in AGENTS (2025-09-20)
