@@ -184,6 +184,7 @@ ML_classification/
   `gh-pages` branch using `peaceiris/actions-gh-pages@v3`.
   Pushing to this branch requires a token with `contents:write`
   (the default `GITHUB_TOKEN` on forks lacks this permission).
+- Store this token in the `GH_PAGES_TOKEN` secret for the docs job.
   Links are checked using:
 
 ```bash
