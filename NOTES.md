@@ -485,3 +485,7 @@ now warns to do this for all secrets. Reason: avoid YAML parser errors.
 
 2025-06-16: Noted GH_PAGES_TOKEN requirement in README under docs section.
 Reason: clarify needed token to deploy pages.
+
+2025-06-16: Quoted GH_PAGES_TOKEN condition in gh-pages workflow and updated AGENTS on quoting secrets. Reason: prevent YAML parse errors.
+
+2025-06-16: Removed trailing blank line in tests/test_cli_manifest.py to fix flake8.

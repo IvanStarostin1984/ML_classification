@@ -37,4 +37,3 @@ def test_cli_manifest(tmp_path) -> None:
     text = out.read_text()
     assert str(f1) in text
     assert "python" in text
-

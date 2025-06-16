@@ -192,7 +192,8 @@ ML_classification/
 - Store this token in the `GH_PAGES_TOKEN` secret for the docs job.
 - The deploy step runs only when `GH_PAGES_TOKEN` is set to avoid failing on
   forks.
-- Wrap any `if` referencing secrets in `${{ }}` to avoid parser errors.
+- Wrap any `if` referencing secrets in `${{ }}` and quote the expression
+  (e.g. `if: "${{ secrets.MY_TOKEN != '' }}"`) to avoid YAML parser errors.
 
 Links are checked using:
 
