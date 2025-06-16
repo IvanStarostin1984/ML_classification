@@ -272,3 +272,7 @@ scaling.
 ## 28. CI token fix
 
 - [x] add env GIT_TOKEN to CI pre-commit step
+
+## 29. Docs job token check
+
+- [x] only run Deploy to gh-pages step when GH_PAGES_TOKEN is set (2025-09-17)
