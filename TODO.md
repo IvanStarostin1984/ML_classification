@@ -256,3 +256,7 @@ scaling.
 ## 25. Data path refactor
 
 - [x] centralise DATA_PATH via CSV_PATH constant in model modules
+
+## 26. Support vector machine model
+
+- [x] add SVM pipeline, CLI option and tests

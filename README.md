@@ -91,6 +91,8 @@ mlcls-train --model random_forest  # train only the RF model
 mlcls-train --model random_forest -g  # grid search for the RF model
 mlcls-train --model gboost  # train the gradient boosting model
 mlcls-train --model gboost -g  # grid search for gradient boosting
+mlcls-train --model svm  # train the support vector machine
+mlcls-train --model svm -g  # grid search for SVM
 mlcls-train --sampler smote   # run with SMOTE oversampling
 ```
 
@@ -195,6 +197,7 @@ pip install -e .
 mlcls-train          # trains both models
 mlcls-train --model random_forest -g  # extensive grid search
 mlcls-train --model gboost -g  # gradient boosting grid search
+mlcls-train --model svm -g  # SVM grid search
 mlcls-eval --threshold 0.6  # sets fairness metric cutoff
 mlcls-predict        # generates predictions from a saved model
 mlcls-report        # collects report artifacts
