@@ -10,7 +10,7 @@
 - Binder environment, Dockerfile and Makefile for reproducible runs.
 - CI workflow running linting and tests plus Sphinx documentation.
 
-## 0.1.1 - YYYY-MM-DD
+## 0.1.1 - 2025-09-08
 
 - Documented that pre-commit requires network access or a GIT_TOKEN.
 - Linked CITATION.cff from README and docs.
