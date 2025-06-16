@@ -186,7 +186,7 @@ to PyPI via `twine`.
 
 ## Command-line usage
 
-After installing the project in editable mode you get two console commands:
+After installing the project in editable mode you get these console commands:
 
 ```bash
 pip install -e .
@@ -196,6 +196,7 @@ mlcls-train --model gboost -g  # gradient boosting grid search
 mlcls-eval           # evaluates the trained models
 mlcls-predict        # generates predictions from a saved model
 mlcls-report        # collects report artifacts
+mlcls-manifest      # writes checksums for selected files
 ```
 
 These commands require the Kaggle dataset, which is distributed under its

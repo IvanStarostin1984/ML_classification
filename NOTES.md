@@ -424,3 +424,6 @@ Reason: avoid confusion when running demos online.
 
 2025-09-10: Removed TODO item about running a pre-commit hook for markdownlint.
 Reason: docs rely on CI gate only.
+
+2025-06-16: Added mlcls-manifest CLI for checksum manifests. Docs and tests
+updated. Reason: expose artifact verification.
