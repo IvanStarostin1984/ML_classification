@@ -407,3 +407,5 @@ Token with public_repo scope can be kept as a CI secret. Reason: clarify setup.
 2025-09-08: Bumped version to 0.1.1 and updated CHANGELOG with token docs,
 CITATION link and equalized odds metric.
 Decision: emphasise version rule in AGENTS.
+2025-09-09: evaluate.py accepts --threshold to override Youden J.
+Tests and docs cover it. Reason: allow custom cutoff in fairness metrics.

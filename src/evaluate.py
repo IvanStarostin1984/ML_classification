@@ -28,28 +28,40 @@ SCORERS = {
 
 
 def _four_fifths(
-    estimator, X: pd.DataFrame, y: pd.Series, group_col: str | None
+    estimator,
+    X: pd.DataFrame,
+    y: pd.Series,
+    group_col: str | None,
+    threshold: float | None,
 ) -> float:
     if group_col and group_col in X.columns:
-        thr = youden_threshold(estimator, X, y)
+        thr = threshold if threshold is not None else youden_threshold(estimator, X, y)
         return four_fifths_ratio(estimator, X, y, group_col, thr)
     return 1.0
 
 
 def _equal_opp(
-    estimator, X: pd.DataFrame, y: pd.Series, group_col: str | None
+    estimator,
+    X: pd.DataFrame,
+    y: pd.Series,
+    group_col: str | None,
+    threshold: float | None,
 ) -> float:
     if group_col and group_col in X.columns:
-        thr = youden_threshold(estimator, X, y)
+        thr = threshold if threshold is not None else youden_threshold(estimator, X, y)
         return equal_opportunity_ratio(estimator, X, y, group_col, thr)
     return 1.0
 
 
 def _eq_odds_diff(
-    estimator, X: pd.DataFrame, y: pd.Series, group_col: str | None
+    estimator,
+    X: pd.DataFrame,
+    y: pd.Series,
+    group_col: str | None,
+    threshold: float | None,
 ) -> float:
     if group_col and group_col in X.columns:
-        thr = youden_threshold(estimator, X, y)
+        thr = threshold if threshold is not None else youden_threshold(estimator, X, y)
         return equalized_odds_diff(estimator, X, y, group_col, thr)
     return 0.0
 
@@ -59,8 +71,13 @@ def evaluate_models(
     target: str = "Loan_Status",
     group_col: str | None = None,
     csv_path: Path = Path("artefacts/summary_metrics.csv"),
+    threshold: float | None = None,
 ) -> pd.DataFrame:
-    """Return nested-CV metrics for both models and write ``csv_path``."""
+    """Return nested-CV metrics for both models and write ``csv_path``.
+
+    ``threshold`` sets the probability cutoff used for group metrics. When it
+    is ``None`` the Youden J statistic is used instead.
+    """
     lr_res, X, y = nested_cv(
         df,
         target,
@@ -94,9 +111,15 @@ def evaluate_models(
                 "recall": res["test_recall"].mean(),
                 "specificity": res["test_specificity"].mean(),
                 "bal_acc": res["test_bal_acc"].mean(),
-                "fairness": _four_fifths(res["estimator"][0], X, y, group_col),
-                "equal_opp": _equal_opp(res["estimator"][0], X, y, group_col),
-                "eq_odds": _eq_odds_diff(res["estimator"][0], X, y, group_col),
+                "fairness": _four_fifths(
+                    res["estimator"][0], X, y, group_col, threshold
+                ),
+                "equal_opp": _equal_opp(
+                    res["estimator"][0], X, y, group_col, threshold
+                ),
+                "eq_odds": _eq_odds_diff(
+                    res["estimator"][0], X, y, group_col, threshold
+                ),
             }
         )
     out = pd.DataFrame(rows).round(3)
@@ -113,12 +136,18 @@ def main(args: list[str] | None = None) -> None:
         help="optional fairness group column",
         default=None,
     )
+    parser.add_argument(
+        "--threshold",
+        type=float,
+        help="probability cutoff for fairness metrics",
+        default=None,
+    )
     ns = parser.parse_args(args)
 
     from . import dataprep
 
     df = dataprep.clean(dataprep.load_raw())
-    metrics = evaluate_models(df, group_col=ns.group_col)
+    metrics = evaluate_models(df, group_col=ns.group_col, threshold=ns.threshold)
     print(metrics)
 
 

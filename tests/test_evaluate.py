@@ -5,6 +5,8 @@ import sys
 import subprocess
 from pathlib import Path
 
+from src import evaluate
+
 import pandas as pd
 from sklearn.datasets import make_classification
 
@@ -26,7 +28,15 @@ def test_cli_evaluate(tmp_path) -> None:
     env = os.environ.copy()
     env["PYTHONPATH"] = str(Path(__file__).resolve().parents[1])
     result = subprocess.run(
-        [sys.executable, "-m", "src.evaluate", "--group-col", "group"],
+        [
+            sys.executable,
+            "-m",
+            "src.evaluate",
+            "--group-col",
+            "group",
+            "--threshold",
+            "0.5",
+        ],
         cwd=tmp_path,
         capture_output=True,
         text=True,
@@ -36,3 +46,11 @@ def test_cli_evaluate(tmp_path) -> None:
     assert "roc_auc" in result.stdout
     summary = tmp_path / "artefacts" / "summary_metrics.csv"
     assert summary.exists()
+
+
+def test_evaluate_models_threshold_zero() -> None:
+    df = _toy_df()
+    metrics = evaluate.evaluate_models(df, group_col="group", threshold=0.0)
+    assert all(metrics["fairness"] == 1.0)
+    assert all(metrics["equal_opp"] == 1.0)
+    assert all(metrics["eq_odds"] == 0.0)
