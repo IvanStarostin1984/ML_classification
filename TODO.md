@@ -285,3 +285,8 @@ scaling.
 ## 31. Pre-commit secret check
 
 - [x] run pre-commit only when GIT_TOKEN secret is set (2025-09-19)
+
+## 32. actionlint
+
+- [ ] add actionlint as a pre-commit hook or run manually to catch
+  workflow mistakes
