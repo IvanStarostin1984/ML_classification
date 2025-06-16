@@ -267,7 +267,7 @@ scaling.
 
 ## 27. Dataset summary CLI
 
-- [x] expose mlcls-summary command printing dataset rows, columns and class balance
+- [x] expose mlcls-summary command printing dataset stats
 
 ## 28. CI token fix
 
