@@ -276,3 +276,8 @@ scaling.
 ## 29. Docs job token check
 
 - [x] only run Deploy to gh-pages step when GH_PAGES_TOKEN is set (2025-09-17)
+
+## 30. Secret condition syntax
+
+- [x] wrap GH_PAGES_TOKEN check in ${{ }} and mention rule in AGENTS
+  (2025-09-18)
