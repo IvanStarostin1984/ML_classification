@@ -128,6 +128,7 @@ ML_classification/
 └─ README.md # badges, quick-start, results, contact
 
 - CLI `mlcls-eval` accepts `--threshold` to set group metric cutoff
+- CLI `mlcls-summary` prints dataset row/column counts and class balance
 
 ## Coding Standards
 

@@ -36,4 +36,5 @@ __all__ = [
     "logreg_coefficients",
     "tree_feature_importances",
     "write_manifest",
+    "dataset_summary",
 ]

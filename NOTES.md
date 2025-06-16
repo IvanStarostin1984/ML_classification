@@ -436,3 +436,5 @@ index with reference and ticked TODO. Reason: clarify reporting workflow.
 Reason: document custom cutoff for group metrics.
 
 2025-06-16: Model pipelines import CSV_PATH and reuse it as DATA_PATH. Reason: centralise default data path.
+
+2025-09-13: Added mlcls-summary CLI for dataset stats (rows, cols, balance). Reason: implement TODO item for quick overview. Decisions: compute stats on cleaned data.

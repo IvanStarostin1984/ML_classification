@@ -33,6 +33,7 @@ mlcls-eval = "src.evaluate:main"
 mlcls-predict = "src.predict:main"
 mlcls-report = "src.reporting:main"
 mlcls-manifest = "src.manifest:main"
+mlcls-summary = "src.summary:main"
 
 [tool.setuptools]
 packages = ["src", "scripts"]
