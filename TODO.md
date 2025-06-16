@@ -252,3 +252,7 @@ scaling.
 ## 24. Report docs
 
 - [x] show mlcls-report example in advanced_usage and note zipping output
+
+## 25. Data path refactor
+
+- [x] centralise DATA_PATH via CSV_PATH constant in model modules
