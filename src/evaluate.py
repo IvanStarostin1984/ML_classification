@@ -8,6 +8,7 @@ from sklearn.tree import DecisionTreeClassifier
 from sklearn.metrics import make_scorer, recall_score
 
 from .cv_utils import nested_cv
+from . import dataprep
 
 from .fairness import (
     youden_threshold,
@@ -78,6 +79,7 @@ def evaluate_models(
     ``threshold`` sets the probability cutoff used for group metrics. When it
     is ``None`` the Youden J statistic is used instead.
     """
+    df = dataprep.clean(df)
     lr_res, X, y = nested_cv(
         df,
         target,

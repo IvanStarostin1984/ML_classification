@@ -342,3 +342,6 @@ scaling.
 
 - [x] document missing `GIT_TOKEN` or blocked network message and advise
   checking ~/.cache/pre-commit/pre-commit.log (2025-09-28)
+
+## 41. Clean Loan_Status before evaluation
+- [x] call dataprep.clean(df) at start of evaluate_models and adjust tests (2025-06-17)
