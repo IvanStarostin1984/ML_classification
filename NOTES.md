@@ -550,3 +550,6 @@ Reason: avoid unexpected lint changes from newer versions.
 
 2025-09-27: Documented pinning rhysd/actionlint to a patch tag in AGENTS to
 avoid breakage.
+2025-09-28: Documented how missing GIT_TOKEN or blocked network can cause
+pre-commit 'failed to authenticate to GitHub' errors. Check
+~/.cache/pre-commit/pre-commit.log for details.

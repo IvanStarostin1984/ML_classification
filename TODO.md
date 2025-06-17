@@ -337,3 +337,8 @@ scaling.
 
 - [x] pin rhysd/actionlint to patch tag like v1.7.7; no v1 alias
   (2025-09-27)
+
+## 41. Pre-commit token reminder
+
+- [x] document missing `GIT_TOKEN` or blocked network message and advise
+  checking ~/.cache/pre-commit/pre-commit.log (2025-09-28)
