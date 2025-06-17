@@ -523,3 +523,7 @@ It clarifies CI logic.
 use a helper step to check secrets.
 
 2025-09-23: Marked obsolete quoting task and added helper-step detection TODO.
+
+2025-09-23: Ticked TODO items for secret helper-step pattern. Completed tasks
+for checking secrets via helper steps and removing secret checks from `if:`
+conditions to avoid YAML errors.
