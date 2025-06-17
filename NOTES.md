@@ -550,3 +550,4 @@ Reason: avoid unexpected lint changes from newer versions.
 
 2025-09-27: Documented pinning rhysd/actionlint to a patch tag in AGENTS to
 avoid breakage.
+2025-06-17: evaluate_models cleans data with dataprep.clean at function start. Test updated to work with numeric labels. Reason: normalise Loan_Status early.
