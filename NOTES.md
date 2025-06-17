@@ -489,6 +489,11 @@ Reason: clarify needed token to deploy pages.
 2025-09-19: pre-commit step now checks GIT_TOKEN exists in ci.yml.
 Maintainers must define the secret for full checks. Updated AGENTS.
 
+2025-09-20: Quoted pre-commit GIT_TOKEN check in ci.yml to avoid YAML errors.
+2025-09-20: AGENTS says run actionlint and quote secrets to avoid YAML issues.
+
+2025-06-16: Removed merge markers in NOTES and wrapped lines. Reason: tidy docs.
+
 2025-09-20: Quote GIT_TOKEN condition in ci.yml to avoid YAML errors.
 Reason: follow AGENTS rule on secrets in workflow.
 
