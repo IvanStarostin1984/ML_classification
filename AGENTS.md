@@ -213,6 +213,7 @@ ML_classification/
     secrets directly.
 
   - Run `actionlint` whenever you change workflow files to verify syntax.
+  - CI pins `rhysd/actionlint` at `v1.7.7` to match the pre-commit hook.
 
 Links are checked using:
 

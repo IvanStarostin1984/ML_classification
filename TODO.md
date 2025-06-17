@@ -328,3 +328,7 @@ scaling.
 
 - [x] remove duplicate mlcls-eval command leaving a single example
   (2025-09-26)
+
+## 39. actionlint pinned
+
+- [x] pin ci.yml actionlint step to v1.7.7 for consistency (2025-09-27)
