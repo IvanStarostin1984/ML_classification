@@ -194,13 +194,16 @@ ML_classification/
 - Store this token in the `GH_PAGES_TOKEN` secret for the docs job.
 - The deploy step runs only when `GH_PAGES_TOKEN` is set to avoid failing on
   forks.
-- Wrap any `if` referencing secrets in `${{ }}` and quote the expression
-  (e.g. `if: "${{ secrets.MY_TOKEN != '' }}"`) to avoid YAML parser errors.
+- [superseded] Wrap any `if` referencing secrets in `${{ }}` and quote the
+  expression (e.g. `if: "${{ secrets.MY_TOKEN != '' }}"`) to avoid YAML parser
+  errors.
 - Run `actionlint` whenever you change workflow files and verify secret
   conditions are quoted as above.
 - Run `actionlint` after editing workflows and ensure secret checks use
   exactly `if: "${{ secrets.NAME != '' }}"`. Wrong quoting causes
   'Unrecognized named-value: 'secrets'' errors in GitHub Actions.
+- Quoting secrets in `if:` lines caused the error above and has been replaced
+  by a helper step. Set an output in a short step and test that output instead.
 - The pre-commit config includes an `actionlint` hook so CI lints workflow
   files automatically.
 
