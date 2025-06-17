@@ -155,6 +155,9 @@ ML_classification/
 - After editing docs, run `npx markdownlint-cli` locally before committing.
 - Run `npx markdownlint-cli '**/*.md' --ignore node_modules` to mirror the CI
   job.
+- All Markdown files must be free of trailing spaces. Running
+  `npx markdownlint-cli '**/*.md' --ignore node_modules` (or pre-commit) will
+  catch these issues.
 - `make lint-docs` runs this command automatically.
 - End each Markdown file with exactly one newline to satisfy MD047.
 
@@ -210,7 +213,6 @@ ML_classification/
     secrets directly.
 
   - Run `actionlint` whenever you change workflow files to verify syntax.
-
 
 Links are checked using:
 
