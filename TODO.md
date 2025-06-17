@@ -318,3 +318,8 @@ scaling.
 
 - [x] document in AGENTS that all Markdown files must be free of trailing
   spaces and enforce with markdownlint (2025-09-25)
+
+## 37. README cleanup
+
+- [x] remove duplicate mlcls-eval command leaving a single example
+  (2025-09-26)

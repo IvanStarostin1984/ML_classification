@@ -83,7 +83,6 @@ python scripts/download_data.py
 # Train, evaluate and store artefacts in artefacts/
 make train            # run both models
 make eval             # evaluate trained models and check fairness
-mlcls-eval --threshold 0.6  # set fairness metric cutoff
 # or individually
 make train-logreg
 make train-cart
@@ -125,8 +124,7 @@ Use `plot_shap_summary` to turn those values into a PNG stored in
 `artefacts/`.
 
 `make eval` runs `python -m src.evaluate` to compute test metrics and the worst
-mlcls-eval --threshold 0.6  # set fairness metric cutoff
-four-fifths ratio across protected groups (pass `--group-col` to override the
+ four-fifths ratio across protected groups (pass `--group-col` to override the
 default). Metrics are stored in `artefacts/summary_metrics.csv` and printed to
 stdout. A ratio below **0.8** warns of possible bias.
 You can replicate the notebook's exhaustive cross-validation using the training

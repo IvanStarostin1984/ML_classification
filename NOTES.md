@@ -537,3 +537,6 @@ for checking secrets via helper steps and removing secret checks from `if:`
 conditions to avoid YAML errors.
 2025-09-25: Cleaned trailing spaces in NOTES and updated AGENTS.
 Added rule about removing them.
+
+2025-09-26: Removed duplicate mlcls-eval line from README. Kept single
+example under Command-line usage with mlcls-summary.
