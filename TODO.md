@@ -279,13 +279,11 @@ scaling.
 
 ## 30. Secret condition syntax
 
-- [x] wrap GH_PAGES_TOKEN check in ${{ }} and mention rule in AGENTS
-  (2025-09-18)
+- [x] wrap GH_PAGES_TOKEN check in ${{ }} and mention rule in AGENTS (2025-09-18)
 
 ## 31. Pre-commit secret check
 
 - [x] run pre-commit only when GIT_TOKEN secret is set (2025-09-19)
-
 
 ## 32. CI quoting fix
 
@@ -293,11 +291,8 @@ scaling.
 
 ## 33. Workflow lint
 
-- [x] mention running actionlint on workflow changes and quoting secret
-  conditions in AGENTS (2025-09-20)
+- [x] note running actionlint and quoting secrets in AGENTS (2025-09-20)
 
 ## 34. actionlint
 
-- [ ] add actionlint as a pre-commit hook or run manually to catch
-  workflow mistakes
-
+- [ ] add actionlint as a pre-commit hook or run manually to catch workflow mistakes
