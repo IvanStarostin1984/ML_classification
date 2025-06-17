@@ -523,3 +523,5 @@ It clarifies CI logic.
 use a helper step to check secrets.
 
 2025-09-23: Marked obsolete quoting task and added helper-step detection TODO.
+
+2025-09-24: Previous notes about quoting secrets are obsolete. All workflows now use a helper step to detect secrets.
