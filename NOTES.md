@@ -514,3 +514,7 @@ actionlint.
 
 2025-09-22: Documented actionlint reminder and exact secret check syntax in
 AGENTS to prevent "Unrecognized named-value: 'secrets'" errors.
+
+2025-09-23: Workflows now use helper steps to detect secrets.
+Quoting secrets in if conditions is invalid, so this avoids YAML errors.
+It clarifies CI logic.
