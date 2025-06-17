@@ -177,6 +177,9 @@ ML_classification/
   must define this secret for CI to run the full checks.
 - If pre-commit fails with "could not read Username", verify network access
   and ensure the `GIT_TOKEN` secret is set.
+- A missing `GIT_TOKEN` or blocked network may produce "failed to authenticate
+  to GitHub" when pre-commit fetches hooks. Check
+  `~/.cache/pre-commit/pre-commit.log` for details.
 - Run these commands locally before committing to ensure your code passes the
   same checks. Use `make test` to run the full pytest suite with the correct
   `PYTHONPATH`.

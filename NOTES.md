@@ -550,4 +550,10 @@ Reason: avoid unexpected lint changes from newer versions.
 
 2025-09-27: Documented pinning rhysd/actionlint to a patch tag in AGENTS to
 avoid breakage.
+<<<<<<< codex/update-agents.md-and-notes.md-with-git_token-info
+2025-09-28: Documented how missing GIT_TOKEN or blocked network can cause
+pre-commit 'failed to authenticate to GitHub' errors. Check
+~/.cache/pre-commit/pre-commit.log for details.
+=======
 2025-06-17: evaluate_models cleans data with dataprep.clean at function start. Test updated to work with numeric labels. Reason: normalise Loan_Status early.
+>>>>>>> main
