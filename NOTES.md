@@ -511,3 +511,6 @@ errors. Reason: ensures expression parsing works on all runners.
 actionlint.
 
 2025-06-17: ensured GIT_TOKEN if quote style and ran actionlint.
+
+2025-09-22: Documented actionlint reminder and exact secret check syntax in
+AGENTS to prevent "Unrecognized named-value: 'secrets'" errors.

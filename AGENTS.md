@@ -198,6 +198,9 @@ ML_classification/
   (e.g. `if: "${{ secrets.MY_TOKEN != '' }}"`) to avoid YAML parser errors.
 - Run `actionlint` whenever you change workflow files and verify secret
   conditions are quoted as above.
+- Run `actionlint` after editing workflows and ensure secret checks use
+  exactly `if: "${{ secrets.NAME != '' }}"`. Wrong quoting causes
+  'Unrecognized named-value: 'secrets'' errors in GitHub Actions.
 - The pre-commit config includes an `actionlint` hook so CI lints workflow
   files automatically.
 
