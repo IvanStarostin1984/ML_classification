@@ -15,3 +15,9 @@
 - Documented that pre-commit requires network access or a GIT_TOKEN.
 - Linked CITATION.cff from README and docs.
 - Added equalized_odds_diff metric with eq_odds column.
+
+## 0.1.2 - 2025-09-26
+
+- Added `mlcls-summary` CLI for quick dataset statistics.
+- Replaced secret checks with helper steps to avoid YAML errors.
+- Enforced trailing space rule via markdownlint.
