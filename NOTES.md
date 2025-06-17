@@ -523,4 +523,15 @@ It clarifies CI logic.
 use a helper step to check secrets.
 
 2025-09-23: Marked obsolete quoting task and added helper-step detection TODO.
-2025-09-24: Clarified secret checks in AGENTS. Removed outdated quoting guidance and kept helper-step approach as the only method. Updated TODO accordingly.
+
+2025-09-24: Clarified secret checks in AGENTS. 
+Removed outdated quoting guidance and kept 
+helper-step approach as the only method. 
+Updated TODO accordingly.
+
+2025-09-24: Previous notes about quoting secrets are obsolete. 
+All workflows now use a helper step to detect secrets.
+
+2025-09-23: Ticked TODO items for secret helper-step pattern. Completed tasks
+for checking secrets via helper steps and removing secret checks from `if:`
+conditions to avoid YAML errors.
