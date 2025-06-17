@@ -313,3 +313,8 @@ scaling.
 
 - [x] remove secret checks from `if:` conditions and detect token presence
   via a helper step (2025-09-24)
+
+## 36. Trailing spaces rule
+
+- [x] document in AGENTS that all Markdown files must be free of trailing
+  spaces and enforce with markdownlint (2025-09-25)
