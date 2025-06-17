@@ -518,3 +518,8 @@ AGENTS to prevent "Unrecognized named-value: 'secrets'" errors.
 2025-09-23: Workflows now use helper steps to detect secrets.
 Quoting secrets in if conditions is invalid, so this avoids YAML errors.
 It clarifies CI logic.
+
+2025-09-23: Added note that quoting secrets in `if:` caused that error and now
+use a helper step to check secrets.
+
+2025-09-23: Marked obsolete quoting task and added helper-step detection TODO.

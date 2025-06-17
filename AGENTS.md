@@ -191,6 +191,7 @@ ML_classification/
   `gh-pages` branch using `peaceiris/actions-gh-pages@v3`.
   Pushing to this branch requires a token with `contents:write`
   (the default `GITHUB_TOKEN` on forks lacks this permission).
+
   - Store this token in the `GH_PAGES_TOKEN` secret for the docs job.
   - The deploy step runs only when `GH_PAGES_TOKEN` is set to avoid failing on
     forks.
@@ -203,6 +204,29 @@ ML_classification/
     "Unrecognized named-value: 'secrets'".
   - The pre-commit config includes an `actionlint` hook so CI lints workflow
     files automatically.
+
+- Store this token in the `GH_PAGES_TOKEN` secret for the docs job.
+- The deploy step runs only when `GH_PAGES_TOKEN` is set to avoid failing on
+  forks.
+
+- [superseded] Wrap any `if` referencing secrets in `${{ }}` and quote the
+  expression (e.g. `if: "${{ secrets.MY_TOKEN != '' }}"`) to avoid YAML parser
+  errors.
+- Run `actionlint` whenever you change workflow files and verify secret
+  conditions are quoted as above.
+- Run `actionlint` after editing workflows and ensure secret checks use
+  exactly `if: "${{ secrets.NAME != '' }}"`. Wrong quoting causes
+  'Unrecognized named-value: 'secrets'' errors in GitHub Actions.
+- Quoting secrets in `if:` lines caused the error above and has been replaced
+  by a helper step. Set an output in a short step and test that output instead.
+
+- Detect secret presence in a setup step and store a boolean output.
+  Reference that output in later `if:` conditions instead of checking
+  secrets directly.
+- Run `actionlint` whenever you change workflow files to verify syntax.
+
+- The pre-commit config includes an `actionlint` hook so CI lints workflow
+  files automatically.
 
 Links are checked using:
 
