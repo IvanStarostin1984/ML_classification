@@ -523,3 +523,4 @@ It clarifies CI logic.
 use a helper step to check secrets.
 
 2025-09-23: Marked obsolete quoting task and added helper-step detection TODO.
+2025-09-24: Clarified secret checks in AGENTS. Removed outdated quoting guidance and kept helper-step approach as the only method. Updated TODO accordingly.

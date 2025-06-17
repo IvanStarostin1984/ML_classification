@@ -301,8 +301,8 @@ scaling.
 
 ## 35. Secret helper step
 
-- [ ] check secrets using helper steps or `github.secret_source`.
-  Avoid `if: "${{ secrets.NAME != '' }}"`.
+- [x] check secrets using helper steps or `github.secret_source`.
+  Avoid `if: "${{ secrets.NAME != '' }}"`. (2025-09-24)
 
 ## 35. Helper step for secret checks
 
@@ -311,5 +311,5 @@ scaling.
 
 ## 35. Helper-step detection
 
-- [ ] remove secret checks from `if:` conditions and detect token presence
-  via a helper step
+- [x] remove secret checks from `if:` conditions and detect token presence
+  via a helper step (2025-09-24)
