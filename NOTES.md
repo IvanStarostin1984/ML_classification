@@ -537,3 +537,7 @@ for checking secrets via helper steps and removing secret checks from `if:`
 conditions to avoid YAML errors.
 2025-09-25: Cleaned trailing spaces in NOTES and updated AGENTS.
 Added rule about removing them.
+
+2025-09-26: Bumped version to 0.1.2 documenting mlcls-summary CLI,
+secret helper steps and trailing space rule. Reason: prepare new
+release with helper-step guidance.

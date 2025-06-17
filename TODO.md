@@ -318,3 +318,8 @@ scaling.
 
 - [x] document in AGENTS that all Markdown files must be free of trailing
   spaces and enforce with markdownlint (2025-09-25)
+
+## 37. Version 0.1.2 release
+
+- [x] bump version to 0.1.2 and update CHANGELOG with new CLI and
+  secret helper-step guidance (2025-09-26)
