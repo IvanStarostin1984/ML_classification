@@ -299,6 +299,12 @@ scaling.
 - [x] add actionlint as a pre-commit hook or run manually to catch
   workflow mistakes (2025-09-20)
 
+
+## 35. Helper step for secret checks
+
+- [x] Document helper-step approach replacing quoting advice in AGENTS
+  (2025-09-23)
+
 ## 35. Helper-step detection
 
 - [ ] remove secret checks from `if:` conditions and detect token presence
