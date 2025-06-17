@@ -323,3 +323,8 @@ scaling.
 
 - [x] bump version to 0.1.2 and update CHANGELOG with new CLI and
   secret helper-step guidance (2025-09-26)
+
+## 38. README cleanup
+
+- [x] remove duplicate mlcls-eval command leaving a single example
+  (2025-09-26)

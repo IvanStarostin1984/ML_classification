@@ -541,3 +541,6 @@ Added rule about removing them.
 2025-09-26: Bumped version to 0.1.2 documenting mlcls-summary CLI,
 secret helper steps and trailing space rule. Reason: prepare new
 release with helper-step guidance.
+
+2025-09-26: Removed duplicate mlcls-eval line from README. Kept single
+example under Command-line usage with mlcls-summary.
