@@ -514,3 +514,5 @@ actionlint.
 
 2025-09-22: Documented actionlint reminder and exact secret check syntax in
 AGENTS to prevent "Unrecognized named-value: 'secrets'" errors.
+
+2025-09-23: Marked obsolete quoting task and added helper-step detection TODO.
