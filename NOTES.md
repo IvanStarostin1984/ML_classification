@@ -545,5 +545,8 @@ release with helper-step guidance.
 2025-09-26: Removed duplicate mlcls-eval line from README. Kept single
 example under Command-line usage with mlcls-summary.
 
+2025-09-27: CI now pins actionlint step to v1.7.7 to match pre-commit.
+Reason: avoid unexpected lint changes from newer versions.
+
 2025-09-27: Documented pinning rhysd/actionlint to a patch tag in AGENTS to
 avoid breakage.

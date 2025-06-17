@@ -51,7 +51,7 @@ jobs:
           GIT_TOKEN: ${{ secrets.GIT_TOKEN }}
         run: pre-commit run --files ${{ steps.files.outputs.all_changed_files }}
       - name: Lint workflows
-        uses: rhysd/actionlint@v1
+        uses: rhysd/actionlint@v1.7.7
       - name: Run flake8
         run: flake8
       - name: Run black
