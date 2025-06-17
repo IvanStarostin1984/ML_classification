@@ -298,6 +298,6 @@ scaling.
 
 ## 34. actionlint
 
-- [ ] add actionlint as a pre-commit hook or run manually to catch
-  workflow mistakes
+- [x] add actionlint as a pre-commit hook or run manually to catch
+  workflow mistakes (2025-09-20)
 
