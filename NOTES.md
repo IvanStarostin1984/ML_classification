@@ -501,6 +501,9 @@ Reason: follow AGENTS rule on secrets in workflow.
 Secret conditions must be quoted in AGENTS.
 Reason: keep workflows linted and avoid YAML issues.
 
+2025-09-20: Added actionlint pre-commit hook and CI step to lint workflows.
+Reason: catch YAML mistakes automatically.
+
 2025-09-20: pre-commit token check in ci.yml is quoted to avoid YAML parser
 errors. Reason: ensures expression parsing works on all runners.
 

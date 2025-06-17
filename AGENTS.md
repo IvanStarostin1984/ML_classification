@@ -198,6 +198,8 @@ ML_classification/
   (e.g. `if: "${{ secrets.MY_TOKEN != '' }}"`) to avoid YAML parser errors.
 - Run `actionlint` whenever you change workflow files and verify secret
   conditions are quoted as above.
+- The pre-commit config includes an `actionlint` hook so CI lints workflow
+  files automatically.
 
 Links are checked using:
 
