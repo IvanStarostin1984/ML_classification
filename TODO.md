@@ -287,7 +287,8 @@ scaling.
 
 ## 32. CI quoting fix
 
-- [x] wrap GIT_TOKEN check in ci.yml with quotes to avoid YAML parser errors (2025-09-20)
+- [x] wrap GIT_TOKEN check in ci.yml with quotes to avoid YAML parser errors
+  (2025-09-20) (obsolete; replaced by helper-step detection)
 
 ## 33. Workflow lint
 
@@ -298,7 +299,13 @@ scaling.
 - [x] add actionlint as a pre-commit hook or run manually to catch
   workflow mistakes (2025-09-20)
 
+
 ## 35. Helper step for secret checks
 
 - [x] Document helper-step approach replacing quoting advice in AGENTS
   (2025-09-23)
+
+## 35. Helper-step detection
+
+- [ ] remove secret checks from `if:` conditions and detect token presence
+  via a helper step

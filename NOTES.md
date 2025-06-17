@@ -517,3 +517,5 @@ AGENTS to prevent "Unrecognized named-value: 'secrets'" errors.
 
 2025-09-23: Added note that quoting secrets in `if:` caused that error and now
 use a helper step to check secrets.
+
+2025-09-23: Marked obsolete quoting task and added helper-step detection TODO.
