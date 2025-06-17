@@ -207,6 +207,8 @@ ML_classification/
     "Unrecognized named-value: 'secrets'".
   - The pre-commit config includes an `actionlint` hook so CI lints workflow
     files automatically.
+  - Pin `rhysd/actionlint` to the latest patch tag (e.g. `v1.7.7`) because no
+    `v1` alias exists.
 
   - Detect secret presence in a setup step and store a boolean output.
     Reference that output in later `if:` conditions instead of checking

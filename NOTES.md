@@ -544,3 +544,6 @@ release with helper-step guidance.
 
 2025-09-26: Removed duplicate mlcls-eval line from README. Kept single
 example under Command-line usage with mlcls-summary.
+
+2025-09-27: Documented pinning rhysd/actionlint to a patch tag in AGENTS to
+avoid breakage.
