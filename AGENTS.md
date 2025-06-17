@@ -191,6 +191,20 @@ ML_classification/
   `gh-pages` branch using `peaceiris/actions-gh-pages@v3`.
   Pushing to this branch requires a token with `contents:write`
   (the default `GITHUB_TOKEN` on forks lacks this permission).
+
+  - Store this token in the `GH_PAGES_TOKEN` secret for the docs job.
+  - The deploy step runs only when `GH_PAGES_TOKEN` is set to avoid failing on
+    forks.
+  - Secrets cannot appear directly in `if:` expressions. Create a helper step
+    that writes `has_token=${{ secrets.GH_PAGES_TOKEN != '' }}` to
+    `$GITHUB_OUTPUT` and reference that output with
+    `if: steps.check-token.outputs.has_token == 'true'`.
+  - Run `actionlint` whenever you change workflow files and verify secret
+    checks follow the helper-step pattern to avoid YAML errors like
+    "Unrecognized named-value: 'secrets'".
+  - The pre-commit config includes an `actionlint` hook so CI lints workflow
+    files automatically.
+
 - Store this token in the `GH_PAGES_TOKEN` secret for the docs job.
 - The deploy step runs only when `GH_PAGES_TOKEN` is set to avoid failing on
   forks.

@@ -20,8 +20,10 @@ jobs:
           pip install -r requirements.txt
       - name: Build docs
         run: sphinx-build -b html docs docs/_build
+      - id: check-token
+        run: echo "has_token=${{ secrets.GH_PAGES_TOKEN != '' }}" >> "$GITHUB_OUTPUT"
       - name: Deploy to gh-pages
-        if: "${{ secrets.GH_PAGES_TOKEN != '' }}"
+        if: steps.check-token.outputs.has_token == 'true'
         uses: peaceiris/actions-gh-pages@v3
         with:
           personal_token: ${{ secrets.GH_PAGES_TOKEN }}

@@ -299,6 +299,10 @@ scaling.
 - [x] add actionlint as a pre-commit hook or run manually to catch
   workflow mistakes (2025-09-20)
 
+## 35. Secret helper step
+
+- [ ] check secrets using helper steps or `github.secret_source`.
+  Avoid `if: "${{ secrets.NAME != '' }}"`.
 
 ## 35. Helper step for secret checks
 
