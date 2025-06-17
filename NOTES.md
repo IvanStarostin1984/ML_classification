@@ -489,16 +489,15 @@ Reason: clarify needed token to deploy pages.
 2025-09-19: pre-commit step now checks GIT_TOKEN exists in ci.yml.
 Maintainers must define the secret for full checks. Updated AGENTS.
 
-<<<<<<< codex/fix-ci.yml-secrets-check-syntax
 2025-09-20: Quote GIT_TOKEN condition in ci.yml to avoid YAML errors.
 Reason: follow AGENTS rule on secrets in workflow.
-=======
-<<<<<<< codex/update-agents.md-with-actionlint-instructions
+
 2025-09-20: Added rule to run actionlint on workflow edits.
 Secret conditions must be quoted in AGENTS.
 Reason: keep workflows linted and avoid YAML issues.
-=======
-2025-09-20: pre-commit token check in ci.yml is quoted to avoid YAML
-parser errors. Reason: ensures expression parsing works on all runners.
->>>>>>> main
->>>>>>> main
+
+2025-09-20: pre-commit token check in ci.yml is quoted to avoid YAML parser
+errors. Reason: ensures expression parsing works on all runners.
+
+2025-09-21: Verified gh-pages workflow uses quoted GH_PAGES_TOKEN check and ran
+actionlint.
