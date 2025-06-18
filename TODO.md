@@ -366,3 +366,7 @@ scaling.
 ## 45. Markdown style note
 
 - [x] mention wrapping module names like `__init__` in backticks (2025-10-01)
+
+## 46. Version 0.1.3 release
+
+- [x] bump version to 0.1.3 and document summary CLI

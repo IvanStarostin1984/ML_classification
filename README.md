@@ -213,6 +213,12 @@ mlcls-manifest      # writes checksums for selected files
 mlcls-summary       # prints dataset statistics
 ```
 
+Example usage:
+
+```bash
+mlcls-summary --data-path data/raw/loan_approval_dataset.csv
+```
+
 These commands require the Kaggle dataset, which is distributed under its
 original licence. See [data/README.md](data/README.md) for details. The dataset
 is small – around 380&nbsp;kB (~1000 rows) – so the default training run
