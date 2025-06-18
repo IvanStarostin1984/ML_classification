@@ -578,3 +578,5 @@ function is callable. Reason: align public API with docs.
 Wrapped `dataset_summary` and `__init__`.
 2025-10-01: AGENTS Markdown bullet now mentions wrapping module names in
 backticks like `__init__`. Reason: avoid MD050.
+
+2025-10-02: Documented mlcls-summary usage in CLI docs and added src.summary to the API reference. Reason: user request for dataset summary documentation.
