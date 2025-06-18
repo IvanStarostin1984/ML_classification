@@ -387,3 +387,7 @@ scaling.
 ## 49. Update changelog date
 
 - [x] replace placeholder date for version 0.1.3 in CHANGELOG (2025-10-06)
+
+## 50. NOTES cleanup after release-date PR
+
+- [x] remove leftover merge markers from NOTES (2025-10-07)
