@@ -358,3 +358,7 @@ scaling.
 ## 43. Public API update
 
 - [x] public API now exposes `dataset_summary` via `src` package
+
+## 44. Markdownlint cleanup
+
+- [x] fix NOTES formatting lines 561-569 to satisfy markdownlint (2025-06-18)

@@ -558,8 +558,7 @@ pre-commit 'failed to authenticate to GitHub' errors. Check
 2025-06-17: evaluate_models cleans data with dataprep.clean at function start.
 Test updated to work with numeric labels. Reason: normalise Loan_Status early.
 
-2025-09-29: Removed conflict markers from NOTES and TODO. Added cleanup item in
-TODO.md.
+2025-09-29: Removed conflict markers from NOTES and TODO. Added cleanup item in TODO.md.
 
 2025-09-30: flake8 uses indent-size 4. Updated AGENTS.
 Reason: enforce 4-space indentation.
@@ -571,3 +570,9 @@ function is callable. Reason: align public API with docs.
 2025-06-18: added blank lines around TODO headings.
 Marked dataset_summary item complete.
 Reason: keep formatting consistent and reflect completion.
+
+2025-09-30: `dataset_summary` import exposed in src package `__init__` so
+`from src import dataset_summary` works. Added unit test verifying the
+function is callable. Reason: align public API with docs.
+2025-06-18: Fixed NOTES formatting for markdownlint. Merged conflict marker.
+Wrapped `dataset_summary` and `__init__`.
