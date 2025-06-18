@@ -354,3 +354,7 @@ scaling.
 ## 43. Flake8 indentation
 
 - [x] set `indent-size = 4` in .flake8 and document in AGENTS (2025-09-30)
+
+## 43. Public API update
+
+- [ ] public API now exposes `dataset_summary` via `src` package

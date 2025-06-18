@@ -560,5 +560,10 @@ Test updated to work with numeric labels. Reason: normalise Loan_Status early.
 
 2025-09-29: Removed conflict markers from NOTES and TODO. Added cleanup item in
 TODO.md.
+
 2025-09-30: flake8 uses indent-size 4. Updated AGENTS.
 Reason: enforce 4-space indentation.
+
+2025-09-30: dataset_summary import exposed in src package __init__ so
+`from src import dataset_summary` works. Added unit test verifying the
+function is callable. Reason: align public API with docs.
