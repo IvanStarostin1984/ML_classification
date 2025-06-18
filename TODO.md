@@ -374,3 +374,8 @@ scaling.
 ## 46. Dataset summary docs
 
 - [x] document mlcls-summary usage and add src.summary to API reference (2025-10-02)
+
+## 47. GIT_TOKEN setup note
+
+- [x] clarify README quick-start with PAT creation steps and emphasise
+  CI requires the GIT_TOKEN secret (2025-10-05)
