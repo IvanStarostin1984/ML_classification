@@ -357,4 +357,4 @@ scaling.
 
 ## 43. Public API update
 
-- [ ] public API now exposes `dataset_summary` via `src` package
+- [x] public API now exposes `dataset_summary` via `src` package
