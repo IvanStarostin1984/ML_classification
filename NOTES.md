@@ -595,3 +595,6 @@ Reason: keep repository clean while preserving reference code as per TODO item.
 2025-10-08: evaluate_models now runs random_forest, gboost and svm pipelines and
 supports a --models option to pick which to run. Tests cover the new selection.
 Reason: extend evaluation as requested.
+
+2025-06-18: Pre-commit excludes the legacy folder so isort, black and flake8
+skip ai_arisha.py. Reason: touching that script caused CI failures.

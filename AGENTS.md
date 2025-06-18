@@ -8,7 +8,9 @@ github repo in line with README.md to showcase my work. The notebook now lives
 in `legacy/` for reference only.
 
 The style rules apply to new code under `src/` and tests, while
-`legacy/ai_arisha.py` is kept as-is for reference
+`legacy/ai_arisha.py` is kept as-is for reference.
+Pre-commit skips `legacy/ai_arisha.py` and anything under `legacy/` so
+formatters and linters don't touch the old notebook script.
 
 TODO.md, NOTES.md AGENTS.md may be not perfectly aligned with current project
 status. Always recheck in actual code.
