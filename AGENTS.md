@@ -180,6 +180,11 @@ ML_classification/
   must define this secret for CI to run the full checks.
 - If pre-commit fails with "could not read Username", verify network access
   and ensure the `GIT_TOKEN` secret is set.
+- A missing or expired personal access token stored in `GIT_TOKEN` will cause
+  `git fetch` errors during pre-commit with the same message. The token must
+  include at least `public_repo` scope (or `repo` for private forks) and should
+  be recreated if the pre-commit log reports authentication errors. Check
+  `~/.cache/pre-commit/pre-commit.log` for details.
 - A missing `GIT_TOKEN` or blocked network may produce "failed to authenticate
   to GitHub" when pre-commit fetches hooks. Check
   `~/.cache/pre-commit/pre-commit.log` for details.
