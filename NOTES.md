@@ -582,7 +582,9 @@ backticks like `__init__`. Reason: avoid MD050.
 2025-06-18: Version bumped to 0.1.3 with README example for `mlcls-summary`.
 Reason: document dataset summary CLI before tagging release.
 
-2025-10-02: Documented mlcls-summary usage in CLI docs 
-and added src.summary to the API reference. 
+2025-10-02: Documented mlcls-summary usage in CLI docs
+and added src.summary to the API reference.
 Reason: user request for dataset summary documentation.
 
+2025-10-03: Documented PAT expiry causing pre-commit `git fetch` failures.
+Reason: clarify CI token issues when "could not read Username" appears.

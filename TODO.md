@@ -374,3 +374,7 @@ scaling.
 ## 46. Dataset summary docs
 
 - [x] document mlcls-summary usage and add src.summary to API reference (2025-10-02)
+
+## 47. Clarify expired PAT
+
+- [x] PAT expiry can break `git fetch`; recreate token if it fails (2025-10-03)
