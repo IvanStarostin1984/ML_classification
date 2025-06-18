@@ -400,3 +400,7 @@ scaling.
 
 - [x] evaluate_models supports random_forest, gboost and svm and CLI accepts
   --models option (2025-10-08)
+
+## 53. Pre-commit legacy exclusion
+
+- [ ] keep legacy directory excluded from automated linting
