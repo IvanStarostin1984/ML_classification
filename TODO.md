@@ -379,3 +379,7 @@ scaling.
 
 - [x] clarify README quick-start with PAT creation steps and emphasise
   CI requires the GIT_TOKEN secret (2025-10-05)
+
+## 48. Clarify expired PAT
+
+- [x] PAT expiry can break `git fetch`; recreate token if it fails (2025-10-03)
