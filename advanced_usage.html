@@ -80,6 +80,11 @@ omitted the tool chooses the Youden J statistic:</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">mlcls</span><span class="o">-</span><span class="nb">eval</span> <span class="o">--</span><span class="n">group</span><span class="o">-</span><span class="n">col</span> <span class="n">gender</span> <span class="o">--</span><span class="n">threshold</span> <span class="mf">0.6</span>
 </pre></div>
 </div>
+<p>Select specific pipelines with <code class="docutils literal notranslate"><span class="pre">--models</span></code>. Pass multiple names to evaluate
+only those models:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">mlcls</span><span class="o">-</span><span class="nb">eval</span> <span class="o">--</span><span class="n">models</span> <span class="n">logreg</span> <span class="n">random_forest</span> <span class="n">svm</span>
+</pre></div>
+</div>
 <p>The <code class="docutils literal notranslate"><span class="pre">advanced_demo.ipynb</span></code> notebook walks through these steps and shows the
 additional plots.</p>
 </section>
