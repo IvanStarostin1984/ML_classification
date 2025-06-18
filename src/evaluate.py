@@ -1,20 +1,22 @@
 from __future__ import annotations
 
-from pathlib import Path
 import argparse
+from pathlib import Path
+
 import pandas as pd
+from sklearn.ensemble import GradientBoostingClassifier, RandomForestClassifier
 from sklearn.linear_model import LogisticRegression
-from sklearn.tree import DecisionTreeClassifier
 from sklearn.metrics import make_scorer, recall_score
+from sklearn.svm import SVC
+from sklearn.tree import DecisionTreeClassifier
 
-from .cv_utils import nested_cv
 from . import dataprep
-
+from .cv_utils import nested_cv
 from .fairness import (
-    youden_threshold,
-    four_fifths_ratio,
     equal_opportunity_ratio,
     equalized_odds_diff,
+    four_fifths_ratio,
+    youden_threshold,
 )
 
 SPECIFICITY = make_scorer(recall_score, pos_label=0)
@@ -73,37 +75,54 @@ def evaluate_models(
     group_col: str | None = None,
     csv_path: Path = Path("artefacts/summary_metrics.csv"),
     threshold: float | None = None,
+    models: list[str] | None = None,
 ) -> pd.DataFrame:
-    """Return nested-CV metrics for both models and write ``csv_path``.
+    """Return nested-CV metrics and write ``csv_path``.
 
     ``threshold`` sets the probability cutoff used for group metrics. When it
-    is ``None`` the Youden J statistic is used instead.
+    is ``None`` the Youden J statistic is used instead. ``models`` selects which
+    pipelines to run.
     """
     df = dataprep.clean(df)
-    lr_res, X, y = nested_cv(
-        df,
-        target,
-        LogisticRegression(max_iter=1000, solver="liblinear"),
-        {"model__C": [0.3, 1, 3], "model__penalty": ["l1", "l2"]},
-        SCORERS,
-        seed=0,
-        n_splits=3,
-        n_repeats=2,
-        bootstrap_iters=100,
-    )
-    dt_res, _, _ = nested_cv(
-        df,
-        target,
-        DecisionTreeClassifier(random_state=42),
-        {"model__max_depth": [None, 8, 15], "model__min_samples_leaf": [1, 5]},
-        SCORERS,
-        seed=0,
-        n_splits=3,
-        n_repeats=2,
-        bootstrap_iters=100,
-    )
+
+    all_models: dict[str, tuple[object, dict]] = {
+        "logreg": (
+            LogisticRegression(max_iter=1000, solver="liblinear"),
+            {"model__C": [0.3, 1, 3], "model__penalty": ["l1", "l2"]},
+        ),
+        "cart": (
+            DecisionTreeClassifier(random_state=42),
+            {"model__max_depth": [None, 8, 15], "model__min_samples_leaf": [1, 5]},
+        ),
+        "random_forest": (
+            RandomForestClassifier(random_state=42),
+            {"model__n_estimators": [50, 100], "model__max_depth": [None, 10]},
+        ),
+        "gboost": (
+            GradientBoostingClassifier(random_state=42),
+            {"model__n_estimators": [100, 200], "model__learning_rate": [0.05, 0.1]},
+        ),
+        "svm": (
+            SVC(probability=True),
+            {"model__kernel": ["linear", "rbf"], "model__C": [0.1, 1.0]},
+        ),
+    }
+
+    selected = models or list(all_models.keys())
     rows = []
-    for name, res in [("logreg", lr_res), ("cart", dt_res)]:
+    for name in selected:
+        model, grid = all_models[name]
+        res, X, y = nested_cv(
+            df,
+            target,
+            model,
+            grid,
+            SCORERS,
+            seed=0,
+            n_splits=3,
+            n_repeats=2,
+            bootstrap_iters=100,
+        )
         rows.append(
             {
                 "model": name,
@@ -124,6 +143,7 @@ def evaluate_models(
                 ),
             }
         )
+
     out = pd.DataFrame(rows).round(3)
     csv_path.parent.mkdir(parents=True, exist_ok=True)
     out.to_csv(csv_path, index=False)
@@ -144,12 +164,21 @@ def main(args: list[str] | None = None) -> None:
         help="probability cutoff for fairness metrics",
         default=None,
     )
+    parser.add_argument(
+        "--models",
+        nargs="+",
+        choices=["logreg", "cart", "random_forest", "gboost", "svm"],
+        default=None,
+        help="models to evaluate (default: all)",
+    )
     ns = parser.parse_args(args)
 
     from . import dataprep
 
     df = dataprep.clean(dataprep.load_raw())
-    metrics = evaluate_models(df, group_col=ns.group_col, threshold=ns.threshold)
+    metrics = evaluate_models(
+        df, group_col=ns.group_col, threshold=ns.threshold, models=ns.models
+    )
     print(metrics)
 
 
