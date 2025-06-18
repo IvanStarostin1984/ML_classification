@@ -383,3 +383,7 @@ scaling.
 ## 48. Clarify expired PAT
 
 - [x] PAT expiry can break `git fetch`; recreate token if it fails (2025-10-03)
+
+## 49. Update changelog date
+
+- [x] replace placeholder date for version 0.1.3 in CHANGELOG (2025-10-06)

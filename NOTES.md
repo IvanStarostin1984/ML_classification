@@ -575,6 +575,19 @@ Reason: document dataset summary CLI before tagging release.
 
 2025-10-02: Documented mlcls-summary usage and its API reference entry.
 Reason: user request for dataset summary documentation.
+<<<<<<< codex/update-release-date-for-version-0.1.3
+
+2025-10-05: README quick-start clarifies that CI requires the GIT_TOKEN secret.
+It explains how to create a PAT and store it as that secret.
+Reason: user request for clearer setup.
+
+2025-10-03: Documented PAT expiry causing pre-commit `git fetch` failures.
+Reason: clarify CI token issues when "could not read Username" appears.
+
+2025-10-06: Set 0.1.3 release date in CHANGELOG and removed leftover merge
+markers from NOTES. Reason: keep changelog accurate and pass markdownlint.
+=======
 2025-10-03: Documented PAT expiry causing `git fetch` errors and how to fix.
 2025-10-05: README clarifies CI needs a GIT_TOKEN secret and how to create it.
 2025-10-06: Removed leftover merge markers and stray lines. Shortened bullets.
+>>>>>>> main
