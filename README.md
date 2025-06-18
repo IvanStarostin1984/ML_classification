@@ -53,8 +53,8 @@ pip install pre-commit
 pre-commit install
 
 # Running pre-commit needs network access or a `GIT_TOKEN` with
-# at least the `public_repo` scope. Store the token as a secret and
-# reference it in CI.
+# at least the `public_repo` scope. CI uses this token to clone the hooks,
+# so set it as a repository secret.
 
 # The hooks run `isort` before `black` and `flake8` so imports stay ordered.
 # In CI the workflow runs `pre-commit run --files` on changed files before
@@ -98,13 +98,10 @@ mlcls-train --sampler smote   # run with SMOTE oversampling
 Pre-commit hooks format code and lint Markdown automatically on each commit.
 They run `isort`, `black` and `flake8` when you commit.
 
-Create a personal access token with the `public_repo` permission at
-<https://github.com/settings/tokens> and store it as `GIT_TOKEN` under your
-repository secrets. CI exports this token so `pre-commit` can clone its hook
-repositories without prompts.
-
-Note: `make` is required for these commands. On Windows, install GNU Make or run
-the console scripts `mlcls-train` and `mlcls-eval` instead.
+Create a personal access token from GitHub Settings > Developer settings
+> Personal access tokens.
+Add this token under Settings > Secrets as `GIT_TOKEN`.
+CI reads this secret so `pre-commit` can clone hook repositories.
 
 See [data/README.md](data/README.md) for dataset licence notes.
 
