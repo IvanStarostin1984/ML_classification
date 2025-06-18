@@ -576,3 +576,5 @@ Reason: keep formatting consistent and reflect completion.
 function is callable. Reason: align public API with docs.
 2025-06-18: Fixed NOTES formatting for markdownlint. Merged conflict marker.
 Wrapped `dataset_summary` and `__init__`.
+2025-10-01: AGENTS Markdown bullet now mentions wrapping module names in
+backticks like `__init__`. Reason: avoid MD050.
