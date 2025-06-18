@@ -28,3 +28,9 @@ def test_extended_metrics_and_grid() -> None:
         evaluate.SCORERS,
     )
     assert len(res["estimator"][0].cv_results_["params"]) > 1
+
+
+def test_multiple_models_selection() -> None:
+    df = _df()
+    metrics = evaluate.evaluate_models(df, models=["random_forest", "gboost", "svm"])
+    assert set(metrics["model"]) == {"random_forest", "gboost", "svm"}

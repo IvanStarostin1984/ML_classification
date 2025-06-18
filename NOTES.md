@@ -588,3 +588,6 @@ markers from NOTES. Reason: keep changelog accurate and pass markdownlint.
 
 2025-10-07: Removed leftover merge markers from NOTES after merging
 release-date PR. Reason: fix markdownlint errors.
+2025-10-08: evaluate_models now runs random_forest, gboost and svm pipelines and
+supports a --models option to pick which to run. Tests cover the new selection.
+Reason: extend evaluation as requested.
