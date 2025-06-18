@@ -50,6 +50,11 @@ omitted the tool chooses the Youden J statistic::
 
    mlcls-eval --group-col gender --threshold 0.6
 
+Select specific pipelines with ``--models``. Pass multiple names to evaluate
+only those models::
+
+   mlcls-eval --models logreg random_forest svm
+
 The ``advanced_demo.ipynb`` notebook walks through these steps and shows the
 additional plots.
 
