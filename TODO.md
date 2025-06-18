@@ -391,3 +391,7 @@ scaling.
 ## 50. NOTES cleanup after release-date PR
 
 - [x] remove leftover merge markers from NOTES (2025-10-07)
+
+## 51. Archive legacy script
+
+- [x] move ai_arisha.py into legacy/ directory for reference (2025-10-08)
