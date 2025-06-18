@@ -112,18 +112,9 @@ outputs and manifest in README.
 2025-06-09: Verified Kaggle download and training pipelines. Added lowercase
 loan_status handling in dataprep.
 2025-06-09: Strip whitespace in dataset columns for evaluation.
-2025-06-23: Replaced Build & Test badge with GitHub internal badge for private
-repo.
+2025-06-23: Replaced Build badge with GitHub internal badge.
 2025-06-23: download_data warns when src package is missing and tests cover it.
-2025-06-23: Added note in README that 'pip install -e .' registers src for
-import like
-import python
-import so
-import work.
-
-import scripts
-import scripts/download_data.py
-
+2025-06-23: README notes `pip install -e .` registers src for imports and CLI.
 2025-06-24: README clarifies that `make` is required and lists console script
 alternatives for Windows.
 2025-06-09: Added grid_train_from_df using GridSearchCV with repeated CV and
@@ -558,7 +549,7 @@ pre-commit 'failed to authenticate to GitHub' errors. Check
 2025-06-17: evaluate_models cleans data with dataprep.clean at function start.
 Test updated to work with numeric labels. Reason: normalise Loan_Status early.
 
-2025-09-29: Removed conflict markers from NOTES and TODO. Added cleanup item in TODO.md.
+2025-09-29: Removed conflict markers and added cleanup item to TODO.
 
 2025-09-30: flake8 uses indent-size 4. Updated AGENTS.
 Reason: enforce 4-space indentation.
@@ -582,15 +573,8 @@ backticks like `__init__`. Reason: avoid MD050.
 2025-06-18: Version bumped to 0.1.3 with README example for `mlcls-summary`.
 Reason: document dataset summary CLI before tagging release.
 
-2025-10-02: Documented mlcls-summary usage in CLI docs
-and added src.summary to the API reference.
+2025-10-02: Documented mlcls-summary usage and its API reference entry.
 Reason: user request for dataset summary documentation.
-
-<<<<<<< codex/update-readme-with-ci-git_token-reminder
-2025-10-05: README quick-start clarifies that CI requires the GIT_TOKEN secret.
-It explains how to create a PAT and store it as that secret.
-Reason: user request for clearer setup.
-=======
-2025-10-03: Documented PAT expiry causing pre-commit `git fetch` failures.
-Reason: clarify CI token issues when "could not read Username" appears.
->>>>>>> main
+2025-10-03: Documented PAT expiry causing `git fetch` errors and how to fix.
+2025-10-05: README clarifies CI needs a GIT_TOKEN secret and how to create it.
+2025-10-06: Removed leftover merge markers and stray lines. Shortened bullets.
