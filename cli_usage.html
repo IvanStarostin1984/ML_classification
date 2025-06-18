@@ -67,12 +67,21 @@
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">mlcls</span><span class="o">-</span><span class="n">manifest</span> <span class="n">artefacts</span><span class="o">/*.</span><span class="n">csv</span>
 </pre></div>
 </div>
-<p>Show dataset statistics:</p>
+<section id="dataset-summary">
+<h2>Dataset summary<a class="headerlink" href="#dataset-summary" title="Link to this heading">¶</a></h2>
+<p>Run <code class="docutils literal notranslate"><span class="pre">mlcls-summary</span></code> to inspect the dataset:</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">mlcls</span><span class="o">-</span><span class="n">summary</span> <span class="o">--</span><span class="n">data</span><span class="o">-</span><span class="n">path</span> <span class="n">data</span><span class="o">/</span><span class="n">raw</span><span class="o">/</span><span class="n">loan_approval_dataset</span><span class="o">.</span><span class="n">csv</span>
+</pre></div>
+</div>
+<p>Example output:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">Rows</span><span class="p">:</span> <span class="mi">30</span>
+<span class="n">Columns</span><span class="p">:</span> <span class="mi">6</span>
+<span class="n">Class</span> <span class="n">balance</span><span class="p">:</span> <span class="n">Y</span><span class="p">:</span> <span class="mi">15</span> <span class="p">(</span><span class="mf">50.0</span><span class="o">%</span><span class="p">),</span> <span class="n">N</span><span class="p">:</span> <span class="mi">15</span> <span class="p">(</span><span class="mf">50.0</span><span class="o">%</span><span class="p">)</span>
 </pre></div>
 </div>
 <p>The command gathers recent metrics and plots under <code class="docutils literal notranslate"><span class="pre">report_artifacts/</span></code>. This
 folder can be zipped and shared as a summary of the run.</p>
+</section>
 <section id="local-testing">
 <h2>Local testing<a class="headerlink" href="#local-testing" title="Link to this heading">¶</a></h2>
 <p>Install the requirements before running the tests:</p>
@@ -112,6 +121,7 @@ folder can be zipped and shared as a summary of the run.</p>
 <p class="caption" role="heading"><span class="caption-text">Contents:</span></p>
 <ul class="current">
 <li class="toctree-l1 current"><a class="current reference internal" href="#">Command-line usage</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#dataset-summary">Dataset summary</a></li>
 <li class="toctree-l2"><a class="reference internal" href="#local-testing">Local testing</a></li>
 </ul>
 </li>

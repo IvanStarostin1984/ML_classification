@@ -43,3 +43,6 @@ available functions and classes.
 .. automodule:: src.utils
    :members:
    :undoc-members:
+
+.. automodule:: src.summary
+   :members:
