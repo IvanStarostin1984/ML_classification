@@ -370,3 +370,7 @@ scaling.
 ## 46. Version 0.1.3 release
 
 - [x] bump version to 0.1.3 and document summary CLI
+
+## 46. Dataset summary docs
+
+- [x] document mlcls-summary usage and add src.summary to API reference (2025-10-02)
