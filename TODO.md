@@ -350,3 +350,7 @@ scaling.
 ## 42. Resolve merge leftovers
 
 - [x] remove conflict markers from NOTES and TODO (2025-09-29)
+
+## 43. Flake8 indentation
+
+- [x] set `indent-size = 4` in .flake8 and document in AGENTS (2025-09-30)
