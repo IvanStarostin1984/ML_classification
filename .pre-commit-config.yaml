@@ -3,21 +3,28 @@ repos:
     rev: 6.0.1
     hooks:
       - id: isort
-        args: ['--profile', 'black']
+        args: ["--profile", "black"]
+
   - repo: https://github.com/psf/black
     rev: 23.7.0
     hooks:
       - id: black
         language_version: python3
+
   - repo: https://github.com/pycqa/flake8
     rev: 6.1.0
     hooks:
       - id: flake8
-  - repo: https://github.com/pre-commit/mirrors-markdownlint-cli
-    rev: v0.39.0
+
+  # ---- markdown-lint (v2, actively maintained) -----------------------------
+  - repo: https://github.com/DavidAnson/markdownlint-cli2
+    rev: v0.18.1                  # bump when a new tag is released
     hooks:
-      - id: markdownlint-cli
-        files: '\\.md$'
+      - id: markdownlint-cli2
+        files: "\\.md$"
+        # args: [--config=.markdownlint.json]            # ← use if you keep custom rules
+        # additional_dependencies: [markdownlint-cli2-config]  # shared ruleset (optional)
+
   - repo: https://github.com/rhysd/actionlint
     rev: v1.7.7
     hooks:
