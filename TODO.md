@@ -392,7 +392,11 @@ scaling.
 
 - [x] remove leftover merge markers from NOTES (2025-10-07)
 
-## 51. Extended evaluation models
+## 51. Archive legacy script
+
+- [x] move ai_arisha.py into legacy/ directory for reference (2025-10-08)
+
+## 52. Extended evaluation models
 
 - [x] evaluate_models supports random_forest, gboost and svm and CLI accepts
   --models option (2025-10-08)

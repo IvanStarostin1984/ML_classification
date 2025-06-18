@@ -3,11 +3,12 @@
 This repository hosts ML classifier (trees and logistic classifier). Follow
 these rules when adding or updating code.
 
-Your job is to migrate Google Colab notebook ai_arisha.py to several classes
-github repo in line with README.md to showcase my work.
+Your job is to migrate Google Colab notebook `ai_arisha.py` to several classes
+github repo in line with README.md to showcase my work. The notebook now lives
+in `legacy/` for reference only.
 
-The style rules apply to new code under `src/` and tests, while `ai_arisha.py`
-is kept as-is for reference
+The style rules apply to new code under `src/` and tests, while
+`legacy/ai_arisha.py` is kept as-is for reference
 
 TODO.md, NOTES.md AGENTS.md may be not perfectly aligned with current project
 status. Always recheck in actual code.
@@ -38,7 +39,7 @@ ML_classification/
 ├─ .github/
 │ └─ workflows/
 │ └─ ci.yml # lint + pytest on Python 3.10
-├─ ai_arisha.py # original Colab / legacy script
+├─ legacy/ai_arisha.py # archived Colab script
 ├─ AGENTS.md # design / architecture notes
 ├─ data/
 │ └─ README.md # Kaggle‐licence notice & instructions
@@ -278,7 +279,7 @@ features and architecture.
 Two markdown files at the repository root help coordinate the refactor.
 
 - **TODO.md** – complete list of tasks required to move the legacy
-`ai_arisha.py` notebook into the modular project layout above.
+`legacy/ai_arisha.py` notebook into the modular project layout above.
 - **NOTES.md** – running log that explains what was done and how.
 
 Contributors must keep `TODO.md` up to date with remaining work and record

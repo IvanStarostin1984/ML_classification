@@ -252,7 +252,7 @@ executes both the logistic regression and decision-tree pipelines located under
 `src/models`.
 
 ```text
-ai_arisha.py             ← legacy Colab script (read-only)
+legacy/ai_arisha.py      ← legacy Colab script (read-only)
 AGENTS.md                ← contributor guidelines and architecture notes
 .github/workflows/ci.yml ← CI pipeline (Black, flake8, pytest)
 scripts/download_data.py ← Kaggle dataset pull helper
