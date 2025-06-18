@@ -139,6 +139,7 @@ ML_classification/
 - Favour composition over inheritance and keep variables scoped tightly.
 - Validate inputs early and throw on bad data.
 - Use 4‑space indentation, single quotes and end files with a newline.
+  `.flake8` enforces this with `indent-size = 4`.
 - Run `isort` automatically via pre-commit to keep imports ordered.
 - Document each public API/function with a doc comment.
 

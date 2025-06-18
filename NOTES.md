@@ -560,3 +560,5 @@ Test updated to work with numeric labels. Reason: normalise Loan_Status early.
 
 2025-09-29: Removed conflict markers from NOTES and TODO. Added cleanup item in
 TODO.md.
+2025-09-30: flake8 uses indent-size 4. Updated AGENTS.
+Reason: enforce 4-space indentation.
