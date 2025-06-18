@@ -22,7 +22,7 @@
 - Replaced secret checks with helper steps to avoid YAML errors.
 - Enforced trailing space rule via markdownlint.
 
-## 0.1.3 - YYYY-MM-DD
+## 0.1.3 - 2025-10-02
 
 - Documented `mlcls-summary` command in README.
 - Public dataset summary CLI available through `mlcls-summary`.
