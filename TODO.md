@@ -362,3 +362,7 @@ scaling.
 ## 44. Markdownlint cleanup
 
 - [x] fix NOTES formatting lines 561-569 to satisfy markdownlint (2025-06-18)
+
+## 45. Markdown style note
+
+- [x] mention wrapping module names like `__init__` in backticks (2025-10-01)
