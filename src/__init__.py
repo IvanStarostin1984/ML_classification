@@ -15,6 +15,7 @@ from .evaluation_utils import plot_or_load, youden_thr, four_fifths
 from .calibration import calibrate_model
 from .feature_importance import logreg_coefficients, tree_feature_importances
 from .manifest import write_manifest
+from .summary import dataset_summary
 
 __all__ = [
     "FeatureEngineer",
