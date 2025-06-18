@@ -350,3 +350,7 @@ scaling.
 ## 42. Resolve merge leftovers
 
 - [x] remove conflict markers from NOTES and TODO (2025-09-29)
+
+## 43. Public API update
+
+- [ ] public API now exposes `dataset_summary` via `src` package
