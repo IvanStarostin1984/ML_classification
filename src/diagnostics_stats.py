@@ -68,12 +68,28 @@ def _safe_chi2(
 
     try:
         if need_mc:
-            res = chi2_contingency(
-                ct,
-                correction=False,
-                method=MonteCarloMethod(n_resamples=MC_N, rng=rng),
-            )
-            return res.statistic, res.pvalue, res.dof, f"chi2 (MC {MC_N:,})"
+            if "method" in chi2_contingency.__code__.co_varnames:
+                res = chi2_contingency(
+                    ct,
+                    correction=False,
+                    method=MonteCarloMethod(n_resamples=MC_N),
+                )
+                return (
+                    res.statistic,
+                    res.pvalue,
+                    res.dof,
+                    f"chi2 (MC {MC_N:,})",
+                )
+            else:
+                n = int(ct.to_numpy().sum())
+                expected = np.outer(ct.sum(axis=1), ct.sum(axis=0)) / n
+                chi2 = ((ct - expected) ** 2 / expected).to_numpy().sum()
+                probs = (expected / n).ravel()
+                sims = rng.multinomial(n, probs, size=MC_N).reshape(MC_N, *ct.shape)
+                sim_chi2 = ((sims - expected) ** 2 / expected).sum(axis=(1, 2))
+                p = (sim_chi2 >= chi2).mean()
+                dof = (ct.shape[0] - 1) * (ct.shape[1] - 1)
+                return chi2, float(p), dof, f"chi2 (MC {MC_N:,})"
         chi2, p, dof, _ = chi2_contingency(ct, correction=False, lambda_=None)
         return chi2, p, dof, "chi2"
     except ValueError:
