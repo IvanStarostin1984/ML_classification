@@ -403,4 +403,4 @@ scaling.
 
 ## 53. Pre-commit legacy exclusion
 
-- [ ] keep legacy directory excluded from automated linting
+- [x] keep legacy directory excluded from automated linting

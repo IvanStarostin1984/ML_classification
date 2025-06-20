@@ -598,3 +598,6 @@ Reason: extend evaluation as requested.
 
 2025-06-18: Pre-commit excludes the legacy folder so isort, black and flake8
 skip ai_arisha.py. Reason: touching that script caused CI failures.
+
+2025-06-20: Marked TODO item on keeping the legacy directory excluded from
+linting as done. Reason: pre-commit config already skips `legacy/`.
