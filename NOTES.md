@@ -596,6 +596,11 @@ Reason: keep repository clean while preserving reference code as per TODO item.
 supports a --models option to pick which to run. Tests cover the new selection.
 Reason: extend evaluation as requested.
 
+2025-10-09: Updated GitHub Actions to checkout@v4, setup-python@v5,
+peaceiris/actions-gh-pages@v4 and softprops/action-gh-release@v2. Reason:
+follow upstream updates and silence version warnings. Marked TODO item 53 as
+complete since the legacy folder is already excluded from pre-commit.
+
 2025-06-18: Pre-commit excludes the legacy folder so isort, black and flake8
 skip ai_arisha.py. Reason: touching that script caused CI failures.
 

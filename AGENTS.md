@@ -205,7 +205,7 @@ ML_classification/
   `actions/upload-artifact@v4`. Keep the major version current when GitHub
   releases a new one.
 - The workflow `.github/workflows/gh-pages.yml` deploys these pages to the
-  `gh-pages` branch using `peaceiris/actions-gh-pages@v3`.
+  `gh-pages` branch using `peaceiris/actions-gh-pages@v4`.
   Pushing to this branch requires a token with `contents:write`
   (the default `GITHUB_TOKEN` on forks lacks this permission).
 
