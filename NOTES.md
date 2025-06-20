@@ -598,3 +598,6 @@ Reason: extend evaluation as requested.
 
 2025-06-18: Pre-commit excludes the legacy folder so isort, black and flake8
 skip ai_arisha.py. Reason: touching that script caused CI failures.
+
+2025-10-09: Workflows use Node20 actions and docs job depends on changes.
+Reason: actionlint failures from outdated actions and missing dependency.

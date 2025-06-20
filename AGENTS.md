@@ -204,6 +204,10 @@ ML_classification/
 - After tests pass, CI builds the Sphinx docs and uploads them using
   `actions/upload-artifact@v4`. Keep the major version current when GitHub
   releases a new one.
+  - Node-based actions are pinned to their Node&nbsp;20 major versions
+    (`actions/checkout@v4`, `actions/setup-python@v5`).
+  - The docs job depends on the `changes` job to check if only Markdown
+    files were modified.
 - The workflow `.github/workflows/gh-pages.yml` deploys these pages to the
   `gh-pages` branch using `peaceiris/actions-gh-pages@v3`.
   Pushing to this branch requires a token with `contents:write`
