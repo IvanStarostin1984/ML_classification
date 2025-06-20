@@ -16,3 +16,7 @@ kaggle.json
 secrets/
 *.key
 *.pem
+
+# Packaging
+requirements.lock
+ml_classification.egg-info/
