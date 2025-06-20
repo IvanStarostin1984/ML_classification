@@ -289,3 +289,12 @@ completed items in `NOTES.md`.
 
 - **FUNCTIONS.md** – reference list of notebook functions. Ensure each is
 implemented or intentionally skipped. Log skipped ones in NOTES.md.
+
+## Workflow tips
+
+- Pin CI actions like `actions/checkout` and `actions/setup-python` to the
+  newest major version that works with GitHub's current Node runtime. For
+  example, use `actions/checkout@v3` or newer when Node 20 is required.
+- When a job's `if:` expression references outputs from another job, list that
+  job name under `needs:` so the value is available.
+- Run `actionlint` after editing workflow files to catch syntax issues early.
