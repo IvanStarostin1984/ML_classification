@@ -599,5 +599,7 @@ Reason: extend evaluation as requested.
 2025-06-18: Pre-commit excludes the legacy folder so isort, black and flake8
 skip ai_arisha.py. Reason: touching that script caused CI failures.
 
+2025-06-20: Completed TODO 53. Added TODO for GitHub Actions Node 20 update.
+
 2025-10-09: Docs job now depends on both build and changes jobs. Reason: ensure
 workflow steps run in correct order when docs are built.
