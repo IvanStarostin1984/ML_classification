@@ -601,3 +601,11 @@ skip ai_arisha.py. Reason: touching that script caused CI failures.
 
 2025-06-20: Marked TODO item on keeping the legacy directory excluded from
 linting as done. Reason: pre-commit config already skips `legacy/`.
+
+2025-06-20: Added AGENTS note about pinning actions and listing needed jobs.
+Reason: remind to run actionlint when workflows change.
+
+2025-06-20: Completed TODO 53. Added TODO for GitHub Actions Node 20 update.
+
+2025-10-09: Docs job now depends on both build and changes jobs. Reason: ensure
+workflow steps run in correct order when docs are built.

@@ -404,3 +404,14 @@ scaling.
 ## 53. Pre-commit legacy exclusion
 
 - [x] keep legacy directory excluded from automated linting
+
+## 54. Node20 workflow upgrade
+
+- [ ] Update GitHub Actions workflows to use Node.js 20 as per issue #1
+
+- [ ] keep legacy directory excluded from automated linting
+
+## 54. CI docs job dependency
+
+- [x] update docs job to depend on both build and changes jobs so the workflow
+  waits for them (2025-10-09)
