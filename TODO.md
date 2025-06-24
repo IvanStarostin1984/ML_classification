@@ -415,3 +415,6 @@ scaling.
 
 - [x] update docs job to depend on both build and changes jobs so the workflow
   waits for them (2025-10-09)
+
+## 55. Indentation fixes
+- [x] fix inconsistent indentation causing flake8 E111 (2025-10-11)

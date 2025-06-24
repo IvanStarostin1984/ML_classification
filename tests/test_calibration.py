@@ -1,8 +1,8 @@
 from __future__ import annotations
 
 import os
-import sys
 import subprocess
+import sys
 from pathlib import Path
 
 import numpy as np
@@ -11,8 +11,8 @@ import pytest
 from sklearn.datasets import make_classification
 from sklearn.linear_model import LogisticRegression
 
-from src.calibration import calibrate_model
 from src import dataprep
+from src.calibration import calibrate_model
 from src.features import FeatureEngineer
 from src.models import logreg
 
@@ -25,17 +25,17 @@ def test_calibrate_model_simple() -> None:
 
 
 def test_calibrate_model_isotonic_fitted() -> None:
-  X, y = make_classification(n_samples=30, n_features=4, random_state=1)
-  model = LogisticRegression().fit(X, y)
-  cal = calibrate_model(model, X, y, method="isotonic")
-  assert hasattr(cal, "calibrated_classifiers_")
+    X, y = make_classification(n_samples=30, n_features=4, random_state=1)
+    model = LogisticRegression().fit(X, y)
+    cal = calibrate_model(model, X, y, method="isotonic")
+    assert hasattr(cal, "calibrated_classifiers_")
 
 
 def test_calibrate_model_invalid_method() -> None:
-  X, y = make_classification(n_samples=20, n_features=4, random_state=2)
-  model = LogisticRegression().fit(X, y)
-  with pytest.raises(ValueError):
-    calibrate_model(model, X, y, method="bad")
+    X, y = make_classification(n_samples=20, n_features=4, random_state=2)
+    model = LogisticRegression().fit(X, y)
+    with pytest.raises(ValueError):
+        calibrate_model(model, X, y, method="bad")
 
 
 def _toy_df(n: int = 40) -> pd.DataFrame:

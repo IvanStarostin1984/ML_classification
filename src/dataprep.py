@@ -3,14 +3,15 @@
 from __future__ import annotations
 
 from pathlib import Path
+
 import pandas as pd
 
-CSV_PATH = Path('data/raw/loan_approval_dataset.csv')
+CSV_PATH = Path("data/raw/loan_approval_dataset.csv")
 
 
 def load_raw(path: str | Path = CSV_PATH) -> pd.DataFrame:
-  """Return the raw dataset as a ``DataFrame``."""
-  return pd.read_csv(path)
+    """Return the raw dataset as a ``DataFrame``."""
+    return pd.read_csv(path)
 
 
 def clean(df: pd.DataFrame) -> pd.DataFrame:
