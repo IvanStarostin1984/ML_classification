@@ -417,4 +417,10 @@ scaling.
   waits for them (2025-10-09)
 
 ## 55. Indentation fixes
+
 - [x] fix inconsistent indentation causing flake8 E111 (2025-10-11)
+
+## 56. Markdown blank line rule
+
+- [x] note that MD022 and MD032 expect blank lines before and after headings
+  and lists (2025-10-11)

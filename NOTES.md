@@ -615,3 +615,6 @@ Reason: remind to run actionlint when workflows change.
 2025-10-09: Docs job now depends on both build and changes jobs. Reason: ensure
 workflow steps run in correct order when docs are built.
 2025-10-11: Fixed indentation in dataprep and tests to satisfy flake8 E111.
+2025-10-11: Added AGENTS note that MD022 and MD032 require blank lines around
+headings and lists; emphasised running markdownlint or pre-commit. Reason: to
+prevent style violations.

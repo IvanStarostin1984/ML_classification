@@ -150,6 +150,8 @@ ML_classification/
 
 - Keep lines under 80 characters.
 - Surround lists, headings and fenced code blocks with blank lines.
+- MD022 (headings) and MD032 (lists) require blank lines before and after.
+  Run `npx markdownlint-cli` or pre-commit before committing.
 - Use backticks around file names containing underscores or module names like
   `__init__` to avoid MD050.
 - Specify a language for fenced code blocks.
